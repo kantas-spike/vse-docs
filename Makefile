@@ -10,7 +10,7 @@ OS:=$(shell uname -s)
 SPHINXBUILD   ?= sphinx-build
 SOURCEDIR     = ./
 BUILDDIR      = _build
-BF_LANG       ?= en
+BF_LANG       ?= ja
 SPHINXOPTS    ?= -j auto -D language='$(BF_LANG)'
 LATEXOPTS     ?= "-interaction nonstopmode"
 
