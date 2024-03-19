@@ -1,7 +1,86 @@
 The Unofficial Documentation of Blender's Video Sequence Editor is structured into three sections:
 
-1. Video Sequencer: describes the Video Sequence Editor; Blender's dedicated *tool* to handle video footage.
-2. Video Editing: describes the usual *operations* in a video editing project.
+1. Video Sequencer: describes the Video Sequence Editor; Blender's dedicated _tool_ to handle video footage.
+2. Video Editing: describes the usual _operations_ in a video editing project.
 3. Extra-tools: additional software (eg. ffmpeg, Python, exiftool, ... )
 
-The  HTML-version of these docs can be found at: https://vse-docs.readthedocs.io/.
+The HTML-version of these docs can be found at: https://vse-docs.readthedocs.io/.
+
+## 翻訳
+
+### TODO (74ファイル. xxx-old-textsは不要かも)
+
+- [x] ./index.rst
+- [x] ./video_sequencer/index.rst
+- [ ] ./video_sequencer/sequencer&preview/index.rst
+- [ ] ./video_sequencer/sequencer/index.rst
+- [ ] ./video_sequencer/sequencer/navigate.rst
+- [ ] ./video_sequencer/sequencer/zoom.rst
+- [ ] ./video_sequencer/sequencer/toolbar.rst
+- [ ] ./video_sequencer/sequencer/move.rst
+- [ ] ./video_sequencer/sequencer/timeline.rst
+- [ ] ./video_sequencer/sequencer/header.rst
+- [ ] ./video_sequencer/sequencer/sidebar.rst
+- [ ] ./video_sequencer/preview/index.rst
+- [ ] ./video_sequencer/preview/toolbar.rst
+- [ ] ./video_sequencer/preview/header.rst
+- [ ] ./video_sequencer/preview/sidebar.rst
+- [ ] ./video_sequencer/preview/gizmos.rst
+- [ ] ./video_editing/index.rst
+- [ ] ./video_editing/setup/index.rst
+- [ ] ./video_editing/setup/proxies_technical.rst
+- [ ] ./video_editing/setup/proxies.rst
+- [ ] ./video_editing/setup/workspace.rst
+- [ ] ./video_editing/setup/add-ons.rst
+- [ ] ./video_editing/setup/preferences.rst
+- [ ] ./video_editing/setup/directory-structure.rst
+- [ ] ./video_editing/setup/creating-test-files.rst
+- [ ] ./video_editing/setup/project-settings.rst
+- [ ] ./video_editing/render/index.rst
+- [ ] ./video_editing/render/codec/video/video.rst
+- [ ] ./video_editing/render/codec/codec.rst
+- [ ] ./video_editing/render/codec/audio/audio.rst
+- [ ] ./video_editing/render/postprocessing/ffmpeg/ffmpeg.rst
+- [ ] ./video_editing/render/postprocessing/compositor/compositor.rst
+- [ ] ./video_editing/render/postprocessing/postprocessing.rst
+- [ ] ./video_editing/render/postprocessing/subtitles/subtitles.rst
+- [ ] ./video_editing/edit/index.rst
+- [ ] ./video_editing/edit/montage/index.rst
+- [ ] ./video_editing/edit/montage/striptypes/index.rst
+- [ ] ./video_editing/edit/montage/striptypes/movie.rst
+- [ ] ./video_editing/edit/montage/striptypes/clip.rst
+- [ ] ./video_editing/edit/montage/striptypes/sound.rst
+- [ ] ./video_editing/edit/montage/striptypes/color.rst
+- [ ] ./video_editing/edit/montage/striptypes/mask.rst
+- [ ] ./video_editing/edit/montage/striptypes/text.rst
+- [ ] ./video_editing/edit/montage/striptypes/image.rst
+- [ ] ./video_editing/edit/montage/striptypes/scene.rst
+- [ ] ./video_editing/edit/montage/add.rst
+- [ ] ./video_editing/edit/montage/move.rst
+- [ ] ./video_editing/edit/montage/transform.rst
+- [ ] ./video_editing/edit/montage/copy_paste.rst
+- [ ] ./video_editing/edit/montage/remove.rst
+- [ ] ./video_editing/edit/montage/select.rst
+- [ ] ./video_editing/edit/color-grading/adjustment.rst
+- [ ] ./video_editing/edit/color-grading/index.rst
+- [ ] ./video_editing/edit/color-grading/terminology/terminology.rst
+- [ ] ./video_editing/edit/color-grading/modifiers.rst
+- [ ] ./video_editing/edit/effects/index.rst
+- [ ] ./video_editing/edit/effects/speed.rst
+- [ ] ./video_editing/edit/effects/animation.rst
+- [ ] ./video_editing/edit/effects/masking.rst
+- [ ] ./video_editing/edit/effects/grease_pencil.rst
+- [ ] ./video_editing/edit/effects/transition.rst
+- [ ] ./video_editing/edit/sound/index.rst
+- [ ] ./video_editing/edit/sound/audacity/audacity.rst
+- [ ] ./video_editing/edit/sound/measuring/volume.rst
+- [ ] ./extra-tools/python-useful-scripts.rst
+- [ ] ./extra-tools/index.rst
+- [ ] ./extra-tools/exiftool.rst
+- [ ] ./extra-tools/ffmpeg.rst
+- [ ] ./extra-tools/annotating-screenshot.rst
+- [ ] ./extra-tools/test.rst
+- [ ] ./extra-tools/python-scripting-workspace.rst
+- [ ] ./xxx-old-texts/index.rst
+- [ ] ./xxx-old-texts/timecode.rst
+- [ ] ./xxx-old-texts/supporting-doc.rst
