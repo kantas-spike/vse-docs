@@ -64,7 +64,7 @@ BlenderのVSEは、単なるビデオエディターではありませんが、�
 Python、ffmpeg、MediaInfoやExifToolsなどのオープンソースツールについて簡単に紹介します。
 ---
 
-.. rubric:: Footnotes
+.. rubric:: 脚注
 
 .. [#f1] (訳注) VSEは *Video Sequence Editor* の略です。
 .. [#f2] (訳注) 公式のBlenderリファレンス文書は、エディターの各機能を網羅的に説明しているため、動画編集のワークフローと機能の関連がわかりにくくなっています。
