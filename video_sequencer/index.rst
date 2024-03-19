@@ -41,12 +41,12 @@ View Type Selector(参照 図1)を使えば、Video Seuqence Editorの構成を�
 
 .. Note that any area within the Blender main window can contain any Editor and that the same Editor can occur multiple times within the main window. So, theoretically, you can rebuild the combined Sequencer/Preview, starting from an empty workspace and placing two Video Sequence Editors on top of each other. The bottom editor has View Type Sequencer and the top one has type Preview.
 
-Blender のメインウィンドウ内のどのエリアにもエディターを含めることができ、同じエディターをメインウィンドウ内に複数表示できることに注意してください。したがって、理論的には、空のワークスペースから開始して、2つのVideo Sequence Editorを上下に配置 [#1]_ することで、View Type の Sequencer/Preview の構成を再構築できます。その場合、下部エディターの View Typeは Sequencer で、上部エディターの View TypeはPreviewになります。
+Blender のメインウィンドウ内のどのエリアにもエディターを含めることができ、同じエディターをメインウィンドウ内に複数表示できることに注意してください。したがって、理論的には、空のワークスペースから開始して、2つのVideo Sequence Editorを上下に配置 [#f1]_ することで、View Type の Sequencer/Preview の構成を再構築できます。その場合、下部エディターの View Typeは Sequencer で、上部エディターの View TypeはPreviewになります。
 
 .. The VSE is composed of multiple areas (see figure 2). They are described in more detail in the next sections. Figure 2 shows the combined view *Sequencer/Preview*. You can select this view with the View Type selector. This view can contain the following areas:
 
 
-VSEは複数のリージョン [#2]_ から構成されます(参照 図2)。これらのリージョンについては、次のセクションで詳細を説明します。
+VSEは複数のリージョン [#f2]_ から構成されます(参照 図2)。これらのリージョンについては、次のセクションで詳細を説明します。
 図2は、*Sequencer*/*Preview* が結合されビューになります。
 View Type Selectorでこのビューを選択できます。このビューは以下のリージョンを含みます。
 
@@ -59,13 +59,13 @@ View Type Selectorでこのビューを選択できます。このビューは�
 
 
 .. - Sequencer: area for the montage of the strips.
-- Sequencer: ストリップのモンタージュ用のエリア [#a]_
+- Sequencer: ストリップのモンタージュ用のエリア [#f4]_
 .. - Properties: shows the properties of the active strip. Is divided into panels and tabs. Toggle on or off with :kbd:`N` key.
-- Properties: 選択されたストリップのプロパティーを表示します。プロパティーはパネルとタブで分割されています。:kbd:`N` キーで表示非表示を切替えます [#3]_
+- Properties: 選択されたストリップのプロパティーを表示します。プロパティーはパネルとタブで分割されています。:kbd:`N` キーで表示非表示を切替えます [#f3]_
 .. - Toolbar: collection of icons. Clicking the icons will perform an operation on the selected strips in the sequencer. Toggle on or off with :kbd:`T` key.
 - Toolbar: アイコンの一覧。 アイコンをクリックすると、Sequencer内の選択したストリップを操作できます。:kbd:`T`キーで表示非表示を切替えます。
 .. - Preview: shows the output of the sequencer at the time of the playhead.
-- Preview: プレイヘッドが指し示す時刻のSequencerの内容を表示します。 [#b]_
+- Preview: プレイヘッドが指し示す時刻のSequencerの内容を表示します。 [#f5]_
 .. - Header: with the menu and buttons. This header changes slightly depending on the selected view (see below).
 - Header: メニューとボタンを持ちます。 ヘッダーは選択されているビューによって若干内容が変わります。 (以降の文書を参照).
 
@@ -80,8 +80,8 @@ View Type Selectorでこのビューを選択できます。このビューは�
 
 .. rubric:: 脚注
 
-.. [#1] (訳注) Video Editing ワークスペースは、実際に上下2つのエリアにそれぞれVSEをVideo Sequence Editor配置しています。
-.. [#2] (訳注) Vエディター内の名前のつけられた領域は、リージョン(region)と呼ばれます。
-.. [#3] (訳注) :kbd:`N` キーで表示される右端のリージョン(region)は、サイドバーと呼ばれます。サイドバーはタブで分類され、各タブにはオブジェクトやエディター自身の設定を行うパネルがあります。
-.. [#a] (訳注) 厳密にはメインリージョンの上半分の領域になります。
-.. [#b] (訳注) 厳密にはメインリージョンの下半分の領域になります。
+.. [#f1] (訳注) Video Editing ワークスペースは、実際に上下2つのエリアにそれぞれVSEをVideo Sequence Editor配置しています。
+.. [#f2] (訳注) Vエディター内の名前のつけられた領域は、リージョン(region)と呼ばれます。
+.. [#f4] (訳注) 厳密にはメインリージョンの上半分の領域になります。
+.. [#f3] (訳注) :kbd:`N` キーで表示される右端のリージョン(region)は、サイドバーと呼ばれます。サイドバーはタブで分類され、各タブにはオブジェクトやエディター自身の設定を行うパネルがあります。
+.. [#f5] (訳注) 厳密にはメインリージョンの下半分の領域になります。
