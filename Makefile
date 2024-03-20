@@ -91,7 +91,7 @@ latexpdf: .SPHINXBUILD_EXISTS
 	@echo "  "$(OPEN_CMD) $(shell pwd)"/$(BUILDDIR)/latex/blender_manual.pdf"
 
 epubpdf: .SPHINXBUILD_EXISTS
-	@$(SPHINXBUILD) -M epub "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+	@$(SPHINXBUILD) -M epub "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) -t epub $(O)
 	@ebook-convert $(BUILDDIR)/epub/*.epub blender_manual.pdf \
 	--pdf-default-font-size 16 \
 	--pdf-mono-font-size 14
