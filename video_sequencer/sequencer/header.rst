@@ -229,7 +229,7 @@ Sync Visible Range
    .. warning::
       .. Currently, if we open the side panels of the animation editors (N or T panels) then the 'Visual Range' shrinks or expands depending on the side panel sizes. This happens even if we have enabled the 'Region Overlap' (Preferences > Interface > Editors > Region Overlap > Enabled) making the option useless.
 
-      現在のところ、エディターのサイドパネル(ショートカット N や Tで開く、SidebarやToolbar)を開くと、サイドパネルのサイズに応じて、表示範囲が縮小または格段します。これは、'Region Overlap' (Preferences > Interface > Editors > Region Overlap > Enabled)を有効にしても発生するため、[Sync Visible Range]オプションは役に立たなくなります。
+      現在のところ、エディターのサイドパネル(ショートカット N や Tで開く、SidebarやToolbar)を開くと、サイドパネルのサイズに応じて、表示範囲が縮小または格段します。これは、'Region Overlap' ([Preferences] > [Interface] > [Editors] > [Region Overlap] > [Enabled])を有効にしても発生するため、[Sync Visible Range]オプションは役に立たなくなります。
 
    .. todo::
       .. Give a meaningful example for this option.
