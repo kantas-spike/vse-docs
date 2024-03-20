@@ -61,7 +61,7 @@ View Type Selectorでこのビューを選択できます。このビューは�
 .. - Sequencer: area for the montage of the strips.
 - Sequencer: ストリップのモンタージュ用のエリア [#f4]_
 .. - Properties: shows the properties of the active strip. Is divided into panels and tabs. Toggle on or off with :kbd:`N` key.
-- Properties: 選択されたストリップのプロパティーを表示します。プロパティーはパネルとタブで分割されています。:kbd:`N` キーで表示非表示を切替えます [#f3]_
+- Properties: 編集対象(active)のストリップのプロパティーを表示します。プロパティーはパネルとタブで分割されています。:kbd:`N` キーで表示非表示を切替えます [#f3]_
 .. - Toolbar: collection of icons. Clicking the icons will perform an operation on the selected strips in the sequencer. Toggle on or off with :kbd:`T` key.
 - Toolbar: アイコンの一覧。 アイコンをクリックすると、Sequencer内の選択したストリップを操作できます。:kbd:`T`キーで表示非表示を切替えます。
 .. - Preview: shows the output of the sequencer at the time of the playhead.
