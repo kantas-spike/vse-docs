@@ -253,15 +253,13 @@ Show Markers
    このオプションはデフォルトで有効に設定されています。このオプションはマーカー領域(図8)を表示します。
    無効の場合は、マーカー領域だけでなく、[Marker]メニューも非表示になります。そして、マーカー関連操作(追加、削除など)がこのエディター内で利用できなくなります。
 
+   マーカーの使用については、:ref:`マーカーの使用 <using_markers>` で詳細を説明する。
+
    .. figure:: /images/editors_vse_header-menu-show-markers.svg
       :alt: Show Markers
 
 
       図8: 3つのマーカーがあるマーカー領域
-
-   .. todo::
-      .. The use of Markers is described more in detail in ...
-      マーカーの使用については、... で詳しく説明する。 (TODO)
 
 .. _bpy.types.SequenceEditor.show_cache:
 
