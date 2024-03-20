@@ -12,14 +12,14 @@ The HTML-version of these docs can be found at: https://vse-docs.readthedocs.io/
 
 - [x] ./index.rst
 - [x] ./video_sequencer/index.rst
-- [x] ./video_sequencer/sequencer&preview/index.rst
-- [ ] ./video_sequencer/sequencer/index.rst
+- [ ] ./video_sequencer/sequencer&preview/index.rst
+- [x] ./video_sequencer/sequencer/index.rst
 - [ ] ./video_sequencer/sequencer/navigate.rst
 - [ ] ./video_sequencer/sequencer/zoom.rst
 - [ ] ./video_sequencer/sequencer/toolbar.rst
 - [ ] ./video_sequencer/sequencer/move.rst
 - [ ] ./video_sequencer/sequencer/timeline.rst
-- [ ] ./video_sequencer/sequencer/header.rst
+- [x] ./video_sequencer/sequencer/header.rst
 - [ ] ./video_sequencer/sequencer/sidebar.rst
 - [ ] ./video_sequencer/preview/index.rst
 - [ ] ./video_sequencer/preview/toolbar.rst
