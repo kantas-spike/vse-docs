@@ -18,7 +18,7 @@ The HTML-version of these docs can be found at: https://vse-docs.readthedocs.io/
 - [ ] ./video_sequencer/sequencer/zoom.rst
 - [ ] ./video_sequencer/sequencer/toolbar.rst
 - [ ] ./video_sequencer/sequencer/move.rst
-- [ ] ./video_sequencer/sequencer/timeline.rst
+- [x] ./video_sequencer/sequencer/timeline.rst
 - [x] ./video_sequencer/sequencer/header.rst
 - [ ] ./video_sequencer/sequencer/sidebar.rst
 - [ ] ./video_sequencer/preview/index.rst
