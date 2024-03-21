@@ -30,7 +30,7 @@ The HTML-version of these docs can be found at: https://vse-docs.readthedocs.io/
 - [x] ./video_editing/setup/index.rst
 - [ ] ./video_editing/setup/proxies_technical.rst
 - [ ] ./video_editing/setup/proxies.rst
-- [ ] ./video_editing/setup/workspace.rst
+- [x] ./video_editing/setup/workspace.rst
 - [ ] ./video_editing/setup/add-ons.rst
 - [ ] ./video_editing/setup/preferences.rst
 - [ ] ./video_editing/setup/directory-structure.rst
