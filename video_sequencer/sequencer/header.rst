@@ -50,8 +50,8 @@ Sidebar :kbd:`N`
    .. Show or hide the sidebar. You can use the shortcut :kbd:`N` or the Sidebar button (see figure 1) to toggle on or off. This sidebar appears at the right of the sequencer and will show all the properties of the active strip. Please, note that the active strip does *not* need to be a selected strip (see :ref:`Selecting <video_editing_edit_timeline_select>`). A detailled description of all the properties of the various strip types can be found in the :ref:`Video Editing <striptypes>` section.
 
    Sidebarを表示・非表示します。ショートカットキー :kbd:`N` か Sidebarボタン(図１)を使って、表示・非表示を切替えれます。
-   Sidebarは Sequenceer の右側に表示され、編集対象(active)のストリップの全てのプロパティーが表示されます。
-   編集対象(active)のストリップは選択されたストリップである *必要はない* ことに注意してください (参照 :ref:`Selecting <video_editing_edit_timeline_select>`)。
+   Sidebarは Sequenceer の右側に表示され、アクティブストリップの全てのプロパティーが表示されます。
+   アクティブストリップは選択されたストリップである *必要はない* ことに注意してください (参照 :ref:`Selecting <video_editing_edit_timeline_select>`)。
    様々なストリップのタイプの全プロパティーの詳細については、 :ref:`Video Editing <striptypes>` セクションを参照してください。
 
 

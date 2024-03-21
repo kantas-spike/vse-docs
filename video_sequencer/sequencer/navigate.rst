@@ -21,7 +21,7 @@
 .. Warning::
    .. There could be some confusing regarding the term Current Frame. According to the Strip properties > Time panel, the Current Frame is frame 3, although the playhead and the Preview window show frame 4. This is because the Current Frame field in the Time panel is a relative measure: it is the position of the Playhead relative to the visual start (|notequal| the Start field) of the active strip.
 
-   「現在のフレーム」という用語に関しては、混乱を招く可能性があります。 [Strip プロパティ] > [Time] パネルによると、現在のフレームはフレーム 3 ですが、PlayheadとPreviewウィンドウにはフレーム 4 が表示されます。これは、[Time] パネルの [Current Frame] フィールドが相対的な尺度であるためです。これは、Playheadの位置です。編集対象ストリップの視覚的な開始点 (|notequal| Start フィールド) を基準にします。
+   「現在のフレーム」という用語に関しては、混乱を招く可能性があります。 [Strip プロパティ] > [Time] パネルによると、現在のフレームはフレーム 3 ですが、PlayheadとPreviewウィンドウにはフレーム 4 が表示されます。これは、[Time] パネルの [Current Frame] フィールドが相対的な尺度であるためです。これは、Playheadの位置です。アクティブストリップの視覚的な開始点 (|notequal| Start フィールド) を基準にします。
 
    .. * In figure 1: playhead is at frame 4; the strip starts at frame 1; Current frame = 3; you have to move 3 frames from the playhead to get at the visual start frame.
    .. * If the strip should start at frame 0, then the Current frame should be 4.
