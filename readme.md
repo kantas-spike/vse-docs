@@ -25,7 +25,7 @@ The HTML-version of these docs can be found at: https://vse-docs.readthedocs.io/
 - [x] ./video_sequencer/preview/toolbar.rst
 - [x] ./video_sequencer/preview/header.rst
 - [x] ./video_sequencer/preview/sidebar.rst
-- [ ] ./video_sequencer/preview/gizmos.rst
+- [x] ./video_sequencer/preview/gizmos.rst
 - [ ] ./video_editing/index.rst
 - [ ] ./video_editing/setup/index.rst
 - [ ] ./video_editing/setup/proxies_technical.rst
