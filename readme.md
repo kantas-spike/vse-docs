@@ -33,7 +33,7 @@ The HTML-version of these docs can be found at: https://vse-docs.readthedocs.io/
 - [x] ./video_editing/setup/workspace.rst
 - [x] ./video_editing/setup/add-ons.rst
 - [x] ./video_editing/setup/preferences.rst
-- [ ] ./video_editing/setup/directory-structure.rst
+- [x] ./video_editing/setup/directory-structure.rst
 - [ ] ./video_editing/setup/creating-test-files.rst
 - [ ] ./video_editing/setup/project-settings.rst
 - [ ] ./video_editing/render/index.rst
