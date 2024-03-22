@@ -48,7 +48,7 @@ The HTML-version of these docs can be found at: https://vse-docs.readthedocs.io/
 - [x] ./video_editing/edit/montage/index.rst
 - [x] ./video_editing/edit/montage/striptypes/index.rst
 - [x] ./video_editing/edit/montage/striptypes/movie.rst
-- [ ] ./video_editing/edit/montage/striptypes/clip.rst
+- [x] ./video_editing/edit/montage/striptypes/clip.rst
 - [x] ./video_editing/edit/montage/striptypes/sound.rst
 - [ ] ./video_editing/edit/montage/striptypes/color.rst
 - [ ] ./video_editing/edit/montage/striptypes/mask.rst
