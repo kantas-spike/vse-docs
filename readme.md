@@ -45,7 +45,7 @@ The HTML-version of these docs can be found at: https://vse-docs.readthedocs.io/
 - [ ] ./video_editing/render/postprocessing/postprocessing.rst
 - [ ] ./video_editing/render/postprocessing/subtitles/subtitles.rst
 - [x] ./video_editing/edit/index.rst
-- [ ] ./video_editing/edit/montage/index.rst
+- [x] ./video_editing/edit/montage/index.rst
 - [ ] ./video_editing/edit/montage/striptypes/index.rst
 - [ ] ./video_editing/edit/montage/striptypes/movie.rst
 - [ ] ./video_editing/edit/montage/striptypes/clip.rst
