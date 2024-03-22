@@ -53,7 +53,7 @@ The HTML-version of these docs can be found at: https://vse-docs.readthedocs.io/
 - [ ] ./video_editing/edit/montage/striptypes/color.rst
 - [ ] ./video_editing/edit/montage/striptypes/mask.rst
 - [ ] ./video_editing/edit/montage/striptypes/text.rst
-- [ ] ./video_editing/edit/montage/striptypes/image.rst
+- [x] ./video_editing/edit/montage/striptypes/image.rst
 - [ ] ./video_editing/edit/montage/striptypes/scene.rst
 - [ ] ./video_editing/edit/montage/add.rst
 - [ ] ./video_editing/edit/montage/move.rst
