@@ -1,7 +1,6 @@
 .. _bpy.types.MovieSequence:
 
 ***********
-.. Movie Strip
 ムービーストリップ
 ***********
 
