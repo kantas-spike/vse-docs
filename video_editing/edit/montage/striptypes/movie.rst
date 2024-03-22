@@ -1,7 +1,7 @@
 .. _bpy.types.MovieSequence:
 
 ***********
-ムービーストリップ
+Movie ストリップ
 ***********
 
 .. The input source of a movie strip is a video file with extension

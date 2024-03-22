@@ -1,7 +1,7 @@
 .. _bpy.types.SoundSequence:
 
 ***********
-サウンドストリップ
+Sound ストリップ
 ***********
 
 .. The input source of a Sound strip is an audio file with extension
