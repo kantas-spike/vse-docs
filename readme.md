@@ -60,7 +60,7 @@ The HTML-version of these docs can be found at: https://vse-docs.readthedocs.io/
 - [ ] ./video_editing/edit/montage/transform.rst
 - [ ] ./video_editing/edit/montage/copy_paste.rst
 - [ ] ./video_editing/edit/montage/remove.rst
-- [ ] ./video_editing/edit/montage/select.rst
+- [x] ./video_editing/edit/montage/select.rst
 - [ ] ./video_editing/edit/color-grading/adjustment.rst
 - [ ] ./video_editing/edit/color-grading/index.rst
 - [ ] ./video_editing/edit/color-grading/terminology/terminology.rst
