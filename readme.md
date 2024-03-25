@@ -72,7 +72,7 @@ The HTML-version of these docs can be found at: https://vse-docs.readthedocs.io/
 - [x] ./video_editing/edit/effects/grease_pencil.rst
 - [x] ./video_editing/edit/effects/transition.rst
 - [x] ./video_editing/edit/sound/index.rst
-- [ ] ./video_editing/edit/sound/audacity/audacity.rst
+- [x] ./video_editing/edit/sound/audacity/audacity.rst
 - [x] ./video_editing/edit/sound/measuring/volume.rst
 - [ ] ./extra-tools/python-useful-scripts.rst
 - [ ] ./extra-tools/index.rst
