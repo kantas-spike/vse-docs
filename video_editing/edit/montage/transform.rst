@@ -7,6 +7,7 @@ Transform セクションでは、Split、Trim、Group という 3 つの操作�
 
 Split
 .....
+
 .. Splitting a strip is separating the strip into two parts at the position of the playhead. Both parts continue to function as independent strips (who shares the same source). Splitting can be done on all strip types. Splitting an effect strip however will also split the input strip of the effect and vice versa.
 
 ストリップの分割とは、ストリップを再生ヘッドの位置で 2 つの部分に分割することです。両方のパートは引き続き独立したストリップ（同じソースを共有する）として機能します。分割はすべてのストリップ タイプで実行できます。ただし、エフェクト ストリップを分割すると、エフェクトの入力ストリップも分割され、その逆も同様です。
@@ -135,7 +136,7 @@ Hold Split :kbd:`Shift-K`
 
 
 Trim
-----
+.....
 
 .. Trimming is changing the duration of a strip by altering the In and Out point. In figure 1, the original strip of channel 2 starts at frame 1 and has a duration of 11138 frames. It is duplicated to channel 3 and trimmed. The new In point is at frame 2226 (1 + Strip Offset Start) and the new Out point at frame 7665 (Duration - Strip Offset End). As already discussed in the section on the :ref:`Time panel <time-panel>` or the :doc:`Split operation  </video_editing/edit/montage/striptypes/movie>` trimming and splitting is done with the use of the Strip Offset fields.
 
