@@ -68,7 +68,7 @@ The HTML-version of these docs can be found at: https://vse-docs.readthedocs.io/
 - [x] ./video_editing/edit/effects/index.rst
 - [ ] ./video_editing/edit/effects/speed.rst
 - [x] ./video_editing/edit/effects/animation.rst
-- [ ] ./video_editing/edit/effects/masking.rst
+- [x] ./video_editing/edit/effects/masking.rst
 - [x] ./video_editing/edit/effects/grease_pencil.rst
 - [x] ./video_editing/edit/effects/transition.rst
 - [ ] ./video_editing/edit/sound/index.rst
