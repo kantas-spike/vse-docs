@@ -66,7 +66,7 @@ The HTML-version of these docs can be found at: https://vse-docs.readthedocs.io/
 - [ ] ./video_editing/edit/color-grading/terminology/terminology.rst
 - [ ] ./video_editing/edit/color-grading/modifiers.rst
 - [x] ./video_editing/edit/effects/index.rst
-- [ ] ./video_editing/edit/effects/speed.rst
+- [x] ./video_editing/edit/effects/speed.rst
 - [x] ./video_editing/edit/effects/animation.rst
 - [x] ./video_editing/edit/effects/masking.rst
 - [x] ./video_editing/edit/effects/grease_pencil.rst
