@@ -75,7 +75,7 @@ View Type Selectorでこのビューを選択できます。このビューは�
 
    sequencer/index
    preview/index
-   sequencer&preview/index
+   sequencer_and_preview/index
 
 
 .. rubric:: 脚注
