@@ -1,0 +1,384 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>2.2.1.1.8. Text ストリップ &mdash; Blender VSE Unofficial Documentation  ドキュメント</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+    <link rel="canonical" href="https://kantas-spike.github.io/vse-docs/video_editing/edit/montage/striptypes/text.html" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../../../../genindex.html" />
+    <link rel="search" title="検索" href="../../../../search.html" />
+    <link rel="next" title="2.2.1.2. Select" href="../select.html" />
+    <link rel="prev" title="2.2.1.1.7. Mask ストリップ" href="mask.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> Blender VSE Unofficial Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../video_sequencer/index.html">1. Video Sequence Editor</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">2. Video Editing</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../setup/index.html">2.1. Setup</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">2.2. プロジェクトを編集する</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">2.2.1. Montage</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">2.2.1.1. ストリップの種類</a><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="movie.html">2.2.1.1.1. Movie ストリップ</a></li>
+<li class="toctree-l5"><a class="reference internal" href="sound.html">2.2.1.1.2. Sound ストリップ</a></li>
+<li class="toctree-l5"><a class="reference internal" href="image.html">2.2.1.1.3. Image/Image Sequence ストリップ</a></li>
+<li class="toctree-l5"><a class="reference internal" href="clip.html">2.2.1.1.4. Clip ストリップ</a></li>
+<li class="toctree-l5"><a class="reference internal" href="scene.html">2.2.1.1.5. Scene ストリップ</a></li>
+<li class="toctree-l5"><a class="reference internal" href="color.html">2.2.1.1.6. Color ストリップ</a></li>
+<li class="toctree-l5"><a class="reference internal" href="mask.html">2.2.1.1.7. Mask ストリップ</a></li>
+<li class="toctree-l5 current"><a class="current reference internal" href="#">2.2.1.1.8. Text ストリップ</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#options">2.2.1.1.8.1. Options</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#effect-strip">2.2.1.1.8.2. Effect Strip</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#style">2.2.1.1.8.3. Style</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#layout">2.2.1.1.8.4. Layout</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../select.html">2.2.1.2. Select</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../add.html">2.2.1.3. Add</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../copy_paste.html">2.2.1.4. Copy - Paste</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../move.html">2.2.1.5. Move</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../transform.html">2.2.1.6. Transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../remove.html">2.2.1.7. Remove/disable</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../effects/index.html">2.2.2. Effects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../color-grading/index.html">2.2.3. Color grading</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../sound/index.html">2.2.4. サウンドの編集</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/index.html">2.3. Render your project</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../extra-tools/index.html">3. 追加ツール</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Blender VSE Unofficial Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../../index.html"><span class="section-number">2. </span>Video Editing</a> &raquo;</li>
+        
+          <li><a href="../../index.html"><span class="section-number">2.2. </span>プロジェクトを編集する</a> &raquo;</li>
+        
+          <li><a href="../index.html"><span class="section-number">2.2.1. </span>Montage</a> &raquo;</li>
+        
+          <li><a href="index.html"><span class="section-number">2.2.1.1. </span>ストリップの種類</a> &raquo;</li>
+        
+      <li><span class="section-number">2.2.1.1.8. </span>Text ストリップ</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../../_sources/video_editing/edit/montage/striptypes/text.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="text">
+<span id="bpy-types-textsequence"></span><h1><span class="section-number">2.2.1.1.8. </span>Text ストリップ<a class="headerlink" href="#text" title="この見出しへのパーマリンク">¶</a></h1>
+<p>Text ストリップを使用すると、フレーム内にテキストを直接表示できます。
+タイトルやその他の短いテキストを表示することを目的としています。
+そのため、長さは 511 文字に制限されており、テキストは 1 行（折り返し付き）です。
+テキストのほとんどのプロパティ (場所、色など) はアニメーション化できますが、テキストの内容やフォントはアニメーション化できません。
+Text ストリップバーのデフォルトの色は <span class="text">███</span> です。</p>
+<div class="figure align-default" id="id1">
+<img alt="Example of text strip" src="../../../../_images/vse_setup_project_striptypes_text.svg" /><p class="caption"><span class="caption-text">図1 Text ストリップの例</span><a class="headerlink" href="#id1" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<p>図 1 から明らかなように、Text ストリップはエッセイを書くことを目的としたものではありません。
+図 1 のようなクレジット ロールの場合でも、状況はすぐに複雑になります。
+ただし、小さなテキストには理想的です。 [Location] フィールドと [Anchor] フィールドを使用すると、
+Preview ウィンドウにテキストを配置できます。</p>
+<div class="section" id="options">
+<h2><span class="section-number">2.2.1.1.8.1. </span>Options<a class="headerlink" href="#options" title="この見出しへのパーマリンク">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>パネルは他の場所で文書化されています。</p>
+<p>次のパネルは、Movie ストリップのパネルと同じです。</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="movie.html#compositing-panel"><span class="std std-ref">Compositing</span></a></p></li>
+<li><p><a class="reference internal" href="movie.html#transform-panel"><span class="std std-ref">Transform</span></a></p></li>
+<li><p><a class="reference internal" href="movie.html#crop-panel"><span class="std std-ref">Crop</span></a></p></li>
+<li><p><a class="reference internal" href="movie.html#video-panel"><span class="std std-ref">Video</span></a></p></li>
+<li><p><a class="reference internal" href="movie.html#color-panel"><span class="std std-ref">Color</span></a></p></li>
+<li><p><a class="reference internal" href="movie.html#custom-panel"><span class="std std-ref">Custom</span></a></p></li>
+</ul>
+<p>The Time panel has no Strip Offset or Hold Offset properties.
+because there is no content to offset. The strip is evenly colored.
+There is also no Source panel because the text is defined in the Effect panel.</p>
+</div>
+<p>Effect パネルがプロパティに追加されます (図 2 を参照)。</p>
+</div>
+<div class="section" id="effect-strip">
+<h2><span class="section-number">2.2.1.1.8.2. </span>Effect Strip<a class="headerlink" href="#effect-strip" title="この見出しへのパーマリンク">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">Reference</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 85%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Name</strong>:</p></td>
+<td><p>Effect Strip</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Context</strong>:</p></td>
+<td><p>Video Sequence Editor &gt; Sequencer</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Location</strong>:</p></td>
+<td><p>Sidebar &gt; Strip</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="figure align-right" id="id2">
+<a class="reference internal image-reference" href="../../../../_images/vse_setup_project_striptypes_panel-effect-strip-text-.png"><img alt="Effect Property of Text Strip" src="../../../../_images/vse_setup_project_striptypes_panel-effect-strip-text-.png" style="width: 226.79999999999998px; height: 357.0px;" /></a>
+<p class="caption"><span class="caption-text">図 2: Effectストリップのプロパティ</span><a class="headerlink" href="#id2" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<dl class="simple">
+<dt>Text</dt><dd><p>実際に表示されるテキスト。このテキストの長さは 511 文字です。
+折り返し機能 (下記参照) を使用してテキストを複数行に分割できますが、
+事前に定義した位置で分割を作成するのは簡単ではありません。</p>
+</dd>
+<dt>Wrap Width</dt><dd><p>フレーム幅のパーセンテージでテキストを折り返します。これをゼロに設定すると、ワードラップが無効になります。
+1 を指定すると、Preview の右端でテキストが折り返されます (左右にわずかな余白が生じます)。
+ただし、このオプションは、[Anchor] フィールドと [Location] フィールドと組み合わせて機能します (以下を参照)。
+前述の効果は、中心アンカーと X 位置が 0.5 (デフォルト設定) の場合にのみ発生します。
+ただし、左揃えのアンカーが指定されている場合は、境界で分割するために X 位置を 0 にする必要があります。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="style">
+<h2><span class="section-number">2.2.1.1.8.3. </span>Style<a class="headerlink" href="#style" title="この見出しへのパーマリンク">¶</a></h2>
+<dl class="simple">
+<dt>Font</dt><dd><p>デフォルトのフォントは Blender 独自の BMonoFont です。
+これはdatafiles/fonts、Blender インストールのフォルダーにあります 。
+[Open] ボタンをクリックすると、ファイル ブラウザ ウィンドウが表示され、おそらくシステムの Fonts ディレクトリが選択されています。
+このディレクトリは、[Preferences] &gt; [File Path] &gt; [Data] で設定されます。
+もちろん、別のフォルダーに移動することもできます。そこで、選択したテキスト ストリップの新しいフォントを選択できます。</p>
+</dd>
+</dl>
+<div class="figure align-default" id="id3">
+<img alt="Font selection preview" src="../../../../_images/video_editing_edit_montage_text-strip-fonts-preview.svg" /><p class="caption"><span class="caption-text">図3 フォント選択のプレビュー</span><a class="headerlink" href="#id3" title="この画像へのパーマリンク">¶</a></p>
+<div class="legend">
+<p>選択したフォントのプレビューを表示したい場合は、ヘッダーの [Thumbnail] ボタンをクリックします (図3)。</p>
+<p>フォント セレクターの隣に、太字と斜体の切り替えボタンがあります。</p>
+</div>
+</div>
+<dl class="simple">
+<dt>Size</dt><dd><p>テキストのサイズ。値は 0 ～ 2000 の間で変化します。
+もちろん、このサイズはフォント (Arial 12 など) のポイント サイズとは異なります。デフォルトのサイズ 60 は、ポイント サイズ 30 にほぼ対応します。</p>
+</dd>
+<dt>Color</dt><dd><p>カラー ボタンをクリックすると、標準の <a class="reference internal" href="../../color-grading/terminology/terminology.html"><span class="doc">Color Picker</span></a> が表示されます。</p>
+</dd>
+<dt>Shadow</dt><dd><p>テキストの下に指定した色の影を作成します。影の横にあるカラーセレクターを使用して、影の色と不透明度を変更できます。
+これにより、標準の <a class="reference internal" href="../../color-grading/terminology/terminology.html"><span class="doc">Color Picker</span></a> が開きます。
+影のサイズや向きは変更できません。ボックス (下記参照) と組み合わせると、素晴らしい効果が得られます。</p>
+</dd>
+<dt>Box</dt><dd><p>テキストの背景を作成して、状況によってはテキストの読みやすさと明瞭さを向上させます。
+ボックスの色と不透明度は、カラーセレクターを使用して調整できます。</p>
+</dd>
+<dt>Box Margin</dt><dd><p>ボックスの境界がフォント グリフの境界から延びる距離。距離は画像の幅の係数として測定されます。
+ただし、余白の幅がテキストの幅とどのように関係するかは明らかではありません。値がゼロの場合、当然マージンは作成されません。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="layout">
+<h2><span class="section-number">2.2.1.1.8.4. </span>Layout<a class="headerlink" href="#layout" title="この見出しへのパーマリンク">¶</a></h2>
+<dl>
+<dt>Location X, Y</dt><dd><p>値XとYを使用すると、プレビュー フレーム内にテキストを配置できます。値 (0,0) は左下を指し、(1,1) は右上を指します。
+値 (0.5, 0.5) は、テキストのアンカーをフレームの中央に設定します。したがって、最初にアンカーの配置を設定することをお勧めします (以下を参照)。</p>
+<p>Locationには 1より大きい値 を指定できます。Preview フレームの外側にテキストを効果的に書き込むことができます。
+この Location 値はアニメーション化できるため、ロールインまたはロールアウトのエフェクトを作成するのに非常に便利です。</p>
+</dd>
+<dt>Anchor X, Y</dt><dd><p>テキストの水平方向 (左、中央、右) または垂直方向 (上、中央、下) のアンカー ポイント。
+この値を使用すると、テキストを水平方向または垂直方向に配置できます。
+たとえば、位置 X &amp; Y = 0、アンカー X = 左、アンカー Y = 下とすると、テキストは左下隅に配置されます。</p>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../select.html" class="btn btn-neutral float-right" title="2.2.1.2. Select" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="mask.html" class="btn btn-neutral float-left" title="2.2.1.1.7. Mask ストリップ" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright This page is licensed under a CC-BY-SA 4.0 Int. License.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,386 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>2.2.1.1.3. Image/Image Sequence ストリップ &mdash; Blender VSE Unofficial Documentation  ドキュメント</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+    <link rel="canonical" href="https://kantas-spike.github.io/vse-docs/video_editing/edit/montage/striptypes/image.html" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../../../../genindex.html" />
+    <link rel="search" title="検索" href="../../../../search.html" />
+    <link rel="next" title="2.2.1.1.4. Clip ストリップ" href="clip.html" />
+    <link rel="prev" title="2.2.1.1.2. Sound ストリップ" href="sound.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> Blender VSE Unofficial Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../video_sequencer/index.html">1. Video Sequence Editor</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">2. Video Editing</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../setup/index.html">2.1. Setup</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">2.2. プロジェクトを編集する</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">2.2.1. Montage</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">2.2.1.1. ストリップの種類</a><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="movie.html">2.2.1.1.1. Movie ストリップ</a></li>
+<li class="toctree-l5"><a class="reference internal" href="sound.html">2.2.1.1.2. Sound ストリップ</a></li>
+<li class="toctree-l5 current"><a class="current reference internal" href="#">2.2.1.1.3. Image/Image Sequence ストリップ</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#image">2.2.1.1.3.1. Image</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#image-sequence">2.2.1.1.3.2. Image Sequence</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#options">2.2.1.1.3.3. Options</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#source">2.2.1.1.3.3.1. Source</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="clip.html">2.2.1.1.4. Clip ストリップ</a></li>
+<li class="toctree-l5"><a class="reference internal" href="scene.html">2.2.1.1.5. Scene ストリップ</a></li>
+<li class="toctree-l5"><a class="reference internal" href="color.html">2.2.1.1.6. Color ストリップ</a></li>
+<li class="toctree-l5"><a class="reference internal" href="mask.html">2.2.1.1.7. Mask ストリップ</a></li>
+<li class="toctree-l5"><a class="reference internal" href="text.html">2.2.1.1.8. Text ストリップ</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../select.html">2.2.1.2. Select</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../add.html">2.2.1.3. Add</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../copy_paste.html">2.2.1.4. Copy - Paste</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../move.html">2.2.1.5. Move</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../transform.html">2.2.1.6. Transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../remove.html">2.2.1.7. Remove/disable</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../effects/index.html">2.2.2. Effects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../color-grading/index.html">2.2.3. Color grading</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../sound/index.html">2.2.4. サウンドの編集</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/index.html">2.3. Render your project</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../extra-tools/index.html">3. 追加ツール</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Blender VSE Unofficial Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../../index.html"><span class="section-number">2. </span>Video Editing</a> &raquo;</li>
+        
+          <li><a href="../../index.html"><span class="section-number">2.2. </span>プロジェクトを編集する</a> &raquo;</li>
+        
+          <li><a href="../index.html"><span class="section-number">2.2.1. </span>Montage</a> &raquo;</li>
+        
+          <li><a href="index.html"><span class="section-number">2.2.1.1. </span>ストリップの種類</a> &raquo;</li>
+        
+      <li><span class="section-number">2.2.1.1.3. </span>Image/Image Sequence ストリップ</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../../_sources/video_editing/edit/montage/striptypes/image.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="image-image-sequence">
+<span id="bpy-types-imagesequence"></span><h1><span class="section-number">2.2.1.1.3. </span>Image/Image Sequence ストリップ<a class="headerlink" href="#image-image-sequence" title="この見出しへのパーマリンク">¶</a></h1>
+<div class="figure align-right" id="id3">
+<a class="reference internal image-reference" href="../../../../_images/vse_setup_project_striptypes_add-strips.png"><img alt="Add stips" src="../../../../_images/vse_setup_project_striptypes_add-strips.png" style="width: 180.0px; height: 308.0px;" /></a>
+<p class="caption"><span class="caption-text">図1 追加コマンド</span><a class="headerlink" href="#id3" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<p>Imageストリップ と Image Sequence ストリップは、2 つの異なるストリップ タイプです。
+ただし、タイムラインに追加するには同じコマンドが必要です (図 1 を参照)。
+画像/画像シーケンスのストリップバーのデフォルトの色は <span class="image">███</span> です。</p>
+<p>Image/Image Sequence ストリップの入力ソースは、以下の拡張子をもつ 画像ファイルまたは画像ファイルのコレクション です。
+またはのこれらの形式の詳細については、<a class="reference external" href="https://docs.blender.org/manual/en/dev/files/media/image_formats.html">graphics formats</a> を参照してください。</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">.BMP</span></code>, <code class="docutils literal notranslate"><span class="pre">.Iris</span></code>, <code class="docutils literal notranslate"><span class="pre">.PNG</span></code>, <code class="docutils literal notranslate"><span class="pre">.JPEG</span></code>, <code class="docutils literal notranslate"><span class="pre">.JPG2000</span></code>, <code class="docutils literal notranslate"><span class="pre">.targa</span></code>,
+<code class="docutils literal notranslate"><span class="pre">.cineon</span> <span class="pre">&amp;</span> <span class="pre">DPX</span></code>, <code class="docutils literal notranslate"><span class="pre">openEXR</span></code>, <code class="docutils literal notranslate"><span class="pre">Radiance</span> <span class="pre">HDR</span></code>, <code class="docutils literal notranslate"><span class="pre">.TIFF</span></code>.</p>
+</div></blockquote>
+<div class="section" id="image">
+<h2><span class="section-number">2.2.1.1.3.1. </span>Image<a class="headerlink" href="#image" title="この見出しへのパーマリンク">¶</a></h2>
+<p>通常、画像ファイルには 1 つの画像しか含まれていませんが、結果として得られる画像ストリップの長さは 25 個の同一のフレームまたは静止画になります。
+そのため、これらのストリップは映画のストリップに非常によく似ています。デフォルトの長さ 25 はハードコーディングされていますが、
+新しい Duration を入力するか、ストリップ ハンドルをドラッグすることで簡単に変更できます。</p>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>オフセットの正確な数値は、<em>still_offset_start</em> と <em>Still_offset_end</em> という2 つの非公開フィールド <a class="footnote-reference brackets" href="#f1" id="id1">1</a> に保存されます。
+説明については、 <a class="reference internal" href="../../../../extra-tools/python-useful-scripts.html"><span class="doc">Extra Tools &gt; Python &gt; Useful scripts</span></a>
+および <a class="reference internal" href="movie.html#time-panel"><span class="std std-ref">Movie strip &gt; Time panel</span></a> を参照してください。</p>
+</div>
+</div>
+<div class="section" id="image-sequence">
+<h2><span class="section-number">2.2.1.1.3.2. </span>Image Sequence<a class="headerlink" href="#image-sequence" title="この見出しへのパーマリンク">¶</a></h2>
+<p>Image Sequence ストリップの入力は、一連のグラフィック ファイル (例: 0001.png、0002.png、0003.pngなど) です。
+ほとんどの場合、これらのファイルには前の例のように番号が付けられます。
+ただし、Blender はファイル ブラウザーの並べ替え順序に基づいてシーケンスを作成するため、これは必要ありません。
+それらにa.png、b.png、およびc.pngという名前を付けることもできます。
+偶然にも、上記のファイルを逆の順序で並べ替えた場合、順序は0003.pngまたはc.pngで始まります。</p>
+<p>この Image Sequence がタイムラインに追加されると、結果のストリップが 1 つのムービーとして扱われます。
+サイドバーの <a class="reference internal" href="#image-source-panel"><span class="std std-ref">Source panel</span></a> で個々のイメージ名を取得できます。</p>
+<p>Image Sequence を作成するときに、利用可能なイメージ ファイルのすべてが存在しない場合があります。
+これで、Image ストリップを追加するときに [Use placeholders] チェックボックスを有効にすることができます。
+これにより、欠落している画像に対して空の、しかし名前が付けられたフレームを含む画像ストリップが作成されます。
+前の例で 0002.png が欠落しているとします。
+[Use placeholders] をチェックしてイメージ シーケンスを作成すると、3 つのフレームのストリップが作成されます。
+2 番目のフレームは黒で表示されますが、名前は 0002.png です。後で、このファイルを他のファイルと一緒にフォルダーに追加できます。
+このメソッドは、正しい番号が付けられたシーケンスでのみ機能します。a.png、b.png、c.pngを使用した前述の例は成功しません。</p>
+</div>
+<div class="section" id="options">
+<h2><span class="section-number">2.2.1.1.3.3. </span>Options<a class="headerlink" href="#options" title="この見出しへのパーマリンク">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>パネルは他の場所で文書化されています。</p>
+<p>次のパネルは、Movie ストリップのパネルと同じです</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="movie.html#compositing-panel"><span class="std std-ref">Compositing</span></a></p></li>
+<li><p><a class="reference internal" href="movie.html#transform-panel"><span class="std std-ref">Transform</span></a></p></li>
+<li><p><a class="reference internal" href="movie.html#crop-panel"><span class="std std-ref">Crop</span></a></p></li>
+<li><p><a class="reference internal" href="movie.html#video-panel"><span class="std std-ref">Video</span></a></p></li>
+<li><p><a class="reference internal" href="movie.html#color-panel"><span class="std std-ref">Color</span></a></p></li>
+<li><p><a class="reference internal" href="movie.html#time-panel"><span class="std std-ref">Time</span></a></p></li>
+<li><p><a class="reference internal" href="movie.html#source-panel"><span class="std std-ref">Source</span></a></p></li>
+<li><p><a class="reference internal" href="movie.html#custom-panel"><span class="std std-ref">Custom</span></a>.</p></li>
+</ul>
+</div>
+<p>ソースパネルのみに若干の変更があります。</p>
+<div class="section" id="source">
+<h3><span class="section-number">2.2.1.1.3.3.1. </span>Source<a class="headerlink" href="#source" title="この見出しへのパーマリンク">¶</a></h3>
+<div class="refbox admonition" id="image-source-panel">
+<p class="admonition-title">Reference</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 85%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Name</strong>:</p></td>
+<td><p>Source</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Context</strong>:</p></td>
+<td><p>Video Sequence Editor &gt; Sequencer</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Location</strong>:</p></td>
+<td><p>Sidebar &gt; Strip</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="figure align-right" id="id4">
+<a class="reference internal image-reference" href="../../../../_images/vse_setup_project_striptypes_panel-source-strip-image.png"><img alt="Source Property of Image Strip" src="../../../../_images/vse_setup_project_striptypes_panel-source-strip-image.png" style="width: 240.0px; height: 148.0px;" /></a>
+<p class="caption"><span class="caption-text">図2 ソース プロパティ</span><a class="headerlink" href="#id4" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<p>Moveストリップとは対照的に、Image Sequenceストリップの Source プロパティはディレクトリとファイル コンポーネントに分割されています (図2)。</p>
+<dl>
+<dt>Directory</dt><dd><p>ソースファイルが含まれるディレクトリ。画像ファイルが移動された場合、ストリップを再作成する代わりに、このフィールドを更新できます。</p>
+</dd>
+<dt>File</dt><dd><p>その特定のフレームの画像のファイル名 (例: <em>0001.png</em> )。画像シーケンス内の特定のフレームを別のフレームに置き換えたい場合は、ここで名前を変更できます。</p>
+</dd>
+<dt>Color Space</dt><dd><p><a class="reference internal" href="movie.html#source-panel"><span class="std std-ref">参照 Movie strip</span></a>.</p>
+</dd>
+<dt>Alpha</dt><dd><p>オプションは[Premultiplied]または[Straight]です。</p>
+<div class="admonition-todo admonition" id="id2">
+<p class="admonition-title">課題</p>
+<p>次のことを明確にしてください。
+このページの上部にあるほとんどのグラフィック形式は、赤、緑、青チャネルの隣に 4 番目のチャネルであるアルファ チャネルをサポートしています。顕著な例外の 1 つは JPEG です。</p>
+<p>アルファ チャネルは、透明度情報を 2 つの方法 (直接または事前乗算) のいずれかでファイルに保存します。アルファ チャネルは同じですが、カラー チャネルは異なります。</p>
+<p>ストレート (またはマットされていない) チャネルの場合、透明度情報はアルファ チャネルにのみ保存され、表示されるカラー チャネルには保存されません。ストレート チャネルの場合、ストレート チャネルをサポートするアプリケーションで画像が表示されるまで、透明度の効果は見えません。</p>
+<p>事前乗算された (またはマットされた) チャネルでは、透明度情報がアルファ チャネルに保存され、背景色と乗算される可視の RGB チャネルにも保存されます。ぼかしエッジなどの半透明領域の色は、透明度に比例して背景色に向かってシフトされます。</p>
+<p>一部のソフトウェアでは、チャンネルに事前乗算する背景色を指定できます。それ以外の場合、背景色は通常黒または白です。</p>
+<p>イメージの事前乗算 は (透明ピクセルの RGB チャネルがアルファ チャネルで乗算される)。
+ストレート は (透明ピクセルの RGB チャネルがアルファ チャネルの影響を受けない)。</p>
+</div>
+</dd>
+<dt>Change Datafile</dt><dd><p>完全な画像シーケンスを選択した画像に置き換えます。シーケンス内に元のストリップと同じ数の画像を含めることをお勧めします。元のストリップの長さは実際には変更されません。したがって、画像の数が少ない場合は最後の画像が繰り返され、画像の数が多い場合は最後の画像が切り取られます。</p>
+</dd>
+<dt>Resolution</dt><dd><p><a class="reference internal" href="movie.html#resolution"><span class="std std-ref">参照 Movie strip</span></a>.</p>
+</dd>
+</dl>
+<p class="rubric">脚注</p>
+<dl class="footnote brackets">
+<dt class="label" id="f1"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>Blender3.2以降では、 <em>frame_still_start</em> と <em>frame_still_end</em> ではなく、 <em>frame_offset_start</em> と <em>frame_offset_end</em> の負値で表現します。</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="clip.html" class="btn btn-neutral float-right" title="2.2.1.1.4. Clip ストリップ" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="sound.html" class="btn btn-neutral float-left" title="2.2.1.1.2. Sound ストリップ" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright This page is licensed under a CC-BY-SA 4.0 Int. License.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

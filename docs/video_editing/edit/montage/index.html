@@ -1,0 +1,258 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>2.2.1. Montage &mdash; Blender VSE Unofficial Documentation  ドキュメント</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+    <link rel="canonical" href="https://kantas-spike.github.io/vse-docs/video_editing/edit/montage/index.html" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="検索" href="../../../search.html" />
+    <link rel="next" title="2.2.1.1. ストリップの種類" href="striptypes/index.html" />
+    <link rel="prev" title="2.2. プロジェクトを編集する" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Blender VSE Unofficial Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../video_sequencer/index.html">1. Video Sequence Editor</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">2. Video Editing</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../setup/index.html">2.1. Setup</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">2.2. プロジェクトを編集する</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">2.2.1. Montage</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="striptypes/index.html">2.2.1.1. ストリップの種類</a></li>
+<li class="toctree-l4"><a class="reference internal" href="select.html">2.2.1.2. Select</a></li>
+<li class="toctree-l4"><a class="reference internal" href="add.html">2.2.1.3. Add</a></li>
+<li class="toctree-l4"><a class="reference internal" href="copy_paste.html">2.2.1.4. Copy - Paste</a></li>
+<li class="toctree-l4"><a class="reference internal" href="move.html">2.2.1.5. Move</a></li>
+<li class="toctree-l4"><a class="reference internal" href="transform.html">2.2.1.6. Transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="remove.html">2.2.1.7. Remove/disable</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../effects/index.html">2.2.2. Effects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../color-grading/index.html">2.2.3. Color grading</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../sound/index.html">2.2.4. サウンドの編集</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/index.html">2.3. Render your project</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../extra-tools/index.html">3. 追加ツール</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender VSE Unofficial Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html"><span class="section-number">2. </span>Video Editing</a> &raquo;</li>
+        
+          <li><a href="../index.html"><span class="section-number">2.2. </span>プロジェクトを編集する</a> &raquo;</li>
+        
+      <li><span class="section-number">2.2.1. </span>Montage</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/video_editing/edit/montage/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="montage">
+<h1><span class="section-number">2.2.1. </span>Montage<a class="headerlink" href="#montage" title="この見出しへのパーマリンク">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<p>モンタージュは、個別のクリップ (ビデオ、オーディオ、テキスト、エフェクト) を一貫したシーケンスに組み立てる手法です。モンタージュの重要性は、1910 年代と 1920 年代にロシアの映画監督レフ クレショフによって初めて実証されました。有名なのはクレショフ効果です。視聴者は、単独の 1 つのショットよりも 2 つの連続したショットの相互作用からより多くの意味を引き出します (素敵な図については、 <a class="reference external" href="https://en.wikipedia.org/wiki/Kuleshov_effect">Wikipedia article</a> を参照してください)。</p>
+<p>明らかに、タイムラインを組み立てる際に最初に行うことは、ストリップをインポートまたは追加することです。これを行うにはいくつかの方法があり、それぞれに独自の長所と短所があります。</p>
+<p>ストリップで何かを行う前に、ストリップを選択する必要があります。ストリップを選択するには複数の方法があります。</p>
+<p>ストリップは、時間内を (X 軸の左から右) または表示スタック内 (Y 軸の下から上) を移動できます。</p>
+<p>ストリップを分割またはカットすると、ストリップの 2 つの部分 (分割位置の前と後) が作成されます。スプリットとホールド スプリットの 2 つのバリエーションがあります。</p>
+<p>トリミングとは、ビデオの先頭または末尾の一部を削除または追加するプロセスです。これにより、ビデオの長さが増減します。</p>
+<p>グループ化とは、複数のストリップをグループ化するメタ ストリップの作成です。</p>
+<div class="admonition hint">
+<p class="admonition-title">ヒント</p>
+<p>優れたモンタージュを作成するには時間のかかるプロセスです。したがって、すべての基本操作 (追加、分割、トリムなど) には、関連付けられたショートカットがあります。メニューやマウスを使用しても同じ結果が得られる場合でも、これらのショートカットを学ぶことは有益です。</p>
+<p>特定のキー (例: 削除の X) の選択は、操作の意味だけでなく、標準 (Qwerty) キーボードの左手でショートカットを簡単に実行できる必要があるという事実にも影響を受けています。したがって、削除に推奨されるショートカットは、<kbd class="kbd docutils literal notranslate">Delete</kbd>  キー (ほとんどのキーボードの右側にあります) ではなく、<kbd class="kbd docutils literal notranslate">X</kbd> キーです。</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="striptypes/index.html" class="btn btn-neutral float-right" title="2.2.1.1. ストリップの種類" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../index.html" class="btn btn-neutral float-left" title="2.2. プロジェクトを編集する" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright This page is licensed under a CC-BY-SA 4.0 Int. License.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

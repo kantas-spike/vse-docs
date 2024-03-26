@@ -1,0 +1,503 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>1.1.1. Header &mdash; Blender VSE Unofficial Documentation  ドキュメント</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+    <link rel="canonical" href="https://kantas-spike.github.io/vse-docs/video_sequencer/sequencer/header.html" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="1.1.2. タイムライン" href="timeline.html" />
+    <link rel="prev" title="1.1. Sequencer" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Blender VSE Unofficial Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">1. Video Sequence Editor</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">1.1. Sequencer</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">1.1.1. Header</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#type-selector">1.1.1.1. Type Selector ボタン</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id1">1.1.1.2. メニューバー</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#view">1.1.1.2.1. View メニュー</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#select-marker-add-strip">1.1.1.2.2. Select - Marker - Add - Strip メニュー</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#overlap">1.1.1.3. Overlap ドロップダウン</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#snapping">1.1.1.4. Snapping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#show-overlay">1.1.1.5. Show Overlay ボタン</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="timeline.html">1.1.2. タイムライン</a></li>
+<li class="toctree-l3"><a class="reference internal" href="toolbar.html">1.1.3. Toolbar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sidebar.html">1.1.4. Sidebar</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../preview/index.html">1.2. Preview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sequencer_and_preview/index.html">1.3. Sequencer &amp; Preview</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">2. Video Editing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extra-tools/index.html">3. 追加ツール</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blender VSE Unofficial Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html"><span class="section-number">1. </span>Video Sequence Editor</a> &raquo;</li>
+        
+          <li><a href="index.html"><span class="section-number">1.1. </span>Sequencer</a> &raquo;</li>
+        
+      <li><span class="section-number">1.1.1. </span>Header</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/video_sequencer/sequencer/header.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="header">
+<h1><span class="section-number">1.1.1. </span>Header<a class="headerlink" href="#header" title="この見出しへのパーマリンク">¶</a></h1>
+<p>VSEの Header はデフォルトでは、エディターの最上部に配置されます。ヘッダー上で <kbd class="kbd docutils literal notranslate">RMB</kbd> をクリックすることで、コンテキストメニューからヘッダーを最下部に配置することもできます。利用可能なオプションの詳細は、 <a class="reference external" href="https://docs.blender.org/manual/en/dev/interface/window_system/regions.html#header">Header &gt; Context menu</a> を参照してください。</p>
+<p>Headerには3つの領域があります。</p>
+<div class="section" id="type-selector">
+<h2><span class="section-number">1.1.1.1. </span>Type Selector ボタン<a class="headerlink" href="#type-selector" title="この見出しへのパーマリンク">¶</a></h2>
+<p>左側の領域は Editor Type Selecto と View Type Selector を持ちます(図1)。
+名前が示すように、Editor Type Selectorを使用して、エディター全体を、別のタイプのエディター(例えば Compositor)に切替えることができます。
+View Type Selectorを使うと、特定のビュー(Sequencer、Preview、Sequencer/Preview)を選択できます。選択されたビューのタイプによって、多少内容が異なるHeaderが表示されます。</p>
+</div>
+<div class="section" id="id1">
+<h2><span class="section-number">1.1.1.2. </span>メニューバー<a class="headerlink" href="#id1" title="この見出しへのパーマリンク">¶</a></h2>
+<p>中央の領域はメニューバーを持ちます。この場合も、メニューはコンテキストメニューを使って、表示・非表示を切替えれます。
+図1は、メニューの下に、展開されたメニュー項目を合せて表示しています。</p>
+<div class="figure align-default" id="id14">
+<img alt="Header Sequencer" src="../../_images/editors_vse_header-sequencer.svg" /><p class="caption"><span class="caption-text">図1: パネルが展開されたSequencerビューのHeader</span><a class="headerlink" href="#id14" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<p>[Select], [Marker], [Add] と [Strip] メニューは、一般的な動画編集ワークフローの中で登場する時に、以降のセクションや Video Editingの章で説明します。
+[View] メニューは、Sequencerの操作に特有の多くの項目を含むため、ここで説明します。</p>
+<div class="section" id="view">
+<h3><span class="section-number">1.1.1.2.1. </span>View メニュー<a class="headerlink" href="#view" title="この見出しへのパーマリンク">¶</a></h3>
+<p>Sequencerの[View]メニューのすべてのサブメニューの概要は、図1(左下のパネル)を参照してください 。</p>
+<dl class="simple">
+<dt>Sidebar <kbd class="kbd docutils literal notranslate">N</kbd></dt><dd><p>Sidebarを表示・非表示します。ショートカットキー <kbd class="kbd docutils literal notranslate">N</kbd> か Sidebarボタン(図１)を使って、表示・非表示を切替えれます。
+Sidebarは Sequenceer の右側に表示され、アクティブストリップの全てのプロパティーが表示されます。
+アクティブストリップは選択されたストリップである <em>必要はない</em> ことに注意してください (参照 <a class="reference internal" href="../../video_editing/edit/montage/select.html#video-editing-edit-timeline-select"><span class="std std-ref">Selecting</span></a>)。
+様々なストリップのタイプの全プロパティーの詳細については、 <a class="reference internal" href="../../video_editing/edit/montage/striptypes/index.html#striptypes"><span class="std std-ref">Video Editing</span></a> セクションを参照してください。</p>
+</dd>
+<dt>Tool Settings</dt><dd><p>Tool Settings (メニューバーの下に配置) を表示・非表示します。 Tool Settings は 主にToolbar (<kbd class="kbd docutils literal notranslate">T</kbd>)と組合せて使用します。
+例えば、ToolbarでBladeツールを選択した場合、Tool Settingsで Bladeツールのカット方式を <em>Soft</em> と <em>Hard</em> から選択できます。</p>
+</dd>
+</dl>
+<div class="figure align-right">
+<a class="reference internal image-reference" href="../../_images/editors_vse_header_toolbar-generic.png"><img alt="Toolbar" src="../../_images/editors_vse_header_toolbar-generic.png" style="width: 52.0px; height: 85.60000000000001px;" /></a>
+</div>
+<dl class="simple">
+<dt>Toolbar <kbd class="kbd docutils literal notranslate">T</kbd></dt><dd><p>Toolbar を表示・非表示します。ショートカットキー <kbd class="kbd docutils literal notranslate">T</kbd> か Toolbarボタン(図1)を使って、表示・非表示を切替えれます。
+SequncerのToolbarは、かなり簡素で役に立ちません。これには、選択ツールとBladeツールのみ含まれます。</p>
+</dd>
+</dl>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>どちらの汎用ツールも上手く機能しないようです。例えば、<a class="reference external" href="https://github.com/zeograd/VSE_Transform_Tools">VSE Transform Tools</a> のような一部のアドオンは、Toolbarを有効に活用します。 <a class="footnote-reference brackets" href="#f1" id="id2">1</a></p>
+</div>
+<dl>
+<dt>Adjust Last Operation</dt><dd><p>有効にした場合、最後に完了した操作のプロパティーを変更するためのポップアップパネルを表示します。
+一般的な背景情報については、<a class="reference external" href="https://docs.blender.org/manual/en/dev/interface/undo_redo.html#bpy-ops-screen-redo-last" title="(in Blender 4.2 Manual v4.2)"><span>Adjust Last Operation</span></a> を参照してください。</p>
+<p>例えば、ストリップの複製オペレーションを実施後に、複製したストリップの水平(開始フレーム)・垂直(チャンネル)オフセットを変更できます。また、ストリップのカットオペレーションを実施後に、カット方式を変更できます(図3)。</p>
+<div class="figure align-default" id="id15">
+<img alt="Adjust Last Operation" src="../../_images/editors_vse_header_adjust_last_operation.svg" /><p class="caption"><span class="caption-text">図3: Adjust Last Operationの例</span><a class="headerlink" href="#id15" title="この画像へのパーマリンク">¶</a></p>
+</div>
+</dd>
+<dt>Preview as Backdrop</dt><dd><p>現在のフレームをSequencerの背景として表示します。(<a class="reference external" href="https://docs.blender.org/manual/en/dev/editors/compositor.html">Compositor</a> と同じです) この背景プレビューは、プレイヘッドを移動すると更新されます。</p>
+<p>もちろん、大量のストリップがSequencerに配置されている場合、背景画像の大部分は隠されてしまいますが、
+<a class="reference internal" href="zoom.html#sequencer-full-view"><span class="std std-ref">Sequencer in Full View</span></a> で表示した場合、背景へのプレビューは、別のモニターに Preview画面を表示する変わりに使用できます。</p>
+<div class="figure align-default" id="id16">
+<img alt="Backdrop" src="../../_images/editors_vse_header_backdrop.png" />
+<p class="caption"><span class="caption-text">図4: Sequencer内のムービーの背景プレビュー</span><a class="headerlink" href="#id16" title="この画像へのパーマリンク">¶</a></p>
+</div>
+</dd>
+<dt>Frame Selected - Frame All - Zoom</dt><dd><p>これらのメニュー項目は全て、Sequencer画面のズームインまたはズームアウトに関するものです。
+このトピックは(全てのショートカットキーも含め)、 <a class="reference internal" href="zoom.html"><span class="doc">Zoom</span></a> セクションで詳しく説明されています。</p>
+</dd>
+</dl>
+<dl id="bpy-ops-sequencer-refresh-all">
+<dt>Refresh All</dt><dd><p>click the <em>Refresh All</em> button. Blender will update and synchronize all cached images and compute the current frame.</p>
+<p>Blenderに強制的にファイルを再読み込みさせたり、強制的にシーンストリップを再描画させる場合は、 <em>[Refresh All]</em> ボタンをクリックします。 Blenderはキャッシュされた全ての画像を更新・同期し、現在のフレームを処理します。</p>
+<p>再生中に予期しない glitch(不具合) が発生した場合は、キャッシュが更新されない場合があるため、 <em>[Refresh All]</em> する必要があります。</p>
+<p>例えば、Sequencerにシーンストリップ(参照 <a class="reference internal" href="../../video_editing/edit/montage/striptypes/index.html#striptypes"><span class="std std-ref">Strip types</span></a>)があるとします。
+もととなるシーンでなにかを変更しても(例えば、オブジェクトを回転するなど)、Squencerはキャッシュを更新しません。
+Sequencerでは、オブジェクトが回転されることなく表示されます。
+プレイヘッドを動かすとキャッシュは更新されますが、一度に統べてのキャッシュが更新されるわけではありません。</p>
+<p>これにより、glitches(キャッシュ内のいくつかのフレームは更新され、それ以外は更新されない状態)が発生します。
+この場合、[Refresh All] ボタンを使うと良いでしょう。キャッシュが無効になり、キャッシュが再構築されます。</p>
+<p>別のユースケースは、追加した画像を後で外部プログラムで変更した場合です。
+Belnderはこのような変更を知ることができません。
+そのため、画像を再読み込みしてキャッシュを更新する必要があります。</p>
+<p>マウスポインタが正しい領域(ここでは、Sequencerタイムライン)上にある必要があることに注意してください。 <a class="footnote-reference brackets" href="#f2" id="id3">2</a></p>
+</dd>
+<dt>Navigation</dt><dd><p>タイムラインを移動するには、プレイヘッドを移動します。[Navigation] サブメニューは <a class="reference internal" href="navigate.html"><span class="doc">Navigate</span></a> セクションで詳しく説明します。</p>
+</dd>
+</dl>
+<div class="figure align-right" id="id17">
+<a class="reference internal image-reference" href="../../_images/editors_vse_header_menu-range.png"><img alt="Menu Range" src="../../_images/editors_vse_header_menu-range.png" style="width: 220.79999999999998px; height: 123.0px;" /></a>
+<p class="caption"><span class="caption-text">図5: Range サブメニュー</span><a class="headerlink" href="#id17" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<dl>
+<dt>Range</dt><dd><p>The first three menu items (see figure 5) will change the <em>Preview Range</em> or <em>Playback Range</em>. The last three menu items are meant to set the <em>Render Range</em>.</p>
+<p>[Range] メニューを使うと、どのフレームをプレビューまたはレンダリングするのかを指定できます <a class="footnote-reference brackets" href="#f3" id="id4">3</a>。
+最初の3つのメニュー項目(図5)は <em>Preview Range</em> や <em>Playback Range</em> を変更します。
+最後の3つのメニュー項目は、<em>Render Range</em> を設定するためのものです。</p>
+<dl>
+<dt>Set Preview Range <kbd class="kbd docutils literal notranslate">P</kbd></dt><dd><p>プレビューやプレイバックに使用する範囲を対話的に定義します。このメニューを選択すると、十字カーソルが表示されます。このカーソルを使って、プレビューしたいフレームの範囲を、ドラッグしてボックス選択します。
+Sequencer領域内のどこにでもドラッグして選択できます。
+選択された Preview Range は通常の黒色で表示されます。 Preview Rangeの範囲外のフレームは茶色で表示されます(図6)。</p>
+<p>この Preview Range は Render Rangeにまったく影響しません。どちらも独立して存在できます。</p>
+</dd>
+<dt>Set Preview Range to Strips</dt><dd><p>Preview Rangeを、選択されたストリップの範囲に設定します。</p>
+</dd>
+<dt>Clear Preview Range (Shortcut: <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">P</kbd></kbd>)</dt><dd><p>Sequencer領域内の任意の場所で、<kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">P</kbd></kbd> を押すと、Preview Rangeがクリアされます。
+Preview Rangeが定義されていない場合は、Render Range がplaybackやpreviewに使用されます。</p>
+</dd>
+</dl>
+<div class="figure align-default" id="id18">
+<img alt="Preview &amp; Render Range" src="../../_images/editors_vse_header-menu-range.svg" /><p class="caption"><span class="caption-text">図6: Preview Range と Render Range</span><a class="headerlink" href="#id18" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<p>Render Range は通常、プロジェクトのSetupフェーズ (参照 <a class="reference internal" href="../../video_editing/setup/project-settings.html"><span class="doc">Project Settings</span></a>) で設定されます。Render Range は、様々エディター(<a class="reference external" href="https://docs.blender.org/manual/en/dev/render/output/properties/dimensions.html">Properties</a> や <a class="reference external" href="https://docs.blender.org/manual/en/dev/editors/timeline.html">Timeline</a> )で設定することもできます。</p>
+<dl class="simple">
+<dt>Set Start Frame <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">Home</kbd></kbd></dt><dd><p>Render Rangeの開始位置を現在のPlayheadの位置に設定します。</p>
+</dd>
+<dt>Set End Frame <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">End</kbd></kbd></dt><dd><p>Render Rangeの終了位置を現在のPlayheadの位置に設定します。</p>
+</dd>
+<dt>Set Frame Range to Strips</dt><dd><p>Render Rangeを選択したストリップの範囲に設定します。</p>
+</dd>
+</dl>
+</dd>
+<dt>Sync Visible Range</dt><dd><p>VSEは時間ベースのエディターです。そして、Dope Sheet や Graph Editor、Timeline も同様です。アニメーションの微調整には、よくGraph Editorが利用されます。そのため、これら2つのエディターは、同期して動作する必要があります。</p>
+<p>Playhead は、常にエディター間で同期しています。PlayheadがSequencerの15フレーム目にある場合、Graph Editorでも15フレーム目にあります。
+しかし、表示範囲はデフォルトでは同期しません。そのため、Sequencerで15から150フレームの範囲を表示し、Graph Editerではまったく異なる表示範囲が表示することができます。</p>
+<p>場合によっては、表示範囲を同期することで、役に立つことがあります。Sequencerでズームインすると、同様にGraph Editorでもズームインされます。そのためには、このオプションを有効にする必要があります。 <a class="footnote-reference brackets" href="#f4" id="id5">4</a></p>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>現在のところ、エディターのサイドパネル(ショートカット N や Tで開く、SidebarやToolbar)を開くと、サイドパネルのサイズに応じて、表示範囲が縮小または格段します。これは、'Region Overlap' ([Preferences] &gt; [Interface] &gt; [Editors] &gt; [Region Overlap] &gt; [Enabled])を有効にしても発生するため、[Sync Visible Range]オプションは役に立たなくなります。</p>
+</div>
+<div class="admonition-todo admonition" id="id7">
+<p class="admonition-title">課題</p>
+<p>このオプションの意味のある例を教えてください。 <a class="footnote-reference brackets" href="#f5" id="id6">5</a></p>
+</div>
+</dd>
+<dt>Show Seconds <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">T</kbd></kbd></dt><dd><p>デフォルトでは、タイムラインの単位はいわゆる SMTEタイムコードです。例えば、12+08は、12秒と8フレーム後の時刻になります。このオプションを無効にすると、タイムラインはフレーム単位で表示されます(図7)。</p>
+<div class="figure align-default" id="id19">
+<img alt="Menu Show Seconds" src="../../_images/editors_vse_header-menu-show-seconds.svg" /><p class="caption"><span class="caption-text">図7: [Show Seconds]オプションの有効/無効</span><a class="headerlink" href="#id19" title="この画像へのパーマリンク">¶</a></p>
+</div>
+</dd>
+<dt>Show Markers</dt><dd><p>このオプションはデフォルトで有効に設定されています。このオプションはマーカー領域(図8)を表示します。
+無効の場合は、マーカー領域だけでなく、[Marker]メニューも非表示になります。そして、マーカー関連操作(追加、削除など)がこのエディター内で利用できなくなります。</p>
+<p>マーカーの使用については、<a class="reference internal" href="navigate.html#using-markers"><span class="std std-ref">マーカーの使用</span></a> で詳細を説明する。</p>
+<div class="figure align-default" id="id20">
+<img alt="Show Markers" src="../../_images/editors_vse_header-menu-show-markers.svg" /><p class="caption"><span class="caption-text">図8: 3つのマーカーがあるマーカー領域</span><a class="headerlink" href="#id20" title="この画像へのパーマリンク">¶</a></p>
+</div>
+</dd>
+</dl>
+<dl id="bpy-types-sequenceeditor-show-cache">
+<dt>Show Cache, Sequence Render Image, Sequence Render Animation, Export Subtitles</dt><dd><ul class="simple">
+<li><p>キャッシュは Video Editing &gt; Setup &gt; Environment &gt; Proxies &amp; Cache セクションで説明します。</p></li>
+</ul>
+<ul class="simple">
+<li><p>Rendering は Video Editing &gt; Render セクションで説明します。</p></li>
+</ul>
+<ul class="simple">
+<li><p>Subtitles は Video Editing &gt; Edit &gt; Sound で説明します。</p></li>
+</ul>
+<div class="admonition-todo admonition" id="id8">
+<p class="admonition-title">課題</p>
+<p>それらのセクションへのリンクを追加する。</p>
+</div>
+</dd>
+<dt>Toggle Sequencer/Preview <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">Tab</kbd></kbd></dt><dd><p>エディターの表示タイプを Sequencer とPreview の間で切替えます。ショートカットキー <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">Tab</kbd></kbd> を使うと、これらの2つのビューを素早く切替えることができます。
+このコマンドは、Sequencerをフル表示している編集している場合、特に便利です。</p>
+</dd>
+<dt>Area</dt><dd><p>このメニューを使用すると、Sequencerが占める領域を再定義できます。全てのオプションは、<a class="reference external" href="https://docs.blender.org/manual/en/dev/interface/window_system/areas.html?highlight=area">user interface section</a> で詳しく説明されています。</p>
+<p><a class="reference external" href="https://docs.blender.org/manual/en/dev/interface/window_system/areas.html?highlight=area">https://docs.blender.org/manual/en/dev/interface/window_system/areas.html?highlight=area</a></p>
+</dd>
+</dl>
+</div>
+<div class="section" id="select-marker-add-strip">
+<h3><span class="section-number">1.1.1.2.2. </span>Select - Marker - Add - Strip メニュー<a class="headerlink" href="#select-marker-add-strip" title="この見出しへのパーマリンク">¶</a></h3>
+<p>[Select]、[Marker]、[Add]、[Strip]メニューは、一般的な動画編集ワークフローの中で登場する時に、以降のセクションや Video Editingの章で説明します。</p>
+</div>
+</div>
+<div class="section" id="overlap">
+<h2><span class="section-number">1.1.1.3. </span>Overlap ドロップダウン<a class="headerlink" href="#overlap" title="この見出しへのパーマリンク">¶</a></h2>
+<p>Sequencerのストリップを移動する場合、他のストリップの上にドロップできます。Overlapドロップダウンを使うと、移動後のストリップの重なりを解決する方法を指定できます。
+使用可能なオプションは、[Shuffle]、[Overwrite]と[Expand]です。<a class="reference internal" href="../../video_editing/edit/montage/move.html"><span class="doc">video editing &gt; montage &gt; move</span></a> で詳細を説明しています。</p>
+</div>
+<div class="section" id="snapping">
+<h2><span class="section-number">1.1.1.4. </span>Snapping<a class="headerlink" href="#snapping" title="この見出しへのパーマリンク">¶</a></h2>
+<p>Snappingオプションを有効にした場合、Sequencer内のストリップを移動すると、他のストリップ(またはPlayhead)の境界にストリップがスナップ <a class="footnote-reference brackets" href="#f6" id="id9">6</a> されます。
+移動するストリップが、他のストリップの境界近くにある場合、細い白線が表示されます。Snappingドロップダウンを使うと、いくつかの特別のオプションを有効にできます(例えば、サウンドストリップは無視するなど)。
+詳細については、<a class="reference internal" href="../../video_editing/edit/montage/move.html"><span class="doc">video editing &gt; montage &gt; move</span></a> を参照してください。</p>
+</div>
+<div class="section" id="show-overlay">
+<h2><span class="section-number">1.1.1.5. </span>Show Overlay ボタン<a class="headerlink" href="#show-overlay" title="この見出しへのパーマリンク">¶</a></h2>
+<p>ヘッダーの右端に、[Show Overlay]ボタンがあります(図9)。
+:kbd:<a href="#id10"><span class="problematic" id="id11">`</span></a>LMB - クリック`で、オーバーレイの表示を、完全に有効するか有効にするかを切替えれます。
+また、ドロップダウンを表示し、一部オプションの有効無効を切替えることもできます。</p>
+<p>ドロップダウンのパネルには、デフォルトでは、[Name]、[Source]、[Duration]、[Color Tags]、[F-Curves]、[Gird]と[Waveform Display]が設定されているようです。<a class="footnote-reference brackets" href="#f7" id="id12">7</a></p>
+<div class="figure align-right" id="id21">
+<a class="reference internal image-reference" href="../../_images/editors_vse_header_preview-overlays.png"><img alt="Preview Overlays" src="../../_images/editors_vse_header_preview-overlays.png" style="width: 185.5px; height: 318.5px;" /></a>
+<p class="caption"><span class="caption-text">図9: Preview Overlays</span><a class="headerlink" href="#id21" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<dl>
+<dt>Name</dt><dd><p>このオプションを有効にするとストリップバーの上部にストリップの名前が表示されます。ストリップの先頭に左揃えで表示されます。ストリップの名前はストリップのプロパティーで設定されます。</p>
+</dd>
+<dt>Source</dt><dd><p>このオプションを使うと、ストリップのソースファイル名とパスを表示できます。ソースは、<a class="reference internal" href="../../video_editing/edit/montage/striptypes/movie.html#source-panel"><span class="std std-ref">Source panel</span></a> で設定されます。</p>
+</dd>
+<dt>Duration</dt><dd><p>このオプションを使うと、ストリップの長さ(Duration)が表示されます。Durationには常にフレーム数が設定されます。Durationは複数の方法で設定できます。Durationの数値は <a class="reference internal" href="../../video_editing/edit/montage/striptypes/movie.html#time-panel"><span class="std std-ref">Time panel</span></a> で利用できます。</p>
+</dd>
+<dt>Color Tags</dt><dd><p>[Color Tags]オプションを選択すると、ストリップのプロパティーパネル(図10)で選択した色が表示されます。デフォルトカラーはPreferenceで設定されます。参照: <a class="reference internal" href="../../video_editing/edit/montage/striptypes/index.html"><span class="doc">Strip types</span></a></p>
+<div class="figure align-default" id="id22">
+<img alt="Color tags" src="../../_images/editors_vse_header-sequencer_color_tag.svg" /><p class="caption"><span class="caption-text">図10: Color Tags</span><a class="headerlink" href="#id22" title="この画像へのパーマリンク">¶</a></p>
+</div>
+</dd>
+<dt>Offsets</dt><dd><p>分割したストリップを作成するとそのオフセットフィールドの値を取得されます。このオプションを使うと、細い青色のバーでオフセットの値を視覚化します。<a class="footnote-reference brackets" href="#f8" id="id13">8</a>
+ストリップの開始オフセットと終了オフセットのみ表示できます。参照: <a class="reference internal" href="../../video_editing/edit/montage/transform.html"><span class="doc">text on splitting</span></a></p>
+</dd>
+<dt>F-curves</dt><dd><p>アニメーション化する時、例えばフェード効果を追加時、F-curveが作成されます。実際、ストリップのOpacityプロパティーをアニメーション化しています。
+このオプションを使うと、F-curveを視覚化できます。</p>
+<div class="figure align-default">
+<a class="reference internal image-reference" href="../../_images/editors_vse_header-F-curves.svg"><img alt="F-curves" height="103" src="../../_images/editors_vse_header-F-curves.svg" width="451" /></a>
+</div>
+<p>図11: F-curves</p>
+</dd>
+<dt>Thumbnails</dt><dd><p>MovieやImage Sequence、Imageストリップについては、サムネイルを表示できます。
+図12の例では、ストリップには30フレームあります。各フレームは青色の背景に黄色のフレーム番号が表示されます。
+サムネイルを表示するためには、[Thumbnails]オプションを有効にし、かつストリップバーの高さが十分である必要があります。
+認識できるようにするには、サムネイルチャンネルは少なくとも約92ピクセルが必要です(図12 一番下のストリップ)。</p>
+<p>サムネイルの幅は実際の画像のアスペクト比に応じて計算されます。図12 では、ストリップの高さも変更されていないため、左側のストリップの幅はズーム レベル全体で変化しません。
+ただし、右上のストリップでは、高さははるかに大きいため、幅も大きくなります。</p>
+<div class="figure align-default">
+<a class="reference internal image-reference" href="../../_images/editors_vse_sequencer_timeline_sequencer_thumbnails.svg"><img alt="Thumbnails" height="720" src="../../_images/editors_vse_sequencer_timeline_sequencer_thumbnails.svg" width="1191" /></a>
+</div>
+<p>図12: 異なるズームレベルのThumbnails</p>
+<p>サムネイルの数は、サムネイルのサイズ (上記を参照) とストリップの長さ (ズーム レベルに応じて異なります) によって異なります。ストリップの最初のフレームは常にサムネイルとして表示されます。</p>
+<p>サムネイルは、別のスレッドを使用してソース ファイルからロードされ、キャッシュに保存されます。キャッシュ容量は 5000 サムネイルに制限されており、制限に達すると表示されない画像のクリーンアップが実行されます。</p>
+</dd>
+<dt>Grid</dt><dd><p>有効にすると、 nフレームごとに細い黒色の垂直線がシーケンサーに表示されます。フレーム数はズーム レベルによって異なりますが、(十分にズームアウトした場合) 1000 フレームごとに開始され、500、200、100、50、20、15、10、5 とズームインしながら減少し、最終的には 2 フレームごとに停止します。 このグリッドは、タイムライン内のストリップの位置を認識するための視覚的な補助です。</p>
+</dd>
+<dt>Waveform Display</dt><dd><p>図9 では、このオプションはすでに設定されています。ストリップ オプションをオーバーライドして、ストリップ バーにサウンド ストリップの波形を表示する (波形オン) か表示しない (波形オフ) かを選択できます。ストリップ オプションは、<a class="reference internal" href="../../video_editing/edit/montage/striptypes/sound.html"><span class="doc">Sound</span></a> のSoundプロパティで設定します。</p>
+</dd>
+</dl>
+<p class="rubric">脚注</p>
+<dl class="footnote brackets">
+<dt class="label" id="f1"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
+<dd><p>(訳注) このアドオンのリポジトリを見ると、最終コミットは3年前なのでメンテナンスされていないため、利用しないほうが良さそうです。 <em>TODO</em>: SequencerのToolbarに良いツールを追加できるアドオンを探す</p>
+</dd>
+<dt class="label" id="f2"><span class="brackets"><a class="fn-backref" href="#id3">2</a></span></dt>
+<dd><p>(訳注) メニューで [Refresh All] する場合は必ずマウスポインタはSequencer内にあるため、ショートカットキーで [Refresh All] する場合の注意だと思われます。</p>
+</dd>
+<dt class="label" id="f3"><span class="brackets"><a class="fn-backref" href="#id4">3</a></span></dt>
+<dd><p>(訳注) 処理対象とするフレームの範囲を指定できます</p>
+</dd>
+<dt class="label" id="f4"><span class="brackets"><a class="fn-backref" href="#id5">4</a></span></dt>
+<dd><p>(訳注) Sequencer と Graph Editorを同期させる場合、その両方の[Sync Visible Range]を有効にする必要があるようです。どちらか一方では同期しません。</p>
+</dd>
+<dt class="label" id="f5"><span class="brackets"><a class="fn-backref" href="#id6">5</a></span></dt>
+<dd><p>(訳注) 厳密な表示範囲の同期ではなく、ざっくりした表示範囲の同期になります。それでも、いくつかのマーカー間で頻繁にPlayheadを動かして、アニメーションを調整する場合は便利かもしれません。</p>
+</dd>
+<dt class="label" id="f6"><span class="brackets"><a class="fn-backref" href="#id9">6</a></span></dt>
+<dd><p>(訳注) スナップとは吸着するように動作することだそうです。</p>
+</dd>
+<dt class="label" id="f7"><span class="brackets"><a class="fn-backref" href="#id12">7</a></span></dt>
+<dd><p>(訳注) 本文の内容がBlender4.0とあっていないため、訳者が修正・追記しました。</p>
+</dd>
+<dt class="label" id="f8"><span class="brackets"><a class="fn-backref" href="#id13">8</a></span></dt>
+<dd><p>(訳注) MovieやSoundストリップなどStrip Offsetを持つストリップのみ対象になるようです。</p>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="timeline.html" class="btn btn-neutral float-right" title="1.1.2. タイムライン" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="index.html" class="btn btn-neutral float-left" title="1.1. Sequencer" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright This page is licensed under a CC-BY-SA 4.0 Int. License.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

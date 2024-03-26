@@ -1,0 +1,417 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>2.2.1.1.2. Sound ストリップ &mdash; Blender VSE Unofficial Documentation  ドキュメント</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+    <link rel="canonical" href="https://kantas-spike.github.io/vse-docs/video_editing/edit/montage/striptypes/sound.html" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../../../../genindex.html" />
+    <link rel="search" title="検索" href="../../../../search.html" />
+    <link rel="next" title="2.2.1.1.3. Image/Image Sequence ストリップ" href="image.html" />
+    <link rel="prev" title="2.2.1.1.1. Movie ストリップ" href="movie.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> Blender VSE Unofficial Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../video_sequencer/index.html">1. Video Sequence Editor</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">2. Video Editing</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../setup/index.html">2.1. Setup</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">2.2. プロジェクトを編集する</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">2.2.1. Montage</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">2.2.1.1. ストリップの種類</a><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="movie.html">2.2.1.1.1. Movie ストリップ</a></li>
+<li class="toctree-l5 current"><a class="current reference internal" href="#">2.2.1.1.2. Sound ストリップ</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#options">2.2.1.1.2.1. Options</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#id1">2.2.1.1.2.1.1. Sound</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#source">2.2.1.1.2.1.2. Source</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="image.html">2.2.1.1.3. Image/Image Sequence ストリップ</a></li>
+<li class="toctree-l5"><a class="reference internal" href="clip.html">2.2.1.1.4. Clip ストリップ</a></li>
+<li class="toctree-l5"><a class="reference internal" href="scene.html">2.2.1.1.5. Scene ストリップ</a></li>
+<li class="toctree-l5"><a class="reference internal" href="color.html">2.2.1.1.6. Color ストリップ</a></li>
+<li class="toctree-l5"><a class="reference internal" href="mask.html">2.2.1.1.7. Mask ストリップ</a></li>
+<li class="toctree-l5"><a class="reference internal" href="text.html">2.2.1.1.8. Text ストリップ</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../select.html">2.2.1.2. Select</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../add.html">2.2.1.3. Add</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../copy_paste.html">2.2.1.4. Copy - Paste</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../move.html">2.2.1.5. Move</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../transform.html">2.2.1.6. Transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../remove.html">2.2.1.7. Remove/disable</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../effects/index.html">2.2.2. Effects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../color-grading/index.html">2.2.3. Color grading</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../sound/index.html">2.2.4. サウンドの編集</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/index.html">2.3. Render your project</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../extra-tools/index.html">3. 追加ツール</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Blender VSE Unofficial Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../../index.html"><span class="section-number">2. </span>Video Editing</a> &raquo;</li>
+        
+          <li><a href="../../index.html"><span class="section-number">2.2. </span>プロジェクトを編集する</a> &raquo;</li>
+        
+          <li><a href="../index.html"><span class="section-number">2.2.1. </span>Montage</a> &raquo;</li>
+        
+          <li><a href="index.html"><span class="section-number">2.2.1.1. </span>ストリップの種類</a> &raquo;</li>
+        
+      <li><span class="section-number">2.2.1.1.2. </span>Sound ストリップ</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../../_sources/video_editing/edit/montage/striptypes/sound.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="sound">
+<span id="bpy-types-soundsequence"></span><h1><span class="section-number">2.2.1.1.2. </span>Sound ストリップ<a class="headerlink" href="#sound" title="この見出しへのパーマリンク">¶</a></h1>
+<p>サウンド ストリップの入力ソースは、拡張子が以下のオーディオファイルです。(参照 <a class="reference external" href="https://docs.blender.org/manual/en/dev/files/media/video_formats.html">audio formats</a>)</p>
+<p><code class="docutils literal notranslate"><span class="pre">.AAC</span></code>, <code class="docutils literal notranslate"><span class="pre">.AC3</span></code>, <code class="docutils literal notranslate"><span class="pre">.FLAC</span></code>, <code class="docutils literal notranslate"><span class="pre">.MP2</span></code>, <code class="docutils literal notranslate"><span class="pre">.MP3</span></code>,  <code class="docutils literal notranslate"><span class="pre">.opus</span></code>, <code class="docutils literal notranslate"><span class="pre">.PCM</span></code>, <code class="docutils literal notranslate"><span class="pre">.vorbis</span></code></p>
+<p>サウンド ストリップは、上記のファイルタイプのいずれかから直接追加できます。
+また、オーディオチャネルが埋め込まれたビデオファイルからムービー ストリップを追加するときにも間接的に作成されます。
+Blender は自動的にサウンド ストリップを抽出し、ビデオ ストリップの下のチャンネルに配置します (スペースがある場合)。
+ソースビデオファイルと埋め込みオーディオの間にリンクはありません。
+したがって、ムービー ストリップを移動せずにサウンド ストリップを移動することも、その逆も可能です。
+そのため、同期の問題が発生します。サウンドストリップバーのデフォルトの色は <span class="sound">███</span> です。</p>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>ムービー ストリップを追加した後、ムービー ストリップとサウンド ストリップの長さが同じではないことに気づく場合があります。
+これは、プロジェクトとビデオ クリップのフレーム レート (fps) の不一致の結果です。</p>
+</div>
+<div class="figure align-right" id="id2">
+<img alt="Synchronization problem" src="../../../../_images/vse_setup_project_striptypes_sound.svg" /><p class="caption"><span class="caption-text">図 1: fps の不一致による同期の問題</span><a class="headerlink" href="#id2" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<p>1 秒または 30 フレームの長さの 30 fps ビデオを 24 fps プロジェクトに追加するとします。
+動画ファイルに埋め込まれた音声は、当然ながら動画のフレームシーケンスと同期しています。
+ビデオ ファイルのフレーム 1 はオーディオの特定のタイム コードと同期され、フレーム 2、フレーム 3 なども同期されます。
+図 1 では、タイムコード 0.27 秒 (フレーム 8) と 0.73 秒 (フレーム 22) でビープ音が鳴ります。
+ただし、プロジェクトは 24 fps で実行されます。ビープ音は引き続き 0.27 秒と 0.73 秒で発生しますが、フレーム 8 と 22 は右にシフトされます。
+プロジェクトのフレーム 24 は結局タイムコード 1 秒なので、フレーム 22 はその少し前のタイムコード 0.91 秒です。
+したがって、ピッチを変更せずにサウンドを圧縮することはできないため、サウンド ストリップはフレーム 24 で終了します。</p>
+<div class="section" id="options">
+<h2><span class="section-number">2.2.1.1.2.1. </span>Options<a class="headerlink" href="#options" title="この見出しへのパーマリンク">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>Panels documented elsewhere!</p>
+<p>パネルは他の場所で文書化されています。</p>
+<p>以下ののパネルは、ムービー ストリップのパネルと同じです。</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="movie.html#time-panel"><span class="std std-ref">Time</span></a></p></li>
+<li><p><a class="reference internal" href="movie.html#source-panel"><span class="std std-ref">Source</span></a></p></li>
+<li><p><a class="reference internal" href="movie.html#custom-panel"><span class="std std-ref">Custom</span></a></p></li>
+</ul>
+</div>
+<p>サウンド ストリップには、 以下のパネルはありません。</p>
+<ul class="simple">
+<li><p><em>Compositing</em></p></li>
+<li><p><em>Transform</em></p></li>
+<li><p><em>Crop</em></p></li>
+<li><p><em>Video</em></p></li>
+<li><p><em>Color</em></p></li>
+</ul>
+<p>以降のプロパティはサウンド ストリップで <em>固有</em> のものです。</p>
+<div class="section" id="id1">
+<h3><span class="section-number">2.2.1.1.2.1.1. </span>Sound<a class="headerlink" href="#id1" title="この見出しへのパーマリンク">¶</a></h3>
+<div class="refbox admonition">
+<p class="admonition-title">Reference</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 85%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Name</strong>:</p></td>
+<td><p>Sound</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Context</strong>:</p></td>
+<td><p>Video Sequence Editor &gt; Sequencer</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Location</strong>:</p></td>
+<td><p>Sidebar &gt; Strip</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="figure align-right" id="id3">
+<a class="reference internal image-reference" href="../../../../_images/vse_setup_project_striptypes_panel-sound.svg"><img alt="Sound Panel" height="172" src="../../../../_images/vse_setup_project_striptypes_panel-sound.svg" width="192" /></a>
+<p class="caption"><span class="caption-text">Figure 2: Sound Panel</span><a class="headerlink" href="#id3" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<dl>
+<dt>Volume</dt><dd><p>音の音量または音量。音量をゼロに設定するとサウンドがミュートされます。値を 0 ～ 1 の間にすると音量が下がり、
+値 = 1 にすると元のサウンド レベルになります。
+1 を超えると音声レベルが増加します。
+しかし、値 = 2 のサウンドは元の 2 倍の大きさに聞こえますか、それとも値 = 0.5 のサウンドは元の半分の大きさでしょうか? そうではありません！</p>
+<p>デシベル単位での騒音レベルの解釈についての詳細は、 <a class="reference internal" href="../../sound/measuring/volume.html"><span class="doc">Volume level</span></a> を参照してください。</p>
+</dd>
+<dt>Pitch</dt><dd><p>ピッチ (低音と高音) は音の周波数と密接に関係しています。サウンド ストリップのピッチ値は、サウンドの再生速度または周波数を変更します。
+値を大きくすると音が高くなり、小さくすると音が低くなります。再生レートも変わるので音の長さも変わります。</p>
+<p>ただし、これはタイムラインでは視覚的に表現されません。波形の長さも形も変わりません。
+サウンド ストリップは以前と同じ長さで表示されますが、速度が低下するとサウンドはより早くまたは途中で停止します。</p>
+</dd>
+</dl>
+<div class="figure align-default" id="id4">
+<img alt="Sound waveform" src="../../../../_images/vse_setup_project_striptypes_sound-waveform.svg" /><p class="caption"><span class="caption-text">図3 Blender でピッチを変更しても音の波形は変化しない</span><a class="headerlink" href="#id4" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<p>図 3 は、カウントダウン音声ファイルの波形を示しています。どのようなピッチを選択しても、この波形と長さは Blender で変更されません。
+中央の波形は、Audacity の同じファイルからのもので、スピード値 (= Blender ではピッチ値) が 1 です。
+ご覧のとおり、この波形の長さは同じ 13秒 です。
+速度を 1.4 に変更すると、Audacity では波の長さが 9.5 秒 (~13 秒 /1.4) に短縮されますが、
+Blender では視覚的には短縮されません。ただし、オーディオを再生すると、音の高さ (および速度) がほぼ同じで、
+サウンドが約 9.5 秒で停止することがわかります。
+ファイルは Audacity ではステレオですが、Blender ではモノラルであることにも注意してください。</p>
+<p>したがって、サウンド ファイルのピッチや長さの変更は、 Blender の <a class="reference internal" href="../../effects/speed.html"><span class="doc">speed control</span></a> を使用しても行うことができます。</p>
+<dl>
+<dt>Pan</dt><dd><p>サウンド システムに応じて、1 つ、2 つ、またはそれ以上のスピーカーがあります。
+パンとは、スピーカー全体にサウンドを分配することです。
+これは主に、左右のチャンネルからのオーディオをパン（分配）するために使用されます。
+パン値は -2 ～ 2 の間で指定できます (図 4 を参照)。値 0 は、前面/中央 (12 時) を意味します。
+左右のスピーカーに同じ量の音が送られます。値 -1 は、すべてのサウンドが左チャンネル (10 時) に送信されることを意味します。
++1 の値は、サウンドが 2 時位置に表示されることを意味します)。
+マルチチャンネル オーディオ (リア スピーカー) の場合は、より高い値、-2 (7 時) および +2 (5 時) にパンできます。
+したがって、この値は基本的にサウンドが再生される角度を表します。モノラルソースでのみ機能します。</p>
+<blockquote>
+<div><div class="figure align-default" id="id5">
+<a class="reference internal image-reference" href="../../../../_images/vse_setup_project_striptypes_sound-pan.svg"><img alt="Pan values" height="170" src="../../../../_images/vse_setup_project_striptypes_sound-pan.svg" width="180" /></a>
+<p class="caption"><span class="caption-text">図4 Panの値</span><a class="headerlink" href="#id5" title="この画像へのパーマリンク">¶</a></p>
+</div>
+</div></blockquote>
+</dd>
+<dt>Display Waveform</dt><dd><p>サウンド ストリップ内にサウンド ファイルのおおよその波形を表示します。
+波形はストリップのボリュームを反映します。このボリュームはキーフレームを使用してアニメーション化できます。
+波形が表示されない場合は、[Show Overlays] (右上のボタン、図 1 を参照) をオンにする必要があります。</p>
+</dd>
+<dt>Mono</dt><dd><p>すべてのオーディオチャンネルを単一のチャンネルにミックスダウンします。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="source">
+<h3><span class="section-number">2.2.1.1.2.1.2. </span>Source<a class="headerlink" href="#source" title="この見出しへのパーマリンク">¶</a></h3>
+<div class="refbox admonition">
+<p class="admonition-title">Reference</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 85%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Name</strong>:</p></td>
+<td><p>Source</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Context</strong>:</p></td>
+<td><p>Video Sequence Editor &gt; Sequencer</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Location</strong>:</p></td>
+<td><p>Sidebar &gt; Strip</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="simple">
+<dt>Pack</dt><dd><p>サウンド ファイルをパックするということは、サウンドがブレンド ファイルに (リンクではなく) 埋め込まれることを意味します。
+これにより、配布する必要があるファイルが 1 つだけになるため、プロジェクトを別のコンピュータに転送する作業が容易になります。
+ただし、すべてを含む単一のプロジェクト フォルダーの使用を推奨していることに注意してください ( <a class="reference internal" href="../../../setup/directory-structure.html"><span class="doc">Directory structure</span></a> を参照)。
+ファイルを圧縮しても Blend ファイルのサイズが増加するだけであり、いずれの場合もプロジェクト フォルダーの配布にすでに含まれています。</p>
+</dd>
+<dt>Caching</dt><dd><p>サウンド ファイルはデコードされて RAM にロードされ、スムーズな再生が可能になります。</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="image.html" class="btn btn-neutral float-right" title="2.2.1.1.3. Image/Image Sequence ストリップ" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="movie.html" class="btn btn-neutral float-left" title="2.2.1.1.1. Movie ストリップ" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright This page is licensed under a CC-BY-SA 4.0 Int. License.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

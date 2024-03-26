@@ -1,0 +1,774 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>2.2.1.1.1. Movie ストリップ &mdash; Blender VSE Unofficial Documentation  ドキュメント</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+    <link rel="canonical" href="https://kantas-spike.github.io/vse-docs/video_editing/edit/montage/striptypes/movie.html" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../../../../genindex.html" />
+    <link rel="search" title="検索" href="../../../../search.html" />
+    <link rel="next" title="2.2.1.1.2. Sound ストリップ" href="sound.html" />
+    <link rel="prev" title="2.2.1.1. ストリップの種類" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> Blender VSE Unofficial Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../video_sequencer/index.html">1. Video Sequence Editor</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">2. Video Editing</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../setup/index.html">2.1. Setup</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">2.2. プロジェクトを編集する</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">2.2.1. Montage</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">2.2.1.1. ストリップの種類</a><ul class="current">
+<li class="toctree-l5 current"><a class="current reference internal" href="#">2.2.1.1.1. Movie ストリップ</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#options">2.2.1.1.1.1. Options</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#compositing">2.2.1.1.1.1.1. Compositing</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#transform">2.2.1.1.1.1.2. Transform</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#crop">2.2.1.1.1.1.3. Crop</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#video">2.2.1.1.1.1.4. Video</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#color">2.2.1.1.1.1.5. Color</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#time">2.2.1.1.1.1.6. Time</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#source">2.2.1.1.1.1.7. Source</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#custom-properties">2.2.1.1.1.1.8. Custom Properties</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="sound.html">2.2.1.1.2. Sound ストリップ</a></li>
+<li class="toctree-l5"><a class="reference internal" href="image.html">2.2.1.1.3. Image/Image Sequence ストリップ</a></li>
+<li class="toctree-l5"><a class="reference internal" href="clip.html">2.2.1.1.4. Clip ストリップ</a></li>
+<li class="toctree-l5"><a class="reference internal" href="scene.html">2.2.1.1.5. Scene ストリップ</a></li>
+<li class="toctree-l5"><a class="reference internal" href="color.html">2.2.1.1.6. Color ストリップ</a></li>
+<li class="toctree-l5"><a class="reference internal" href="mask.html">2.2.1.1.7. Mask ストリップ</a></li>
+<li class="toctree-l5"><a class="reference internal" href="text.html">2.2.1.1.8. Text ストリップ</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../select.html">2.2.1.2. Select</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../add.html">2.2.1.3. Add</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../copy_paste.html">2.2.1.4. Copy - Paste</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../move.html">2.2.1.5. Move</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../transform.html">2.2.1.6. Transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../remove.html">2.2.1.7. Remove/disable</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../effects/index.html">2.2.2. Effects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../color-grading/index.html">2.2.3. Color grading</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../sound/index.html">2.2.4. サウンドの編集</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/index.html">2.3. Render your project</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../extra-tools/index.html">3. 追加ツール</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Blender VSE Unofficial Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../../index.html"><span class="section-number">2. </span>Video Editing</a> &raquo;</li>
+        
+          <li><a href="../../index.html"><span class="section-number">2.2. </span>プロジェクトを編集する</a> &raquo;</li>
+        
+          <li><a href="../index.html"><span class="section-number">2.2.1. </span>Montage</a> &raquo;</li>
+        
+          <li><a href="index.html"><span class="section-number">2.2.1.1. </span>ストリップの種類</a> &raquo;</li>
+        
+      <li><span class="section-number">2.2.1.1.1. </span>Movie ストリップ</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../../_sources/video_editing/edit/montage/striptypes/movie.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="movie">
+<span id="bpy-types-moviesequence"></span><h1><span class="section-number">2.2.1.1.1. </span>Movie ストリップ<a class="headerlink" href="#movie" title="この見出しへのパーマリンク">¶</a></h1>
+<p>ムービー ストリップの入力ソースは、拡張子が以下のビデオファイルです。(参照 <a class="reference external" href="https://docs.blender.org/manual/en/dev/files/media/video_formats.html">Video formats</a>)</p>
+<p><code class="docutils literal notranslate"><span class="pre">.mp4</span></code>, <code class="docutils literal notranslate"><span class="pre">.mpg</span></code>, <code class="docutils literal notranslate"><span class="pre">.mpeg</span></code>, <code class="docutils literal notranslate"><span class="pre">.dvd</span></code>, <code class="docutils literal notranslate"><span class="pre">.vob</span></code>,  <code class="docutils literal notranslate"><span class="pre">.avi</span></code>, <code class="docutils literal notranslate"><span class="pre">.mov</span></code>, <code class="docutils literal notranslate"><span class="pre">.dv</span></code>, <code class="docutils literal notranslate"><span class="pre">.ogg</span></code>, <code class="docutils literal notranslate"><span class="pre">.ogv</span></code>, <code class="docutils literal notranslate"><span class="pre">.mkv</span></code>, <code class="docutils literal notranslate"><span class="pre">.flv</span></code>, <code class="docutils literal notranslate"><span class="pre">.webm</span></code></p>
+<p>Blender は ffmpeg ライブラリを使用してビデオ ファイルを処理します。
+どのコーデックが利用できるかは、オペレーティング システムと ffmpeg のバージョンによって異なります。
+ムービー ストリップ バーのデフォルトの色は次のとおりです: <span class="movie">███</span></p>
+<p>各ビデオ ファイルには、一連の画像フレーム (実際のムービー) と解像度などのメタ情報が含まれています。
+解像度とフレームレート (fps または 1 秒あたりのフレーム数) の情報は、<a class="reference internal" href="#source-panel">source-panel</a> で公開されます。</p>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>プロジェクト設定パラメータは、ストリップパラメータと同じであることが望ましいです。
+たとえば、プロジェクトのフレーム レートが 30 fps に設定されているのに、
+クリップが 24 fps しかない場合、クリップは速い再生速度で表示されます。
+プロジェクト設定によれば、30 フレームは 1 秒を意味します。
+ただし、これらの 30 フレームは、元の映像の 1.2 秒をカバーします (30 / 24 fps = 1.2 秒)。
+再生中に 1.2 秒を 1 秒に圧縮すると再生速度を速めます。</p>
+<p>また、クリップが可変フレームレートの場合も同様です。
+たとえば、一部のスマートフォンからの映像の場合、
+Blender は一定のフレーム レートを使用するため、
+オーディオ同期の問題が発生します。
+これを解決するには、 <a class="reference external" href="https://ffmpeg.org/">ffmpeg</a> や <a class="reference external" href="https://handbrake.fr/">Handbrake</a> などのプログラムを使用して
+クリップを一定のフレーム レートに変換する必要があります。</p>
+</div>
+<div class="section" id="options">
+<h2><span class="section-number">2.2.1.1.1.1. </span>Options<a class="headerlink" href="#options" title="この見出しへのパーマリンク">¶</a></h2>
+<p>ムービー ストリップはよく使用されるストリップ タイプであり、多くのプロパティがあります。これらは <a class="reference external" href="https://docs.blender.org/manual/en/dev/interface/window_system/regions.html">sidebar</a> のパネルに整理されています。</p>
+<div class="section" id="compositing">
+<span id="compositing-panel"></span><h3><span class="section-number">2.2.1.1.1.1.1. </span>Compositing<a class="headerlink" href="#compositing" title="この見出しへのパーマリンク">¶</a></h3>
+<div class="refbox admonition">
+<p class="admonition-title">Reference</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 85%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Name</strong>:</p></td>
+<td><p>Compositing</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Context</strong>:</p></td>
+<td><p>Video Sequence Editor &gt; Sequencer</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Location</strong>:</p></td>
+<td><p>Sidebar &gt; Strip</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="figure align-right" id="id10">
+<a class="reference internal image-reference" href="../../../../_images/vse_setup_project_striptypes_panel-compositing.png"><img alt="Compositing property" src="../../../../_images/vse_setup_project_striptypes_panel-compositing.png" style="width: 239.0px; height: 81.0px;" /></a>
+<p class="caption"><span class="caption-text">図 1: Compositing パネル</span><a class="headerlink" href="#id10" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<p>[Compositing] パネルでは、 <span class="incremental">Blend</span> と <span class="incremental">Opacity</span> のプロパティを設定できます(図 1)。</p>
+<dl>
+<dt>Blend</dt><dd><p>2 つのストリップを重ねて配置すると、たとえそれがはるかに小さかったとしても、高いチャンネルのストリップが下のストリップを完全に覆います。
+Preview ウィンドウには、上位チャンネルのストリップのみが表示されます。たとえば、下にあるストリップは何も気付かずに安全に削除できます。</p>
+<p>これは、上位チャンネル ストリップのブレンド モードが <code class="docutils literal notranslate"><span class="pre">Cross</span></code> に設定されているためです。
+これはすべてのストリップのデフォルト値です。ただし、デフォルト値が <code class="docutils literal notranslate"><span class="pre">Alpha</span> <span class="pre">Over</span></code> のテキスト ストリップは除きます。</p>
+<p>ストリップのブレンド モードは、すぐ下のストリップがどのように結合またはブレンドされるかを指定します。
+<code class="docutils literal notranslate"><span class="pre">Color</span> <span class="pre">Dodge</span></code> や <code class="docutils literal notranslate"><span class="pre">Alpha</span> <span class="pre">Over</span></code> など、27 のブレンド モードがあります。
+それらはすべてユニークで、時には微妙な効果を持っています。
+たとえば、 <code class="docutils literal notranslate"><span class="pre">Cross</span></code> と <code class="docutils literal notranslate"><span class="pre">Replace</span></code> ブレンド モードは一見するとまったく同じように見えます。
+高い方のチャンネルストリップは、低い方のチャンネルストリップを完全に置き換えます。
+ただし、不透明度値 0 (以下を参照) と組み合わせると、両方のブレンド モードでまったく異なる結果が得られます。</p>
+<ul class="simple">
+<li><p>Blend mode = Replace + Opacity = 0 --&gt; 完全に透明な Preview ウィンドウ</p></li>
+<li><p>Blend mode = Cross  + Opacity = 0 --&gt; Preview Window に下のストリップを表示</p></li>
+</ul>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">課題</p>
+<p>すべてのブレンド モードの詳細な説明は、「編集 &gt; カラー グレーディング」の章で間もなく公開されます。</p>
+</div>
+</dd>
+<dt>Opacity</dt><dd><p>不透明な物体は光をまったく通しません。それを通して見ることはできません。
+不透明度は透明度の反対です。画像内の各ピクセルは、赤、緑、青の値のほかに、0 から 1 までの数値であるアルファ値を持つことができます。
+アルファ = 0 は、完全に透明な画像を示します。完全に不透明なイメージのアルファ = 1 になります。</p>
+<div class="admonition hint">
+<p class="admonition-title">ヒント</p>
+<p>これらの値を覚えておくための簡単なニーモニック: 0 はのぞき穴のような = シースルー = 透明です。</p>
+</div>
+<p>画像内の各ピクセルのアルファ値は、このフィールドの不透明度値と乗算されます。
+値 1 はストリップの不透明度に影響しません。
+たとえば、ストリップが半透明（たとえば、アルファ = 0.6）の場合、半透明のままになります（0.6 x 1 = 0.6）。
+ゼロを乗算すると常にゼロになるため、値をゼロにするとストリップが完全に透明になります。
+透明度/不透明度の詳細については、 <a class="reference internal" href="mask.html"><span class="doc">Mask strips</span></a> を参照してください。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="transform">
+<span id="transform-panel"></span><h3><span class="section-number">2.2.1.1.1.1.2. </span>Transform<a class="headerlink" href="#transform" title="この見出しへのパーマリンク">¶</a></h3>
+<div class="refbox admonition">
+<p class="admonition-title">Reference</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 85%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Name</strong>:</p></td>
+<td><p>Transform</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Context</strong>:</p></td>
+<td><p>Video Sequence Editor &gt; Sequencer</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Location</strong>:</p></td>
+<td><p>Sidebar &gt; Strip</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="figure align-right" id="id11">
+<a class="reference internal image-reference" href="../../../../_images/vse_setup_project_striptypes_panel-transform.png"><img alt="Transform Property" src="../../../../_images/vse_setup_project_striptypes_panel-transform.png" style="width: 241.0px; height: 172.0px;" /></a>
+<p class="caption"><span class="caption-text">図2: Transform パネル</span><a class="headerlink" href="#id11" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<p>Transform パネルには、Position、Scale、Rotation プロパティと、おそらくそれほど重要ではない Mirror プロパティが含まれています。</p>
+<div class="admonition-todo admonition" id="id2">
+<p class="admonition-title">課題</p>
+<p>Image Transformメニューへのリンクを追加する</p>
+</div>
+<dl>
+<dt>Position X, Y</dt><dd><p>シーケンサー出力の表示領域のサイズは、プロジェクトのサイズによって設定されます。
+たとえば、デフォルトでは 1920 x 1080 ( <a class="reference internal" href="../../../setup/project-settings.html"><span class="doc">Project settings</span></a> を参照)。ムービーは、この表示領域内で中央に配置 (および拡大縮小) されます。
+したがって、位置 (0,0) は画像の中点を指します。X、Y の値を使用して、水平軸と垂直軸に沿ってフレームを移動できます。値はピクセル単位です。</p>
+</dd>
+<dt>Scale X, Y</dt><dd><p>この値を使用すると、X (= 水平) 軸と Y (= 垂直) 軸で画像を拡大縮小できます。
+0 から無限大までの数値です。たとえば、X 軸のスケールを 0.5 にすると、
+フレームの幅が半分になります。スケールを 2 にすると 2 倍になります。
+フレームを比例的に拡大縮小するには、X と Y に同じ値を使用する必要があります。</p>
+<p>画像を拡大縮小しても、画像の解像度は決して変わりません。</p>
+</dd>
+<dt>Rotation</dt><dd><p>フレームを Z 軸に沿って回転します。度で表されます。
+負の値を指定すると反時計回りに回転します。この値は 360° を超えることができます。
+たとえば、アニメーションでは、値 1080° = 3 x 360° を入力すると、Z 軸を中心にフレームを 3 回回転できます。</p>
+</dd>
+<dt>Mirror</dt><dd><p>X 軸 (左から右) または Y 軸 (上から下) に沿ってイメージをミラーリングします。</p>
+</dd>
+</dl>
+<p>図 3 は、ピクチャ イン ピクチャ (PIP) セットアップの例を示しています。
+これを実現するには、Position、Scale、および Blend モードのプロパティが必要です。
+図 3 には 3 つのチャネルがあります。チャンネル 1 にはオーディオが含まれます。
+チャンネル 2 が背景を形成します。
+チャンネル 3 には前景画像が含まれます。この画像は拡大縮小 (0.3) され、位置変更 (717,300) されて PIP が作成されます。</p>
+<div class="figure align-default" id="id12">
+<img alt="PIP example" src="../../../../_images/vse_setup_project_striptypes_PIP-example.svg" /><p class="caption"><span class="caption-text">図 3: ピクチャー・イン・ピクチャーの例</span><a class="headerlink" href="#id12" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<p>図 3 の「Spring」オープン ムービーのサイズはデフォルトではありません: 2048 x 858。このムービーをダウンロードするには、 <a class="reference external" href="/video_editing/setup/creating-test-files">creating test-files - section E)</a> を参照してください。
+このムービーをデフォルトの FHD タイムライン (1920 x 1080) に追加すると、スケーリングされます。
+最長の寸法 (2048) は 0.9375 の係数で 1920 にスケーリングされます (0.9375 x 2048 = 1920)。
+垂直方向の寸法も同じパラメータで拡大縮小され、高さ 858 * 0.9375 = 804 が指定され、
+ビデオの上下に 2 つの透明なバンドが残ります。
+図 3 では、ビューポートがビデオに完全に表示されるように、プロジェクトの dimensions をストリップの dimensions と等しくなるように変更しました。</p>
+<p>前景の画像 (同じ公開映画「Spring」から) は 0.3 倍に拡大縮小されます。
+これにより、ピクセル サイズは 2048 x 0.3 = 614 および 858 x 0.3 = 257 になります。
+このストリップを右上隅に配置したい場合は、X と Y の位置を変更する必要があります。
+しかし、いくらですか？各ピクチャの中心は位置 (0,0) です。したがって、背景画像は左下 (-1024、-429) から右上 (1024、429) まで続きます。
+小さな画像を右上隅に押し込むには、X 軸上で 1024 - (614/2) = 717 の位置に移動する必要があります。
+また、Y 軸上で 429 - (257/2) = 300 の位置に移動する必要があります。</p>
+</div>
+<div class="section" id="crop">
+<span id="crop-panel"></span><h3><span class="section-number">2.2.1.1.1.1.3. </span>Crop<a class="headerlink" href="#crop" title="この見出しへのパーマリンク">¶</a></h3>
+<div class="refbox admonition">
+<p class="admonition-title">Reference</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 85%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Name</strong>:</p></td>
+<td><p>Crop</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Context</strong>:</p></td>
+<td><p>Video Sequence Editor &gt; Sequencer</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Location</strong>:</p></td>
+<td><p>Sidebar &gt; Strip</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="figure align-right" id="id13">
+<a class="reference internal image-reference" href="../../../../_images/vse_setup_project_striptypes_panel-crop.png"><img alt="Crop Property" src="../../../../_images/vse_setup_project_striptypes_panel-crop.png" style="width: 244.0px; height: 122.0px;" /></a>
+<p class="caption"><span class="caption-text">図 4: Crop パネル</span><a class="headerlink" href="#id13" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<p>Cropping とは、画像から不要な外側の領域を除去することです。</p>
+<dl class="simple">
+<dt>Left, Right, Top, Bottom</dt><dd><p>And as such making this image smaller. Although you can specify a negative number, this does not affect the image.
+指定された数のピクセルが画像のLeft、Right、Topおよび/またはBottomから削除されます。
+したがって、この画像は小さくなります。負の数値を指定することもできますが、画像には影響しません。</p>
+</dd>
+</dl>
+<p>CropとScaleは、まったく異なる 2 つの操作です。
+図 5 をご覧ください。両方の小さな画像は同じサイズです。
+左側の画像は、元の 2048 x 858 イメージを 0.3 にスケールして、614 x 257 ピクセルの画像になります (図 3 も参照)。
+右の写真はCropしたものです。</p>
+<p>LeftとRightのCropを組み合わせた値は、2048 - 614 = 1434 になるはずです。
+左右から 1434 ピクセル (670 + 764) をCropすると、正確に 614 ピクセル幅の画像が得られます。
+Cropの Top と Bottom を組み合わせた値は、858 - 257 = 601 または 572 + 29 である必要があります。
+もちろん、Left/Right と Top/Bottom の正確な比率は、焦点を当てたいディテールによって異なります。
+犬を中心にするには、次のトリミング サイズが必要です: Left (670)、Right (734)、Top (572)、Bottom (29)。
+これにより、まったく同じサイズになりますが、拡大されます。</p>
+<div class="figure align-default" id="id14">
+<img alt="Crop vs Scale" src="../../../../_images/vse_setup_project_striptypes_crop-vs-scale.svg" /><p class="caption"><span class="caption-text">図 5: Crop と Scale の例</span><a class="headerlink" href="#id14" title="この画像へのパーマリンク">¶</a></p>
+</div>
+</div>
+<div class="section" id="video">
+<span id="video-panel"></span><h3><span class="section-number">2.2.1.1.1.1.4. </span>Video<a class="headerlink" href="#video" title="この見出しへのパーマリンク">¶</a></h3>
+<div class="refbox admonition">
+<p class="admonition-title">Reference</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 85%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Name</strong>:</p></td>
+<td><p>Video</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Context</strong>:</p></td>
+<td><p>Video Sequence Editor &gt; Sequencer</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Location</strong>:</p></td>
+<td><p>Sidebar &gt; Strip</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="figure align-right" id="id15">
+<a class="reference internal image-reference" href="../../../../_images/vse_setup_project_striptypes_panel-video-strip-movie.png"><img alt="Video Property" src="../../../../_images/vse_setup_project_striptypes_panel-video-strip-movie.png" style="width: 243.0px; height: 83.0px;" /></a>
+<p class="caption"><span class="caption-text">図6: Videoパネル</span><a class="headerlink" href="#id15" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<dl>
+<dt>Strobe</dt><dd><p>Strobe 値は、各 n 番目のフレームのみが表示されることを示します。
+デフォルトでは 1 に設定されています。たとえば、これを 10 に設定すると、
+プレビューには 1 ～ 10 フレームの範囲ではフレーム 1 のみが表示され、11 ～ 20 の範囲ではフレーム 11 が表示され、...</p>
+<p>フレーム 2 ～ 9、11 ～ 19 などは黒く塗りつぶされていないため、実際にはストロボ効果ではありません。
+これは、タイムコード オーバーレイ テスト ファイルを使用して簡単に確認できます (参照 <a class="reference internal" href="../../../setup/creating-test-files.html"><span class="doc">Creating test files - section C</span></a>)。</p>
+</dd>
+<dt>Reverse Frames</dt><dd><p>ストリップは、シーケンスの最後のフレームから最初のフレームまで逆方向に再生されます。
+これは分割ストリップでも機能します。ただし、&quot;Hold Split&quot; (Shift + K) カットを使用することに注意してください (/edit/montage/splitting を参照)。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="color">
+<span id="color-panel"></span><h3><span class="section-number">2.2.1.1.1.1.5. </span>Color<a class="headerlink" href="#color" title="この見出しへのパーマリンク">¶</a></h3>
+<div class="refbox admonition">
+<p class="admonition-title">Reference</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 85%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Name</strong>:</p></td>
+<td><p>Color</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Context</strong>:</p></td>
+<td><p>Video Sequence Editor &gt; Sequencer</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Location</strong>:</p></td>
+<td><p>Sidebar &gt; Strip</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="figure align-right" id="id16">
+<a class="reference internal image-reference" href="../../../../_images/vse_setup_project_striptypes_panel-color.png"><img alt="Color Property" src="../../../../_images/vse_setup_project_striptypes_panel-color.png" style="width: 242.0px; height: 109.0px;" /></a>
+<p class="caption"><span class="caption-text">図 7: Colorパネル</span><a class="headerlink" href="#id16" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<p>このパネルのプロパティは、一部のエフェクトやモディファイアの簡単なショートカットのようです。
+[Saturation]は、Color Hue モディファイアを使用して (色ごとに独立して) 変更できます。 [Multiply] プロパティは、Multiply エフェクトとカラー ストリップを使用して実現できます。</p>
+<dl class="simple">
+<dt>Saturation</dt><dd><p>画像の彩度や鮮やかさを増減します。彩度値を 0 にすると、カラー イメージがグレースケール イメージに変わります。</p>
+</dd>
+<dt>Multiply</dt><dd><p>色にこの値を乗算します。これにより、値が 1 より大きい場合は明るさが増加します。
+値が 1 より小さい場合は明るさが減少します。値をゼロにすると、均一な黒のイメージが生成されます。黒のカラーコードは RGB (0,0,0) です。</p>
+</dd>
+<dt>Convert to Float</dt><dd><p>乗算値を float データ型に変換します。</p>
+</dd>
+</dl>
+<div class="admonition-todo admonition" id="id3">
+<p class="admonition-title">課題</p>
+<p>Convert to Float は何も行わないようです。
+ただし、Stackexchange: <a class="reference external" href="https://blender.stackexchange.com/questions/57528/">https://blender.stackexchange.com/questions/57528/</a> を参照してください</p>
+</div>
+</div>
+<div class="section" id="time">
+<span id="time-panel"></span><h3><span class="section-number">2.2.1.1.1.1.6. </span>Time<a class="headerlink" href="#time" title="この見出しへのパーマリンク">¶</a></h3>
+<div class="refbox admonition">
+<p class="admonition-title">Reference</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 85%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Name</strong>:</p></td>
+<td><p>Time</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Context</strong>:</p></td>
+<td><p>Video Sequence Editor &gt; Sequencer</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Location</strong>:</p></td>
+<td><p>Sidebar &gt; Strip</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="figure align-right" id="id17">
+<a class="reference internal image-reference" href="../../../../_images/vse_setup_project_striptypes_panel-time.png"><img alt="Time Property" src="../../../../_images/vse_setup_project_striptypes_panel-time.png" style="width: 244.0px; height: 246.0px;" /></a>
+<p class="caption"><span class="caption-text">図8: Time パネル</span><a class="headerlink" href="#id17" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<p>すべてではありませんが、使用可能なタイム コードのほとんどをこのパネルで更新できます。
+タイムラインとタイムコードの概要については、 <a class="reference internal" href="../../../../video_sequencer/sequencer/timeline.html"><span class="doc">Timeline basics</span></a> を参照してください。
+クリップのトリミングやフリーズを行うには、これらのタイムコードを明確に理解することが不可欠です。</p>
+<p>ムービー ストリップは、シーケンサー内の青いバーで表される一連のフレームです。
+このムービー ストリップを描画するには、チャンネル、タイムラインの開始位置、
+ムービー ストリップのタイム コードなど、いくつかのプロパティが必要です。</p>
+<dl class="simple">
+<dt>Channel</dt><dd><p>ストリップはチャンネルに配置されます。行が互いに積み重ねられています (たとえば、3 つのチャネルがある図3 を参照)。
+ムービークリップを追加すると、Blender は再生ヘッドの位置で次の空きチャンネルを検索し、ムービー ストリップを配置します。このプロパティを使用すると、チャネル番号を変更できます。チャンネルがすでに別のストリップによって使用されている場合、ストリップは次に高い利用可能なチャンネルに配置されます。
+最初のチャンネル 0 はストリップを配置する場所としては使用できません。
+これは、チャンネル 0 より上のすべてのストリップの合成を表示するためにシーケンサー ディスプレイによって使用されるためです。チャンネルの最大数は 32 です <a class="footnote-reference brackets" href="#f1" id="id4">1</a> 。</p>
+</dd>
+</dl>
+<p>これらのタイムコードを理解しやすくするために、ムービー ストリップ上の 4 つのマーカーを想像してください。説明については、図 9 を参照してください。</p>
+<ul class="simple">
+<li><p>First accessible frame (FA): <em>表示できる</em> シーケンス内の最初のフレーム。通常はビデオの最初のフレームでもあります。</p></li>
+<li><p>First Visible (FV) frame: Preview に実際に表示される最初のフレーム。これはストリップ バーの始まりでもあります。</p></li>
+<li><p>Last Visible (LV) frame: 表示されるシーケンスの最後のフレーム。青いバーの端。</p></li>
+<li><p>Last Accessible (LA) frame: <em>表示できる</em> シーケンスの最後のフレーム。</p></li>
+</ul>
+<dl>
+<dt>Start</dt><dd><p>このフィールドは、ムービー ストリップの FA フレームをタイムライン上のどこに配置するかを指定します。
+ムービー ストリップを Sequencer に追加すると、Start フィールドが再生ヘッドの値に設定されます。
+別のフレーム番号を入力するか、ストリップをタイムライン内の別の位置に移動することで、手動で変更できます。</p>
+<p>ストリップを追加した直後は、FV=FA、LV=LA になります。
+このため、ムービーは Start 位置から始まるように見えます。ただし、常にそうとは限りません。</p>
+</dd>
+<dt>Duration</dt><dd><p>このフィールドは実際の期間を表します。
+青いバーの長さ。または LV から FV を引いた値 (図 9 を参照)。
+別の値を入力すると、期間を変更できます。値が小さいほどストリップが短くなります (LV が前に配置されます。図 9 を参照)。
+値を大きくすると、最後のフレームが連動し、ストリップが長くなります。
+LVはLAより大きくなるはず？ そして、Previewウィンドウには存在しないフレームも表示する必要があるのでしょうか?
+この問題は、Python API を通じてアクセスできる2つの非公開フィールド、 <em>frame_still_start</em> フィールドと <em>frame_still_end</em> フィールドによって解決されます (詳細は Python APIを参照) <a class="footnote-reference brackets" href="#f2" id="id5">2</a> 。</p>
+</dd>
+<dt>End</dt><dd><p>ストリップの実際の終了または最後に表示されるフレーム (LV) を指定します。この値は編集できません。Start + Duration - 1 という計算の結果です。</p>
+</dd>
+<dt>Strip Offset Start</dt><dd><p>この値を使用して、FV マーカーの位置を変更します。正の値または負の値を指定できます。正の場合、ストリップの実際の開始 (FV) はさらに後になります。いくつかのフレームがスキップされ、ムービー ストリップが後で開始されます (図 9 を参照)。負の場合、FV フレームは FA フレームの前に来る必要があります (最初に FV = FA と仮定します)。これは不可能です。
+そのため、FA フレームが繰り返されます (説明については、ホールド オフセットのセクションを参照してください)。</p>
+</dd>
+<dt>Strip Offset End</dt><dd><p>このフィールドは LV フレームの位置を変更します。
+正の場合、ストリップは短くなります。
+負の場合、ストリップは長くなり、それによって LA フレームが繰り返されます (フリーズします)。</p>
+</dd>
+</dl>
+<div class="figure align-default" id="id18">
+<img alt="Strip Offset fields" src="../../../../_images/vse_setup_project_striptypes_offset-strip.svg" /><p class="caption"><span class="caption-text">図 9: ストリップ オフセット フィールドの視覚化</span><a class="headerlink" href="#id18" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<p>両方の Strip Offset フィールドは、値を入力するか、左右のストリップ ハンドルをドラッグすることによって変更できます。
+[Show Overlay] が有効になっている場合、オフセットを示す小さなバーがストリップ バーの下部または上部に表示されます。</p>
+<dl class="simple">
+<dt>Hold Offset Start</dt><dd><p>このフィールドは FA フレームの位置を変更します。
+FA フレームの前に利用可能なフレームがないため、負の値にすることはできません。
+正の値を指定すると、一見矛盾しているように見えますが、ストリップの Duration が短くなります。
+ただし、Start フィールド (FA がタイムラインに配置される場所) は同じままで、表示できるフレームが少なくなります。つまり、ストリップは短くなりますが、FA フレームはそのままです。</p>
+</dd>
+<dt>Hold Offset End</dt><dd><p>このフィールドは LA フレームの位置を変更します。正の数を指定すると、LA 値が減少します。
+この効果はストリップを短くすることにもなります。</p>
+</dd>
+</dl>
+<div class="figure align-default" id="id19">
+<img alt="Hold Offset fields" src="../../../../_images/vse_setup_project_striptypes_offset-hold.svg" /><p class="caption"><span class="caption-text">図 10: Hold Offset フィールドの視覚化</span><a class="headerlink" href="#id19" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<p>もちろん、両方のタイプのオフセットを組み合わせることもできます。
+図 11 には、合せて8フレームのオフセットが設定されています。そのため、元の10フレームの長さは 2 フレームに短縮されます。</p>
+<div class="figure align-default" id="id20">
+<img alt="Both Offset fields" src="../../../../_images/vse_setup_project_striptypes_offset-both.svg" /><p class="caption"><span class="caption-text">図 11: ストリップ フィールドとホールド オフセット フィールドの両方の視覚化</span><a class="headerlink" href="#id20" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<p>前の文章では、<em>freezing</em> 効果、つまり最初または最後のフレームの繰り返しについて何度か言及しました。
+これは、たとえば、LV フレームを LA フレームを超えて拡張する ([Duration] フィールドに大きな数値を入力する) ことで実行できます。
+または、左または右のハンドルを FA または LA フレームを超えてドラッグします。</p>
+<p>図 12 には、最初のフレームが 2 つ繰り返され、最後のフレームが 2 つ繰り返されます。Still Offset フィールド  <a class="footnote-reference brackets" href="#f3" id="id6">3</a> は、Python スクリプトを介して Time パネルに追加されます。これを行う方法の詳細な説明については、 <a class="reference internal" href="../../../../extra-tools/python-useful-scripts.html"><span class="doc">section 5 Extra-tools</span></a> を参照してください。</p>
+<div class="figure align-default" id="id21">
+<img alt="Still Offset fields" src="../../../../_images/vse_setup_project_striptypes_offset-still.svg" /><p class="caption"><span class="caption-text">図 12: Still Offset フィールドの視覚化</span><a class="headerlink" href="#id21" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<dl class="simple">
+<dt>Current Frame</dt><dd><p>アクティブなストリップの FA フレーム <a class="footnote-reference brackets" href="#f4" id="id7">4</a> に対するPlayheadの位置。
+したがって、ストリップがフレーム 10 で始まり、Playheadが (タイムライン) フレーム 15 に配置されている場合、現在のフレームは 5 になります。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="source">
+<span id="source-panel"></span><h3><span class="section-number">2.2.1.1.1.1.7. </span>Source<a class="headerlink" href="#source" title="この見出しへのパーマリンク">¶</a></h3>
+<div class="refbox admonition">
+<p class="admonition-title">Reference</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 85%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Name</strong>:</p></td>
+<td><p>Source</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Context</strong>:</p></td>
+<td><p>Video Sequence Editor &gt; Sequencer</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Location</strong>:</p></td>
+<td><p>Sidebar &gt; Strip</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="figure align-right" id="id22">
+<a class="reference internal image-reference" href="../../../../_images/vse_setup_project_striptypes_panel-source-movie-strip.png"><img alt="Source Property" src="../../../../_images/vse_setup_project_striptypes_panel-source-movie-strip.png" style="width: 259.0px; height: 190.5px;" /></a>
+<p class="caption"><span class="caption-text">図13: Sourceパネル</span><a class="headerlink" href="#id22" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<dl>
+<dt>File</dt><dd><p>ソースファイルが含まれるディレクトリとファイル名。ファイルが移動された場合、ストリップを再作成する代わりに、このフィールドを更新できます。</p>
+</dd>
+<dt>Color Space</dt><dd><p>このストリップのソース ファイルのカラー スペースを指定します。
+Sequencer のカラー スペースは、[Render]Properties の [Color Management]パネルでグローバルに設定されますが、ここで独自設定することができます。
+ただし、インポートされたクリップのほとんどは sRGB カラー スペースを持っています。 <a class="reference internal" href="scene.html"><span class="doc">Scene strip</span></a> の場合、カラースペースをフィルミックに設定すると効果的です。</p>
+</dd>
+<dt>MPEG Preseek</dt><dd><p>プリシークは、特定のフレームをデコードする最速の方法を決定するために使用されます。
+ビデオのグループ オブ ピクチャ (GOP) サイズと一致する必要があります。 GOP の詳細な説明については、 <a class="reference external" href="https://aws.amazon.com/blogs/media/part-1-back-to-basics-gops-explained/">Bryan Samis blog</a> を参照してください。
+ただし、ビデオの GOP サイズを見つけるのは簡単なことではありません (手動の方法については、上記のリンクを参照してください)。
+プリシークを 200 などの高い値に設定すると、シークのパフォーマンスに悪影響を及ぼす可能性があります。
+したがって、違いがほとんどない最大 = 50 に制限されます。したがって、実際には、このオプションはあまり使用されません。</p>
+</dd>
+<dt>Stream Index</dt><dd><p>一部のビデオ ファイルには、複数のビデオ ストリームとオーディオ ストリームを含めることができます。
+たとえば、2 つの監視カメラ出力。ただし、ほとんどのビデオ プレーヤーでは、両方のストリームを並べて同時にプレビューすることはできません。
+このプロパティを使用すると、プレビューするストリームを選択できます (ただし、同時に両方を選択することはできません)。
+もちろん、同じムービー ストリップを 2 回追加し、ストリーム インデックスを適切に設定し、
+上記のピクチャ イン ピクチャ アプローチを使用することもできます。
+逆の場合: <a class="reference internal" href="../../../../extra-tools/ffmpeg.html"><span class="doc">section Extra tools &gt; ffmpeg</span></a> を参照して 、2 つのビデオ チャネルを 1 つのコンテナにマージします。</p>
+</dd>
+<dt>Deinterlace</dt><dd><p>ほとんどの (古い) テレビ放送ではインターレース スキャン テクノロジが使用されています。
+HD (1920 x 1080) 画像は半分 (2 フィールド) に分割され、奇数ラインと偶数ラインが別々に順番に送信されます。
+したがって、2 つのフィールド間には非常に小さな時間遅延が生じます。
+最新のテレビやコンピュータ画面のほとんどはプログレッシブ技術で動作し、行ごとに完全な画像が一度に送信されます。
+コンピューターのモニターでインターレース画像/ムービーを表示すると、鋸歯やコーミングなどのインターレースアーティファクトが表示されます。</p>
+<p>図 14 は、ムービーのインターレース静止画 (左) とインターレース解除静止画 (右) を示しています。
+おそらく、アーティファクトを確認するにはズームインする必要があります。
+動画では青い四角が動いています。スキャンされたフィールドは同時に (次々に) 取得されないため、
+動きがあるとインターレース アーティファクトがより目立ちます。そして、動くと、それがより顕著になります。</p>
+</dd>
+</dl>
+<div class="figure align-right" id="id23">
+<img alt="Interlace vs deinterlace" src="../../../../_images/vse_setup_project_striptypes_deinterlace.svg" /><p class="caption"><span class="caption-text">図 14: インターレースおよびデインターレース スキャン</span><a class="headerlink" href="#id23" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<p>図 14 のテスト ファイルは、 <a class="reference external" href="http://www.gvgdevelopers.com/concrete/products/summit/test_clips/">Grass Valley Developers</a>  Web サイトからダウンロードできます。</p>
+<dl id="resolution">
+<dt>Resolution &amp; fps</dt><dd><p>アクティブなストリップ画像出力の dimentions (ピクセル単位の幅 x 高さ)。アクティブなストリップの 1 秒あたりのフレーム数 (fps)。</p>
+<p>これらのプロパティは編集できません。できればプロジェクトの設定と一致させるとよいです。 ( <a class="reference internal" href="../add.html"><span class="doc">see Organize &gt; Import section</span></a> を参照)。</p>
+<p>ストリップをスケーリングすると、フレームの視覚的な dimension が変わりますが、解像度は変わりません。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="custom-properties">
+<span id="custom-panel"></span><h3><span class="section-number">2.2.1.1.1.1.8. </span>Custom Properties<a class="headerlink" href="#custom-properties" title="この見出しへのパーマリンク">¶</a></h3>
+<div class="refbox admonition">
+<p class="admonition-title">Reference</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 85%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Name</strong>:</p></td>
+<td><p>Custom</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Context</strong>:</p></td>
+<td><p>Video Sequence Editor &gt; Sequencer</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Location</strong>:</p></td>
+<td><p>Sidebar &gt; Strip</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="figure align-right" id="id24">
+<a class="reference internal image-reference" href="../../../../_images/vse_setup_project_striptypes_panel-custom.png"><img alt="Custom Property" src="../../../../_images/vse_setup_project_striptypes_panel-custom.png" style="width: 246.0px; height: 65.0px;" /></a>
+<p class="caption"><span class="caption-text">図15: Custom パネル</span><a class="headerlink" href="#id24" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<p>カスタム プロパティは、独自のメタデータをストリップに保存する方法です。たとえば、これを使用して、ストリップの著作権情報や、さらなる後処理のための指示を保存できます。詳細については、 <a class="reference external" href="https://docs.blender.org/manual/en/dev/files/data_blocks.html#files-data-blocks-custom-properties">data-blocks section</a> を参照してください。</p>
+<p class="rubric">脚注</p>
+<dl class="footnote brackets">
+<dt class="label" id="f1"><span class="brackets"><a class="fn-backref" href="#id4">1</a></span></dt>
+<dd><p>Blender4.0 では 利用できるChannelの範囲は1〜128です。</p>
+</dd>
+<dt class="label" id="f2"><span class="brackets"><a class="fn-backref" href="#id5">2</a></span></dt>
+<dd><p>Blender3.2で <em>frame_still_start</em> と <em>frame_still_end</em> は削除されたようです。 (<a class="reference external" href="https://developer.blender.org/docs/release_notes/3.2/python_api/#breaking-changes">https://developer.blender.org/docs/release_notes/3.2/python_api/#breaking-changes</a>)</p>
+</dd>
+<dt class="label" id="f3"><span class="brackets"><a class="fn-backref" href="#id6">3</a></span></dt>
+<dd><p>Blender3.2以降では、 <em>frame_still_start</em> と <em>frame_still_end</em> ではなく、 <em>frame_offset_start</em> と <em>frame_offset_end</em> の負値で表現します。</p>
+</dd>
+<dt class="label" id="f4"><span class="brackets"><a class="fn-backref" href="#id7">4</a></span></dt>
+<dd><p>Blender4.0 では、 <a href="#id8"><span class="problematic" id="id9">`</span></a>Strip Offset Start`(負の場合あり) に対する Playheadの位置 のようです。</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="sound.html" class="btn btn-neutral float-right" title="2.2.1.1.2. Sound ストリップ" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="index.html" class="btn btn-neutral float-left" title="2.2.1.1. ストリップの種類" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright This page is licensed under a CC-BY-SA 4.0 Int. License.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

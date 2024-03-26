@@ -1,0 +1,289 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>2. Video Editing &mdash; Blender VSE Unofficial Documentation  ドキュメント</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+    <link rel="canonical" href="https://kantas-spike.github.io/vse-docs/video_editing/index.html" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="next" title="2.1. Setup" href="setup/index.html" />
+    <link rel="prev" title="1.3. Sequencer &amp; Preview" href="../video_sequencer/sequencer_and_preview/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Blender VSE Unofficial Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../video_sequencer/index.html">1. Video Sequence Editor</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">2. Video Editing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="setup/index.html">2.1. Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="edit/index.html">2.2. プロジェクトを編集する</a></li>
+<li class="toctree-l2"><a class="reference internal" href="render/index.html">2.3. Render your project</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../extra-tools/index.html">3. 追加ツール</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Blender VSE Unofficial Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li><span class="section-number">2. </span>Video Editing</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/video_editing/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="video-editing">
+<h1><span class="section-number">2. </span>Video Editing<a class="headerlink" href="#video-editing" title="この見出しへのパーマリンク">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<span class="target" id="id1"></span><p>この ビデオ編集ドキュメントは 3つの章に分かれており、ビデオ編集プロジェクトの一般的なワークフローを表しています: <span class="red">(1)</span> セットアップ、 <span class="red">(2)</span> 編集、および <span class="red">(3)</span> レンダリング。これらのフェーズは、pre-editing、editing そして post-editing と考えることもできます。</p>
+<p>単一のビデオの編集を開始する前に、 以下の <span class="red">(1)</span> セットアップが必要です。</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><span class="blue">(1.1)</span> 作業環境</p></li>
+<li><p><span class="blue">(1.2)</span> 特定のプロジェクト</p></li>
+</ul>
+</div></blockquote>
+<p>をセットアップする必要があります。
+<span class="blue">(1.1)</span> 作業環境のセットアップには次のものが含まれます:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><span class="green">(1.1.1)</span> ビデオ編集ワークスペースのカスタマイズ</p></li>
+<li><p><span class="green">(1.1.2)</span> いくつかのアドオンのインストール</p></li>
+<li><p><span class="green">(1.1.3)</span> ユーザー設定の管理</p></li>
+<li><p><span class="green">(1.1.4)</span> プロキシとキャッシュシステムの調整。</p></li>
+</ul>
+</div></blockquote>
+<p>一般的な <span class="blue">(1.2)</span> プロジェクトには数百のファイルが含まれています。</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><span class="green">(1.2.1)</span> 論理的でわかりやすいディレクトリ構造</p></li>
+<li><p><span class="green">(1.2.2)</span> 適切なプロジェクト設定のセットアップ (これにより、ワークフローが改善されます。)</p></li>
+<li><p><span class="green">(1.2.3)</span> 映像のインポート</p></li>
+</ul>
+</div></blockquote>
+<p><span class="red">(2)</span> 編集フェーズは、以下から構成されます。</p>
+<blockquote>
+<div><ul>
+<li><p><span class="blue">(2.1)</span> ビデオのモンタージュ</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><span class="green">(2.1.1)</span> 追加</p></li>
+<li><p><span class="green">(2.1.2)</span> 選択</p></li>
+<li><p><span class="green">(2.1.3)</span> 分割</p></li>
+<li><p><span class="green">(2.1.4)</span> 移動</p></li>
+<li><p><span class="green">(2.1.5)</span> トリミング</p></li>
+<li><p><span class="green">(2.1.6)</span> グループ化</p></li>
+<li><p><span class="green">(2.1.7)</span> ストリップの削除</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+<p>利用可能なすべてのストリップ タイプの詳細な説明は <span class="green">(2.1.1)</span> に含まれています。</p>
+<p>ラフなモンタージュが完了したら、以下を開始します。</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><span class="blue">(2.2)</span> エフェクトの追加 (トランジションやフェードなどのいくつかの。スピードやマスキングなどのより高度なアニメーション エフェクトも追加できます。これにより、完成直前のタイムラインが表示されます。)</p></li>
+<li><p><span class="blue">(2.3)</span> カラー グレーディング</p></li>
+<li><p><span class="blue">(2.4)</span> サウンドの編集 (ただし、作成者によっては、もっと早くサウンドから始める場合もあります。 例 ミュージック ビデオの編集時など)。</p></li>
+</ul>
+</div></blockquote>
+<p>編集が完了したら、</p>
+<p><span class="red">(3)</span> プロジェクトのレンダリングを開始できます。</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><span class="blue">(3.1)</span> コーデックの選択</p></li>
+<li><p><span class="blue">(3.2)</span> コンポジターまたは FFMPEG を使った post-processing (字幕が必要な場合もあります。)</p></li>
+</ul>
+</div></blockquote>
+<p><a class="reference internal" href="../video_sequencer/index.html"><span class="doc">Video Sequence Editor</span></a> に関する別の章もあることに注意してください。そこでは、タイムラインの移動、ズーム、ナビゲーションなどの基本的なタイムライン操作に関する詳細情報を見つけることができます。また、別の章では、いくつかの <a class="reference internal" href="../extra-tools/index.html"><span class="doc">Extra Tools</span></a> について説明します。編集中に必要になるかもしれない、いくつかの便利な Python または FFMPEG スクリプト、ExifTools および MediaInfo に関する情報です。</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="setup/index.html" class="btn btn-neutral float-right" title="2.1. Setup" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../video_sequencer/sequencer_and_preview/index.html" class="btn btn-neutral float-left" title="1.3. Sequencer &amp; Preview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright This page is licensed under a CC-BY-SA 4.0 Int. License.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

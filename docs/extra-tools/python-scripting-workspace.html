@@ -1,0 +1,307 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>3.3. Scripting Workspace &mdash; Blender VSE Unofficial Documentation  ドキュメント</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+    <link rel="canonical" href="https://kantas-spike.github.io/vse-docs/extra-tools/python-scripting-workspace.html" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="next" title="3.4. ExifTool" href="exiftool.html" />
+    <link rel="prev" title="3.2. FFMPEG" href="ffmpeg.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Blender VSE Unofficial Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../video_sequencer/index.html">1. Video Sequence Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../video_editing/index.html">2. Video Editing</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">3. 追加ツール</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="python-useful-scripts.html">3.1. Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ffmpeg.html">3.2. ffmpeg</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">3.3. Script Editor</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">3.3.1. スクリプトエディタを効率的に使用するにはどうすればよいですか?</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id2">3.3.1.1. ワークスペースをレイアウトする</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#python">3.3.1.2. Python コンソールを使用する</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">3.3.1.3. オートコンプリート/インテリセンスを使用する</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#vs-code">3.3.2. VS Code を効率的に使用するにはどうすればよいですか?</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id4">3.3.2.1. VS Code をスタンドアロン エディターとして使用する</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">3.3.2.2. VS Code を統合エディタとして使用する</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="exiftool.html">3.4. ExifTool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="annotating-screenshot.html">3.5. スクリーンショットに注釈を付ける</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Blender VSE Unofficial Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html"><span class="section-number">3. </span>追加ツール</a> &raquo;</li>
+        
+      <li><span class="section-number">3.3. </span>Scripting Workspace</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/extra-tools/python-scripting-workspace.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="scripting-workspace">
+<h1><span class="section-number">3.3. </span>Scripting Workspace<a class="headerlink" href="#scripting-workspace" title="この見出しへのパーマリンク">¶</a></h1>
+<p>Blender には、Text Editor (中央領域)、Info Editor (左下)、Python Console (左中央)、および 3D Viewport (左上) の 7 つのウィンドウ (領域) を備えた専用のワークスペース [Scripting] があります。右側には、[Properties] ウィンドウ (下) と 2 つのバージョンの[Outliner] (上) があります。図1 を参照してください。</p>
+<div class="figure align-default" id="id6">
+<img alt="The scripting workspace as defined in the call for workspaces in 2018" src="https://devtalk.blender.org/uploads/default/optimized/2X/6/65c4bd501c6df0b0aaa19baf4244f83589822595_2_1035x582.jpg" />
+<p class="caption"><span class="caption-text">図1 スクリプト ワークスペース (2021 年 2.92)</span><a class="headerlink" href="#id6" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<p>組み込みのテキスト エディタを使用してコードを作成し、テストできます。しかし、もちろん、Microsoft Visual Studio Code (VS Code)、Atom、Sublime など、他にも多数のコード エディターが市場に出回っています。また、Microsoft Visual Studio (VS Code と混同しないでください) などの完全な統合コード環境 (IDE) も存在します。 )、Eclipse、Pycharm、…</p>
+<p>スクリプト エディター用のアドオンも多数あります。</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/tin2tin/Script_Editing/">TintwoTin</a> は、いくつかの無料アドオンをスクリプト エディター テンプレートに統合しました。</p></li>
+<li><p><a class="reference external" href="https://blendersensei.com/hacker-manual/">Blender Sensei</a> は、スクリプト エディターの非常に高度ではあるが有料の改良版を開発しました。</p></li>
+</ul>
+<div class="section" id="id1">
+<h2><span class="section-number">3.3.1. </span>スクリプトエディタを効率的に使用するにはどうすればよいですか?<a class="headerlink" href="#id1" title="この見出しへのパーマリンク">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>Blender では、キーストロークはマウスが置かれているウィンドウに送信されます。これは、たとえば 3D ビューでは非常にうまく機能しますが、スクリプト ワークスペースでは逆効果になります。Python コンソールに何かを入力するたびに、マウスはそのウィンドウの上に移動する必要があります。標準の GUI プログラムのように、クリックするだけでは十分ではありません。</p>
+</div>
+<div class="section" id="id2">
+<h3><span class="section-number">3.3.1.1. </span>ワークスペースをレイアウトする<a class="headerlink" href="#id2" title="この見出しへのパーマリンク">¶</a></h3>
+<p>上記の煩わしさを最小限に抑えるには、スクリプト ワークスペースを 2 つのメイン ウィンドウに再配置する必要があります (図 1 を参照)。左側には、コードを作成しているエディター (シーケンス エディターなど) があります。右側にはテキストエディタがあります。それでも十分なスペースがない場合は、Ctrl-Tab または Alt-Shift-Tab を使用していつでも全画面表示にすることができます。</p>
+<p>一見すると、手の届く範囲にいくつかの便利なエディター、特に Python コンソールがなくなってしまいます。しかし、私の好みでは、デフォルトのワークスペースではその領域が小さすぎます。さらに、大きなウィンドウの 1 つを別のエディタに置き換えることも非常に簡単です。ショートカット Shift-F4 を使用すると、ウィンドウが Python コンソールに置き換えられます。コードエディタに戻るには、Shift-F11 を使用します。こうすることで、ほとんどの時間、マウス カーソルをテキスト エディター (キーストロークを受け取る人) の上に置くことができます。コーディングを高速化するには、できるだけ手をキーボードの上に置いたままにするのが最善です。</p>
+</div>
+<div class="section" id="python">
+<h3><span class="section-number">3.3.1.2. </span>Python コンソールを使用する<a class="headerlink" href="#python" title="この見出しへのパーマリンク">¶</a></h3>
+<p>なぜ Python コンソールが必要なのでしょうか? とりわけ (たとえば、計算機として使用できます)、何かを試すのに非常に便利なツールです。ビデオ シーケンス エディター (VSE) の特定のフレームに再生ヘッドを配置するという指示は何だったのでしょうか? Python (Shift-F4) を使用してテキスト エディタを一時的に変更し、 &quot;bpy.context&quot; と入力し始めます。... 疑わしい場合は、Tab キーを押して、使用可能なコマンドのリスト (コード補完) を表示します。これも、大きな窓が必要な理由の 1 つです。コード補完リストは非常に長くなる場合があります。いずれかのオプションを選択することはできませんが、実際のキーワードが得られるまで、さらに入力して Tab キーを押してリストを絞り込むことができます。</p>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>残念ながら、Python コンソールのコピー/ペーストおよび選択機能はかなり制限されています。選択はマウスでのみ行うことができます (ただし、上記を参照)。ショートカット Ctrl-Shift-C を押すと、Python コンソール バッファ全体 (画面に表示されるいくつかのコマンドではなく、完全な履歴) がコピーされます。Windows の場合はコマンド  <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">os</span></code>  および  <code class="docutils literal notranslate"><span class="pre">os.system('cls')</span></code>  または  <code class="docutils literal notranslate"><span class="pre">os.system('clear')</span></code>  を使用して画面をクリアできます。 &gt; Linuxの場合。</p>
+</div>
+<p>完全なコード ブロック (for next ループなど) をコピーして Python コンソールに貼り付けて、実行およびテストすることができます (たとえば、いくつかの変数の値を検査するなど)。ただし、白線の使用は避けてください。次のコマンドを使用して、完全なオープン テキスト エディター コードを実行することもできます。</p>
+<p><code class="docutils literal notranslate"><span class="pre">exec(compile(bpy.data.texts['Text'].as_string(),</span> <span class="pre">'textblock',</span> <span class="pre">'exec'))</span></code></p>
+<p>これにより、開いているテキスト エディタ ウィンドウからコードが実行されます。 <a class="reference external" href="https://github.com/Pullusb/snippetsLibrary">snippet addon</a> を使用して、これらのスニペットを保存できます。</p>
+</div>
+<div class="section" id="id3">
+<h3><span class="section-number">3.3.1.3. </span>オートコンプリート/インテリセンスを使用する<a class="headerlink" href="#id3" title="この見出しへのパーマリンク">¶</a></h3>
+<p>テキスト エディタ自体にはオートコンプリートが組み込まれていますが、それはファイル自体のコード オブジェクトに限定されています。Mackraken と Tintwotin による <a class="reference external" href="https://github.com/tin2tin/Intellisense_for_Blender_Text_Editor">Intellisense for Blender Text Editor</a> アドオンをインストールできます。これは、呼び出すために奇妙なキーの組み合わせを使用する必要があるにもかかわらず、うまく機能します。もう 1 つの方法は、 <a class="reference external" href="https://github.com/nutti/fake-bpy-module">Nutti</a> の`fake bpy modules` を利用することです。これは <a class="reference external" href="https://www.youtube.com/watch?v=IQgLBnPO2uo">GDQuest</a> で紹介されている。</p>
+<p>テキスト エディターからコード (複数行) をコピーし、Python コンソールに貼り付けて実行し、いくつかの変数を検査することもできます。場合によっては、これがあまりうまく機能しないことがあります (空行など)。別の方法としては、コンソールで次のコマンドを実行します。これにより、開いているテキスト ファイルがエディタで実行されます。</p>
+<p>Blender sensei バージョンのテキスト エディター (上記を参照) にも、非常に優れたオートコンプリート機能があります。</p>
+<p>`` exec(compile(bpy.data.texts['Text'].as_string(), 'textblock', 'exec'))``</p>
+</div>
+</div>
+<div class="section" id="vs-code">
+<h2><span class="section-number">3.3.2. </span>VS Code を効率的に使用するにはどうすればよいですか?<a class="headerlink" href="#vs-code" title="この見出しへのパーマリンク">¶</a></h2>
+<p>もちろん、市場にはプロフェッショナルなコードエディタがいくつかあります。ほとんどの場合、それらはより適切に、より流暢に動作し、より優れたサポートと、最も多様なものに対する無限の拡張機能を備えています。Blender テキスト エディターの唯一の利点は、他の Blender モジュールとスムーズに統合され、コードの実行が非常に簡単であることです。ただし、VS Code と Blender の統合はそれに非常に近いものになります。ただし、セットアップはもう少し複雑です。 <a class="reference external" href="https://www.youtube.com/playlist?list=PLlu-PIRg8u2nVGQMKRhiqK0KhKqBZfkax">Michael Bridges</a> は、 Windows、Linux、Mac 上で VS Code と Blender をセットアップするための 3 つの広範なチュートリアルを作成しました。</p>
+<p>このチュートリアルを完了すると、Python 拡張機能と <span class="incremental">fake-module</span> のオートコンプリート リストを備えた VS Code がインストールされます。その後、VS Code を次の 2 つの方法で使用できます。</p>
+<div class="section" id="id4">
+<h3><span class="section-number">3.3.2.1. </span>VS Code をスタンドアロン エディターとして使用する<a class="headerlink" href="#id4" title="この見出しへのパーマリンク">¶</a></h3>
+<p>VS Code でコードを記述し、.py ファイルとして保存し、そのファイルを Blender テキスト エディターで開き、実行して編集し、再度保存します (注意: ショートカット キーは Alt-S です)。VS Code で続行し (コードはリアルタイムで更新されます)、保存して、Blender テキスト エディターに切り替え、更新ボタンを押して続行します。もちろん、VS Code エディターを使用してコードを入力する場合を除いて、これには大きな利点はありません。</p>
+</div>
+<div class="section" id="id5">
+<h3><span class="section-number">3.3.2.2. </span>VS Code を統合エディタとして使用する<a class="headerlink" href="#id5" title="この見出しへのパーマリンク">¶</a></h3>
+<p>まず、Jaques Luke による素晴らしい Blender 拡張機能をインストールする必要があります。Blender 開発用の拡張ライブラリを検索します。</p>
+<div class="figure align-default" id="id7">
+<a class="reference internal image-reference" href="../_images/script_editor_VSCode_extension.png"><img alt="Blender extension for VSCode" src="../_images/script_editor_VSCode_extension.png" style="width: 661.0px; height: 138.5px;" /></a>
+<p class="caption"><span class="caption-text">図2  VCode の Blender 拡張機能</span><a class="headerlink" href="#id7" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<p>コマンド (ショートカット = Alt-Shift-P) を使用して VS Code 内から Blender のインスタンスを起動し、&quot;Blender: Start&quot;を選択します。これにより、Blender が起動し、Blender のシステム コンソールが VS Code のターミナル ウィンドウに移動します。これで、[Terminal] タブからシステム コンソールにアクセスできるようになります。Python コンソールは、[Debug Console] タブで利用できます。Blender の他のインスタンスを手動で作成することもできますが、Blender のこの特定のインスタンスは VS Code 内からのみ管理できる (たとえば閉じられる) ことに注意してください。</p>
+<p>[Blender: New Script] コマンドを使用して新しい空のスクリプトを作成するか、既存のスクリプトを開くことができます。このスクリプトを VS Code 内で編集します。スクリプトの先頭で [Blender: Set Script Context] コマンドを使用して、正しいコンテキスト (例: VIDEO SEQUENCER、VIEW_3D など) を設定します。 [Blender: Run Script] コマンドを使用して、VS Code 内からスクリプトを実行できます。すべてがうまくいけば、スクリプトは Blender 環境内で実行されます。エラーがある場合は、システム コンソール (ターミナル) または Python コンソール (デバッグ コンソール) に出力されます。</p>
+<div class="figure align-default" id="id8">
+<img alt="terminal window of Blender extension" src="../_images/script_editor_VSCode_terminal-1.png" />
+<p class="caption"><span class="caption-text">図3 terminal window of Blender extension</span><a class="headerlink" href="#id8" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<p>デバッグのために、1 つ以上のブレークポイントを設定してスクリプトを開始できます。スクリプトはブレークポイントで停止します。そこで変数を検査し、コードをステップ実行できます。別のデバッガは <a class="reference external" href="https://github.com/alanscodelog/blender-debugger-for-vscode">Alan</a> によって作成されました。</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="exiftool.html" class="btn btn-neutral float-right" title="3.4. ExifTool" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="ffmpeg.html" class="btn btn-neutral float-left" title="3.2. FFMPEG" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright This page is licensed under a CC-BY-SA 4.0 Int. License.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

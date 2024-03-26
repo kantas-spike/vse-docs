@@ -80,8 +80,13 @@ livehtml:
 html: .SPHINXBUILD_EXISTS
 	@QUICKY_CHAPTERS=$(QUICKY_CHAPTERS) \
 	$(SPHINXBUILD) -M html "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+	rm -rf ./docs/
+	mkdir ./docs/
+	touch ./docs/.nojekyll
+	cp -r $(BUILDDIR)/html/* ./docs/.
 	@echo "To view, run:"
-	@echo "  "$(OPEN_CMD) $(shell pwd)"/$(BUILDDIR)/html/$(CONTENTS_HTML)"
+#	@echo "  "$(OPEN_CMD) $(shell pwd)"/$(BUILDDIR)/html/$(CONTENTS_HTML)"
+	@echo "  "$(OPEN_CMD) $(shell pwd)"/docs/$(CONTENTS_HTML)"
 
 latexpdf: .SPHINXBUILD_EXISTS
 	@QUICKY_CHAPTERS=$(QUICKY_CHAPTERS) \

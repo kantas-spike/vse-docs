@@ -1,0 +1,285 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>2.2.2.2. グリースペンシルによる注釈 &mdash; Blender VSE Unofficial Documentation  ドキュメント</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+    <link rel="canonical" href="https://kantas-spike.github.io/vse-docs/video_editing/edit/effects/grease_pencil.html" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="検索" href="../../../search.html" />
+    <link rel="next" title="2.2.2.3. Transition" href="transition.html" />
+    <link rel="prev" title="2.2.2.1. VSE でのアニメーション" href="animation.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Blender VSE Unofficial Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../video_sequencer/index.html">1. Video Sequence Editor</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">2. Video Editing</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../setup/index.html">2.1. Setup</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">2.2. プロジェクトを編集する</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../montage/index.html">2.2.1. Montage</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">2.2.2. Effects</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="animation.html">2.2.2.1. VSE でのアニメーション</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">2.2.2.2. グリースペンシルによる注釈</a></li>
+<li class="toctree-l4"><a class="reference internal" href="transition.html">2.2.2.3. Transition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="masking.html">2.2.2.4. Masking</a></li>
+<li class="toctree-l4"><a class="reference internal" href="speed.html">2.2.2.5. Speed</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../color-grading/index.html">2.2.3. Color grading</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../sound/index.html">2.2.4. サウンドの編集</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/index.html">2.3. Render your project</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../extra-tools/index.html">3. 追加ツール</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender VSE Unofficial Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html"><span class="section-number">2. </span>Video Editing</a> &raquo;</li>
+        
+          <li><a href="../index.html"><span class="section-number">2.2. </span>プロジェクトを編集する</a> &raquo;</li>
+        
+          <li><a href="index.html"><span class="section-number">2.2.2. </span>Effects</a> &raquo;</li>
+        
+      <li><span class="section-number">2.2.2.2. </span>グリースペンシルによる注釈</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/video_editing/edit/effects/grease_pencil.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1><span class="section-number">2.2.2.2. </span>グリースペンシルによる注釈<a class="headerlink" href="#id1" title="この見出しへのパーマリンク">¶</a></h1>
+<p>ビデオ シーケンス エディターで映像にグリース ペンシルの注釈を作成するには、2 つのシーンが必要です。
+1 つはグリース ペンシルの注釈用で、もう 1 つはビデオ シーケンサー用です。ビデオ映像が含まれる同じシーン内にグリース ペンシル アノテーションを作成することはできません。
+それらを GP シーンと VSE シーンと呼びましょう。おそらく、作業中の VSE シーンがすでにあるでしょう。 GP シーンは、VSE シーンの設定をコピーできます。これにより、両方のシーンのフレームレートと解像度が同じになります。必須ではありませんが。
+ただし、カメラはコピーされないため、GP シーンに手動で追加する必要があります。
+次に、GP シーンをシーン ストリップとして VSE シーン ([Add]メニュー &gt; [Scen]) の既存のフッテージの上に追加します。もちろん、注釈はまだ作成されていないため、プレビューには何も表示されません。</p>
+<p>GP シーンに切り替えて、2D アニメーション ワークスペースを開きます (図 1 を参照)。新しいカメラを追加します。注釈を付けるムービーをカメラの背景として追加できます。 カメラを選択し[Properties] パネルで、[Background Images] Panelを探しします。
+もう 1 つのオプションは、ムービーをプレーン上のテクスチャとして追加することです。これは、アドオンの画像を平面として使用すると簡単に実行できます。</p>
+<p>キャンバスの背景も透明にする必要があります。そうしないと、GP シーンの背景が VSE シーン ストリップを完全に覆ってしまいます。 [Properties] エディターで [Render]タブ に切り替え、GP シーンの [Film] プロパティを [Transparent] に設定します。現在のフレーム インジケーターまたはPlayheadをフレーム 1 に配置し、グリース ペンシル オブジェクトを追加します (メニューの [Add] &gt; [Grease Pencil] &gt; [Blank])。グリースペンシルの描画モードに切り替えて、キャンバス上に何かを描きます。</p>
+<p>図 1 は、描画モードの 2D アニメーション ワークスペースを示しています。キャンバス上に黄色のボックスと矢印が描画されます。黄色のボックスはフレーム 1 でキーフレームされ、矢印はフレーム 20 でキーフレームされていることに注意してください。現在のフレームが位置 20 にあるため、両方とも 2D アニメーション ワークスペースに表示されます。</p>
+<div class="figure align-default" id="id2">
+<img alt="2D Animation workspace" src="../../../_images/video_editing_edit_effects_grease-pencil-1.png" />
+<p class="caption"><span class="caption-text">図1 グリース ペンシル オブジェクトと背景画像を含む 2D アニメーション ワークスペース</span><a class="headerlink" href="#id2" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<p>VSE シーンとビデオ編集ワークスペースに戻り、結果を確認します。プレビューのプロパティのビューパネルでレンダリングシェーディングがオンになっていることを確認してください。下にあるムービーの上に GP 描画が表示されます。</p>
+<p>ビデオ編集ワークスペースにはデフォルトでカメラが含まれていますが、必ずしもカメラを持つ必要はありません。ビデオ シーケンサーは、追加されたストリップに基づいて独自の出力を作成します。</p>
+<div class="figure align-default" id="id3">
+<img alt="Video Editing workspace" src="../../../_images/video_editing_edit_effects_grease-pencil-2.png" />
+<p class="caption"><span class="caption-text">図 2: (カットされた) シーン ストリップが追加されたビデオ編集ワークスペース</span><a class="headerlink" href="#id3" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<p>シーケンサーでわかるように、GP シーンは約フレーム 50 に追加されます。ただし、シーン ストリップの現在のフレームはフレーム 17 です。したがって、黄色のボックスのみが表示されます。フレーム 20 以降に矢印が表示されます。</p>
+<p>上記のテクニックは、元のクリップを編集していない場合にのみ機能します。ただし、たとえば、元の映像に変換 (回転、スケールなど) を適用した場合、このテクニックは機能しません。次に、最初に編集したストリップをレンダリングし、この出力を GP シーンに挿入する必要があります。</p>
+<p>複数の注釈</p>
+<p>ほとんどの場合、ビデオ プロジェクトには複数の注釈が必要です。もちろん、ワークフローはもう少し複雑になります。いくつかの選択肢の中から選択できます。</p>
+<ul class="simple">
+<li><p>必要なアニメーションごとに 1 つのシーンを作成でき、各アニメーションは 1 つのシーン ストリップで表されます。</p></li>
+</ul>
+<ul>
+<li><p>1 つのシーン内に複数のアニメーションをカプセル化することもできます。ただし、アニメーションがかなり複雑な場合は、別のシーンを作成することをお勧めします。</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>タイムフレームに基づいて各アニメーションを分離します。たとえば、最初のアニメーションはフレーム 1 で始まり、2 番目のアニメーションはフレーム 500 で始まり、3 番目のアニメーションはフレーム 1000 で始まります。次に、シーン ストリップを正しいフレームでカットする必要があります (ショートカット K または Shft-K)。</p></li>
+</ul>
+<ul class="simple">
+<li><p>また、アニメーションごとに異なるレイヤーを作成し (グリース ペンシル プロパティの [Layers] パネル)、[Set Layer Visibility] プロパティ ([Layers] パネルの目のアイコン) を適切にキーフレームすることもできます。上の例では、すべてのレイヤーをフレーム 0 で非表示に設定し、それぞれフレーム 1、500、1000 で表示できるように設定します。</p></li>
+</ul>
+<ul class="simple">
+<li><p>アニメーションごとに個別のグリース ペンシル オブジェクトを予約できます。次に、レンダリングの可視性も適切に設定する必要があります。</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="transition.html" class="btn btn-neutral float-right" title="2.2.2.3. Transition" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="animation.html" class="btn btn-neutral float-left" title="2.2.2.1. VSE でのアニメーション" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright This page is licensed under a CC-BY-SA 4.0 Int. License.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

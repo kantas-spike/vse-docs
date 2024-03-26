@@ -1,0 +1,270 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>2.1.4.2.1. Proxies technical &mdash; Blender VSE Unofficial Documentation  ドキュメント</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+    <link rel="canonical" href="https://kantas-spike.github.io/vse-docs/video_editing/setup/proxies_technical.html" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="2.1.5. Directory structure" href="directory-structure.html" />
+    <link rel="prev" title="2.1.4. Proxies &amp; cache" href="proxies.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Blender VSE Unofficial Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../video_sequencer/index.html">1. Video Sequence Editor</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">2. Video Editing</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">2.1. Setup</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="workspace.html">2.1.1. Workspace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="preferences.html">2.1.2. User Preferences</a></li>
+<li class="toctree-l3"><a class="reference internal" href="add-ons.html">2.1.3. Add-ons</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="proxies.html">2.1.4. Proxies &amp; cache</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="proxies.html#proxies">2.1.4.1. Proxies</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="proxies.html#cache">2.1.4.2. Cache</a><ul class="current">
+<li class="toctree-l5 current"><a class="current reference internal" href="#">2.1.4.2.1. Proxies technical</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="directory-structure.html">2.1.5. Directory structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="project-settings.html">2.1.6. Project settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="creating-test-files.html">2.1.7. テストファイルの作成</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../edit/index.html">2.2. プロジェクトを編集する</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render/index.html">2.3. Render your project</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../extra-tools/index.html">3. 追加ツール</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blender VSE Unofficial Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html"><span class="section-number">2. </span>Video Editing</a> &raquo;</li>
+        
+          <li><a href="index.html"><span class="section-number">2.1. </span>Setup</a> &raquo;</li>
+        
+          <li><a href="proxies.html"><span class="section-number">2.1.4. </span>Proxies &amp; cache</a> &raquo;</li>
+        
+      <li><span class="section-number">2.1.4.2.1. </span>Proxies technical</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/video_editing/setup/proxies_technical.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="proxies-technical">
+<h1><span class="section-number">2.1.4.2.1. </span>Proxies technical<a class="headerlink" href="#proxies-technical" title="この見出しへのパーマリンク">¶</a></h1>
+<p>ビデオのファイルサイズは非常に大きくなることがあります。 4K ファイル (3840 x 2160) を例に挙げます。 1 つの非圧縮フレームには、3840 x 2160 x 24 ビット (R、G、B の各色に 8 ビット)、または 24 883 200 バイト、約 21 MB が必要です。</p>
+<p>以下は、最初の 10 フレームを選択し、画像タイプを出力する FFProbe コードです。</p>
+<p>ffprobe -v error -hide_banner -of default=noprint_wrappers=0 -print_format flat  -select_streams v:0 -show_entries frame=pict_type -read_intervals &quot;%+#10&quot; dolby-4k.mkv</p>
+<p>1920 x 1080 = 2 073 600 x 24 bits = 49 766 400 bits / 8 = 6.220 800 / 0 048 576 = 5.932 MB</p>
+<p>Blender VSE の簡単なProxy Addon (より引用 <a class="reference external" href="https://blender.community/c/rightclickselect/0Nfbbc/">https://blender.community/c/rightclickselect/0Nfbbc/</a>)</p>
+<p>Ffmpeg Command:</p>
+<p>プロキシの構築には次のコマンドを使用します。</p>
+<p>ffmpeg -i input.mp4 -vf scale=640:-2 -vcodec libx264 -g 1 -bf 0 -vb 0 -crf 20 -preset veryfast -acodec aac -ab 128k out.avi</p>
+<blockquote>
+<div><p>Fixed ratio of 640:-2 (&quot;-:2&quot; is needed for x264 to use the scale filter which needs to be divisible by 2) Details: <a class="reference external" href="https://ffmpeg.org/ffmpeg-filters.html#scale">https://ffmpeg.org/ffmpeg-filters.html#scale</a>
+これにより、アスペクト比を維持したまま固定幅 640 の AVI コンテナ内に h264 のイントラフレームが作成されます。
+640:-2 の固定比率 (x264 でスケール フィルターを使用するには、2 で割り切れる必要がある「-:2」が必要です)</p>
+<p>詳細: <a class="reference external" href="https://ffmpeg.org/ffmpeg-filters.html#scale">https://ffmpeg.org/ffmpeg-filters.html#scale</a></p>
+</div></blockquote>
+<p>アスペクト比を維持しながら固定幅 640 を使用する理由は次のとおりです。</p>
+<blockquote>
+<div><p>それは簡単です。単純なプロキシ操作では、可変サイズを選択する必要はありません。</p>
+<p>HD や 4k などの混合メディアを同じ品質で併用できます。</p>
+<p>インターフェイスは幅 640 にぴったりフィットします。</p>
+<p>業界は 4K および 4K+ に向かっています。たとえば、25% プロキシでは 960x540 という巨大なファイル サイズが作成されます。</p>
+<p>可変のスケーリングは、エンコード速度とフレーム ブレンディングにも影響します。</p>
+<p>代わりに、画質とファイルサイズを考慮して CRF を使用しています。</p>
+</div></blockquote>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="directory-structure.html" class="btn btn-neutral float-right" title="2.1.5. Directory structure" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="proxies.html" class="btn btn-neutral float-left" title="2.1.4. Proxies &amp; cache" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright This page is licensed under a CC-BY-SA 4.0 Int. License.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
