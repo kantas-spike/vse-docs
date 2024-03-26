@@ -1,0 +1,328 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>2.2.2.4. Masking &mdash; Blender VSE Unofficial Documentation  ドキュメント</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+    <link rel="canonical" href="https://kantas-spike.github.io/vse-docs/video_editing/edit/effects/masking.html" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="検索" href="../../../search.html" />
+    <link rel="next" title="2.2.2.5. Speed" href="speed.html" />
+    <link rel="prev" title="2.2.2.3. Transition" href="transition.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Blender VSE Unofficial Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../video_sequencer/index.html">1. Video Sequence Editor</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">2. Video Editing</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../setup/index.html">2.1. Setup</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">2.2. プロジェクトを編集する</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../montage/index.html">2.2.1. Montage</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">2.2.2. Effects</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="animation.html">2.2.2.1. VSE でのアニメーション</a></li>
+<li class="toctree-l4"><a class="reference internal" href="grease_pencil.html">2.2.2.2. グリースペンシルによる注釈</a></li>
+<li class="toctree-l4"><a class="reference internal" href="transition.html">2.2.2.3. Transition</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">2.2.2.4. Masking</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#strip-masks">2.2.2.4.1. Strip masks</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#data-block-masks">2.2.2.4.2. Data-block masks</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id2">2.2.2.4.3. いくつかの例</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="speed.html">2.2.2.5. Speed</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../color-grading/index.html">2.2.3. Color grading</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../sound/index.html">2.2.4. サウンドの編集</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/index.html">2.3. Render your project</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../extra-tools/index.html">3. 追加ツール</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender VSE Unofficial Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html"><span class="section-number">2. </span>Video Editing</a> &raquo;</li>
+        
+          <li><a href="../index.html"><span class="section-number">2.2. </span>プロジェクトを編集する</a> &raquo;</li>
+        
+          <li><a href="index.html"><span class="section-number">2.2.2. </span>Effects</a> &raquo;</li>
+        
+      <li><span class="section-number">2.2.2.4. </span>Masking</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/video_editing/edit/effects/masking.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="masking">
+<h1><span class="section-number">2.2.2.4. </span>Masking<a class="headerlink" href="#masking" title="この見出しへのパーマリンク">¶</a></h1>
+<p>マスキングは、ビデオ画像の一部を分離して、分離された領域に何らかの効果を適用するビデオ編集手法です。分離したいストリップの領域はマスクによって指定されます。これは本質的に、ストリップ画像と同じサイズの白黒画像です。孤立した領域は白でペイントされます。無視できる領域は黒で塗りつぶされます。</p>
+<p>次に、ソース ストリップのアルファ チャネルを変更することによってマスキングが行われます。 RGB カラー値に加えて、各ピクセルには 0 ～ 1 の範囲内の追加の値があります。 alpha=0 の場合、ピクセルは透明であり、ピクセルの RGB 値はピクセルの外観にまったく影響しません。 alpha=1 の場合、ピクセルは完全に不透明になり、ピクセルの色は RGB 値によって完全に決まります。乗算ルールを念頭に置くことで、これらの値を覚えておくことができます。つまり、RGB 値を 1 で乗算すると、元の RGB 値が保持されます。ゼロを乗算すると、すべての RGB 値が消去されます。</p>
+<div class="figure align-default" id="id4">
+<img alt="Mask alpha calculation" src="../../../_images/video_editing_edit_effects_masking-alpha-channel.svg" /><p class="caption"><span class="caption-text">図1 ソース ストリップに適用されたさまざまな領域のマスクによるアルファ値の計算</span><a class="headerlink" href="#id4" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<p>マスキングでは、ソース ストリップ ピクセルのアルファ値と、対応するマスク ピクセルの最小の RGB 値を乗算して結果を取得します。したがって、マスクが白の場合 (図 1 を参照)、その RGB 値は (1,1,1) で、対応する結果のアルファ値は 1 または完全に不透明 (1 x 1 = 1) に設定されます。マスクが黒の RGB (0,0,0) の場合、1 x 0 = 0 であるため、結果は完全に透明になります。中間のグレーの RGB(0.5,0.5,0.5) と黄色の RGB(1,1,0) マスクにより、結果は、最小の RGB 値 = 0.5 であるため、中間グレーでは部分的に透明になり、最小の RGB 値 = 0 であるため、黄色のマスクでは完全に透明になります。 したがって、図 2 では、マスクの黒と黄色の両方の領域がソース ストリップになります。その場所では透明になります。</p>
+<div class="section" id="strip-masks">
+<h2><span class="section-number">2.2.2.4.1. </span>Strip masks<a class="headerlink" href="#strip-masks" title="この見出しへのパーマリンク">¶</a></h2>
+<p>VSE でのマスキングは、Mask モディファイアを使用して行われます (図 2 および 3 を参照)。マスクするストリップを選択し、マスク モディファイアを適用します。マスク入力タイプとしてストリップを選択し、マスク ドロップダウンからマスク (この場合はマスク ストリップ) を選択します。必ずマスク ストリップをミュート (<kbd class="kbd docutils literal notranslate">H</kbd>) としてマークしてください。このストリップは見たくないでしょう。</p>
+<div class="figure align-default" id="id5">
+<img alt="Meta strip mask" src="../../../_images/video_editing_edit_effects_masking-strip-mask.svg" /><p class="caption"><span class="caption-text">図2 ストリップ マスクを使用したMask modifier</span><a class="headerlink" href="#id5" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<p>図 2 では、分離領域のサイズに合わせてトリミングされたカラー ストリップを使用しています。プロジェクトはソース ストリップの解像度 (Sprite Fright - Blender Open Movie - 1280 x 536) に設定されます。したがって、追加されたカラー ストリップも 1280 x 536 の解像度を持ちます。歩行するキャラクターの領域を分離するために、約 960 x 230 にトリミングされます。このマスク モディファイアの結果は、透明な背景上の孤立した領域の切り抜きです。</p>
+<p>切り抜きのエッジが鋭利であることに注意してください。 1 つのピクセルで完全に不透明から完全に透明になります。これは、カラー ストリップにも白から黒/透明のはっきりした境界線があるためです。</p>
+<p>また、マスク ストリップはソース ストリップと同じ長さである必要はないことに注意してください。 modifier は、ソース ストリップ全体にマスクを適用します。ストリップの特定の時間枠のみマスクが必要な場合は、ストリップをカットする必要があります。</p>
+<p>また、マスク ストリップはソース ストリップと同じ位置にある必要はありません。たとえば、タイムラインの最後にすべてのマスク ストリップを収集できます。ただし、ほとんどの場合、マスク ストリップをソース ストリップの近くに配置しようとします。ストリップ マスクは、同じシーン内で複数回使用できます。もちろん、マスクとソースを同じ場所に保持することはできません。</p>
+<div class="figure align-right" id="id6">
+<a class="reference internal image-reference" href="../../../_images/video_editing_edit_effects_masking-metastrip-mask.svg"><img alt="Meta strip mask" height="217" src="../../../_images/video_editing_edit_effects_masking-metastrip-mask.svg" width="214" /></a>
+<p class="caption"><span class="caption-text">図3 矢印マスク</span><a class="headerlink" href="#id6" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<p>マスク ストリップはメタ ストリップにすることができます。複数のカラー ストリップ (形状が異なる) を 1 つのメタ ストリップにグループ化し、このストリップをマスクとして使用できます。図 3 は、5 つのカラー ストリップから単純な矢印の形を作成する方法を示しています。白い背景が使用されます。矢印をマスクとして使用できるようにします。</p>
+<p>マスクは白​​黒画像である必要はありません。どのような色でも使用できますが、実際にはグレースケールの色合いのみが使用されます。フェザー効果を作成するには、白から黒へのグラデーションのグレースケール境界線が必要です。グラデーションのステップが多いほど、ぼかしが滑らかになります。 Blender はバックグラウンドで RGB トリプルの最小値を取得し、この値を係数としてソース ストリップのアルファ チャネルに適用します。</p>
+<p>最後に、マスク画像は静止画像である必要はありません。任意のムービー ストリップをマスクとして使用できます。</p>
+</div>
+<div class="section" id="data-block-masks">
+<h2><span class="section-number">2.2.2.4.2. </span>Data-block masks<a class="headerlink" href="#data-block-masks" title="この見出しへのパーマリンク">¶</a></h2>
+<p>Blender は、ストリップのどの領域を分離したいかを知る必要があります。この領域は、別のストリップ (上記を参照) によって指定するか、別のエディタでマスクの定義を作成することによって指定できます。マスクは、Image Editor と Movie Clip Editorの ヘッダーの [Editing Context] を [Mask] に変更することで、で作成できます (図 4)。これにより、さまざまなツールとプロパティがエディター パネルに追加され、マスクの操作に必要のないその他のツールやプロパティは非表示になります。</p>
+<div class="figure align-default" id="id7">
+<img alt="Data-block mask" src="../../../_images/video_editing_edit_effects_masking-datablock-mask.svg" /><p class="caption"><span class="caption-text">図4 データ ブロック マスクを使用したマスク モディファイア</span><a class="headerlink" href="#id7" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<p>Image Editor は静的マスクに適しています。図 4 では、 Video Editing Workspace の元のファイル ブラウザ ウィンドウが Image Editor に置き換えられています。参照イメージを使用するには、まずソース ストリップを(マスクなしで)レンダリングし、このレンダリング結果をイメージ エディタで使用します(ヘッダーの中央にあるリンクするイメージを参照ボタンをクリックしてレンダリング結果を選択します)。</p>
+<p>[Add]メニュー または <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shft</kbd>-<kbd class="kbd docutils literal notranslate">A</kbd></kbd> により、 [Circle] または [Square] マスクを追加できます。この小さなマスクは 2D カーソルの位置に追加されます。通常は画像の左下隅 (位置 0.0) にあります。 2D カーソルの位置は、 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shft</kbd>-<kbd class="kbd docutils literal notranslate">RMB</kbd></kbd> または、ショートカットまたは Sidebar &gt; [View] &gt; [2D Cursor] を使用して変更できます。
+右上の場所は (1.1) です。<kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">LMB</kbd></kbd> で画像内でカスタムマスクを追加できます。 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">LMB</kbd></kbd> クリックし、ドラッグすると、曲線に対する一種のベジェ ハンドルが作成されます。フェザー効果を追加するには、ショートカット <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">S</kbd></kbd> を使用してドラッグします。
+マスクの方向 ( [Mask]メニュー &gt; [Switch Direction]) に応じて、フェザリング境界線 (緑色の線) がマスクの内側または外側に描画されます。フェザリング境界線とマスクの間の距離は、不透明と透明の間の移行の滑らかさを制御します。</p>
+<p>マスクは [Browse Mask to be linked] ボックス (ヘッダーの中央) で名前を付けることができ、アウトライナー (blendファイル表示モード) でデータ ブロックとしても表示されます。このマスクは、同じシーン内だけでなく、シーン間でも複数回使用できます。</p>
+<p>場合によっては、位置や形状を変更するマスクが必要になることがあります。たとえば、走行中の車のナンバープレートをぼかす場合などです。このようなダイナミック マスクの作成は、ムービー クリップ エディターで行うのが最適です。ワークスペースを [VFX] &gt; [Masking] ワークスペースに変更し、ソース クリップを開きます。シーン ストリップや VSE のレンダリング結果を追加することはできません。その場合は、最初にシーンをレンダリングする必要があります。マスクの作成と編集の詳細については、 ドキュメントの <a class="reference external" href="https://docs.blender.org/manual/en/latest/movie_clip/masking/index.html#">Motion Tracking &amp; Masking</a> セクションを参照してください。</p>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">課題</p>
+<p>このセクションにさらに情報を追加するか、他のドキュメントを参照してください。</p>
+</div>
+</div>
+<div class="section" id="id2">
+<h2><span class="section-number">2.2.2.4.3. </span>いくつかの例<a class="headerlink" href="#id2" title="この見出しへのパーマリンク">¶</a></h2>
+<p>マスキングはほぼすべてのビデオ プロジェクトで使用されます。たとえば、</p>
+<ol class="arabic simple">
+<li><p>正方形、円、矢印などの基本的な形状、または文字マスクなどのより高度な形状でストリップの一部を切り取ります</p></li>
+<li><p>ストリップの特定の領域をぼかすには、;顔やナンバープレートなど。</p></li>
+<li><p>ストリップの一部の領域をカラー グレーディングし、残りの領域はそのままにしておきます (空を暗くするなど)。</p></li>
+<li><p>たとえば、グリーン スクリーンと組み合わせて新しいイメージを作成します。</p></li>
+<li><p>ストリップ間のカスタムトランジションを作成します。たとえば、斜めのスイープ。</p></li>
+</ol>
+<div class="figure align-default" id="id8">
+<img alt="Cut out with letter mask" src="../../../_images/video_editing_edit_effects_masking_example-text-mask.png" />
+<p class="caption"><span class="caption-text">図6 文字マスクで切り取る</span><a class="headerlink" href="#id8" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<p>図6 の文字マスクの場合、白色のテキスト ストリップを追加する必要があります。ムービークリップを選択し、[Mask modifier]を追加して、上記のテキストストリップをマスクとして選択します。マスクストリップをミュートにすることを忘れないでください。</p>
+<div class="figure align-default" id="id9">
+<img alt="Blur mask" src="../../../_images/video_editing_edit_effects_masking_example-blur-mask.png" />
+<p class="caption"><span class="caption-text">図7 ぼかしマスク</span><a class="headerlink" href="#id9" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<p>ぼかし効果を得るには、3 つのストリップとマスクが必要です。最初のストリップはオリジナルのムービーで、2 番目のストリップは最初のストリップのコピーですが、カットアウト マスクが適用されています。図 7 の例では、両方のボックスのテキストがマスクされています。[Effects] &gt; [Gussian blur] ストリップがこのチャンネルの上に追加されます。ぼかしのサイズを調整する必要があります。</p>
+<div class="figure align-default" id="id10">
+<img alt="Color grade mask" src="../../../_images/video_editing_edit_effects_masking_example-colorgrade-mask.png" />
+<p class="caption"><span class="caption-text">図 8: カラーグレードマスク</span><a class="headerlink" href="#id10" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<p>図8 では、明るくするために円形の領域が分離されています。円形マスクと [Brightness/Contrast modifier] が必要です。modifier をソース ストリップに適用し、適切なマスクを選択します。</p>
+<div class="figure align-default" id="id11">
+<img alt="Rotoscoping mask" src="../../../_images/video_editing_edit_effects_masking_example-rotoscoping-mask.png" />
+<p class="caption"><span class="caption-text">図 9: ロトスコーピング/グリーン スクリーン マスクカラー グレード マスク</span><a class="headerlink" href="#id11" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<p>このロトスコープ/グリーン スクリーン マスクを作成するには、2 つのムービーが必要です (1 つはグリーン スクリーンの前に撮影することが望ましい)。グリーンスクリーン ムービーにマスクを作成します。これが前景になります。図 9 の例では、Spring という文字がマスクされています。マスクを適用し、背景ムービーの上にストリップを配置します (Sprite Fright の例)。グリーンスクリーン ストリップのブレンド モードをオーバードロップに変更することを忘れないでください。 <a class="footnote-reference brackets" href="#f1" id="id3">1</a></p>
+<p>素晴らしいトランジションや VFX エフェクトを作成するには、Blender Frenzy による優れた <a class="reference external" href="https://www.youtube.com/playlist?list=PLH3QvbpQe8WTbRFlKKWBwgJuTsZf58tXz">tutorial series</a> に従うことができます 。</p>
+<p class="rubric">脚注</p>
+<dl class="footnote brackets">
+<dt class="label" id="f1"><span class="brackets"><a class="fn-backref" href="#id3">1</a></span></dt>
+<dd><p>図9の内容と説明が違うように思います。</p>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="speed.html" class="btn btn-neutral float-right" title="2.2.2.5. Speed" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="transition.html" class="btn btn-neutral float-left" title="2.2.2.3. Transition" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright This page is licensed under a CC-BY-SA 4.0 Int. License.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

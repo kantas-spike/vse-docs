@@ -1,0 +1,380 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>2.2.1.1.5. Scene ストリップ &mdash; Blender VSE Unofficial Documentation  ドキュメント</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+    <link rel="canonical" href="https://kantas-spike.github.io/vse-docs/video_editing/edit/montage/striptypes/scene.html" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../../../../genindex.html" />
+    <link rel="search" title="検索" href="../../../../search.html" />
+    <link rel="next" title="2.2.1.1.6. Color ストリップ" href="color.html" />
+    <link rel="prev" title="2.2.1.1.4. Clip ストリップ" href="clip.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> Blender VSE Unofficial Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../video_sequencer/index.html">1. Video Sequence Editor</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">2. Video Editing</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../setup/index.html">2.1. Setup</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">2.2. プロジェクトを編集する</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">2.2.1. Montage</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">2.2.1.1. ストリップの種類</a><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="movie.html">2.2.1.1.1. Movie ストリップ</a></li>
+<li class="toctree-l5"><a class="reference internal" href="sound.html">2.2.1.1.2. Sound ストリップ</a></li>
+<li class="toctree-l5"><a class="reference internal" href="image.html">2.2.1.1.3. Image/Image Sequence ストリップ</a></li>
+<li class="toctree-l5"><a class="reference internal" href="clip.html">2.2.1.1.4. Clip ストリップ</a></li>
+<li class="toctree-l5 current"><a class="current reference internal" href="#">2.2.1.1.5. Scene ストリップ</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#options">2.2.1.1.5.1. Options</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#id2">2.2.1.1.5.1.1. Scene</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="color.html">2.2.1.1.6. Color ストリップ</a></li>
+<li class="toctree-l5"><a class="reference internal" href="mask.html">2.2.1.1.7. Mask ストリップ</a></li>
+<li class="toctree-l5"><a class="reference internal" href="text.html">2.2.1.1.8. Text ストリップ</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../select.html">2.2.1.2. Select</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../add.html">2.2.1.3. Add</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../copy_paste.html">2.2.1.4. Copy - Paste</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../move.html">2.2.1.5. Move</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../transform.html">2.2.1.6. Transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../remove.html">2.2.1.7. Remove/disable</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../effects/index.html">2.2.2. Effects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../color-grading/index.html">2.2.3. Color grading</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../sound/index.html">2.2.4. サウンドの編集</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/index.html">2.3. Render your project</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../extra-tools/index.html">3. 追加ツール</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Blender VSE Unofficial Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../../index.html"><span class="section-number">2. </span>Video Editing</a> &raquo;</li>
+        
+          <li><a href="../../index.html"><span class="section-number">2.2. </span>プロジェクトを編集する</a> &raquo;</li>
+        
+          <li><a href="../index.html"><span class="section-number">2.2.1. </span>Montage</a> &raquo;</li>
+        
+          <li><a href="index.html"><span class="section-number">2.2.1.1. </span>ストリップの種類</a> &raquo;</li>
+        
+      <li><span class="section-number">2.2.1.1.5. </span>Scene ストリップ</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../../_sources/video_editing/edit/montage/striptypes/scene.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="scene">
+<span id="bpy-types-scenesequence"></span><h1><span class="section-number">2.2.1.1.5. </span>Scene ストリップ<a class="headerlink" href="#scene" title="この見出しへのパーマリンク">¶</a></h1>
+<p>Blender は何よりもまず <a class="reference external" href="https://docs.blender.org/manual/en/dev/index.html">3D および 2D modeling</a> 環境です。
+これを使用して、美しいリアルまたは様式化された 2D および 3D シーンを作成、アニメーション化、レンダリングできます。
+ただし、そのシーンをビデオにレンダリングしてから Video Sequence Editor にビデオ ファイルを挿入する代わりに、シーンを直接挿入することができます。
+Scene ストリップは、別のシーンのレンダリング出力をシーケンスに挿入する方法です。
+典型的な使用例は、ビデオの 3D ロゴやアニメーション イントロの作成です。</p>
+<p>Scene ストリップ バーのデフォルトの色は <span class="scene">███</span> です。
+ストリップの長さは、インポートされたシーンの開始フレームと終了フレームによって決まります。 (参照 <a class="reference external" href="https://docs.blender.org/manual/en/dev/scene_layout/scene/introduction.html#controls">work with scenes</a>)。</p>
+<div class="admonition important">
+<p class="admonition-title">重要</p>
+<p>各シーンには <em>自身</em> の ビデオ シーケンサーがあります。Sceneストリップを使用して、シーケンス自身のシーンを挿入することはできません。 <em>scene-1</em> に 3D アニメーションがある場合、それを <em>scene-2</em> にScene ストリップとして挿入できますが、 <em>scene-1</em> には挿入できません。</p>
+</div>
+<div class="section" id="options">
+<h2><span class="section-number">2.2.1.1.5.1. </span>Options<a class="headerlink" href="#options" title="この見出しへのパーマリンク">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>パネルは他の場所で文書化されています。</p>
+<p>次のパネルは Movieストリップのパネルと同じです。</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="movie.html#compositing-panel"><span class="std std-ref">Compositing</span></a></p></li>
+<li><p><a class="reference internal" href="movie.html#transform-panel"><span class="std std-ref">Transform</span></a></p></li>
+<li><p><a class="reference internal" href="movie.html#crop-panel"><span class="std std-ref">Crop</span></a></p></li>
+<li><p><a class="reference internal" href="movie.html#video-panel"><span class="std std-ref">Video</span></a></p></li>
+<li><p><a class="reference internal" href="movie.html#color-panel"><span class="std std-ref">Color</span></a></p></li>
+<li><p><a class="reference internal" href="movie.html#time-panel"><span class="std std-ref">Time</span></a></p></li>
+<li><p><a class="reference internal" href="movie.html#custom-panel"><span class="std std-ref">Custom</span></a></p></li>
+</ul>
+</div>
+<p>新しいプロパティ <code class="docutils literal notranslate"><span class="pre">Original</span> <span class="pre">Frame</span> <span class="pre">Range</span></code> が [Time] パネルに追加されます。名前が示すように、この新しいプロパティはソース シーンのフレーム数を示します。このフィールドは、ソース シーンの長さが変更されると更新されます。ただし、ストリップバーの長さは Sequencer では更新されません。</p>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">課題</p>
+<p>ソース シーンの実際の長さを反映するようにシーン ストリップの長さを更新するにはどうすればよいですか (メタストリップと同じ問題)。</p>
+</div>
+<p>まったく新しいシーンパネルも追加されます。</p>
+<div class="section" id="id2">
+<h3><span class="section-number">2.2.1.1.5.1.1. </span>Scene<a class="headerlink" href="#id2" title="この見出しへのパーマリンク">¶</a></h3>
+<div class="refbox admonition">
+<p class="admonition-title">Reference</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 85%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Name</strong>:</p></td>
+<td><p>Scene</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Context</strong>:</p></td>
+<td><p>Video Sequence Editor &gt; Sequencer</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Location</strong>:</p></td>
+<td><p>Sidebar &gt; Strip</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="figure align-right" id="id4">
+<a class="reference internal image-reference" href="../../../../_images/vse_setup_project_striptypes_panel-scene.png"><img alt="Scene Property of Scene Strip" src="../../../../_images/vse_setup_project_striptypes_panel-scene.png" style="width: 191.0px; height: 163.0px;" /></a>
+<p class="caption"><span class="caption-text">図1 Sceneのプロパティ</span><a class="headerlink" href="#id4" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<dl>
+<dt>Scene</dt><dd><p>アイコンをクリックすると、ソース シーンを選択できます。たとえば、ドロップダウンから Scene1 を選択します。[link/unlink] ボタン (X) を使用すると、選択したソース シーンを削除できます。視覚的に示すために、ストリップバーが赤になります。</p>
+</dd>
+<dt>Input</dt><dd><blockquote>
+<div><p>Camera または Sequencer のいずれかを選択できます。この Sceneストリップのコンテンツの元となるソース シーンには、コンテンツを含む Viedeo Sequencerが含まれる場合もあります。したがって、そのシーンの出力は、そのビデオ シーケンサーまたはそのシーンの Camera/Compositor から生成される可能性があります。</p>
+<p>ソース シーンで、 <a class="reference external" href="https://docs.blender.org/manual/en/dev/render/output/properties/post_processing.html?highlight=post%20processing%20panel">Post Processing パネル</a> の [Output]プロパティを選択します。
+ただし、その設定を別のシーン内から変更するのは良い習慣ではありません。したがって、この入力を選択すると、2 つの可能性から選択できます。</p>
+</div></blockquote>
+<blockquote>
+<div><p>良い例を図 2 に示します。あなたが四半期報告書の責任者であると仮定します。毎月、素敵なビデオを作成し、そのビデオに別のシーンを使用しました。
+四半期の終わりに、それらを組み合わせて概要ビデオを作成したいと考えています。図 2 にプロジェクト ファイルを示します。
+これには 5 つのシーンが含まれています (上部の図 2 を参照)。シーン概要の Sequencer には 4 つの Sceneストリップが含まれています。 3か月とイントロ。色から、 このイントロはTextストリップであると推測できます。
+これは Preview でも確認できます。シーン Month-2 には、1 つの Movie/Sound ストリップ (青と緑の色) が含まれています。シーン Month-3 には、Text ストリップ  (紫) と Color ストリップ (オレンジ) が含まれています。 4 つのシーンはすべて入力として Sequencer を選択しています。</p>
+<div class="figure align-default" id="id5">
+<img alt="Scene containing scene strips" src="../../../../_images/vse_setup_project_striptypes_scene.svg" /><p class="caption"><span class="caption-text">図2 4 つのシーン ストリップを含むシーンの概要</span><a class="headerlink" href="#id5" title="この画像へのパーマリンク">¶</a></p>
+</div>
+</div></blockquote>
+<blockquote>
+<div><p>Scene ストリップは他のビデオ エディターに比べて Blender 独自の機能ですが、大きな迷惑な点がいくつかあります。
+まず、Blender は作業中のエディタ/ワークスペースを保存しません。
+シーンの概要については、明らかにビデオ エディタで作業しています。
+他のシーンでは、おそらくモデリング ワークスペースを選択し、3D ビューポートで作業していると思います。
+シーンの概要からシーンのイントロに切り替えると、Video Sequencer に留まり、手動で他のエディタに切り替える必要があります。
+第 2 に、(Prevewしている) 現在のフレームが元のシーンのどこにあるのかわかりません。</p>
+<p>3 番目に、プレビュー ウィンドウのサイドバーには <a class="reference external" href="https://docs.blender.org/manual/en/dev/video_editing/preview/sidebar.html">Scene Strip Display</a> パネもあります。これらの設定は、Scene ストリップの表示に影響を与える可能性があります。
+たとえば、コンポジター出力を Scene ストリップに取得したい場合は、次の4 つの設定を有効にする必要があります</p>
+<ul class="simple">
+<li><p>Properties &gt; Post Processing &gt; Compositor</p></li>
+<li><p>Compositor &gt; Use Nodes &gt; Checked (両方のオリジナルシーン)</p></li>
+<li><p>View &gt; Scene Strip Display &gt; Rendered</p></li>
+<li><p>Scene Strip &gt; Input &gt; Camera (最後の2つの対象シーン)</p></li>
+</ul>
+<p>最後に重要なことですが、(複雑な) シーン ストリップの速度は最適とは程遠いです。</p>
+</div></blockquote>
+</dd>
+<dt>Camera</dt><dd><p>同じ理由が複数のカメラにも当てはまります。アクティブなカメラは元のシーンに設定されます。
+ただし、受信シーンでは別のカメラの使用を選択できます。元のシーンに複数のカメラがある場合、ここでどのカメラを使用するかを選択できます。これはマルチカム編集に非常に役立ちます。</p>
+<p>以下の <code class="docutils literal notranslate"><span class="pre">Show</span> <span class="pre">Grease</span> <span class="pre">Pencil</span></code> および <code class="docutils literal notranslate"><span class="pre">Transparent</span></code> オプションは、Camera(上記を参照) が選択されている場合にのみ表示されます。</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Show Grease Pencil</dt><dd><p>非レンダリング プレビュー、つまりソリッド モードでグリース ペンシルを表示します。</p>
+</dd>
+<dt>Transparent</dt><dd><p>透明な背景を作成します。これは、シーケンサーを介してグリース ペンシル フィルムをレンダリングするなどのオーバーレイを行う場合に便利です。</p>
+</dd>
+</dl>
+<div class="admonition-todo admonition" id="id3">
+<p class="admonition-title">課題</p>
+<p>これら 2 つのオプションはあまり効果がないようです。</p>
+</div>
+</div></blockquote>
+</dd>
+<dt>Volume</dt><dd><p>この設定では、元のオーディオの音量を上げたり (&gt; 1) 下げたり (&lt; 1) したりできます。
+この音量レベルの解釈については、 <a class="reference internal" href="../../sound/measuring/volume.html"><span class="doc">Volume level</span></a> を参照してください。</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="color.html" class="btn btn-neutral float-right" title="2.2.1.1.6. Color ストリップ" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="clip.html" class="btn btn-neutral float-left" title="2.2.1.1.4. Clip ストリップ" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright This page is licensed under a CC-BY-SA 4.0 Int. License.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

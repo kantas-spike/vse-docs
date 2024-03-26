@@ -1,0 +1,271 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>3.5. スクリーンショットに注釈を付ける &mdash; Blender VSE Unofficial Documentation  ドキュメント</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+    <link rel="canonical" href="https://kantas-spike.github.io/vse-docs/extra-tools/annotating-screenshot.html" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="prev" title="3.4. ExifTool" href="exiftool.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Blender VSE Unofficial Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../video_sequencer/index.html">1. Video Sequence Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../video_editing/index.html">2. Video Editing</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">3. 追加ツール</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="python-useful-scripts.html">3.1. Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ffmpeg.html">3.2. ffmpeg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python-scripting-workspace.html">3.3. Script Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exiftool.html">3.4. ExifTool</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">3.5. スクリーンショットに注釈を付ける</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#svg">3.5.1. スクリーンショットをSVGに埋め込む</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#blender">3.5.2. Blender のみのソリューション</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Blender VSE Unofficial Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html"><span class="section-number">3. </span>追加ツール</a> &raquo;</li>
+        
+      <li><span class="section-number">3.5. </span>スクリーンショットに注釈を付ける</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/extra-tools/annotating-screenshot.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1><span class="section-number">3.5. </span>スクリーンショットに注釈を付ける<a class="headerlink" href="#id1" title="この見出しへのパーマリンク">¶</a></h1>
+<p>注釈付きの図を Blender ドキュメントに追加するのは、多大な労力を要するプロセスになる場合があります。特に、Blender の内部開発により Figure の内容が大幅に変更される場合はそうです。次のテキストでは、Blender ドキュメントでこれらの頻繁に変更される図を作成するための最適化されたワークフローについて説明します。ほとんどの場合、これらの図は Blender インターフェイスの一部のスクリーンショットに基づいています。ここで、何らかの注釈 (色、テキスト、矢印、ラベルなど) が追加されます。</p>
+<div class="section" id="svg">
+<h2><span class="section-number">3.5.1. </span>スクリーンショットをSVGに埋め込む<a class="headerlink" href="#svg" title="この見出しへのパーマリンク">¶</a></h2>
+<ol class="arabic simple">
+<li><p>図と同じ名前の blendファイルを作成します。例: video_editing_setup_workspace.blend。高解像度のモニターを使用している場合は、テキストの読みやすさを高めるために、[Edit] &gt; [Preference] &gt; [Interface] &gt; [Resolution Scale] をより高い値 (1.5 など) に設定することをお勧めします。</p></li>
+<li><p>スクリーンショット用に Blender 環境を準備します (ワークスペースの選択、パネルのサイズ変更、展開または折りたたみなど)。メニューの [Edit] &gt; [Toggle Full Screen] を使用すると、blend ファイルのファイルの場所が表示されるタイトル バーを非表示にできます。Blender ウィンドウが最大化されていることを確認してください (または、実際のウィンドウの寸法を覚えておいてください)。</p></li>
+<li><p>スクリーンショットを撮ります。Blender を使用できます ([Window]メニュー &gt; [Save Screenshot] または [Save Screenshot (Editor)] を選択します。2 番目のオプションを使用すると、スクリーンショットを取得する特定のエディターを指定できます。専用のスクリーン グラバーを使用することもできます。このスクリーンショットは簡単に再作成できます (見逃したり、Blender UI が変更されて新しいスクリーンショットが必要になった場合に備えて)。</p></li>
+<li><p>SVG ペイント プログラムを開きます。たとえば、Inkscape。クリップボードからスクリーンショットを埋め込み画像として貼り付けます。この埋め込みのオーバーヘッドは妥当です。たとえば、105 KB の PNG ファイルは、143 KB の SVG ファイルになります。</p></li>
+<li><p>画像に注釈を付けます。SVG はベクター形式であるため、これらの注釈は、すべてを再作成することなくいつでも変更できます。</p></li>
+</ol>
+</div>
+<div class="section" id="blender">
+<h2><span class="section-number">3.5.2. </span>Blender のみのソリューション<a class="headerlink" href="#blender" title="この見出しへのパーマリンク">¶</a></h2>
+<p>このワークフローの基本的な考え方は、作業とデータを複数のサードパーティ プログラム (ブレンダー、スクリーン グラバー、グラフィック エディター) に分散させるのではなく、すべての情報を 1 つのブレンド ファイルに保存する (そしてすべての作業を Blender で行う) ことです。</p>
+<ol class="arabic simple">
+<li><p>図と同じ名前の blend ファイルを作成します。例: video_editing_setup_workspace.blend。高解像度のモニターを使用している場合は、テキストの読みやすさを高めるために、[Editor] &gt; [Preferences] &gt; [Interface] &gt; [Resolution Scale] をより高い値 (1.5 など) に設定することをお勧めします。プロジェクトの解像度をモニターのサイズに設定します (たとえば、4K モニターの場合は 1920 x 1080 または 3840 x 2160)。そうしないと、Blender がスクリーンショットを拡大縮小してしまい、出力がぼやけてしまいます。これは正しいです？</p></li>
+<li><p>スクリーンショット用に Blender 環境を準備します (ワークスペースの選択、パネルのサイズ変更、展開または折りたたみなど)。メニューの [Edit] &gt; [Toggle Full Screen] を使用すると、blend ファイルのファイルの場所が表示されるタイトル バーを非表示にできます。Blender ウィンドウが最大化されていることを確認してください (または、実際のウィンドウの寸法を覚えておいてください)。</p></li>
+<li><p>メニューの [Window] &gt; [Save Screenshot] または [Save Screenshot (Editor)] を使用してスクリーンショットを撮ります。2 番目のオプションでは、スクリーンショットを取得する特定のエディターを指定できます。このスクリーンショットをサブフォルダーに保存します。例: オリジナルのスクリーンショット。後で画像をトリミングできます。サードパーティのスクリーングラバーは必要ありません。ただし、マウス カーソルや展開されたメニュー項目などをキャプチャする場合は除きます。ただし、外部スクリーン グラバーの問題は、まったく同じサイズを 2 度目に再作成するのが難しいことです。画面を取得した後は、Blender の UI (ズーム レベルなど) が変更されないことが重要です。質問: UI をフリーズすることは可能ですか?</p></li>
+<li><p>[Copy Settings] オプションを使用して新しいシーン (シーン出力など) を作成します (これにより、解像度が自動的に正しく設定されます)。3D ビュー (レイアウト ワークスペース) をアクティブにし、トップ レベル ビューに変更します。このシーンでは、注釈付きの 図 を作成します。</p></li>
+<li><p>前述のスクリーンショットをソースとして、Image as Plane (アドオン) を追加します。[Emit Material Setting] と [Camera Relative] &gt; [Fill Plane Dimension] を選択します。注: これが最適なオプションかどうかはわかりません。</p></li>
+<li><p>正投影カメラ ビューに切り替え、完全なスクリーンショットがカメラ ビューに収まるまで正投影スケールを調整します。[View] &gt; [Layout] プロパティ を使用すると、レンダリング領域とレンダリング領域へのトリミングを有効にすることができます。これらのオプションを使用すると、画像を希望のサイズにトリミングできます (カメラ ビューの場合)。</p></li>
+<li><p>注釈を付け始めます。いくつかのサンプル テキストと形状、および適切なマテリアルと色を含むプリセット ブレンド ファイル (grease-pencil-shapes.blend) が存在します。このブレンド ファイルをプロジェクトに追加し、必要なテキスト オブジェクトまたはシェイプ オブジェクト (Objects フォルダー内) を選択します。</p></li>
+<li><p>テキストを追加します。プリセットのテキストオブジェクトを追加します。Tab キーを押して内容を変更します。さらにテキストが必要な場合は、オブジェクトを複製します。3D Text オブジェクトを使用してテキストを自分で追加できます。現在はトップ ビューなので、テキストを X 軸上で 90 度回転する必要があることに注意してください。質問: 特定のフォントと色を提案する必要がありますか? 質問: グリース ペンシル内にテキストを追加する簡単な方法はありますか? 利点: GP ではアニメーションがはるかに簡単です。</p></li>
+<li><p>シェイプを追加します。目的のプリセット形状オブジェクト (長方形、単一矢印、二重矢印、単一曲線など) を追加します。必要に応じて、これらの形状を拡大縮小したり回転したりできます。グリース ペンシル オブジェクトを使用して独自の形状を作成できます。</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>Blanc Grease Pencil オブジェクトを追加します。描画モードに切り替えて、目的の形状を作成します。芸術的な注釈が必要な場合は、ストロークを描画できます。または、プリセット ツール (線分、ポリライン、円弧、曲線など) のいずれかを使用することもできます。プリセット ツールのいずれかを使用する場合は、編集モードでカーブ編集をオンにすることを忘れないでください。</p></li>
+<li><p>破線の描画には、2 つのモディファイアが必要です。形状内に均等に分布した点を生成するための [Simplify] &gt; [Sample]と、破線を作成するための一点鎖線モディファイアです。インスピレーションを得るためには、grease-pencil-shapes.blend の事前定義された形状を参照してください。おそらく、GP でこれらの形状を作成するための何らかのチュートリアルがあるはずです。</p></li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="10">
+<li><p>最終的な図を作成します。シーンをレンダリングします(スクリーンショットの一部のみが必要な場合は、「レンダリング領域にクロップ」を忘れないでください)。レンダリングされたイメージを .png ファイルとして保存します。Blend ファイルを保存します。</p></li>
+</ol>
+<p>この図を更新する必要がある場合は、blend ファイルを開きます (最終的には新しいバージョンの Blender で開きます)。Blender 環境を再準備します (ステップ 2)。もちろん、できるだけ変更しないようにしてください。スクリーンショットを撮ります (ステップ 3)。2 番目のシーンに切り替えて、image-as-plane オブジェクトのイメージ データブロック (マテリアル プロパティの下) を更新します。</p>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>上記の手順の一部は、Python スクリプトを使用して実行できます。HD モニターからの巨大な PNG ファイルの問題は解決されていません。Sphinx 内でスケールダウンできますか? 4K モニター上の 1920 x 1080 ウィンドウに Blender を入れようとしましたが、それはあまり実用的ではありません。</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="exiftool.html" class="btn btn-neutral float-left" title="3.4. ExifTool" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright This page is licensed under a CC-BY-SA 4.0 Int. License.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

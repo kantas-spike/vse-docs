@@ -1,0 +1,389 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>2.2.1.2. Select &mdash; Blender VSE Unofficial Documentation  ドキュメント</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+    <link rel="canonical" href="https://kantas-spike.github.io/vse-docs/video_editing/edit/montage/select.html" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="検索" href="../../../search.html" />
+    <link rel="next" title="2.2.1.3. Add" href="add.html" />
+    <link rel="prev" title="2.2.1.1.8. Text ストリップ" href="striptypes/text.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Blender VSE Unofficial Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../video_sequencer/index.html">1. Video Sequence Editor</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">2. Video Editing</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../setup/index.html">2.1. Setup</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">2.2. プロジェクトを編集する</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">2.2.1. Montage</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="striptypes/index.html">2.2.1.1. ストリップの種類</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">2.2.1.2. Select</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#select-one-strip">2.2.1.2.1. Select one strip</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id2">2.2.1.2.2. 複数のストリップを選択する</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id3">2.2.1.2.3. 場所に基づいた選択</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id5">2.2.1.2.4. 属性ベースの選択</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id7">2.2.1.2.5. ストリップハンドルを選択</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="add.html">2.2.1.3. Add</a></li>
+<li class="toctree-l4"><a class="reference internal" href="copy_paste.html">2.2.1.4. Copy - Paste</a></li>
+<li class="toctree-l4"><a class="reference internal" href="move.html">2.2.1.5. Move</a></li>
+<li class="toctree-l4"><a class="reference internal" href="transform.html">2.2.1.6. Transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="remove.html">2.2.1.7. Remove/disable</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../effects/index.html">2.2.2. Effects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../color-grading/index.html">2.2.3. Color grading</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../sound/index.html">2.2.4. サウンドの編集</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/index.html">2.3. Render your project</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../extra-tools/index.html">3. 追加ツール</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender VSE Unofficial Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html"><span class="section-number">2. </span>Video Editing</a> &raquo;</li>
+        
+          <li><a href="../index.html"><span class="section-number">2.2. </span>プロジェクトを編集する</a> &raquo;</li>
+        
+          <li><a href="index.html"><span class="section-number">2.2.1. </span>Montage</a> &raquo;</li>
+        
+      <li><span class="section-number">2.2.1.2. </span>Select</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/video_editing/edit/montage/select.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="select">
+<h1><span class="section-number">2.2.1.2. </span>Select<a class="headerlink" href="#select" title="この見出しへのパーマリンク">¶</a></h1>
+<p>ストリップで何かを行う前に、ストリップを選択する必要があります (さまざまな選択方法については以下を参照してください)。
+選択したストリップとアクティブなストリップには違いがあります(図 1 を参照)。選択したストリップにはアウトラインが付きます。選択されているがアクティブではないストリップには、オレンジ色の輪郭が表示されます。アクティブで選択されたストリップには白い輪郭が表示され、使用可能な場合は白いテキストが表示されます。アクティブなストリップは常に 1 つだけです。サイドバーに表示されるプロパティは、このアクティブなストリップに属します。</p>
+<div class="figure align-default" id="id8">
+<span id="video-editing-edit-timeline-select"></span><img alt="Active vs selected View" src="../../../_images/video_editing_edit_montage_select_active-vs-selected.svg" /><p class="caption"><span class="caption-text">図1 アクティブなストリップと選択されたストリップ</span><a class="headerlink" href="#id8" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<p>ストリップが選択されていない場合でも、アクティブなストリップが存在します。たとえば、図 1-a では、2 番目のストリップがアクティブ ストリップです。テキスト オーバーレイまたは選択範囲がない場合、それを知る唯一の方法は Sidebar を見ることです。図 1-b では、ストリップ 2 がアクティブ (白色のテキスト) であり、ストリップ 1 と 3のみが選択されている (オレンジ色の輪郭)ことが明らかです。図 1-c では、3 つのストリップがすべて選択されており (オレンジと白の輪郭)、ストリップ 3 がアクティブなストリップ (白のテキスト) です。</p>
+<p>削除などの一部のアクションは、選択したストリップにのみ適用されます。図 1-b で [削除] を押すと、ストリップ 1 とストリップ 3 のみが削除されます。拡大縮小や回転など、他のアクションはアクティブなストリップにのみ影響します。</p>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>Sidebar の値を変更すると、さらに多くのストリップが選択されている場合でも、通常はアクティブなストリップのプロパティのみが変更されます。 <kbd class="kbd docutils literal notranslate">Alt</kbd> キーを押すと、アクティブなストリップのみではなく、選択したすべてのストリップにエフェクトを適用することができます。
+値を数値で入力し、 <kbd class="kbd docutils literal notranslate">Alt</kbd> + <kbd class="kbd docutils literal notranslate">Enter</kbd> を押すと、選択したすべてのストリップに値が適用されます。
+スライダーをドラッグして値を変更する場合、選択したすべてのストリップに効果を適用するには <kbd class="kbd docutils literal notranslate">Alt</kbd> + <kbd class="kbd docutils literal notranslate">Enter</kbd> を2 回押す必要があります。任意の値を右クリックして「選択項目にコピー」を選択することもできます。</p>
+</div>
+<div class="section" id="select-one-strip">
+<h2><span class="section-number">2.2.1.2.1. </span>Select one strip<a class="headerlink" href="#select-one-strip" title="この見出しへのパーマリンク">¶</a></h2>
+<p>図 1 からわかるように、ストリップ バーには 'ボディー' と左右のハンドル があります。ストリップの左右にある小さな暗い色のバー がハンドルです。ストリップ バーの中央のどこかを <kbd class="kbd docutils literal notranslate">LMB</kbd> クリックすると、ストリップ全体 (ボディ + ハンドル) を選択できます。マウスでドラッグすると、ストリップが別の位置に移動します。</p>
+<p>ただし、ハンドル (近く) をクリックすることもできます。これでハンドルが選択されます。濃い色の小さなバーが白になり、ドラッグするとクリップが延長または短縮されます (何が起こっているかを理解するには、 <a class="reference internal" href="striptypes/movie.html#time-panel"><span class="std std-ref">Offsets</span></a> に関するセクションを参照してください。[Show Overlay] ボタンが無効になっている場合でも、Start および/または End date?? が表示されることに注意してください。</p>
+<p><a class="reference internal" href="../../../video_sequencer/sequencer/zoom.html"><span class="doc">zoomed out</span></a> した場合、ストリップ バーがかなり小さくなる可能性があり、ストリップ全体ではなくハンドルを選択するのが煩わしいことが知られています。
+また、ハンドルを選択したら、ストリップ全体にアクセスするには、選択を解除し (中央部分をもう一度クリックしても役に立ちません)、もう一度ストリップを選択する必要があります <a class="footnote-reference brackets" href="#f1" id="id1">1</a>。</p>
+</div>
+<div class="section" id="id2">
+<h2><span class="section-number">2.2.1.2.2. </span>複数のストリップを選択する<a class="headerlink" href="#id2" title="この見出しへのパーマリンク">¶</a></h2>
+<dl class="simple">
+<dt>特定のストリップを選択する</dt><dd><p>ストリップを連続して <kbd class="kbd docutils literal notranslate">Shift</kbd> + click して、クリックしたストリップを選択できます。最後にクリックしたストリップがアクティブになります。
+別のストリップをアクティブにしたい場合は、そのストリップをもう一度クリックします (<kbd class="kbd docutils literal notranslate">Shift</kbd> を放さずに)。
+コレクションからストリップを削除するには、ストリップをアクティブにして、もう一度 <kbd class="kbd docutils literal notranslate">Shift</kbd> + click します。</p>
+</dd>
+</dl>
+<div class="figure align-right" id="id9">
+<img alt="Active vs selected View" src="../../../_images/video_editing_edit_montage_select_select-menu.svg" /><p class="caption"><span class="caption-text">図2 メニューの選択</span><a class="headerlink" href="#id9" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<dl>
+<dt>すべてのストリップを選択</dt><dd><p>ショートカット <kbd class="kbd docutils literal notranslate">A</kbd> キーは、タイムライン内のすべてのストリップ (表示および非表示) を選択します。最後にアクティブだったストリップが再びアクティブになります。同等のメニューは、[Select] &gt; [All] です (図 2)。</p>
+</dd>
+<dt>すべてのストリップの選択を解除</dt><dd><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">A</kbd></kbd> を押す か <kbd class="kbd docutils literal notranslate">A</kbd> を素早く2回押す と タイムライン内のすべてのストリップを選択を解除できます。
+または、おそらく最もよく使用されるテクニックは、シーケンサーのストリップの外側のどこかを、ただクリックすることです。
+同等のメニューは、[Select] &gt; [None] です (図 2)</p>
+</dd>
+<dt>選択範囲を反転</dt><dd><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">I</kbd></kbd> を押すと、現在選択されているストリップが反転します。同等のメニューは、[Select] &gt; [Invert] です (図 2)。</p>
+</dd>
+<dt>ストリップのボックス選択</dt><dd><p><kbd class="kbd docutils literal notranslate">B</kbd> キーを押すと十字カーソルが表示されます。Sequencer ウィンドウでストリップの領域の周囲に四角形の選択範囲を描画できます。
+この長方形と交差するすべてのストリップ (囲む必要はない) が選択されます。同等のメニューは、[Select] &gt; [Box Select] です (図 2)。</p>
+<p><kbd class="kbd docutils literal notranslate">LMB</kbd> で ただクリックして、いくつかのストリップ上に 選択範囲をドラッグするだけでも、同じ結果が得られます。</p>
+</dd>
+</dl>
+<p>選択範囲の拡大/縮小 ??</p>
+</div>
+<div class="section" id="id3">
+<h2><span class="section-number">2.2.1.2.3. </span>場所に基づいた選択<a class="headerlink" href="#id3" title="この見出しへのパーマリンク">¶</a></h2>
+<div class="figure align-default" id="id10">
+<img alt="Select Location Based" src="../../../_images/video_editing_edit_montage_select_select-menu-location-based.svg" /><p class="caption"><span class="caption-text">図3 位置ベースの選択</span><a class="headerlink" href="#id10" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<p>これらのコマンドを使用すると、再生ヘッドまたはアクティブなストリップに対するタイムライン上の位置に基づいてストリップを選択できます (図3)。</p>
+<dl>
+<dt>Playhead位置に基づいてすべてのストリップを選択</dt><dd><p><kbd class="kbd docutils literal notranslate">[</kbd> キーを押すと、すべてのチャンネルで Playhead の <em>左側</em> の すべてのストリップが選択されます。
+<kbd class="kbd docutils literal notranslate">]</kbd> を押すと、Playhead の <em>右側</em> のすべてのストリップが選択されます。
+ただし、Playheadの上を走るストリップは選択されないことに注意してください。これらのストリップを選択範囲に含めたい場合は、まず反対側を選択してから、その選択範囲を反転する必要があります (上記を参照)。</p>
+<p>QWERTY 以外のキーボードを使用している場合は、おそらく別のキーが必要になります。たとえば、AZERTY キーボードでは、[Select left] コマンドに <kbd class="kbd docutils literal notranslate">)</kbd> を使用する必要があります。キーの割り当ては、ユーザー設定で簡単に変更できます: [Edit]メニュー &gt; [Preferences] &gt; [Keymap]。 &quot;Select Side of frame&quot; を検索し、新しいキーを割り当てます。</p>
+<p>Playheadの左側を <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>+<kbd class="kbd docutils literal notranslate">LMB</kbd>-<kbd class="kbd docutils literal notranslate">Click</kbd></kbd> して Playheadの前のすべてのストリップを選択するか、Playheadの右側を <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>+<kbd class="kbd docutils literal notranslate">LMB</kbd>-<kbd class="kbd docutils literal notranslate">Click</kbd></kbd> して Playheadの後のすべてのストリップを選択することもできます。</p>
+<p>再生ヘッドの位置にあるすべてのストリップを選択するには、 [Current Frame]サブメニュー を選択します。デフォルトでは関連付けられたショートカット キーはありません。</p>
+<p>メニューは [Select] &gt; [Side of Frame] (図) で、オプションは [Lef]、[Right]、または [Current Frame] です。</p>
+</dd>
+<dt>チャンネル内のストリップを選択</dt><dd><p>選択されているストリップと同じチャンネルで左右に並んでいるストリップを選択します。</p>
+<p>メニューは [Select] &gt; [Channel] (図 2) で、オプションは [Left]、[Right]、または [Both Sides] です。前のコマンドとの違いは、選択されたストリップが基準となることです。Playheadではありません。</p>
+<p>このコマンドを使用して、[Both Sides]オプションを選択してアクティブなストリップのチャンネル内のすべてのストリップを選択します。</p>
+</dd>
+<dt>リンクされたストリップを選択</dt><dd><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">L</kbd></kbd> は、アクティブ ストリップに接続されている同じチャンネル内のすべてのストリップを選択します。
+つまり、それらの間にギャップがないことを意味します</p>
+<p>メニューは [Select] &gt; [Linked] &gt; [All] です。</p>
+<div class="admonition-todo admonition" id="id4">
+<p class="admonition-title">課題</p>
+<p>[Select] &gt; [Link] &gt; [Less and More] メニューは何も実行していないようです。</p>
+</div>
+</dd>
+<dt>リンクされたストリップを垂直方向に選択</dt><dd><p>ストリップを <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>+<kbd class="kbd docutils literal notranslate">LMB</kbd></kbd> クリックすると、開始時刻と終了時刻がまったく同じであれば、その上下のすべてが選択されます。クリックしたストリップが選択され、アクティブになります。このショートカットはメニューには表示されません。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="id5">
+<h2><span class="section-number">2.2.1.2.4. </span>属性ベースの選択<a class="headerlink" href="#id5" title="この見出しへのパーマリンク">¶</a></h2>
+<div class="figure align-default" id="id11">
+<img alt="Select Attribute Based" src="../../../_images/video_editing_edit_montage_select_select-menu-attribute-based.svg" /><p class="caption"><span class="caption-text">図4 属性ベースの選択</span><a class="headerlink" href="#id11" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<p>これらのコマンドを使用すると、他のストリップとの関係およびストリップのタイプに従ってストリップを選択できます。まずストリップを選択し、 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">G</kbd></kbd> を押す か、 [Select] メニュー &gt; [Grouped] を使用します (図 3)。</p>
+<dl>
+<dt>Type</dt><dd><p>カテゴリ内のアクティブなストリップと同じタイプのストリップをすべて選択します。たとえば、スピード コントロール ストリップを選択している場合、このコマンドは他のすべてのスピード コントロール ストリップを選択しますが、トランスフォーム ストリップやクロス トランジション ストリップは選択しません。</p>
+</dd>
+<dt>Global Type</dt><dd><p>このコマンドを使用すると、オーディオ ストリップと残りの部分 (ムービー、画像、エフェクトなど) を区別できます。すべてのオーディオ ストリップを選択するには、アクティブ ストリップがオーディオ ストリップであることを確認して、このコマンドを発行します。</p>
+</dd>
+<dt>Effect Type</dt><dd><p>すべてのエフェクト ストリップを選択します。テキストおよびカラー ストリップも効果ストリップとして考慮されることに注意してください。</p>
+</dd>
+<dt>Data</dt><dd><p>同じデータを共有するストリップ、たとえば、同じ画像ファイルを共有する 2 つの画像ストリップを選択します。これは、同じファイルを別の場所で使用した場合に便利です。たとえば、ロゴ画像など。</p>
+</dd>
+<dt>Effect</dt><dd><p>アクティブ ストリップと同じエフェクトが適用されているすべてのストリップを選択します。たとえば、アクティブ ストリップにブラー エフェクトがある場合、このコマンドはブラー エフェクトを持つ他のすべてのストリップを選択します。</p>
+</dd>
+<dt>Effect/Linked</dt><dd><p>アクティブなストリップの影響を受ける他のストリップを選択します（一定時間以下またはエフェクトが割り当てられているものを共有します）。</p>
+<p>時間範囲内で、初期選択ストリップの下位チャンネルを持つすべてのストリップを選択します。次に、これらのストリップのエフェクト チェーンを選択します。</p>
+<div class="admonition-todo admonition" id="id6">
+<p class="admonition-title">課題</p>
+<p>もっと詳しく説明してください。</p>
+</div>
+</dd>
+<dt>Overlap</dt><dd><p>現在と同じフレーム上にあるストリップを選択します。現在のフレームは常にアクティブなストリップの開始フレームを参照していることに注意してください。再生ヘッドの位置とは対応しません。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="id7">
+<h2><span class="section-number">2.2.1.2.5. </span>ストリップハンドルを選択<a class="headerlink" href="#id7" title="この見出しへのパーマリンク">¶</a></h2>
+<div class="figure align-default" id="id12">
+<img alt="Select Handles" src="../../../_images/video_editing_edit_montage_select_select-menu-handles.svg" /><p class="caption"><span class="caption-text">図4 ハンドルの選択</span><a class="headerlink" href="#id12" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<p>ストリップ ハンドルは、ストリップの左右にある小さな暗い色のバーです。それらを使用して、ストリップの <a class="reference internal" href="striptypes/movie.html#time-panel"><span class="std std-ref">Offsets</span></a> を作成できます。いくつかのコマンドを使用してハンドルのみを選択できます (図4)。</p>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>ストリップ ハンドルの視覚化についてはすでに <a class="reference external" href="https://developer.blender.org/D7401">discussed</a> され、作り直されていますが、まだ他のエディタほど洗練されていません。 HDPI モニターでは非常に小さく、ズーム レベルに応じて拡大縮小されません。また、カーソルがハンドルの上にあるのか、ストリップ本体の上にあるのかはわかりません。</p>
+</div>
+<dl>
+<dt><kbd class="kbd docutils literal notranslate">LMB</kbd> + Click</dt><dd><p>ストリップを選択するのと同じように、ハンドルの「付近」を <kbd class="kbd docutils literal notranslate">LMB</kbd> クリックすると、このハンドルが選択されます。ハンドル部分が白くなります。<kbd class="kbd docutils literal notranslate">Shift</kbd> 押しながら:kbd:<span class="incremental">LMB</span> クリックすると、複数のハンドルが選択されます。</p>
+<p>ハンドルが 1 つだけ選択されている場合、選択後にストリップを移動すると、ストリップの長さが変更されます。両方のハンドル (左と右) が選択されている場合、ストリップは移動し、通常のボックス選択でストリップ全体が選択されているかのように動作します。</p>
+</dd>
+<dt><kbd class="kbd docutils literal notranslate">Alt</kbd> - <kbd class="kbd docutils literal notranslate">LMB</kbd></dt><dd><p>Alt キーとストリップの上の左クリックを組み合わせて使用​​すると、ストリップとその隣接するストリップのストリップ ハンドルが選択されます。これは、隣接するストリップをトリミングするための便利なショートカットです。</p>
+</dd>
+<dt>Box Select (Include Handles) <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">B</kbd></kbd></dt><dd><p>ボックス選択(上記参照)と同じように機能しますが、領域内にあるストリップのハンドルのみを選択します。</p>
+<p>ただし、このボックス選択を使用すると、ストリップの右ハンドルと後続のストリップの左ハンドルを選択することもできます。この選択範囲を (<kbd class="kbd docutils literal notranslate">G</kbd> または  <kbd class="kbd docutils literal notranslate">LMB</kbd> を使用してLMB) 移動すると、左に移動した場合は左のストリップがトリミングされ、右に移動した場合は右のストリップがトリミングされます。これらのテクニックについては、Edit &gt; Assembling &gt; Cutting のセクションで詳しく説明します。</p>
+</dd>
+<dt>Handle</dt><dd><p>このコマンドはアクティブ ストリップ上で動作します。[Both]、[Left]、または[Right]から選択できます。これにより、アクティブなストリップ自体の適切なハンドルが選択されます。または、[Both Neighbor]、[Left Neighbor]または[Right Neighbor]を選択することもできます。これにより、アクティブなストリップのハンドルと隣接するストリップの適切なハンドルが選択されます。</p>
+<p>これらのオペレータは、選択後にハンドルを移動してカットのタイミングを変更するのに便利です。</p>
+</dd>
+</dl>
+<p class="rubric">脚注</p>
+<dl class="footnote brackets">
+<dt class="label" id="f1"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>Blender4.0では、ハンドルを選択後にストリップバーの中央を選択するとクリックすると、ストリップのボディーが選択されるようです。</p>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="add.html" class="btn btn-neutral float-right" title="2.2.1.3. Add" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="striptypes/text.html" class="btn btn-neutral float-left" title="2.2.1.1.8. Text ストリップ" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright This page is licensed under a CC-BY-SA 4.0 Int. License.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

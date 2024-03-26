@@ -1,0 +1,338 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>3.1. Python &mdash; Blender VSE Unofficial Documentation  ドキュメント</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+    <link rel="canonical" href="https://kantas-spike.github.io/vse-docs/extra-tools/python-useful-scripts.html" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="next" title="3.2. FFMPEG" href="ffmpeg.html" />
+    <link rel="prev" title="3. 追加ツール" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Blender VSE Unofficial Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../video_sequencer/index.html">1. Video Sequence Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../video_editing/index.html">2. Video Editing</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">3. 追加ツール</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">3.1. Python</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#still-offset">3.1.1. still_offset フィールドの追加 </a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ffmpeg.html">3.2. ffmpeg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python-scripting-workspace.html">3.3. Script Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exiftool.html">3.4. ExifTool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="annotating-screenshot.html">3.5. スクリーンショットに注釈を付ける</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Blender VSE Unofficial Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html"><span class="section-number">3. </span>追加ツール</a> &raquo;</li>
+        
+      <li><span class="section-number">3.1. </span>Python</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/extra-tools/python-useful-scripts.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="python">
+<h1><span class="section-number">3.1. </span>Python<a class="headerlink" href="#python" title="この見出しへのパーマリンク">¶</a></h1>
+<p>次のスクリプトは、調整されたワークスペースでテストするのが最適です。</p>
+<ol class="arabic simple">
+<li><p>既存のビデオ編集プロジェクトから、[Scripting Workspace] に切り替えます (最終的には、メニュー バーの [Add Workspace] ボタンをクリックします)</p></li>
+<li><p>3D エディタ ウィンドウ (左上) をビデオ シーケンサに置き換えます。</p></li>
+<li><p>シーケンサーで適切なオブジェクト (ムービー ストリップなど) を選択します (図1)。このワークスペース内での作業については、 [Scripting Workspace] で説明しています。</p></li>
+</ol>
+<div class="figure align-right" id="id2">
+<img alt="Adapted scripting workspace" src="../_images/adapted-workspace.svg" /><p class="caption"><span class="caption-text">図1 VSE スクリプト用に調整されたスクリプト ワークスペース</span><a class="headerlink" href="#id2" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<div class="section" id="still-offset">
+<h2><span class="section-number">3.1.1. </span>still_offset フィールドの追加 <a class="footnote-reference brackets" href="#f1" id="id1">1</a><a class="headerlink" href="#still-offset" title="この見出しへのパーマリンク">¶</a></h2>
+<p>/video_editing/edit/montage/striptypes</p>
+<p>Blender は UI で 9 つのタイム コードを公開します (参照 <a class="reference internal" href="../video_editing/edit/montage/striptypes/movie.html"><span class="doc">Movie strip</span></a> )。
+Python API を通じて利用できるものは他にもあります。表 1 に、使用可能なすべてのタイム コードを示します。2 列目はサイドバー (UI) からの名前で、3 列目は Python API からの名前です。</p>
+<table class="colwidths-given docutils align-default" id="id3">
+<caption><span class="caption-text">Table 1: Time code fields in UI and from Python API</span><a class="headerlink" href="#id3" title="このテーブルへのパーマリンク">¶</a></caption>
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 48%" />
+<col style="width: 48%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>#</p></th>
+<th class="head"><p>UI field</p></th>
+<th class="head"><p>Python API (1)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Channel (2)</p></td>
+<td><p>channel</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>Start</p></td>
+<td><p>frame_start</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p><em>Visible in strip (3)</em></p></td>
+<td><p>frame_final_start</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>Duration</p></td>
+<td><p>frame_final_duration</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td></td>
+<td><p>frame_duration</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>End</p></td>
+<td><p>frame_final_end</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>Strip Offset Start</p></td>
+<td><p>frame_offset_start</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>Strip Offset End</p></td>
+<td><p>frame_offset_end</p></td>
+</tr>
+<tr class="row-even"><td><p>8</p></td>
+<td><p>Hold Offset Start</p></td>
+<td><p>animation_offset_start</p></td>
+</tr>
+<tr class="row-odd"><td><p>9</p></td>
+<td><p>Hold Offset End</p></td>
+<td><p>animation_offset_end</p></td>
+</tr>
+<tr class="row-even"><td><p>10</p></td>
+<td><p>Current Frame</p></td>
+<td><p><em>calculated (4)</em></p></td>
+</tr>
+<tr class="row-odd"><td><p>11</p></td>
+<td></td>
+<td><p>frame_still_start</p></td>
+</tr>
+<tr class="row-even"><td><p>12</p></td>
+<td></td>
+<td><p>frame_still_end</p></td>
+</tr>
+</tbody>
+</table>
+<p>これらの値をサイド パネルに表示したい場合は、既存のコードを拡張する必要があります。それはかなり簡単です。ムービー ストリップを選択し、タイムコード フィールドを右クリックします。たとえば、[Offset Start] を押したままにして、[Edit Source] を選択します。「space_sequencer.py」コードが表示されます（上部中央のリンクするテキストの参照ボタンで開きます）。このコード内で (Ctrl + F) 文字列「Hold Offset Start」を検索します。1607行目(Blender 3.1)についてです。Hold Offset セクション (1877 行目あたり) の後に次のコードを追加します。</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">split</span> <span class="o">=</span> <span class="n">sub</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">factor</span><span class="o">=</span><span class="mf">0.5</span> <span class="o">+</span> <span class="n">max_factor</span><span class="p">,</span> <span class="n">align</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">split</span><span class="o">.</span><span class="n">alignment</span> <span class="o">=</span> <span class="s1">&#39;RIGHT&#39;</span>
+<span class="n">split</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;Still Offset Start&quot;</span><span class="p">)</span>
+<span class="n">split</span><span class="o">.</span><span class="n">prop</span><span class="p">(</span><span class="n">strip</span><span class="p">,</span> <span class="s2">&quot;frame_still_start&quot;</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="n">smpte_from_frame</span><span class="p">(</span><span class="n">strip</span><span class="o">.</span><span class="n">frame_still_start</span><span class="p">))</span>
+
+<span class="n">split</span> <span class="o">=</span> <span class="n">sub</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">factor</span><span class="o">=</span><span class="mf">0.5</span> <span class="o">+</span> <span class="n">max_factor</span><span class="p">,</span> <span class="n">align</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">split</span><span class="o">.</span><span class="n">alignment</span> <span class="o">=</span> <span class="s1">&#39;RIGHT&#39;</span>
+<span class="n">split</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;End&quot;</span><span class="p">)</span>
+<span class="n">split</span><span class="o">.</span><span class="n">prop</span><span class="p">(</span><span class="n">strip</span><span class="p">,</span> <span class="s2">&quot;frame_still_end&quot;</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="n">smpte_from_frame</span><span class="p">(</span><span class="n">strip</span><span class="o">.</span><span class="n">frame_still_end</span><span class="p">))</span>
+</pre></div>
+</div>
+<p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd>+<kbd class="kbd docutils literal notranslate">P</kbd></kbd> で コード を実行します。Sidebar が変更されます。
+図 2 を参照してください。ファイルを再度開いたときに、このコードは自動的に実行されないことに注意してください。変更を永続的にしたい場合は、space_sequencer.py コードをアドオンに変換する必要があります。</p>
+<div class="figure align-right" id="id4">
+<img alt="Script" src="../_images/script-adding-still-fields.svg" /><p class="caption"><span class="caption-text">図2 上記のスクリプトを実行した結果</span><a class="headerlink" href="#id4" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<p class="rubric">脚注</p>
+<dl class="footnote brackets">
+<dt class="label" id="f1"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>still_offset は Blender4.0 は廃止されています。</p>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="ffmpeg.html" class="btn btn-neutral float-right" title="3.2. FFMPEG" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="index.html" class="btn btn-neutral float-left" title="3. 追加ツール" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright This page is licensed under a CC-BY-SA 4.0 Int. License.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

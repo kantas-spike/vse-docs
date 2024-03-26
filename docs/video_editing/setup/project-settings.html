@@ -1,0 +1,671 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>2.1.6. Project settings &mdash; Blender VSE Unofficial Documentation  ドキュメント</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+    <link rel="canonical" href="https://kantas-spike.github.io/vse-docs/video_editing/setup/project-settings.html" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="2.1.7. テストファイルの作成" href="creating-test-files.html" />
+    <link rel="prev" title="2.1.5. Directory structure" href="directory-structure.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Blender VSE Unofficial Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../video_sequencer/index.html">1. Video Sequence Editor</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">2. Video Editing</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">2.1. Setup</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="workspace.html">2.1.1. Workspace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="preferences.html">2.1.2. User Preferences</a></li>
+<li class="toctree-l3"><a class="reference internal" href="add-ons.html">2.1.3. Add-ons</a></li>
+<li class="toctree-l3"><a class="reference internal" href="proxies.html">2.1.4. Proxies &amp; cache</a></li>
+<li class="toctree-l3"><a class="reference internal" href="directory-structure.html">2.1.5. Directory structure</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">2.1.6. Project settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="creating-test-files.html">2.1.7. テストファイルの作成</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../edit/index.html">2.2. プロジェクトを編集する</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render/index.html">2.3. Render your project</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../extra-tools/index.html">3. 追加ツール</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blender VSE Unofficial Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html"><span class="section-number">2. </span>Video Editing</a> &raquo;</li>
+        
+          <li><a href="index.html"><span class="section-number">2.1. </span>Setup</a> &raquo;</li>
+        
+      <li><span class="section-number">2.1.6. </span>Project settings</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/video_editing/setup/project-settings.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="project-settings">
+<h1><span class="section-number">2.1.6. </span>Project settings<a class="headerlink" href="#project-settings" title="この見出しへのパーマリンク">¶</a></h1>
+<div class="figure align-right" id="id4">
+<a class="reference internal image-reference" href="../../_images/video_editing_setup_project-settings-output-categories.png"><img alt="Output panels" src="../../_images/video_editing_setup_project-settings-output-categories.png" style="width: 238.4px; height: 264.40000000000003px;" /></a>
+<p class="caption"><span class="caption-text">図0: Output パネル</span><a class="headerlink" href="#id4" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<p>ビデオ プロジェクトのプロジェクト設定は、 <a class="reference external" href="https://docs.blender.org/manual/en/dev/editors/properties_editor.html">Properties Editor</a> の[<a class="reference external" href="https://docs.blender.org/manual/en/dev/render/output/index.html">Output Properties</a>]タブにグループ化されています。
+この Editor はデフォルトの Video Editing Workspace の右上領域にあり、3D モデリングなどの他のモジュールと共有されます。プロパティにはいくつかのカテゴリがあり、タブ (左側のアイコン列) から選択できます。各タブには、データ型のプロパティと設定が再グループ化されています。 VSE の場合、一般的に使用されるのは [Output Properties] のみです。このタブは、Video Editing Workspace を開くとデフォルトで選択されます。これには、6 つのカテゴリ (パネル) が含まれています。</p>
+<ul class="simple">
+<li><p>Format</p></li>
+<li><p>Frame Range</p></li>
+<li><p>Stereoscopy</p></li>
+<li><p>Output</p></li>
+<li><p>Metadata</p></li>
+<li><p>Post Processing</p></li>
+</ul>
+<div class="refbox admonition">
+<p class="admonition-title">Reference</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 83%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Name</strong>:</p></td>
+<td><p><em>Dimensions</em></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Context</strong>:</p></td>
+<td><p>Video Sequence Editor &gt; Properties</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Location</strong>:</p></td>
+<td><p>Tabs &gt; Output Properties &gt; <strong>Format</strong></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="figure align-right" id="id5">
+<a class="reference internal image-reference" href="../../_images/video_editing_setup_project-settings.png"><img alt="Project Settings" src="../../_images/video_editing_setup_project-settings.png" style="width: 155.20000000000002px; height: 192.4px;" /></a>
+<p class="caption"><span class="caption-text">図1: Dimensions パネル</span><a class="headerlink" href="#id5" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<dl>
+<dt>Resolution</dt><dd><p>解像度 X と Y は、出力ビデオの水平軸と垂直軸のピクセル数を指します。一般的なビデオ解像度は次のとおりです。</p>
+<ul class="simple">
+<li><p>High Definition (HD) or 720p (1280 x 720)</p></li>
+<li><p>Full HD or 1080p (1920 x 1080)</p></li>
+<li><p>Ultra HD (UHD) 4K or 2160p (3840 x 2160).</p></li>
+</ul>
+<p>図 2 は、これら 3 つの一般的な解像度をより視覚的に示しています。 UHD または 4K バージョンと比較して、HD 解像度がいかに小さいかに注目してください。もちろん、ソーシャル メディア、映画館など、他にも多くの形式があります。かなり網羅的なリストは <a class="reference external" href="https://en.wikipedia.org/wiki/List_of_common_resolutions">Wikipedia</a> にあります。</p>
+<div class="figure align-right" id="id6">
+<a class="reference internal image-reference" href="../../_images/vse_setup_project_resolutions.svg"><img alt="Resolutions" height="2261" src="../../_images/vse_setup_project_resolutions.svg" width="3947" /></a>
+<p class="caption"><span class="caption-text">図2: Ultra HD, FHD and HD resolution</span><a class="headerlink" href="#id6" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<p>[Render Presets] ボタン (図 1 を参照) を使用すると、一般的なビデオ レンダリング設定 (HDTV 1080p、HDTV720p など) から選択できます。解像度、解像度 %、アスペクト比、fps は、選択したプリセットに応じて設定されます。
+独自のプリセットを作成することもできます。[Dimensions] パネルの設定を好みに合わせて変更し、[New Prests] フィールドに名前を入力して、[+] ボタンを押します。プリセットは、Python ファイルとして scripts/presets/render ディレクトリに保存されます。</p>
+</dd>
+<dt>Resolution %</dt><dd><p>[Resolution %] (デフォルト = 100%) を低いパーセンテージに設定して、ビデオを一時的に低い解像度でレンダリングすることができます。たとえば、10% に設定すると、フル HD ムービーは 192 x 108 ピクセルの解像度でレンダリングされます。
+<kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">LMB</kbd>-<kbd class="kbd docutils literal notranslate">Click</kbd></kbd> して, Video Sequence Editor の Preview の右上隅を 押し続けることで 確認できます <a class="footnote-reference brackets" href="#f1" id="id1">1</a> 。
+Statusbarに、<code class="docutils literal notranslate"><span class="pre">X</span> <span class="pre">:</span> <span class="pre">190</span>&#160; <span class="pre">Y:</span> <span class="pre">100</span> <span class="pre">...</span></code> のような表示が表示されます。
+これは、クリックした場所が、解像度 X = 190 および解像度 Y = 100 であることを意味します。したがって、完全なレンダリング イメージは実質的に 192 x 108 ピクセルになります。もちろん、写真はひどいものになります。絵を描くために自由に使えるのは 192 x 108 = 20736 ピクセルだけです。</p>
+<p>図 3 ～ 4 は、図 2 の 4K 画像の割合を 10% と 5% に設定したレンダリング結果を示しています。UHD 画像を 10% レンダリングしても、依然として 386 x 216 ピクセルの画像が得られることに注意してください。画像は、鮮明に見えるように拡大され、図 2 と同じ寸法になっています。図 4 は、実際には、幅 192 ピクセル x 高さ 108 ピクセルのみです。</p>
+<div class="figure align-default" id="id7">
+<a class="reference internal image-reference" href="../../_images/vse_setup_project_tree-10.png"><img alt="Resolutions" src="../../_images/vse_setup_project_tree-10.png" style="width: 768.0px; height: 432.0px;" /></a>
+<p class="caption"><span class="caption-text">図3: 10% でレンダリングされた図 2</span><a class="headerlink" href="#id7" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<div class="figure align-default" id="id8">
+<a class="reference internal image-reference" href="../../_images/vse_setup_project_tree-05.png"><img alt="Resolutions" src="../../_images/vse_setup_project_tree-05.png" style="width: 768.0px; height: 432.0px;" /></a>
+<p class="caption"><span class="caption-text">図4: 5% でレンダリングされた図 2</span><a class="headerlink" href="#id8" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<p>[Resolution %] を下げることは、プレビューやタイムラインのスクラブを高速化することを意味するものではありません。
+そのためには、プロキシが必要です。プロキシはデフォルトで有効になっているため ([Edit] &gt; [Preferences] &gt; [System] &gt; [Video Sequencer] &gt; [Proxy Setup] を参照)、[Resolution %] が小さい場合、タイムラインのナビゲーションに大きな改善は見られません。レンダリング時間のみが影響を受けます。このオプションは、ビデオの音声同期を確認するなど、簡単なテスト レンダリングを作成する場合に使用できます。</p>
+</dd>
+<dt>Aspect X/Y</dt><dd><p>私たちはコンピューター ディスプレイのピクセルを小さな正方形として見る傾向がありますが、ほとんどの最新のコンピューターでは、実際には正方形です。映画やテレビの世界では、特に古い機器では、非正方形ピクセルが一般的です。たとえば、DVD や BluRay のすべてのムービーは長方形のピクセルを使用します。アナモフィック レンズで撮影すると、非正方形ピクセルが使用されるため、コンピューター画面上で生の画像が歪んで表示されます。</p>
+<p>図 5 は、水平圧縮 1.33 のアナモルフィック レンズで撮影した生の画像の例を示しています。アナモフィック レンズは通常、超ワイド スクリーン ビューを実現するために映画で使用されます。これを実現するために、画像は水平方向に圧縮されます。すぐには明らかではないかもしれませんが、図 5 は少し歪んで見えます。</p>
+<div class="figure align-default" id="id9">
+<a class="reference internal image-reference" href="../../_images/vse_setup_project_anamorphic-squeezed.jpg"><img alt="Image from an anamorphic lens (squeezed)" src="../../_images/vse_setup_project_anamorphic-squeezed.jpg" style="width: 590.0px; height: 332.0px;" /></a>
+<p class="caption"><span class="caption-text">図5: アナモフィック レンズからの Raw イメージ</span><a class="headerlink" href="#id9" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<p>ffmpeg を使用すると、この画像のアスペクト比を取得できます。結果は次のとおりです。</p>
+<p><code class="docutils literal notranslate"><span class="pre">590x332</span> <span class="pre">[SAR</span> <span class="pre">96:96</span> <span class="pre">DAR</span> <span class="pre">295:166]</span></code></p>
+<p>ffmpeg によると、画像は 590 x 332 ピクセルです (Blender も同様です)</p>
+<div class="figure align-default" id="id10">
+<a class="reference internal image-reference" href="../../_images/vse_setup_project_anamorphic-desqueezed.jpg"><img alt="Image from an anamorphic lens (desqueezed)" src="../../_images/vse_setup_project_anamorphic-desqueezed.jpg" style="width: 590.0px; height: 332.0px;" /></a>
+<p class="caption"><span class="caption-text">図6: アナモルフィック レンズからの後処理画像</span><a class="headerlink" href="#id10" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<p>これにより、古い DVD ムービーをコンピュータで再生するときに、あらゆる種類の問題が発生する可能性があります。場合によっては、文字が圧縮されたり、引き伸ばされたりすることがあります。なぜ？それに対して何ができるでしょうか?</p>
+<div class="admonition-todo admonition" id="id2">
+<p class="admonition-title">課題</p>
+<p>アナモルフィックレンズの詳しい説明と使用例。いくつかの例については、以下の「ピクセル アスペクト比 Acid テスト」を参照してください。
+- <a class="reference external" href="http://frs.badcoffee.info/PAR_AcidTest/">http://frs.badcoffee.info/PAR_AcidTest/</a>
+- <a class="reference external" href="https://ia800900.us.archive.org/11/items/TvTestCard/TvTestCard_512kb.mp4">https://ia800900.us.archive.org/11/items/TvTestCard/TvTestCard_512kb.mp4</a>
+- <a class="reference external" href="https://ia800900.us.archive.org/11/items/TvTestCard/TvTestCard_512kb.mp4">https://ia800900.us.archive.org/11/items/TvTestCard/TvTestCard_512kb.mp4</a>
+- <a class="reference external" href="https://www.dpreview.com/articles/5787493634/shooting-photos-with-anamorphic-lenses-is-a-fun-way-to-get-out-of-a-creative-rut">https://www.dpreview.com/articles/5787493634/shooting-photos-with-anamorphic-lenses-is-a-fun-way-to-get-out-of-a-creative-rut</a>)</p>
+</div>
+</dd>
+<dt>RenderRegion/Crop to Render Region</dt><dd><p>これらのオプションは VSE では使用できず、設定するとエラー メッセージ <code class="docutils literal notranslate"><span class="pre">Border</span> <span class="pre">rendering</span> <span class="pre">is</span> <span class="pre">not</span> <span class="pre">supported</span> <span class="pre">by</span> <span class="pre">sequencer</span></code> が表示されます。</p>
+</dd>
+<dt>Frame Rate</dt><dd><p>1 秒あたりに表示されるフレーム数。ドロップダウン メニューには、いくつかの一般的なフレーム レート (23.98、24、25、29.97、30 など) が表示されます。これらのプリセットはさまざまな規格を参照しています: NTSC (30 fps、主に北米) と PAL/SECAM (25 fps、主にヨーロッパ)と、1950 年代にカラーテレビ (23.98 および 29.97)を採用するために行われた必要な調整
+[Custom]を選択すると、他のフレーム レートを使用できます。FPS とベースの値を入力できます。カスタム フレームレートは <code class="docutils literal notranslate"><span class="pre">FPS</span> <span class="pre">/</span> <span class="pre">base</span> <span class="pre">number</span></code> の結果です。たとえば、25 fps プリセットをシミュレートするには、FPS = 25 および Base = 1 または FPS = 50 および Base = 2 を入力できます。</p>
+<p>最初のビデオ ストリップが Sequencer に追加されると、プロジェクトのフレーム レートがそのストリップのフレーム レートに自動的に設定されます。
+フレーム レートが異なる 2 番目のストリップを追加しても、最初のストリップが削除された場合でも、その設定は変更されません。
+Blender VSE は 1 つのプロジェクト内で異なるフレーム レートを処理できません。奇妙なオーディオ ストリップやスローまたはファスト モーション効果を除いて、警告は表示されません。</p>
+<div class="figure align-default" id="id11">
+<img alt="Mixing of different FPS in one project" src="../../_images/video_editing_setup_project-settings-fps.png" />
+<p class="caption"><span class="caption-text">図7: 1 つのプロジェクト内での異なるフレーム レートの混合</span><a class="headerlink" href="#id11" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<p>図7 には、異なるフレーム レートで記録された 3 つのストリップが含まれています。キャプチャ フレーム レートはそれぞれ 30 fps、60 fps、120 fps でした。それぞれ記録には約 15 秒かかりました。 fps = 30 のストリップが最初に追加されました。これにより、プロジェクト全体のプレゼンテーション フレーム レートが 30 fps に設定されました。その後、60 fps と 120 fps のストリップが追加されました。これによってプロジェクトのプレゼンテーションのフレーム レートは変更されませんが、当然のことながら、ストリップのキャプチャ フレーム レートは変更されません。</p>
+<p>オーディオはプレゼンテーションのフレーム レートに依存しないため、すべてのオーディオ ストリップの長さは約 15 秒です。
+キャプチャ fps = 30 のムービー ストリップの長さも約 15 秒です。これは、キャプチャとプレゼンテーションのフレーム レートが等しいためです。
+キャプチャ フレーム レートが 60 fps および 120 fps のストリップは、はるかに長くなります。プレビューの時計の画像では、約 15 秒後 (最初の時計)、2 番目と 3 番目の時計では 6.55 秒と 2.83 秒しか経過していないことがわかります。
+これは、2 番目のストリップ (60 fps) には、30 fps のフレームレートで表示された 16.877 s x 60 fps = 1012.62 (キャプチャされた) フレームが含まれており、これには約 33.754 秒かかります。時計の実時間は約6.55秒です。
+60 fps のキャプチャ フレーム レートで、これはフレーム 393 の画像を表します。ここでも、フレーム 393 は 30 fps のプレゼンテーション フレーム レートで時間 13.1 秒に表示されます。これは、最初の時計で確認できるおおよその時間です (開始時間の違いによる多少の違いは許容してください)。これらが実際のアニメーション ムービーである場合、ストリップ 60 fps でスローモーション効果が見られ、ストリップ 120 fps ではさらに効果が得られます。</p>
+<p>したがって、プレゼンテーション フレーム レートをストリップのキャプチャ フレーム レートと同じに設定することが重要です。ストリップのキャプチャ フレーム レートは、Sequencer の Sidebarにある [Strip]タブ &gt; [Source] &gt; [FPS] で確認できます。</p>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>ビデオのキャプチャ フレーム レートの決定は、場合によっては難しい場合があります。ほとんどのデバイス (特にスマートフォン) では、可変フレーム レート モードでキャプチャすることについて言及していません。したがって、キャプチャ フレーム レートを 30 FPS に設定すると、実際にはフレーム レートは 29 fps から 31 fps の間で変化する可能性があります。これはストリップの開始と終了には影響しませんが、ビデオとオーディオの同期に（小規模な）問題が発生する可能性があります。</p>
+<p>Extra Tools セクションでは、ビデオを可変レートから固定レートに変換し、FPS を変更するソリューションを提供しました。</p>
+</div>
+</dd>
+</dl>
+<div class="refbox admonition">
+<p class="admonition-title">Reference</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 83%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Name</strong>:</p></td>
+<td><p><em>Dimensions</em></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Context</strong>:</p></td>
+<td><p>Video Sequence Editor &gt; Properties</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Location</strong>:</p></td>
+<td><p>Tabs &gt; Output Properties &gt; <strong>Frame range</strong></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl>
+<dt>Frame Start/End/Step</dt><dd><p>Sequencer のタイムラインには、数百のフレームにまたがる複数のストリップを含めることができます。これらすべてのフレームをレンダリングする必要はありません。 Start フィールドと End フィールドを使用して、出力範囲を制限できます。</p>
+</dd>
+<dt>Step</dt><dd><p>タイムライン内の各フレームごとに進むフレーム数を制御します。Sequencer のストリップに 10 フレームが含まれている場合、ステップ 2 では 5 フレーム (フレーム 1、3、5、7、9) がレンダリングされます。</p>
+</dd>
+<dt>Time Stretching</dt><dd><p>これを使用して、プロジェクト全体の再生を高速化または低速化できます。たとえば、図8 には、現在のフレームの 2 つのインジケーターがあります。再生ヘッドは、青い線 (古いフレーム番号) と新しいフレーム番号を含む青いボックス (実際にプレビューで表示されます) に分割されます。</p>
+<dl class="simple">
+<dt>Old</dt><dd><p>元のアニメーションのフレームの長さ。</p>
+</dd>
+<dt>New</dt><dd><p>新しいアニメーションのフレームの長さ。</p>
+</dd>
+</dl>
+<div class="figure align-default" id="id12">
+<img alt="Time Remapping (Old:1, New:2)" src="../../_images/video_editing_setup_project-settings-time-remapping.png" />
+<p class="caption"><span class="caption-text">図8: 時間のリマッピング (Old:1, New:2)</span><a class="headerlink" href="#id12" title="この画像へのパーマリンク">¶</a></p>
+</div>
+</dd>
+</dl>
+<div class="refbox admonition">
+<p class="admonition-title">Reference</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 83%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Name</strong>:</p></td>
+<td><p><em>Stereoscopy</em></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Context</strong>:</p></td>
+<td><p>Video Sequence Editor &gt; Properties</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Location</strong>:</p></td>
+<td><p>Tabs &gt; Output Properties &gt; <strong>Stereoscopy</strong></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Stereoscopyは、一対の 2 次元画像から 3 次元の奥行きの錯覚を作り出す技術です。これらの画像は、私たちの左目と右目が実際の画像を認識する方法に似ています。 Blender では、立体的な画像やムービーを非常に簡単に作成できます。 [Output]プロパティー &gt; [Stereoscopy] &gt; [Stereo 3D] でオプションを有効にするだけです。詳細については; Blender マニュアルの <a class="reference external" href="https://docs.blender.org/manual/en/dev/render/output/properties/stereoscopy/index.html">Stereoscopy</a> を参照してください。</p>
+<p>Blender VSE での Stereoscopy ムービーの編集は、次の 2 段階のプロセスです。</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Select the stereoscopic strip and enable the <em>Use Multi-View</em> option in the Source panel of the movie strip. This option is only available after you have completed step 1. Choose the appropriate Views Format. This depends on the format of the source file. If the image pair is saved as two individual files; select <em>Individual</em>. If the image pair is saved as one file, with both images side-by-side, select Stereo 3D and set the Stereo Mode to Side-by-Side.</p></li>
+<li><p>[Output]プロパティー &gt; [Stereoscopy] &gt; [Stereo 3D] で、 Stereoscopy オプションを有効にします。これにより、ストリップの [Source]プロパティに新しいパネルも追加されます。</p></li>
+<li><p>Stereoscopyが有効になったストリップを選択し、ムービー ストリップの [Source] パネルで[Use Multi-View]オプションを有効にします。このオプションは、ステップ 1 を完了した後にのみ使用できます。適切なビュー形式を選択します。これはソース ファイルの形式によって異なります。画像ペアが 2 つの個別のファイルとして保存される場合。[Individual] を選択します。画像ペアが両方の画像を並べて 1 つのファイルとして保存する場合は、[Stereo 3D] を選択し、[Stereo Mode] を [Side-by-Side] に設定します。</p></li>
+</ul>
+</div></blockquote>
+<div class="refbox admonition">
+<p class="admonition-title">Reference</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 83%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Name</strong>:</p></td>
+<td><p><em>Output</em></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Context</strong>:</p></td>
+<td><p>Video Sequence Editor &gt; Properties</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Location</strong>:</p></td>
+<td><p>Tabs &gt; Output Properties &gt; <strong>Output</strong></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="figure align-right" id="id13">
+<a class="reference internal image-reference" href="../../_images/video_editing_setup_project-settings-output.png"><img alt="Render Output properties" src="../../_images/video_editing_setup_project-settings-output.png" style="width: 228.2px; height: 513.1px;" /></a>
+<p class="caption"><span class="caption-text">図9: レンダリング出力プロパティ</span><a class="headerlink" href="#id13" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<p>図9は、[Output] プロパティの展開された [Output]パネルを示しています。ここでは、プロジェクトのレンダリング結果の保存場所とファイル形式を定義します。図9 では、FFmpeg ビデオ ファイル形式が選択されています。他の可能なファイル形式を図10 に示します。</p>
+<dl>
+<dt>Output Path</dt><dd><p><a class="reference internal" href="directory-structure.html"><span class="doc">前のセクション</span></a> では、ビデオ プロジェクトに関連するすべてのファイルを保持するために考えられるディレクトリ構造について説明しました。この構造では、レンダリングされた出力を 3-2-Render に保存できます。 blend ファイルは 3-1-Blend-file に保存されているため、出力ファイル パスは <code class="docutils literal notranslate"><span class="pre">//../3-2-render/</span></code> である必要があります。最初の // は、現在の blend ファイルを含むディレクトリの Blender 表記です。
+ファイル形式に関する選択に応じて、ファイル名またはディレクトリ名を追加できます。
+ファイル <code class="docutils literal notranslate"><span class="pre">//../3-2-render/myProject-v01.mp4</span></code> パスにより、指定されたディレクト(3-2-render)にファイル <strong>myProject-v01.mp4</strong> が作成されます 。
+拡張子を <code class="docutils literal notranslate"><span class="pre">//../3-2-render/myProject-v01</span></code> のように省略した場合、<em>Saving File Extensions</em> を有効にすると、20 フレームのプロジェクトに対してファイル <em>myProject-v010001-0020.mp4</em> が生成されます。イメージ シーケンスをレンダリングする場合は、サブディレクトリを指定することをお勧めします。 <code class="docutils literal notranslate"><span class="pre">//../3-2-render/myProject-v01/</span></code> のように最後に / を置きます。プロジェクトをレンダリングすると、ファイル0001.png、0002.png、0003.png ... がフォルダー <em>3-2-render/myProject-v01</em> に作成されます。</p>
+<dl class="simple">
+<dt>Saving File Extensions</dt><dd><p>このオプションを有効にすると、ファイル名に適切なファイル拡張子が追加されます (使用可能なファイル形式については、図10 を参照)。</p>
+</dd>
+<dt>Cache result</dt><dd><p>このオプションを有効にすると、レンダー キャッシュが EXR ファイルに保存されます。これは大量の合成に役立ちますが、レンダリングされたシーンに間接的に影響します。</p>
+</dd>
+</dl>
+</dd>
+<dt>Color</dt><dd><p>グレースケール イメージを保存するには BW、カラー イメージ (赤、緑、青のチャネル) を保存するには RGB、透明度を有効にしたカラー イメージ (赤、緑、青、アルファ チャネル) を保存するには RGBA を選択します。 RGBA オプションは、特定のファイル形式でのみ使用できます (下記を参照)。たとえば、JPG ファイル形式にはアルファ チャネルがありませんが、PNG 形式にはアルファ チャネルがあります。また、ほとんどのビデオ ファイル形式には透明度オプションがありません。</p>
+</dd>
+<dt>File Format</dt><dd><p>Sequencerのコンテンツは、一連の画像 (BMP、Iris、PNG、…、TIFF、図10 を参照) として、またはもちろん一連の画像が埋め込まれたムービーとしてレンダリングできます。</p>
+<div class="figure align-default" id="id14">
+<img alt="File formats" src="../../_images/video_editing_setup_project-settings-output-file-format.png" />
+<p class="caption"><span class="caption-text">図10: ファイルフォーマット</span><a class="headerlink" href="#id14" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<p>どれを選ぶべきですか? 選択に応じて、いくつかのフィールドがサイドバーに追加されます。考えられるすべての画像およびムービー形式については、すべての <a class="reference external" href="https://docs.blender.org/manual/en/dev/files/media/video_formats.html">Video &amp; Audio Formats</a> と <a class="reference external" href="https://docs.blender.org/manual/en/dev/files/media/image_formats.html">graphics</a> 形式の概要とともに、ドキュメントの <a class="reference external" href="https://docs.blender.org/manual/en/dev/render/output/properties/output.html">Output セクション</a> で詳しく説明されています(リストについては図10 を参照)。</p>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>Blender は何よりも 3D および 2D モデリングおよびアニメーション プログラムであることを心に留めておくことが重要です。アートワークは主に、3D ビューまたはグリース ペンシル ワークスペース内から作成およびレンダリングされます。アーティストは、解像度、構成、速度、色などを完全に制御できます。ただし、ビデオ編集者は通常、カメラ出力からの既存の素材を使用して作業します。ここでは、多くのパラメータがすでに固定されています。したがって、出力設定はインポートされた映像によって大きく左右されます。</p>
+</div>
+<p>Video Editing Workspace にいる場合、デフォルトは、デフォルトのビデオ コーデックとして H.264、オーディオ コーデックとして AAC を使用する FFmpeg ビデオに設定されています。他のワークスペースではデフォルトが PNG Image Sequence に設定されており、Blender ドキュメントや多くのチュートリアルではこのアプローチが好まれています。レンダリング プロセスを停止して再起動することが簡単になります (たとえば、クラッシュが発生した場合や、別の目的でコンピュータが必要な場合)。カラー グレーディングや VFX などの後処理に最適な、高品質のロスレス形式 (OpenEXR など) を選択できます。レンダー ファームを使用することもできます。ただし、これらの利点は、画質を完全に制御できる 3D アニメーション作成プロセス (Blender の主な焦点) でより顕著になります。ソース素材の品質が通常固定されているビデオ編集ワークフローでは、このことはあまり明らかではありません。たとえば、映像はすでに撮影されており、たとえば、H.264 映像から openEXR イメージ シーケンスを作成しても、その品質は向上しません。プロジェクトを画像シーケンスとして保存した場合は、オーディオも個別に保存する必要があります。そして最終的には、おそらく 1 つのムービー ファイルをクライアントに渡す必要があるでしょう。したがって、一般的なビデオ編集ワークフローでは、単一のムービー ファイル形式 (FFMpeg Video) がはるかに一般的です。</p>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>30 fps、10 秒の 1080P ビデオの非圧縮ファイル サイズは、1080 x 1920 (dimension) x 3 (カラー チャネル) x 30 (fps) x 10 (秒) = 1.866.240.000 バイトまたは 1.73 GB です。ほとんどの場合、このファイルは大きすぎるため、H.264 コーデックなどで圧縮する必要があります。このコーデックは、1:50 ～ 約 1:200 (200 バイトが 1 バイトに圧縮される) の圧縮率を実現し、上記のファイル サイズを約 36 MB ～ 9 MB に削減します。次の概念に留意することが重要です。</p>
+<ul class="simple">
+<li><p>フレーム内圧縮: フレームのすべてのピクセルをコーディングする代わりに、ピクセル間の差分のみがエンコードされます。たとえば、完全に黒いフレームの場合、フレーム全体 (または特定のブロックなど) に適用される色と情報をエンコードするだけで済みます。</p></li>
+<li><p>フレーム間圧縮: イメージ シーケンス内のフレームがすべて完全に異なるわけではありません。したがって、理論的には、最初のフレーム (キー フレームまたは I フレームと呼ばれます) をエンコードし、それ以降は差分のみをエンコードすれば十分です。これは、再生ストリームでは非常にうまく機能する可能性があります。ただし、一般的なビデオ編集環境 (スクラブ、逆再生、ジャンプなど) では、これは不適切な圧縮手法です。 1 フレーム後方に移動するには、最後のキーフレームまで前のフレームをすべて処理する必要があります。 GOP (Group of Pictures) という用語は、1 つのキーフレームに接続されているフレームの数を指します。 GOP サイズが大きいほど圧縮率は高くなりますが、編集に必要な処理も多くなります。</p></li>
+<li><p>非可逆圧縮: 圧縮の結果、一部の情報がファイルから削除されます。ほとんどの場合、これは人間の目では気づかないか、ほとんどわかりません。 JPEG 画像形式は非可逆ファイル形式です。 WEBM/VP9 および Theora は非可逆ビデオ コードです。 AAC は非可逆オーディオ コーデックです。</p></li>
+<li><p>可逆圧縮: 圧縮ファイルには、圧縮されていないファイルとまったく同じ情報が含まれていますが、サイズは小さくなります。可逆圧縮ファイルから元の画像を復元することが可能です。 PNG 画像形式はロスレス ファイル形式です。 FFmpeg ビデオ コーデック #1 および HuffYUV はロスレス ビデオ コーデックです。 FLAC はロスレス オーディオ コーデックです。</p></li>
+</ul>
+<p>一部のコーデックには、不可逆および可逆のバリアントがあります (DNxHD、H.264 など)。 Wikipedia は、<a class="reference external" href="https://en.wikipedia.org/wiki/List_of_codecs#Lossless_compression">list of lossy and lossless video and audio codecs</a> を管理しています。</p>
+</div>
+<dl>
+<dt>AVI JPEG</dt><dd><p>図10 の最初の 2 つの選択肢 (AVI JPEG および AVI Raw)にあります。 AVI (Audio Video Interleaved) という用語は、1992 年に Microsoft によって開発されたファイル形式であるコンテナを指します。AVI JPEG は、Motion JPEG (M-JPEG または MJPEG) を使用します。 ) 各ビデオ フレームが JPEG 画像として個別に圧縮されるコーデック。したがって、このコーデックはフレーム内圧縮のみを使用するため、ビデオ編集の目的に非常に適していますが、(フレーム内圧縮のみであるため) ファイル サイズも大きくなります。 JPEG コーデックを使用するため、非可逆圧縮でもあります。オーディオはコンテナに埋め込まれないため、個別にエクスポートする必要があります。</p>
+</dd>
+<dt>AVI Raw</dt><dd><p>AVI Raw はコーデック自体を使用せず、生の画像を A​​VI コンテナに保存します。したがって、ファイル サイズははるかに大きくなりますが、品質と処理速度は (フレーム サイズが大きくなることを除けば) 優れています。音声も埋め込まれていません。比較のために、オリジナルの Spring Open ムービー (コンテナ: MPEG-4、ビデオ コーデック: AVC (Advanced Video Codec)、オーディオ コーデック: AAC LC (Advanced Audio Codec Low Complexity)) のファイル サイズは 29.6 MB です。AVI Raw はファイル サイズは 64.5 GB、AVI JPEG のファイル サイズは 1.87 GB で、どちらも音声はありません。</p>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>この巨大なファイル サイズと音声がないため、どちらの形式も配信形式としてではなく、フォールバックとして使用する必要があると考えられます。</p>
+</div>
+</dd>
+<dt>FFmpeg video file format</dt><dd><div class="figure align-right" id="id15">
+<a class="reference internal image-reference" href="../../_images/video_editing_setup_project-settings-output-containers-codecs.png"><img alt="FFMpeg video settings" src="../../_images/video_editing_setup_project-settings-output-containers-codecs.png" style="width: 289.8px; height: 498.0px;" /></a>
+<p class="caption"><span class="caption-text">図11: FFmpeg Video settings</span><a class="headerlink" href="#id15" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<p>FFmpeg ビデオは、いくつかのコンテナとコーデックを総称した用語です。内部で ffmpeg ライブラリを使用してビデオ ファイルを作成します。</p>
+<p>このオプションを選択すると、いくつかのプリセットが使用可能になります: <code class="docutils literal notranslate"><span class="pre">DVD</span></code>, <code class="docutils literal notranslate"><span class="pre">H264</span> <span class="pre">in</span> <span class="pre">Matroska</span></code>, <code class="docutils literal notranslate"><span class="pre">H264</span> <span class="pre">in</span> <span class="pre">Matroska</span> <span class="pre">for</span> <span class="pre">scrubbing</span></code>, <code class="docutils literal notranslate"><span class="pre">H264</span> <span class="pre">in</span> <span class="pre">MP4</span></code>, <code class="docutils literal notranslate"><span class="pre">Ogg</span> <span class="pre">Theora</span></code>, <code class="docutils literal notranslate"><span class="pre">WebM</span> <span class="pre">(VP9+Opus)</span></code>, <code class="docutils literal notranslate"><span class="pre">Xvid</span></code> 。</p>
+<p>これらのプリセットのいずれかを選択すると、以降につづく、エンコード、ビデオ、およびオーディオのオプションが事前定義された値に設定されます。ここでは、非常に人気のある <em>H264 in MP4</em> と関連する概念のみについて説明します。これらは他のプリセットにも適用されます。</p>
+<dl>
+<dt>Encoding</dt><dd><p>FFmpeg ビデオ ファイル形式を選択すると、サイド パネルにエンコーディング、ビデオ、およびオーディオ セクションが追加されます。コンテナとコーデックという概念を区別する必要があります。たとえば、図 11 では、コンテナは MPEG-4 (ファイル拡張子は mp4)、ビデオ コーデックは H.264、オーディオ コーデックは AAC です。コンテナには、画像のストリーム、サウンド、字幕、メタデータなど、ビデオのさまざまなコンポーネントが「含まれています」。コーデックは、デジタル ビデオまたはオーディオを圧縮および解凍するソフトウェアまたはハードウェアです。</p>
+<dl>
+<dt>Container</dt><dd><p>コンテナは、データ (オーディオ、ビデオ、字幕など) をビデオ ファイルに保存する方法と、この情報の転送と表示をどのように構成するかを指定します。コンテナはファイル拡張子 (.mp4、.mov など) によって識別できます。ただし、これは完全な識別方法ではありません。たとえば、ファイル拡張子を .mp4 から .mov または .avi に簡単に変更しても、ほとんどのプレーヤーでビデオを表示できます。 (ファイル内の) コンテナーの署名を検出するには、FFprobe や MediaInfo などの追加ソフトウェアが必要です ( <a class="reference external" href="/extra-tools">Extratools</a> を参照)。</p>
+<p>使用可能なコンテナ ファイル形式は <code class="docutils literal notranslate"><span class="pre">MPEG-1</span></code>, <code class="docutils literal notranslate"><span class="pre">MPEG-2</span></code>, <code class="docutils literal notranslate"><span class="pre">MPEG-4</span></code>, <code class="docutils literal notranslate"><span class="pre">AVI</span></code>, <code class="docutils literal notranslate"><span class="pre">Quicktime</span></code>, <code class="docutils literal notranslate"><span class="pre">DV</span></code>, <code class="docutils literal notranslate"><span class="pre">Ogg</span></code>, <code class="docutils literal notranslate"><span class="pre">Matroska</span></code>, <code class="docutils literal notranslate"><span class="pre">Flash</span></code>, <code class="docutils literal notranslate"><span class="pre">WebM</span></code> です。</p>
+<p>コンテナは特定のコーデックに関連付けることができます。たとえば、 <code class="docutils literal notranslate"><span class="pre">MPEG-1</span></code> と <code class="docutils literal notranslate"><span class="pre">MPEG2</span></code> コンテナではビデオ コーデック を <em>強制</em> (選択することはできません) します。 品質パラメータとオーディオ コーデックのみを定義できます。 <code class="docutils literal notranslate"><span class="pre">MPEG-1</span></code> コンテナーの場合、有効なオーディオ コーデックは AC3、MP2、および MP3 のみです。ただし、すべてのオーディオ コーデックが利用可能です。レンダリング エラーなしで AC3 オーディオ コーデックを選択できますが、サウンドは保存されません。また、MP2 オーディオ コーデックが選択されている場合、ビットレートは 128 bps 未満である必要があります。
+別の例としては: webM および Ogg ファイル形式には、Vorbis および Opus コーデックのみを含めることができます。</p>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>互換性のないコーデックまたはコンテナを組み合わせると、[Render Animation] コマンドによりステータス バーに  <code class="docutils literal notranslate"><span class="pre">Could</span> <span class="pre">not</span> <span class="pre">initialize</span> <span class="pre">streams,</span> <span class="pre">probably</span> <span class="pre">unsupported</span> <span class="pre">codec</span> <span class="pre">combination</span></code> エラー メッセージ (見逃しやすい) が表示されます。にもかかわらず、再生できない出力ファイルはまだ生成されています。</p>
+</div>
+<p>Wikipedia には、有効な <a class="reference external" href="https://en.wikipedia.org/wiki/Comparison_of_video_container_formats#Video_coding_formats_support">container-codec combinations</a>  の概要表を含む、利用可能なすべての <a class="reference external" href="https://en.wikipedia.org/wiki/Comparison_of_video_container_formats">container formats</a> に関する非常に広範なドキュメントがあります。</p>
+<p>コンテナとコーデックの違いについての非常に優れた YouTube チュートリアルは、<a class="reference external" href="https://www.youtube.com/watch?v=-4NXxY4maYc">Explaining Digital Video: Formats, Codecs &amp; Containers</a> です。</p>
+</dd>
+<dt>Autosplit</dt><dd><p>出力ファイルが 2 GB より大きい場合は、出力を最大 2 GB のチャンクに自動分割できます。 2GB。各チャンクは個別に再生できます。</p>
+</dd>
+<dt>Video</dt><dd><dl>
+<dt>Video Codec</dt><dd><p>CODEC という名前は、Compressor/Decompressor (コーディング/デコーディングとも呼ばれる) の略です。ファイルを圧縮するソフトウェアです (上記を参照)。使用可能なオプションは以下です。</p>
+<p><code class="docutils literal notranslate"><span class="pre">No</span> <span class="pre">Video</span></code>, <code class="docutils literal notranslate"><span class="pre">DNxHD</span></code>, <code class="docutils literal notranslate"><span class="pre">DV</span></code>, <code class="docutils literal notranslate"><span class="pre">FFmpeg</span> <span class="pre">video</span> <span class="pre">codec</span> <span class="pre">#1</span></code>, <code class="docutils literal notranslate"><span class="pre">Flash</span> <span class="pre">Video</span></code>, <code class="docutils literal notranslate"><span class="pre">H.264</span></code>, <code class="docutils literal notranslate"><span class="pre">HuffYUV</span></code>, <code class="docutils literal notranslate"><span class="pre">MPEG-1</span></code>, <code class="docutils literal notranslate"><span class="pre">MPEG-2</span></code>, <code class="docutils literal notranslate"><span class="pre">MPEG-4</span> <span class="pre">(divx)</span></code>, <code class="docutils literal notranslate"><span class="pre">PNG</span></code>, <code class="docutils literal notranslate"><span class="pre">QT</span> <span class="pre">rle/QT</span> <span class="pre">Animation</span></code>, <code class="docutils literal notranslate"><span class="pre">Theora</span></code>,  <code class="docutils literal notranslate"><span class="pre">WEBM/VP9</span></code>.</p>
+<p>(非可逆) ビデオ エンコードの目標は、品質を可能な限り維持しながら、元の入力ファイルのファイル サイズを削減することです。したがって、サイズと品質の間にはトレードオフがあります。</p>
+<p>選択したビデオ コーデックによっては、以降のフィールドの一部が表示されません。たとえば、[No Video] コーデックを選択した場合、追加のフィールドは表示されません。</p>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>以下の説明は、一般的な H.264 ビデオ コーデックに基づいています。 Blender は、このコーデックの複雑さの一部を隠すことを選択しました。他のコーデックでは、必要な属性をすべて明示的に指定する必要があります。本文では、これらの暗黙的な設定について言及します。</p>
+</div>
+</dd>
+<dt>Output quality</dt><dd><p>デフォルトは [Medium Quality] に設定されています。ビデオの画質はビットレートに依存します。つまり、単位時間あたりに使用されるビット数です。高いビットレートを設定すると、画像を表示する単位時間あたりのビット数が増えるため、品質が向上します。</p>
+<p>FFmpeg を使用すると、一定のビットレートを使用することも、事前定義された品質レベルの 1 つで解決することもできます。ビットレートが一定の場合、画像ストリームがどれほど複雑であっても、単位時間あたりのビット数は常に同じです。可変ビットレートはストリームの複雑さに適応し、動きのないビデオなどではより低いビットレートを使用できます。事前定義された品質レベルの 1 つを選択すると、可変ビットレートが自動的に設定されます。</p>
+<dl>
+<dt>Quality levels (variable bitrate)</dt><dd><p>出力の望ましい品質について何らかの指示を与える必要があります。そうしないと、コーデックは常に最低のビットレートに落ち着く可能性があり、これは当然ながら最低の品質でもあります。</p>
+<p>Blender は <a class="reference external" href="https://blender.stackexchange.com/questions/93048/what-numerical-crf-values-do-the-assorted-output-qualities-correspond-to-in-the">verbal labels</a> を使用することを選択しました。これは FFmpeg の <a class="reference external" href="http://trac.ffmpeg.org/wiki/Encode/H.264">Constant Rate Factor</a> (CRF)の変換です。0 から 51 までの値で、値が低いほど、ファイル サイズは大きくなりますが、品質が向上します (フレームあたりのビット数が増加します)。値が大きいほど圧縮率が高くなりますが、ある時点で品質の低下に気づくことがあります。 ± 6 の変更により、ファイル サイズは約半分または 2 倍になります。</p>
+<div class="figure align-default" id="id16">
+<img alt="Output Quality" src="../../_images/video_editing_setup_project-settings-output-quality.png" />
+<p class="caption"><span class="caption-text">図12: 出力品質と FFmpeg の Constant Rate Factor (CRF) 値</span><a class="headerlink" href="#id16" title="この画像へのパーマリンク">¶</a></p>
+</div>
+</dd>
+<dt>Constant Bitrate</dt><dd><p>FFmpeg にはネイティブまたは真の CBR モードはありませんが、Blender はワンパス平均ビットレート エンコードのパラメーターを調整することで、固定ビット レート設定を「シミュレート」します。次の追加の入力フィールドを設定する必要があります。ただし、ビットレート、最小値、および最大値はすべて同じ値に設定できます。</p>
+<dl class="simple">
+<dt>Bitrate</dt><dd><p>ビットレートは、単位時間あたりにエンコードされるデータの量です。ストリーミングの場合、通常、ビデオの場合はメガビット/秒 (Mbps)、オーディオの場合はキロビット/秒 (kbps) で表されます。デフォルトは 6000 bps に設定されています。比較として、YouTube アップロードの推奨ビデオ ビットレートは、1080p の場合は 8 Mbps、720p の場合は 5 Mbps に設定されています。</p>
+</dd>
+<dt>Minimum</dt><dd><p>[Constant Bitrate] オプションが選択されていますが、エンコーダーはこの数値を中心に変動します。最小値を設定できます。</p>
+</dd>
+<dt>Maximum</dt><dd><p>ただし、最大値の方がおそらくより重要です。ビューアの帯域幅が制限されていると思われる場合は、この最大値を指定できます。エンコーダーは、これより高いビットレートでエンコードすることはありません。</p>
+</dd>
+<dt>Buffer</dt><dd><p>これは「レート制御バッファ」であるため、バッファ ウィンドウ全体で要求された「平均」（ビットレートで設定した値）を強制します。受信機/プレーヤーはその量のデータをバッファーすると想定されており、その範囲内の変動は許容されることを意味します。デフォルトは 1792 ビットに設定されています。</p>
+</dd>
+<dt>Mux Rate</dt><dd><p>Multiplexingとは、ビデオ ファイルと .mp3 オーディオ ファイルを zip ファイルにパックするのと同様に、別々のビデオ ストリームとオーディオ ストリームを 1 つのファイルに結合するプロセスです。 Mux Rate の値は、多重化ストリームの最大ビットレートです。デフォルトは 10080000 に設定されています。</p>
+</dd>
+<dt>Mux Packet size</dt><dd><p>デフォルト: 2048。ソースに応じて、データの断片化またはマルチプレクサのオーバーヘッドを削減します。デフォルトは 2048 に設定されています。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+<dt>Encoding speed</dt><dd><p>高速エンコード (より大きなファイル サイズ) とより多くの圧縮 (より小さなファイル サイズ) の間で変更するためのプリセット。利用可能なオプション: Slowest, Good, Realtime</p>
+</dd>
+<dt>Keyframe Interval</dt><dd><p>画像グループごとの画像の数。デフォルト値は 18 です。「フレーム内のみ」圧縮の場合は 0 に設定すると、フレーム間ビデオ圧縮が無効になります。一般に、数値が大きいほどファイルは小さくなりますが、再生するには高性能のデバイスが必要です。</p>
+<p>キーフレーム間隔の値は目的によって異なります。この出力されたビデオをさらに編集に使用する場合は、間隔を短くすることをお勧めします。非キーフレームを再作成するには、関連するキーフレームを見つけて、その間のすべての差異を適用する必要があります。すべてのフレームがキーフレームの場合、各フレームを独自に再作成できます。ただし、当然のことながら、圧縮は最小限であり、ファイル サイズは大きくなります。</p>
+</dd>
+<dt>Max B-frames</dt><dd><p>B フレームは双方向フレームです。最高の圧縮率を得るために、データ参照に前フレームと前フレームの両方を使用します。この値は、非 B フレーム間の B フレームの最大数です。繰り返しますが、編集が必要なビデオの場合は、値が小さい方が有利です。</p>
+</dd>
+</dl>
+</dd>
+<dt>Audio</dt><dd><p>ターゲット出力ファイルに適合できるのは、特定のオーディオ コーデックのみです。概要表については、 <a class="reference external" href="https://trac.ffmpeg.org/wiki/Encode/HighQualityAudio">Guidelines for high quality lossy audio encoding</a> を参照してください。</p>
+<p>FFmpeg ドキュメントによると、利用可能なオーディオ エンコーダの品質は次のようにランク付けされます:</p>
+<p>Opus &gt; Vorbis &gt;= AAC &gt; MP3 &gt;= AC3 &gt; aac &gt; libtwolame &gt; vorbis &gt; mp2 &gt; wmav2/wmav1</p>
+<dl>
+<dt>Audio Codec</dt><dd><p>利用可能なオプション: <code class="docutils literal notranslate"><span class="pre">No</span> <span class="pre">Audio</span></code>, <code class="docutils literal notranslate"><span class="pre">AAC</span></code>, <code class="docutils literal notranslate"><span class="pre">AC3</span></code>, <code class="docutils literal notranslate"><span class="pre">FLAC</span></code>, <code class="docutils literal notranslate"><span class="pre">MP2</span></code>, <code class="docutils literal notranslate"><span class="pre">MP3</span></code>, <code class="docutils literal notranslate"><span class="pre">Opus</span></code>, <code class="docutils literal notranslate"><span class="pre">PCM</span></code>, and <code class="docutils literal notranslate"><span class="pre">Vorbis</span></code>
+.. Advanced Audio Coding (AAC) is the successor format to MP3 and defined in MPEG-4 part 3.
+Audiocoding (AAC) は MP3 の後継フォーマットであり、MPEG-4 パート 3 で定義されています。</p>
+</dd>
+<dt>Audio channels</dt><dd><p>利用可能なオプション: Mono, Stereo, 4 channels, 5.1 Surround, 7.1 Surround</p>
+</dd>
+<dt>Sample Rate</dt><dd><p>サンプル (サンプリング) レートは、ビデオのフレーム レートまたは FPS (フレーム/秒) 測定に似ています。アナログ音波は一定の間隔で測定またはサンプリングされ、結果はオーディオ ストリーム/ファイルに保存されます。オーディオの場合、英語の音声を明確に表現するための 1 秒あたりの最小サンプル数は 8000 Hz、つまり 1 秒あたり 8000 サンプルです。その他の一般的な値は、44.100 Hz または 44.1 kHz (音楽 CD 品質)、および 48 kHz (映画のオーディオ トラックで最も一般的) です。デフォルト設定は 48000 です。</p>
+</dd>
+<dt>Bit Rate</dt><dd><p>コーデックごとに、動画の音声のビットレート（品質）を制御できます。ビット レートが高くなると、ファイルが大きくなり、ストリーミングは悪くなりますが、音質は良くなります。互換性を保つために 2 の累乗を使用します。</p>
+<p>音楽の場合、64 (AAC)/96 (MP3) kbps は、ほとんどのリスナーが良好に聞こえる汎用的な設定です。これはポッドキャストの標準ビットレートであり、スマート スピーカーやモバイル デバイスなど、ほとんどの最新のデバイスで素晴らしい音質で聞こえます。帯域幅のコストが懸念される場合は、より低い設定の使用を検討してください。リスニングを強化するには、より高いレベルを設定します。</p>
+<p>経験則として、可聴透明度を得るには、各チャンネルに 64 kBit/s を使用します (つまり、ステレオの場合は 128 kBit/s、5.1 サラウンド サウンドの場合は 384 kBit/s) ( <a class="reference external" href="https://trac.ffmpeg.org/wiki/Encode/AAC">https://trac.ffmpeg.org/wiki/Encode/AAC</a> を参照)</p>
+<p>会話の場合、32 (AAC)/64 (MP3) kbps がほとんどの目的に適した標準設定です。特に予算を重視している場合は、トークラジオに低い設定を使用できますが、違いに気づく人はほとんどいません。</p>
+<p>最小値は 32、最大値は 384 kbps です。デフォルトは 192 に設定されています</p>
+</dd>
+<dt>Volume</dt><dd><p>スライダー: デフォルトは 1</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="refbox admonition">
+<p class="admonition-title">Reference</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 83%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Name</strong>:</p></td>
+<td><p><em>Output</em></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Context</strong>:</p></td>
+<td><p>Video Sequence Editor &gt; Properties</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Location</strong>:</p></td>
+<td><p>Tabs &gt; Output Properties &gt; <strong>Metadata</strong></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition-todo admonition" id="id3">
+<p class="admonition-title">課題</p>
+<p>Describe metadata</p>
+</div>
+<div class="refbox admonition">
+<p class="admonition-title">Reference</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 83%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Name</strong>:</p></td>
+<td><p><em>Output</em></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Context</strong>:</p></td>
+<td><p>Video Sequence Editor &gt; Properties</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Location</strong>:</p></td>
+<td><p>Tabs &gt; Output Properties &gt; <strong>Post Processing</strong></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>[Post Processing] パネルは、カメラのレンダリングが行われた後に画像を処理するために使用されるさまざまなオプションを制御するために使用されます。</p>
+<blockquote>
+<div><div class="figure align-right" id="id17">
+<a class="reference internal image-reference" href="../../_images/video_editing_setup_project-settings-output-post-processing.png"><img alt="Post processing options" src="../../_images/video_editing_setup_project-settings-output-post-processing.png" style="width: 309.0px; height: 146.4px;" /></a>
+<p class="caption"><span class="caption-text">図13: Post processing オプション</span><a class="headerlink" href="#id17" title="この画像へのパーマリンク">¶</a></p>
+</div>
+</div></blockquote>
+<p>Compositing</p>
+<blockquote>
+<div><p>レンダリング プロセスの出力は、コンポジターの Composite Output ノードから取得されます。このオプション <em>だけでなく</em> 、Compositer の [Use Note] オプションも有効にする必要があることに注意してください。両方の条件が満たされない場合は、アクティブな Camera の出力を使用してイメージがレンダリングされます。</p>
+</div></blockquote>
+<p>Sequencer</p>
+<blockquote>
+<div><p>アクティブな Camera または Compositer の代わりに、Video Sequence Editor の出力をレンダリングします。Sequencer  にシーン ストリップが含まれている場合、これらもパイプラインの一部としてレンダリングされます。[Compositing] が有効な場合 (ただし上記を参照)、シーン ストリップは Compositer の出力になります。</p>
+<p>Video Sequence Editorにオーディオ ストリップのみが含まれている場合、ビジュアル レンダー出力は Compositer またはアクティブな Camera のコンポジット出力ノードから、オーディオは Sequencer から取得されます。</p>
+<p>Video Sequence Editor が空の場合は、Sequencer オプションが有効であっても、アクティブな Camera またはコンポジット出力ノードがレンダリングされます。</p>
+</div></blockquote>
+<p>Dither</p>
+<blockquote>
+<div><p>ディザリングは、色の間に階段状の段差が現れるグラデーション領域に見られるバンディングを防ぐためにピクセルをぼかす技術です。バンディング アーティファクトは、勾配が長い場合、または勾配が緩やかな場合により目立ちます。ディザリングは、ビット深度が低いグラフィックス向けに開発されました。つまり、使用できる色の範囲が限られています。</p>
+<p>ディザリングは、ピクセル値を取得し、それらをしきい値と比較し、隣接するピクセルを計算して適切な色を生成することによって機能します。ディザリングは、一種の視覚的な色の混合を作成することにより、より大きなカラー パレットの知覚効果を作成します。たとえば、グリッドを作成し、赤と黄色のピクセルを均等に配置すると、画像はオレンジ色に見えます。</p>
+</div></blockquote>
+<p>test
+Some useful links:</p>
+<ul class="simple">
+<li><p>Discrete Cosine Transformation: <a class="reference external" href="https://www.youtube.com/watch?v=Q2aEzeMDHMA&amp;t=33s">https://www.youtube.com/watch?v=Q2aEzeMDHMA&amp;t=33s</a></p></li>
+<li><p>JPEG compression: <a class="reference external" href="https://www.youtube.com/watch?v=Ba89cI9eIg8">https://www.youtube.com/watch?v=Ba89cI9eIg8</a></p></li>
+<li><p>Video compression: <a class="reference external" href="https://www.youtube.com/watch?v=QoZ8pccsYo4">https://www.youtube.com/watch?v=QoZ8pccsYo4</a></p></li>
+<li><p>Rate Control mode: <a class="reference external" href="https://slhck.info/video/2017/03/01/rate-control.html">https://slhck.info/video/2017/03/01/rate-control.html</a></p></li>
+</ul>
+<p class="rubric">脚注</p>
+<dl class="footnote brackets">
+<dt class="label" id="f1"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>Blender4.0の私の環境ではVSEのPreviewを <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">LMB</kbd>-<kbd class="kbd docutils literal notranslate">Click</kbd></kbd> でステータスバーに情報が表示されました。一方 Renderウィンドウでは、 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">RMB</kbd>-<kbd class="kbd docutils literal notranslate">Click</kbd></kbd> で表示されました。</p>
+</dd>
+</dl>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="creating-test-files.html" class="btn btn-neutral float-right" title="2.1.7. テストファイルの作成" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="directory-structure.html" class="btn btn-neutral float-left" title="2.1.5. Directory structure" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright This page is licensed under a CC-BY-SA 4.0 Int. License.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

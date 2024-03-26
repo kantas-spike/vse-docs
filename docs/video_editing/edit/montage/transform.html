@@ -1,0 +1,427 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>2.2.1.6. Transform &mdash; Blender VSE Unofficial Documentation  ドキュメント</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+    <link rel="canonical" href="https://kantas-spike.github.io/vse-docs/video_editing/edit/montage/transform.html" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="検索" href="../../../search.html" />
+    <link rel="next" title="2.2.1.7. Remove/disable" href="remove.html" />
+    <link rel="prev" title="2.2.1.5. Move" href="move.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Blender VSE Unofficial Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../video_sequencer/index.html">1. Video Sequence Editor</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">2. Video Editing</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../setup/index.html">2.1. Setup</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">2.2. プロジェクトを編集する</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">2.2.1. Montage</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="striptypes/index.html">2.2.1.1. ストリップの種類</a></li>
+<li class="toctree-l4"><a class="reference internal" href="select.html">2.2.1.2. Select</a></li>
+<li class="toctree-l4"><a class="reference internal" href="add.html">2.2.1.3. Add</a></li>
+<li class="toctree-l4"><a class="reference internal" href="copy_paste.html">2.2.1.4. Copy - Paste</a></li>
+<li class="toctree-l4"><a class="reference internal" href="move.html">2.2.1.5. Move</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">2.2.1.6. Transform</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#split">2.2.1.6.1. Split</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#trim">2.2.1.6.2. Trim</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#group">2.2.1.6.3. Group</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="remove.html">2.2.1.7. Remove/disable</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../effects/index.html">2.2.2. Effects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../color-grading/index.html">2.2.3. Color grading</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../sound/index.html">2.2.4. サウンドの編集</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/index.html">2.3. Render your project</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../extra-tools/index.html">3. 追加ツール</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender VSE Unofficial Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html"><span class="section-number">2. </span>Video Editing</a> &raquo;</li>
+        
+          <li><a href="../index.html"><span class="section-number">2.2. </span>プロジェクトを編集する</a> &raquo;</li>
+        
+          <li><a href="index.html"><span class="section-number">2.2.1. </span>Montage</a> &raquo;</li>
+        
+      <li><span class="section-number">2.2.1.6. </span>Transform</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/video_editing/edit/montage/transform.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="transform">
+<h1><span class="section-number">2.2.1.6. </span>Transform<a class="headerlink" href="#transform" title="この見出しへのパーマリンク">¶</a></h1>
+<p>Transform セクションでは、Split、Trim、Group という 3 つの操作について説明します。</p>
+<div class="section" id="split">
+<h2><span class="section-number">2.2.1.6.1. </span>Split<a class="headerlink" href="#split" title="この見出しへのパーマリンク">¶</a></h2>
+<p>ストリップの分割とは、ストリップを再生ヘッドの位置で 2 つの部分に分割することです。両方のパートは引き続き独立したストリップ（同じソースを共有する）として機能します。分割はすべてのストリップ タイプで実行できます。ただし、エフェクト ストリップを分割すると、エフェクトの入力ストリップも分割され、その逆も同様です。</p>
+<p>Blender の以前のバージョンや文献の大部分では、この操作は &quot;Cutting&quot; と呼ばれていました。
+ただし、コンピュータ環境では、この用語は主にコピー、カット、ペーストの意味で使用され、削除を意味します。
+したがって、 <em>Split</em> という用語が好まれますが、 <em>Jump Cut</em>、 <em>J-Cut</em> 、 <em>L-Cut</em> などの用語でも非常に目立つままです。</p>
+<p>このコマンドには、Split と Hold Split の 2 つのバリエーションがあります。</p>
+<dl>
+<dt>Split <kbd class="kbd docutils literal notranslate">K</kbd></dt><dd><p>[Strip] メニュー  &gt; [Split] またはショートカット <kbd class="kbd docutils literal notranslate">K</kbd> キーを使用して、選択したストリップを現在のフレームで 2 つに分割できます。これにより、同じソースを使用する 2 つのストリップが作成され、元のストリップのタイミングと長さに適合します。</p>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>ショートカット <kbd class="kbd docutils literal notranslate">K</kbd> を使用している場合は、マウス カーソルが Playhead のどちら側にあるかが重要になります (図 1)。
+カーソルが Playhead の左側にある場合、左側のストリップがアクティブなストリップ (白い輪郭とテキスト オーバーレイ) になるため、これも選択されます。
+マウス カーソルが Playhead の右側にある場合、右側のストリップは選択されたストリップ (オレンジ色の輪郭) ですが、アクティブなストリップではありません (白いテキスト オーバーレイはありません)。予想に反して、Time フィールドは左側のストリップに関連付けられます。（選択された）右側のストリップではありません。</p>
+</div>
+<div class="figure align-default" id="id3">
+<img alt="Split command" src="../../../_images/video_editing_edit_montage_splitting_split.svg" /><p class="caption"><span class="caption-text">図 1: Split コマンドの前後のストリップ プロパティ</span><a class="headerlink" href="#id3" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<p>図 1 では、Split コマンドが発行された直後の結果が 2 列目に示されていることに注意してください。3 番目の列では、分割の右側の部分が削除されます。4 番目の列では、左側の部分が削除され、右側のストリップがアクティブになります。</p>
+<p>また、左右のストリップの開始フレームが同じであることにも注意してください: フレーム 1; 右ストリップは視覚的にはフレーム 8 から始まりますが、これは Strip Offset Start フィールドで実現されます。同様に、左側のストリップの途中での終了は、Strip Offset End フィールドで行われます。</p>
+<p>分割のどちらかの部分から、元のストリップ全体を復元できます。Strip Offset フィールドをゼロにリセットするだけで十分です。これは、左ハンドルまたは右ハンドルをドラッグしても実行できます。</p>
+</dd>
+</dl>
+<dl id="hold-split-command">
+<dt>Hold Split <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">K</kbd></kbd></dt><dd><p>[Strip] メニュー  &gt; [Hold Split] またはショートカット <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">K</kbd></kbd> キーを使用して、選択したストリップを現在のフレームで 2 つに分割できます。ただし、ハンドルをドラッグして、結果として得られる各ストリップの分割を超えたフレームを表示することはできません。</p>
+<div class="figure align-default" id="id4">
+<img alt="Hold Split command" src="../../../_images/video_editing_edit_montage_splitting_hold-split.svg" /><p class="caption"><span class="caption-text">図2 Hold Split コマンドの前後のストリップ プロパティ</span><a class="headerlink" href="#id4" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<p>図 1 と図 2 の間には微妙な違いがあります。結果として得られるストリップはほぼ鏡像になっています。また、最初の左側の部分の名前が変更されていることに注意してください。Strip コマンドの場合、Split 操作の最も重要な部分は最初 (左側) の部分のようです。Hold Split コマンドの場合、これは 2 番目の部分です。</p>
+<p>2 番目 (右) パーツの開始フレームと最初 (左) パーツの終了フレームは、ホールド オフセット開始値とホールド オフセット終了値を使用して再計算されます。Holdという名前は、開始フレームと終了フレームが固定されていることを示します。ストリップはそこで開始または終了し、ハンドルをドラッグしても新しいフレームは表示されません。</p>
+<p>Split コマンドと同様に、Hold Split のどちらかの部分から、元のストリップ全体を復元できます。Hold Offset フィールドをゼロにリセットするだけで十分です。これは、左右のハンドルをドラッグしても実行できません。ドラッグの結果、最初または最後のフレームが複製され、フリーズ フレーム効果が引き起こされます (詳細については、 <a class="reference internal" href="striptypes/movie.html#time-panel"><span class="std std-ref">(see Time panel of Movie strip</span></a> を参照してください)。</p>
+</dd>
+</dl>
+<p><em>Freeze frames</em></p>
+<blockquote>
+<div><p>次のストリップ (図 3 を参照) があり、freeze frames エフェクトを導入するとします。</p>
+<div class="figure align-center" id="id5">
+<img alt="Freeze frames" src="../../../_images/video_editing_edit_montage_splitting_freeze.svg" /><p class="caption"><span class="caption-text">図3 フリーズ フレームの例</span><a class="headerlink" href="#id5" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<p>ストリップの最初と最後でのフリーズは簡単です。ハンドルをドラッグするだけで静止オフセットを導入できます (詳細については、 <a class="reference internal" href="striptypes/movie.html#time-panel"><span class="std std-ref">Time Panel &gt; Still Offset</span></a> を参照してください。図 3 の左側のパネルには 3 フレームの still Offset Start フィールドがあり、右側のパネルの Still Offset End フィールドもあります)  <a class="footnote-reference brackets" href="#f1" id="id1">1</a> 。</p>
+<p>ストリップの中央のフリーズはさらに複雑です。まず、元のストリップのフレーム 6 (再生ヘッドは 7) でホールド スプリットが必要です。そうすれば、フレーム 6 にホールド フラグが存在するため、右ハンドルをドラッグするとフレーム 6 が複製されます。このホールド フラグは、freeze.001 などの分割の左側の部分に必要です。元のストリップの長さが 10 フレームだったので、これは Hold Offset End 値 4 です。</p>
+<p>図 3 のストリップは画像シーケンスであるため、茶色になっています。小さな Python コードを使用して、[Still Offset fields] フィールドを [Time] パネルに追加できます ( <a class="reference internal" href="../../../extra-tools/python-useful-scripts.html"><span class="doc">useful scripts</span></a> を参照) <a class="footnote-reference brackets" href="#f1" id="id2">1</a> 。</p>
+</div></blockquote>
+<p><em>Classic Cuts</em></p>
+<blockquote>
+<div><dl>
+<dt>Jump Cut</dt><dd><p>ジャンプ カットは、映画編集におけるカットであり、被写体の 1 つの連続した連続ショットが 2 つの部分に分割され、時間内で前方向にジャンプする効果を表現するために映像の一部が削除されます。… ジャンプカットは、映画の構成的な性質に注意を向けさせる傾向があります。( <a class="reference external" href="https://en.wikipedia.org/wiki/Jump_cut">Wikipedia</a> より) 本質的に、ジャンプ カットを使用すると、編集者は時間を前に進めることができます。</p>
+<p>また、会話やインタビューで、話者 1 の視点から話者 2 の視点にジャンプするために使用することもできます。</p>
+</dd>
+<dt>L-cut and J-cut</dt><dd><p>L カットでは、別のショットを見ている場合でも、前のショットの音声が聞こえます。L カットの名前は、編集結果の形状に由来しています (図 4 を参照)。</p>
+<p>J カットは本質的に L カットの逆です。ここでは、ビデオを見る前に音声が聞こえます。したがって、聴衆はストリップ 1 を見ていますが、ストリップ 2 からの音声が聞こえてきます (図 4 を参照)。</p>
+<div class="figure align-default" id="id6">
+<img alt="J- &amp; L-cut" src="../../../_images/video_editing_edit_montage_splitting_j-l-cut.svg" /><p class="caption"><span class="caption-text">図4 L カットと J カットの例</span><a class="headerlink" href="#id6" title="この画像へのパーマリンク">¶</a></p>
+</div>
+</dd>
+<dt>Action cut</dt><dd><p>アクション カットは、アクションの途中で最初のショットのアクションと一致する別のショットにカットするときに作成されます。</p>
+</dd>
+</dl>
+</div></blockquote>
+</div>
+<div class="section" id="trim">
+<h2><span class="section-number">2.2.1.6.2. </span>Trim<a class="headerlink" href="#trim" title="この見出しへのパーマリンク">¶</a></h2>
+<p>トリミングとは、インポイントとアウトポイントを変更してストリップの長さを変更することです。図5 では、チャネル 2 の元のストリップはフレーム 1 で始まり、継続時間は 11138 フレームです。チャンネル 3 に複製され、トリミングされます。新しいイン ポイントはフレーム 2226 (1 + ストリップ オフセット開始) にあり、新しいアウト ポイントはフレーム 7665 (継続時間 - ストリップ オフセット終了) にあります。 <a class="reference internal" href="striptypes/movie.html#time-panel"><span class="std std-ref">Time panel</span></a> または <a class="reference internal" href="striptypes/movie.html"><span class="doc">Split operation</span></a> のセクションですでに説明したように、TrimとSplitは「Strip Offset」フィールドを使用して行われます。</p>
+<div class="figure align-default" id="id7">
+<img alt="Example of trimming" src="../../../_images/video_editing_edit_montage_trimming.png" />
+<p class="caption"><span class="caption-text">図5 ムービー ストリップのトリミング</span><a class="headerlink" href="#id7" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<p>ストリップのトリミングは主にマウスで行われます。ただし、キーボードで値を入力するか、プロパティのスライダーを使用して、[Strip Offset]フィールドを直接変更することもできます。値は負の値になる場合があります。これにより、最初および/または最後のフレームが複製 (フリーズ) されます。</p>
+<p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">LMB</kbd> <kbd class="kbd docutils literal notranslate">Click</kbd></kbd> によるハンドルのドラッグ</p>
+<blockquote>
+<div><p>ストリップの [Strip Offset Start]プロパティは、ストリップの左側のハンドルを <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">LMB</kbd> <kbd class="kbd docutils literal notranslate">Click</kbd></kbd> で選択できます。
+図 5 では、このハンドルの色は、選択されアクティブなストリップについては白色、選択されているが非アクティブなストリップについてはオレンジ色となっています。LMB を押したままマウスを左右に動かすと、選択したストリップの IN ポイントが移動したフレーム数だけ変更されます。ストリップ バーの高さが十分な場合にのみ、ストリップの左下隅にあるフレーム番号ラベルには、新しい IN ポイントのフレーム番号が表示されます (図 5 を参照)。</p>
+<p>20 個の画像シーケンス ストリップがある場合、左ハンドルを右に 10 フレーム分ドラッグすると、ストリップは画像 11 から始まります (画像 1 ～ 10 はスキップされます)。これを使用して、ロールアップまたは不要なリードインを切り取ります。左にドラッグすると、ドラッグした数のフレームの最初のフレームのリードイン (コピー) が作成されます。クリップの開始時にトランジション用にいくつかのフレームが必要な場合にこれを使用します。</p>
+<p>ストリップの[Strip Offset End]は、 ストリップの右側のハンドルを <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">LMB</kbd>-<kbd class="kbd docutils literal notranslate">Click</kbd></kbd> で選択できます。それを押したまま（または G グラブを押して）マウスを動かすと、ストリップ内の OUT ポイントが変更されます。ストリップの右下隅にあるフレーム番号ラベルには、OUT ポイントのフレーム番号が表示されます。</p>
+<p>右ハンドルを左方向にドラッグするとクリップが短くなります。末尾にある元のイメージは無視されます。これを使用すると、ロールダウンを素早く切り取ることができます。右ハンドルを右にドラッグすると、クリップが延長されます。ムービーや画像シーケンスの場合、使い果たされるまでさらに多くのアニメーションが使用されます。クリップを終端を超えて延長すると、Blender は最後の画像のコピーを作成します。このクリップからのトランジションにこれを使用します。</p>
+<p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate">LMB</kbd></kbd> を使用して、異なるストリップの複数の左ハンドルまたは右ハンドルを選択できます。
+選択されたハンドルは色付けされます。アクティブなストリップは白、非アクティブなストリップはオレンジになります。
+選択したハンドル上で <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">LMB</kbd> <kbd class="kbd docutils literal notranslate">Click</kbd> <kbd class="kbd docutils literal notranslate">&amp;</kbd> <kbd class="kbd docutils literal notranslate">drag</kbd></kbd> すると、選択したすべてのハンドルがマウスの移動と同じ方向に、マウスが移動したフレーム数だけ移動します。</p>
+</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p><kbd class="kbd docutils literal notranslate">LMB</kbd>  によるハンドルの選択は、 特別なボックス選択 ( <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate">B</kbd></kbd> )、または [Select]メニュー &gt; [Handle] を使用して行うことができます。詳細については、 <a class="reference internal" href="select.html"><span class="doc">Selecting</span></a> のセクションを参照してください。</p>
+</div>
+<dl class="simple">
+<dt><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">LMB</kbd> <kbd class="kbd docutils literal notranslate">Click</kbd></kbd> による handles 選択 と <kbd class="kbd docutils literal notranslate">G</kbd> (Grab)</dt><dd><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">LMB</kbd> <kbd class="kbd docutils literal notranslate">Click`でハンドルを選択してドラッグする代わりに、すべてのハンドルを選択して</kbd> <kbd class="kbd docutils literal notranslate">:kbd:`G</kbd></kbd> を押すこともできます。
+これにより、同じトリミングが行われます。利点は、ストリップ領域をクリックしてドラッグする必要がないことです。<kbd class="kbd docutils literal notranslate">G</kbd> を押して、マウスを動かすだけで十分です(マウスの位置はどこでも)。</p>
+</dd>
+</dl>
+<dl>
+<dt><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">LMB</kbd> <kbd class="kbd docutils literal notranslate">Click</kbd></kbd> による handles 選択 と <kbd class="kbd docutils literal notranslate">E</kbd> (Extend)</dt><dd><blockquote>
+<div><p><kbd class="kbd docutils literal notranslate">E</kbd> キーまたは [Strip]メニュー &gt; [Transform] &gt; [Move/Extend from Current Frame] キーを使用してハンドルを選択しなくても、選択したストリップを移動または延長/短縮 (つまりトリミング) できます。ただし、ここでは現在のフレーム (Playhead) の位置とマウスの初期位置が重要です。</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>Playhead が選択したストリップの範囲外にある場合、 <kbd class="kbd docutils literal notranslate">E</kbd> は選択したすべてのストリップがマウスの移動方向に移動します。これは、<kbd class="kbd docutils literal notranslate">G</kbd> キーによるストリップ全体の移動動作を模倣します。</p></li>
+<li><p>Playhead 選択した（一部の）ストリップの範囲内にある場合、<kbd class="kbd docutils literal notranslate">E</kbd> キーは選択したストリップをトリミングします。マウスが再生ヘッドの左側にある場合、選択したストリップの IN ポイントはマウスの方向に従います (左側のストリップ ハンドルでトリミングするかのように)。マウスが再生ヘッドの右側にある場合、OUT ポイントはマウスの方向に従います (右のストリップ ハンドルでトリミングするかのように)。</p></li>
+</ul>
+<blockquote>
+<div><p>要約すると、現在のフレーム インジケーター (Playhead) の「マウス側」から選択されたすべてのストリップ ハンドルが一緒に変形し、選択されたストリップを移動または延長/短縮します。</p>
+</div></blockquote>
+</dd>
+<dt>Clear strip offsets: <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">ALT</kbd> <kbd class="kbd docutils literal notranslate">O</kbd></kbd></dt><dd><p>選択したストリップのすべてのトリミングは、 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd> <kbd class="kbd docutils literal notranslate">O</kbd></kbd> または [Strip]メニュー &gt; [Transform] &gt; [Clear Strip Offset] を使用してクリアできます。選択したストリップの[Strip Offset Start]フィールドと[Strip Offset End]フィールドがゼロにリセットされます。</p>
+</dd>
+</dl>
+<dl>
+<dt>精密なトリミング</dt><dd><p>Sequencer タイムラインのムービー ストリップにはサムネイルを表示できますが ([Show Overlay] &gt; [Thumbnails])、これらのサムネイルでは正確な視覚的フィードバックを伴うトリミングはできません。</p>
+<p>ただし、デフォルトでは、Preview ウィンドウには現在のフレーム (Preview の位置にあるフレーム) のみが表示されます。Preview ウィンドウのメニューの [View] &gt; [Preview during Transform] を使用すると、精密トリミングを有効にすることができます。Preview ウィンドウには、アクティブなストリップの選択したハンドルの位置にフレームが一時的に表示されます (図6 を参照)。</p>
+</dd>
+</dl>
+<div class="figure align-default" id="id8">
+<img alt="Preview during Transform" src="../../../_images/video_editing_edit_montage_trimming_preview_during_transform.gif" />
+<p class="caption"><span class="caption-text">図6: 変換中のプレビューを有効にしてトリミング (Tin2Tin の例)</span><a class="headerlink" href="#id8" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<dl class="simple">
+<dt><kbd class="kbd docutils literal notranslate">Esc</kbd></dt><dd><p>トリミング中に <kbd class="kbd docutils literal notranslate">Esc</kbd> を押すと、ストリップ ハンドルが元の位置にリセットされ、トリム操作がキャンセルされます。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="group">
+<h2><span class="section-number">2.2.1.6.3. </span>Group<a class="headerlink" href="#group" title="この見出しへのパーマリンク">¶</a></h2>
+<span class="target" id="bpy-types-metasequence"></span><p>選択したストリップは、 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">G</kbd></kbd> を使用して 1 つのいわゆるメタ ストリップに簡単にグループ化できます。
+メタ ストリップは、複数のストリップを含めることができるストリップですが、1 つのストリップであるかのように扱われます。
+Sequencer で使用可能なチャンネルの最大数により、グループ化できるストリップの最大数は 128 です。メタ ストリップの長さは、ストリップの最も早い開始時間から最も遅い終了時間までとなります。</p>
+<div class="figure align-center" id="id9">
+<img alt="../../../_images/video_editing_edit_montage_grouping.png" src="../../../_images/video_editing_edit_montage_grouping.png" />
+<p class="caption"><span class="caption-text">図1 メタ ストリップの例</span><a class="headerlink" href="#id9" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<p>Meta ストリップは、グループ化されたストリップのチャネルが Meta ストリップ内の小さな水平バーで表されるため、非常に特殊な外観を持っています。
+図 1 では、グループ化されたストリップが 4 つのチャネルを占有するため、メタ ストリップには 4 本の (小さな) 水平バーが含まれています。
+グループ化されたストリップ自体は、メタ ストリップ内で独自の色で表されます。
+たとえば、上部の 2 つの紫色の領域は、チャンネル 6 のテキスト ストリップからのものです。メタ ストリップ自体の色は青みがかった紫で、グループ化されたストリップが利用できない領域をカバーしています。グループ化するストリップが 1 つだけの場合、メタ ストリップの色はグループ化されたストリップと非常に似ており (ほとんどの場合、少し暗い)、メタ ストリップ自体を認識するのは困難です。</p>
+<p>メタ ストリップは、Sequencer タイムラインで選択したストリップを置き換え、アクティブなストリップのチャンネルに配置されます。
+これにより、グループをボックス選択するときに、多少予期しない位置が発生する可能性があります (アクティブなストリップはボックス選択によって変更されません)。</p>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>図 1 は、メタ ストリップとグループ化されたストリップがタイムラインで同時に表示されることはないため、少し誤解を招きます。メタ ストリップは、グループ化されたストリップを置き換えます。</p>
+<p>図 1 は、メタ ストリップを作成し、それを複製し、その複製をメタ化解除することによって作成されます。</p>
+</div>
+<p>実際、メタ ストリップは、位置 X と Y、スケール、回転などの独自の (独立した) プロパティを備えた完全に新しいストリップです。
+これは、グループ化されたストリップがレンダリングされ、そのレンダリング結果が新しい (メタ) ストリップとしてタイムラインにインポートされるようなものです。
+たとえば、メタ ストリップの作成後にグループ化されたストリップの長さを増やしても、メタ ストリップの長さは長くなりません。ストリップ ハンドルをドラッグして手動で行う必要があります。</p>
+<p>メタ ストリップはネストできます。たとえば、1 つのメタ ストリップをコピーして、別のメタ ストリップに貼り付けることができます。</p>
+<dl>
+<dt>Make Meta Strip <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">G</kbd></kbd></dt><dd><p>メタ ストリップを作成するには、グループ化するすべてのストリップを選択し、 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">G</kbd></kbd> を押してグループ化します。メタ ストリップは、最初のストリップの始まりから最後のストリップの終わりまで続き、すべてのチャンネルが 1 つのストリップに凝縮されます。メタ ストリップは、アクティブ ストリップのチャネルに配置されます。</p>
+</dd>
+<dt>UnMeta Strip <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">G</kbd></kbd></dt><dd><p>メタ ストリップを分離 (グループ解除) すると、ストリップが相対的な位置とチャンネルに復元されます。これは、メタ ストリップを削除することを選択し、内部のストリップを保持したい場合に使用できます。</p>
+<p>メタ ストリップに追加されたエフェクトは削除されることに注意してください。</p>
+</dd>
+<dt>Edit a Meta strip <kbd class="kbd docutils literal notranslate">Tab</kbd></dt><dd><p><kbd class="kbd docutils literal notranslate">Tab</kbd> を押すと、メタ ストリップ内のコンテンツを編集できます。
+これにより、ストリップが元のグループに展開され、他のストリップが非表示になります。メタ ストリップを終了するには、Tabもう一度押します。
+メタ ストリップはネストすることもできるため、編集が少し混乱します。
+メタ ストリップの 1 レベルを終了するには、押したときにメタ ストリップが選択されていないことを確認してくださいTab(何も選択しないか、別の通常のストリップを選択します)。</p>
+</dd>
+</dl>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>メタ ストリップにグローなどのエフェクトを追加することは可能ですが、メタ ストリップを解除するとエフェクトは削除されます。</p>
+<p>メタ ストリップのデフォルトのブレンド モードは置換です (以下のすべてのストリップは表示されません)。これによりアニメーションの結果が変わる場合が多いため、必ず結果を確認し、必要に応じてブレンド モードを調整してください。</p>
+<p>上記のため、既存のメタ ストリップに新しいストリップを追加は、メタストリップは利用せず、
+その後新しいストリップを追加してメタ ストリップを再度再作成する必要があります。新しいストリップを (クリップボード上に) コピーし、メタ ストリップ (タブ) に移動し、新しいストリップを貼り付けて、メタ ストリップから出る方が良いでしょう。</p>
+</div>
+<p>メタ ストリップは主に整理ツールですが、他にも多数の使用例があります。</p>
+<ul class="simple">
+<li><p>複雑な配置で多数のストリップを使用している場合は、メタ ストリップを使用してそれらをグループ化できます。これにより、シーケンサーで使用される垂直方向のスペースを削減できます。</p></li>
+<li><p>メタ ストリップを使用すると、128 チャンネルの制限を拡張できます。グループ化されたストリップは 1 つのチャンネルのみを占有します。</p></li>
+<li><p>メタ ストリップは、オーディオとビデオを同期した状態に保つための便利な方法です。残念ながら、サムネイルの利点が失われます。</p></li>
+<li><p>より簡単な方法で Speed Effect を追加するために使用できます。手順の詳細なチュートリアルについては、 <a class="reference external" href="https://www.youtube.com/watch?v=jnrOzrPDAA0">Blender Frenzy</a> を参照してください。</p></li>
+<li><p>メタ ストリップの便利な使い方の 1 つは、複数のストリップに同じ効果を適用したい場合です。エフェクトのセットを 1 つのメタ ストリップに適用する方が、個々のストリップに適用するよりもはるかに便利です。調整レイヤーを使用して、上記と同様のタスクを実行することもできます。</p></li>
+</ul>
+<p class="rubric">脚注</p>
+<dl class="footnote brackets">
+<dt class="label" id="f1"><span class="brackets">1</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id2">2</a>)</span></dt>
+<dd><p>Blender4.0では、 [Still Offset Start/End]フィールドは廃止されています。代わりに[Strip Offset Start/End]フィールドに負の値を設定します。</p>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="remove.html" class="btn btn-neutral float-right" title="2.2.1.7. Remove/disable" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="move.html" class="btn btn-neutral float-left" title="2.2.1.5. Move" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright This page is licensed under a CC-BY-SA 4.0 Int. License.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

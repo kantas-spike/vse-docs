@@ -1,0 +1,352 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>1.1.2. タイムライン &mdash; Blender VSE Unofficial Documentation  ドキュメント</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+    <link rel="canonical" href="https://kantas-spike.github.io/vse-docs/video_sequencer/sequencer/timeline.html" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="1.1.2.1. 移動" href="move.html" />
+    <link rel="prev" title="1.1.1. Header" href="header.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Blender VSE Unofficial Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">1. Video Sequence Editor</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">1.1. Sequencer</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="header.html">1.1.1. Header</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">1.1.2. タイムライン</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="move.html">1.1.2.1. 移動</a></li>
+<li class="toctree-l4"><a class="reference internal" href="zoom.html">1.1.2.2. ズーム</a></li>
+<li class="toctree-l4"><a class="reference internal" href="navigate.html">1.1.2.3. ナビゲーション</a></li>
+<li class="toctree-l4"><a class="reference internal" href="navigate.html#id8">1.1.2.4. マーカーの使用</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="toolbar.html">1.1.3. Toolbar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sidebar.html">1.1.4. Sidebar</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../preview/index.html">1.2. Preview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sequencer_and_preview/index.html">1.3. Sequencer &amp; Preview</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">2. Video Editing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extra-tools/index.html">3. 追加ツール</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blender VSE Unofficial Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html"><span class="section-number">1. </span>Video Sequence Editor</a> &raquo;</li>
+        
+          <li><a href="index.html"><span class="section-number">1.1. </span>Sequencer</a> &raquo;</li>
+        
+      <li><span class="section-number">1.1.2. </span>タイムライン</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/video_sequencer/sequencer/timeline.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1><span class="section-number">1.1.2. </span>タイムライン<a class="headerlink" href="#id1" title="この見出しへのパーマリンク">¶</a></h1>
+<span class="target" id="timeline"></span><p><em>タイムライン</em> という概念は、様々ものを指すことができます。Blenderでは、まず、<a class="reference external" href="https://docs.blender.org/manual/en/dev/editors/timeline.html">Timeline Editor</a> のことを指します。Timeline Editorは 時計のアイコンで識別され、キーフレームの操作とPlayheadを動かす時に使用されます(図1)。</p>
+<p>このTimeline Editorは、本来3Dモデリングでアニメーションを編集することを目的としていました。動画編集の場合、あまり役に立ちません。<a class="footnote-reference brackets" href="#f1" id="id2">1</a></p>
+<div class="figure align-default" id="id9">
+<img alt="Timeline editor" src="../../_images/editors_vse_timeline-editor.svg" /><p class="caption"><span class="caption-text">図1: BlenderのTimeline Editor</span><a class="headerlink" href="#id9" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<p>Timeline Editor は <a class="reference internal" href="../../video_editing/setup/workspace.html"><span class="doc">Video Sequence Editor workspace</span></a> の画面下部にあります。
+ヘッダーのみが表示されます。Timeline Editorの時刻とキーフレームを表示するには、上部の水平境界線をドラッグする必要があります。</p>
+<p>Video Editor workspace内でのこのTimeline Editorの使用はかなり限定されており、場合によっては、Video Editor workspaceから削除することもありえます。その機能は、Video Editor workspaceのすぐ上にあるSequencer(図2) に簡単に置き換えられます。</p>
+<p>確かに、Sequencerは自身で一種のタイムラインを持っています。ズーム、移動などの通常の操作はほぼすべてここで実行できます。Frame および Transport コントロールのみが欠落しています。ただし、これらはワークスペースに簡単に追加できます (TintwoTin によるアドオンを参照 <a class="reference external" href="https://github.com/tin2tin/Sequence_Editing">Playback_control_in_VSE_header.zip</a>) <a class="footnote-reference brackets" href="#f2" id="id3">2</a> 。</p>
+<div class="figure align-default" id="id10">
+<img alt="Sequencer timeline" src="../../_images/editors_vse_sequencer_timeline_sequencer.svg" /><p class="caption"><span class="caption-text">図2: BlenderのSequencerのタイムライン</span><a class="headerlink" href="#id10" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<p>Sequencerのタイムラインは、水平方向にチャネル、垂直方向に時間に分割されます。デフォルトの表示範囲は、1〜7チャネル、0〜10 秒です。<a class="footnote-reference brackets" href="#f3" id="id4">3</a></p>
+<p>タイムラインのヘッダーは、時間単位を持つ一種の定規から構成されます。図2 からわかるように、時間はいわゆる SMPTE タイムコードで表示されます。SMPTE タイムコードは、1960 年代後半に映画テレビ技術者協会 (SMPTE) によって採用された標準形式です。これは、HH:MM:SS:FF (例: 00:01:12:06) と書かれます。1分12秒6フレーム後の時間を指します。プロジェクトのフレームレートが 24 fps の場合、6 フレームによりタイムコードにさらに 0.25 秒が追加されます。</p>
+<p>タイムコードのスタイルを変更できます。これは、[Preferences] &gt; [Animation] &gt; [Timeline] にうまく隠されています (図3 を参照)。デフォルトでは、時間単位は最小限の情報で表示されます。他のオプションについては表1 を参照してください。</p>
+<div class="figure align-default" id="id11">
+<img alt="Timecode style" src="../../_images/editors_vse_sequencer_timeline_timecode-style.png" />
+<p class="caption"><span class="caption-text">図3: User Preferencesのタイムコードスタイル</span><a class="headerlink" href="#id11" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<table class="colwidths-given docutils align-default" id="id12">
+<caption><span class="caption-text">表1: タイムコードスタイル</span><a class="headerlink" href="#id12" title="このテーブルへのパーマリンク">¶</a></caption>
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 3%" />
+<col style="width: 89%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Type</p></th>
+<th class="head"><p>Style</p></th>
+<th class="head"><p>Comment</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Minimal info</p></td>
+<td><p>1+18</p></td>
+<td><p>1 second and 18 frames</p></td>
+</tr>
+<tr class="row-odd"><td><p>SMPTE (Full)</p></td>
+<td><p>00:00:01:18</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>SMPTE (Compact)</p></td>
+<td><p>00:01:18</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Compact with Milliseconds</p></td>
+<td><p>00:01:6</p></td>
+<td><p>with fps = 30</p></td>
+</tr>
+<tr class="row-even"><td><p>Only Seconds</p></td>
+<td><p>1.6</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Blender では、タイムラインを <em>秒単位</em> で表示するか <em>フレーム単位</em> で表示するかを選択できます。<kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">T</kbd></kbd> コマンドまたはメニューの [View] &gt; [Show seconds] を使用します。
+図4 では、タイムラインがフレーム単位で示されています。動画編集者であれば、おそらく時間に最も関心があるでしょう。
+動画の一部分を、フレーム番号(例: フレーム 55)ではなく、時間表示(例: 00:01:15:10や1' 15'' and 10 frames')で参照するほうが自然でしょう。
+ただし、SMPTE タイムコードを直接入力することはできません。サイドパネルでは、フレーム番号を入力する必要があります。</p>
+<p>各プロジェクトには <a href="#id5"><span class="problematic" id="id6">`</span></a>fps`(フレーム/秒) パラメーターがあるため、いつでも一方のコードをもう一方のコードから派生させることができます。</p>
+<p>30 fps プロジェクトの場合:</p>
+<ul class="simple">
+<li><p>フレーム 155 の時間は 155/30 = 3.8333 秒 もしくは SMPTE (Compact) 表記で00:03+25 になります。</p></li>
+</ul>
+<ul class="simple">
+<li><p>時間 2.5s は 2.5 * 30 = 70フレーム 内のどこかに収まります。</p></li>
+</ul>
+<p>フレームから SMPTE コードへの変換は、Python 関数smpte_from_frameによって行われます。この関数は 1 つのパラメータ (フレーム番号) を受け取り、それをタイムコードに変換します。</p>
+<p>ストリップはチャンネルに配置されます。行が互いに積み重ねられています (図2の場合 2つのチャンネルを使用)。128 チャンネルが利用可能です。さらにズームアウトすることもできます。最初のチャンネル 0 はストリップを配置する場所としては使用できません。これは、チャンネル 0 より上のすべてのストリップの合成を表示するためにシーケンサー ディスプレイによって使用されるためです。<a class="footnote-reference brackets" href="#f4" id="id7">4</a></p>
+<p>理論的には、タイムラインは - ∞ から + ∞ まで、およびチャネル 0 からチャネル 32 までのフレームにまたがることができます <a class="footnote-reference brackets" href="#f5" id="id8">5</a> 。実際には、Sequencer で表示できるフレームとチャネルの量は限られています。この範囲は <em>表示範囲</em> と呼ばれます。タイムラインで実行できる基本的な操作は 3 つあります (図4)。</p>
+<ul class="simple">
+<li><p>移動: 表示範囲は同じ量をカバーしますが、異なるフレームとチャネルをカバーします。</p></li>
+<li><p>ズーム: 表示範囲内のフレームとチャンネルをより多く (ズームアウト)、またはより少なく (ズームイン) 詰め込みます。</p></li>
+<li><p>ナビゲート: Playheadを移動して、Preview に別のフレームが表示されるようにします。</p></li>
+</ul>
+<p>移動操作では、表示範囲を水平、垂直、またはその両方に移動できることに注意してください。エリアは変わりません。移動の結果、再生ヘッドが表示されなくなる可能性があります。ズーム操作は常に現在の可視範囲から開始され、その領域が縮小または拡大されます。繰り返しになりますが、その結果、再生ヘッドが可視範囲外に落ちてしまう可能性があります。ナビゲート操作では、表示範囲は変更されず、再生ヘッドのみが移動します。</p>
+<div class="figure align-default" id="id13">
+<img alt="Sequencer window" src="../../_images/editors_vse_sequencer_timeline_move-size.svg" /><p class="caption"><span class="caption-text">図4: Sequencerでの移動, ズーム および ナビゲーション操作</span><a class="headerlink" href="#id13" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="move.html">1.1.2.1. 移動</a></li>
+<li class="toctree-l1"><a class="reference internal" href="zoom.html">1.1.2.2. ズーム</a></li>
+<li class="toctree-l1"><a class="reference internal" href="navigate.html">1.1.2.3. ナビゲーション</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="navigate.html#id2">1.1.2.3.1. ジャンピング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="navigate.html#id4">1.1.2.3.2. スクラブ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="navigate.html#id5">1.1.2.3.3. 再生</a></li>
+<li class="toctree-l2"><a class="reference internal" href="navigate.html#playback">1.1.2.3.4. Playback設定</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="navigate.html#id8">1.1.2.4. マーカーの使用</a></li>
+</ul>
+</div>
+<p class="rubric">脚注</p>
+<dl class="footnote brackets">
+<dt class="label" id="f1"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
+<dd><p>(訳注) 動画編集でキーフレームアニメーションを利用する場合は、3Dモデリングで利用する場合と同様に便利です。</p>
+</dd>
+<dt class="label" id="f2"><span class="brackets"><a class="fn-backref" href="#id3">2</a></span></dt>
+<dd><p>(訳注) このアドオンも4年前から更新されていないため利用しないほうが良さそうです。</p>
+</dd>
+<dt class="label" id="f3"><span class="brackets"><a class="fn-backref" href="#id4">3</a></span></dt>
+<dd><p>(訳注) Blender4.0にはchannel0は存在しません。デフォルトでは0〜7チャンネルが表示されます。</p>
+</dd>
+<dt class="label" id="f4"><span class="brackets"><a class="fn-backref" href="#id7">4</a></span></dt>
+<dd><p>(訳注) Blender4.0から?? channel0はマニュアルに記載がなくなっています。</p>
+</dd>
+<dt class="label" id="f5"><span class="brackets"><a class="fn-backref" href="#id8">5</a></span></dt>
+<dd><p>(訳注) Blender4.0ではチャンネルは1〜128までのようです。</p>
+</dd>
+</dl>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="move.html" class="btn btn-neutral float-right" title="1.1.2.1. 移動" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="header.html" class="btn btn-neutral float-left" title="1.1.1. Header" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright This page is licensed under a CC-BY-SA 4.0 Int. License.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

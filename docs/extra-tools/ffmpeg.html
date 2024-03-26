@@ -1,0 +1,277 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>3.2. FFMPEG &mdash; Blender VSE Unofficial Documentation  ドキュメント</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+    <link rel="canonical" href="https://kantas-spike.github.io/vse-docs/extra-tools/ffmpeg.html" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="next" title="3.3. Scripting Workspace" href="python-scripting-workspace.html" />
+    <link rel="prev" title="3.1. Python" href="python-useful-scripts.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Blender VSE Unofficial Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../video_sequencer/index.html">1. Video Sequence Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../video_editing/index.html">2. Video Editing</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">3. 追加ツール</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="python-useful-scripts.html">3.1. Python</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">3.2. ffmpeg</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">3.2.1. ビデオをロスレスでトリミングする</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">3.2.2. 複数のビデオフラグメントを 1 つのファイルに結合します</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">3.2.3. テストファイルを生成する</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">3.2.4. 複数のビデオチャンネルを 1 つのコンテナに作成する</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">3.2.5. 「2で割り切れない」エラーを修正</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="python-scripting-workspace.html">3.3. Script Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exiftool.html">3.4. ExifTool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="annotating-screenshot.html">3.5. スクリーンショットに注釈を付ける</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Blender VSE Unofficial Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html"><span class="section-number">3. </span>追加ツール</a> &raquo;</li>
+        
+      <li><span class="section-number">3.2. </span>FFMPEG</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/extra-tools/ffmpeg.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="ffmpeg">
+<h1><span class="section-number">3.2. </span>FFMPEG<a class="headerlink" href="#ffmpeg" title="この見出しへのパーマリンク">¶</a></h1>
+<p>FFMPEG は、ビデオ ファイルとオーディオ ファイルを処理 (デコード、エンコード、変換など) するためのコマンド ライン ツールです。これは、Blender を含む多くの商用および無料ソフトウェア製品で使用されています。コアは FFMPEG プログラムと、ビデオ &amp; オーディオ プレーヤー (FFPLAY) およびストリーム アナライザー (FFPROBE) です。</p>
+<p>FFMEG のインストールやコマンド ラインの使用に関するチュートリアルはたくさんあります (Google で「ffmpeg のインストール方法」を検索してください)。素晴らしい <a class="reference external" href="https://www.youtube.com/watch?v=MPV7JXTWPWI&amp;t=669s">3-part tutorial</a> がNerdFirst によって提供されています。</p>
+<div class="section" id="id1">
+<h2><span class="section-number">3.2.1. </span>ビデオをロスレスでトリミングする<a class="headerlink" href="#id1" title="この見出しへのパーマリンク">¶</a></h2>
+<p>ソースファイル &quot;input.mkv&quot; の途中の部分を切り取りたいとします。次のコマンドは、約 2 分 2 秒 (-ss コマンド後) から 2 分 43 秒 (-to コマンド後) のセクションを切り出します。ビデオ (c:v) とオーディオ (c:a) の両方が再圧縮されずにコピーされます (コピー)。結果は &quot;output.mkv&quot; に書き込まれます。</p>
+<p><code class="docutils literal notranslate"><span class="pre">ffmpeg</span> <span class="pre">-i</span> <span class="pre">input.mkv</span> <span class="pre">-ss</span> <span class="pre">00:02:02</span> <span class="pre">-to</span> <span class="pre">00:02:43</span> <span class="pre">-c:v</span> <span class="pre">copy</span> <span class="pre">-c:a</span> <span class="pre">copy</span> <span class="pre">output.mkv</span></code></p>
+</div>
+<div class="section" id="id2">
+<h2><span class="section-number">3.2.2. </span>複数のビデオフラグメントを 1 つのファイルに結合します<a class="headerlink" href="#id2" title="この見出しへのパーマリンク">¶</a></h2>
+<p>以前はビデオを別々のシーンで作成していました。たとえば、年次レビュー モンタージュの各月に 1 つのシーン。この 1 年の間に、個別のシーンをビデオ フラグメントにレンダリングすることができました。年末にはそれらを 1 つの作品にまとめる必要があります。</p>
+<p><code class="docutils literal notranslate"><span class="pre">ffmpeg</span> <span class="pre">-safe</span> <span class="pre">0</span> <span class="pre">-f</span> <span class="pre">concat</span> <span class="pre">-i</span> <span class="pre">list.txt</span> <span class="pre">-c</span> <span class="pre">copy</span> <span class="pre">output.mp4</span></code></p>
+<p>出力ファイルは &quot;output.mp4&quot; と呼ばれます。毎月のフラグメントは、フラグメントの名前を含む 12 行を含む別のファイル &quot;list.txt&quot; で名前が付けられます。 &quot;01-jan.mp4 02-feb.mp4 … 12-dec.mp4&quot;。フラグメントが配置されているフォルダーでコマンドを実行する必要があります。</p>
+</div>
+<div class="section" id="id3">
+<h2><span class="section-number">3.2.3. </span>テストファイルを生成する<a class="headerlink" href="#id3" title="この見出しへのパーマリンク">¶</a></h2>
+<p>場合によっては、特定の解像度、期間、またはフレームレートのテスト ビデオまたはテスト画像が必要になることがあります。まず ffplay を試してテストビデオを表示してください。その後、ffplay コマンドを ffmpeg に置き換え、outputfile パラメーターを追加します。</p>
+<p><code class="docutils literal notranslate"><span class="pre">ffplay</span> <span class="pre">-f</span> <span class="pre">lavfi</span> <span class="pre">-i</span> <span class="pre">testsrc=duration=10:size=1280x720:rate=30</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">ffmpeg</span> <span class="pre">-f</span> <span class="pre">lavfi</span> <span class="pre">-i</span> <span class="pre">testsrc=duration=10:size=1280x720:rate=30</span> <span class="pre">test.mp4</span></code></p>
+<p>このコマンドは、解像度 1280 x 720 ピクセル、フレームレート 30 フレーム/秒、持続時間 10 秒の MP4 形式のカウントアップ ビデオを表示/作成します。その他のコマンドとテスト形式については、 <a class="reference external" href="https://www.bogotobogo.com/FFMpeg/ffmpeg_video_test_patterns_src.php">bogotobogo</a> を参照してください。</p>
+<p>次のコマンドは、不透明度が 0.2 に設定され、持続時間が 5 秒、解像度が 640x480、フレームレートが 10 fps の MP4 形式で赤色の背景を表示/作成します。</p>
+<p><code class="docutils literal notranslate"><span class="pre">ffplay</span> <span class="pre">-f</span> <span class="pre">lavfi</span> <span class="pre">-i</span> <span class="pre">color=c=red&#64;0.2:duration=5:s=640x480:r=10</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">ffmpeg</span> <span class="pre">-f</span> <span class="pre">lavfi</span> <span class="pre">-i</span> <span class="pre">color=c=red&#64;0.2:duration=5:s=640x480:r=10</span> <span class="pre">test.mp4</span></code></p>
+</div>
+<div class="section" id="id4">
+<h2><span class="section-number">3.2.4. </span>複数のビデオチャンネルを 1 つのコンテナに作成する<a class="headerlink" href="#id4" title="この見出しへのパーマリンク">¶</a></h2>
+<p>一部のビデオ コンテナには、複数のビデオおよびオーディオ チャネルを含めることができます。たとえば、2 つの監視カメラ出力が隣り合っている場合などです。Blender では、[Strip] &gt; [Source] パネル &gt; [Stream index] を使用して、プレビューするチャンネルを選択できます (同時に両方を選択することはできません)。次のコマンドは、2 つのビデオ チャネルを 1 つのコンテナに作成します。</p>
+<p><code class="docutils literal notranslate"><span class="pre">ffmpeg</span> <span class="pre">-i</span> <span class="pre">input-1.mp4</span> <span class="pre">-i</span> <span class="pre">input-2.mp4</span> <span class="pre">-map</span> <span class="pre">0:0</span> <span class="pre">-map</span> <span class="pre">1:0</span> <span class="pre">output.mkv</span></code></p>
+</div>
+<div class="section" id="id5">
+<h2><span class="section-number">3.2.5. </span>「2で割り切れない」エラーを修正<a class="headerlink" href="#id5" title="この見出しへのパーマリンク">¶</a></h2>
+<p>場合によっては、クラシックな 1080p (1920 x 1080) 以外のレンダリング解像度が必要になることがあります。次に、[Output]プロパティ の [Dimensions] パネルに X および Y 解像度を入力できます。ただし、たとえば 1500 ピクセル x 399 ピクセルで H.264 コーデックを使用しようとすると、「2 で割り切れません」というエラーが発生します (さらに悪いことに、クラッシュが発生する場合もあります)。このエラーの理由は、H.264 エンコーダが固定サイズ (4x4 など) のマクロブロックを使用してムービーを圧縮するためです。各フレームはこれらの小さなマクロブロックに分割され、ビデオを圧縮するために、これらのマクロブロック間の差異のみがエンコードされます。ただし、これにより、ムービーの幅と高さが 2 で割り切れる必要があるという要件が追加されます。Y 解像度を 400 に変更すると、問題が解決します。</p>
+<p>何らかの理由で、元の解像度 1500 x 399 を維持したい場合は、最初にアニメーションを PNG シーケンスとしてレンダリングする必要があります。PNG 形式には、幅と高さに関するこの制限はありません。もちろん、再生可能なムービーはありません。</p>
+<p>したがって、ムービー (MP4 など) を作成するには FFMPEG が必要です。一連の画像からムービーを作成するには、次のコマンドが必要です。</p>
+<p><code class="docutils literal notranslate"><span class="pre">ffmpeg</span> <span class="pre">-f</span> <span class="pre">image2</span> <span class="pre">-r</span> <span class="pre">24</span> <span class="pre">-i</span> <span class="pre">%04d.png</span> <span class="pre">test.mp4</span></code></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">-f</span> <span class="pre">image2</span></code> specifies the filter to convert from images to movie</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-r</span> <span class="pre">24</span></code> sets the framerate to 24 fps</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-i</span> <span class="pre">%04d.png</span></code> specifies the input as a 4 digit number, followed by .png, e.g. 0001.png, 0002.png, ...</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">test.mp4</span></code> specifies the output file.</p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="python-scripting-workspace.html" class="btn btn-neutral float-right" title="3.3. Scripting Workspace" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="python-useful-scripts.html" class="btn btn-neutral float-left" title="3.1. Python" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright This page is licensed under a CC-BY-SA 4.0 Int. License.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

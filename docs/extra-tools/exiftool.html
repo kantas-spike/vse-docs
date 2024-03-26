@@ -1,0 +1,278 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>3.4. ExifTool &mdash; Blender VSE Unofficial Documentation  ドキュメント</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+    <link rel="canonical" href="https://kantas-spike.github.io/vse-docs/extra-tools/exiftool.html" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="next" title="3.5. スクリーンショットに注釈を付ける" href="annotating-screenshot.html" />
+    <link rel="prev" title="3.3. Scripting Workspace" href="python-scripting-workspace.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Blender VSE Unofficial Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../video_sequencer/index.html">1. Video Sequence Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../video_editing/index.html">2. Video Editing</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">3. 追加ツール</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="python-useful-scripts.html">3.1. Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ffmpeg.html">3.2. ffmpeg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python-scripting-workspace.html">3.3. Script Editor</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">3.4. ExifTool</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">3.4.1. 動画の作成日を変更する</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="annotating-screenshot.html">3.5. スクリーンショットに注釈を付ける</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Blender VSE Unofficial Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html"><span class="section-number">3. </span>追加ツール</a> &raquo;</li>
+        
+      <li><span class="section-number">3.4. </span>ExifTool</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/extra-tools/exiftool.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="exiftool">
+<h1><span class="section-number">3.4. </span>ExifTool<a class="headerlink" href="#exiftool" title="この見出しへのパーマリンク">¶</a></h1>
+<p>すべての画像、ビデオ、オーディオ ファイルには、画像の作成日、カメラの種類、GPS 座標などのメタデータが含まれています。ExifTool を使用すると、これらのメタデータを読み取り、場合によっては更新 (書き込み) することもできます。</p>
+<div class="section" id="id1">
+<h2><span class="section-number">3.4.1. </span>動画の作成日を変更する<a class="headerlink" href="#id1" title="この見出しへのパーマリンク">¶</a></h2>
+<p>カメラの日付と時刻が正しく設定されない場合があります（タイムゾーンを切り替える場合など）。このカメラでビデオを撮影する場合、メタデータはビデオが撮影された実際の日付を表しません。たとえば、ビデオ &quot;test.mov&quot; (下記を参照) はスマートフォンで 2021 年 8 月 5 日に撮影されましたが、以前の工場出荷時設定へのリセットにより、スマートフォン内で日付が誤って 2019 年 11 月 1 日に設定されました。</p>
+<p>この特定のスマートフォンは、&quot;test.mov&quot; ファイル内にいくつかの日付と時刻のフィールドを記録しました。次のコマンドは、&quot;test.mov&quot; 内で利用可能なすべての日付と時刻の情報を表示します。</p>
+<p><code class="docutils literal notranslate"><span class="pre">exiftool</span> <span class="pre">-time:all</span> <span class="pre">-groupNames</span> <span class="pre">-short</span> <span class="pre">test.mov</span></code></p>
+<ul class="simple">
+<li><p><em>time:all</em>: 日付/時刻情報を含むすべてのメタデータ フィールドを表示するショートカット</p></li>
+<li><p><em>groupNames</em>: 各タグの前にグループ名を出力します。</p></li>
+<li><p><em>short</em>: 説明の代わりにタグ名が表示されます。</p></li>
+</ul>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[File]          FileModifyDate                  : 2019:11:01 22:22:22+01:00
+[File]          FileAccessDate                  : 2021:08:07 16:29:11+02:00
+[File]          FileCreateDate                  : 2021:08:07 16:29:05+02:00
+[QuickTime]     CreateDate                      : 2019:11:01 21:22:22
+[QuickTime]     ModifyDate                      : 2019:11:01 21:22:30
+[QuickTime]     TrackCreateDate                 : 2019:11:01 21:22:22
+[QuickTime]     TrackModifyDate                 : 2019:11:01 21:22:30
+[QuickTime]     MediaCreateDate                 : 2019:11:01 21:22:22
+[QuickTime]     MediaModifyDate                 : 2019:11:01 21:22:30
+[QuickTime]     CreationDate                    : 2019:11:01 22:22:22+01:00
+</pre></div>
+</div>
+<p>グループ名は[File]と[QuickTime]の2つがあります。タグの最初のグループは通常、デバイスのオペレーティング システムによって管理されます。
+たとえば、ファイル &quot;test.mov&quot; は 2021 年 8 月 7 日にスマートフォンからデスクトップにコピーされたようです。一方、他の日付（スマートフォンの日付/時刻設定が間違っているため）は 2019-11-01 に設定されます。[QuickTime]タグはスマートフォン（この場合はApple iPhone）によって設定されます。</p>
+<p>[QuickTime] CreateDate などの時間フィールドを更新するには、Shift コマンドを使用できます。</p>
+<p><code class="docutils literal notranslate"><span class="pre">exiftool</span> <span class="pre">&quot;-QuickTime:CreateDate</span> <span class="pre">+=</span> <span class="pre">0000:21:04</span> <span class="pre">00:00:00&quot;</span>&#160; <span class="pre">testing.mov</span></code></p>
+<p>メタデータ フィールドQuickTime:CreateDate は0 年、21 か月、4 日ずつ増分され、2019 年 11 月 1 日から 2021 年 8 月 5 日にリセットされます。このコマンドは、testing.mov_original という名前で元のファイルのコピーを作成し、 &quot;testing.mov&quot; 内のフィールドを更新します。</p>
+<p>すべての [QuickTime] 時間フィールドを更新するには、次のコマンドを使用できます。</p>
+<p><code class="docutils literal notranslate"><span class="pre">exiftool</span> <span class="pre">&quot;-QuickTime:time:all</span> <span class="pre">+=</span> <span class="pre">0000:21:04</span> <span class="pre">00:00:00&quot;</span>&#160; <span class="pre">testing.mov</span></code></p>
+<p>これにより、&quot;testing.mov&quot; ファイルが次のように更新されます。前のコマンドは 2021:08:08 16:01:44+02:00 に実行されたため、[File] タグはオペレーティング システムによって更新されます。</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[File]          FileModifyDate                  : 2021:08:08 16:01:44+02:00
+[File]          FileAccessDate                  : 2021:08:08 16:01:44+02:00
+[File]          FileCreateDate                  : 2021:08:07 16:29:05+02:00
+[QuickTime]     CreateDate                      : 2021:08:05 21:22:22
+[QuickTime]     ModifyDate                      : 2021:08:05 21:22:30
+[QuickTime]     TrackCreateDate                 : 2021:08:05 21:22:22
+[QuickTime]     TrackModifyDate                 : 2021:08:05 21:22:30
+[QuickTime]     MediaCreateDate                 : 2021:08:05 21:22:22
+[QuickTime]     MediaModifyDate                 : 2021:08:05 21:22:30
+[QuickTime]     CreationDate                    : 2021:08:05 22:22:22+01:00
+</pre></div>
+</div>
+<p>すべての [QuickTime] 日付と時刻メタデータを特定の時刻として設定するには、次のコマンドを使用できます。上で説明したように、[File] タグはこの特定の時刻に更新されません。</p>
+<p><code class="docutils literal notranslate"><span class="pre">exiftool</span> <span class="pre">-wm</span> <span class="pre">w</span> <span class="pre">-QuickTime:time:all=&quot;2022:08:05</span> <span class="pre">23:12:12&quot;</span> <span class="pre">testing.mov</span></code></p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="annotating-screenshot.html" class="btn btn-neutral float-right" title="3.5. スクリーンショットに注釈を付ける" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="python-scripting-workspace.html" class="btn btn-neutral float-left" title="3.3. Scripting Workspace" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright This page is licensed under a CC-BY-SA 4.0 Int. License.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,400 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>2.2.1.3. Add &mdash; Blender VSE Unofficial Documentation  ドキュメント</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+    <link rel="canonical" href="https://kantas-spike.github.io/vse-docs/video_editing/edit/montage/add.html" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="検索" href="../../../search.html" />
+    <link rel="next" title="2.2.1.4. Copy - Paste" href="copy_paste.html" />
+    <link rel="prev" title="2.2.1.2. Select" href="select.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Blender VSE Unofficial Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../video_sequencer/index.html">1. Video Sequence Editor</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">2. Video Editing</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../setup/index.html">2.1. Setup</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">2.2. プロジェクトを編集する</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">2.2.1. Montage</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="striptypes/index.html">2.2.1.1. ストリップの種類</a></li>
+<li class="toctree-l4"><a class="reference internal" href="select.html">2.2.1.2. Select</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">2.2.1.3. Add</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#import">2.2.1.3.1. Import</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#options">2.2.1.3.1.1. Options</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#id6">2.2.1.3.1.2. タイムラインを整理する</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#id7">2.2.1.3.1.3. Add</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="copy_paste.html">2.2.1.4. Copy - Paste</a></li>
+<li class="toctree-l4"><a class="reference internal" href="move.html">2.2.1.5. Move</a></li>
+<li class="toctree-l4"><a class="reference internal" href="transform.html">2.2.1.6. Transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="remove.html">2.2.1.7. Remove/disable</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../effects/index.html">2.2.2. Effects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../color-grading/index.html">2.2.3. Color grading</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../sound/index.html">2.2.4. サウンドの編集</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/index.html">2.3. Render your project</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../extra-tools/index.html">3. 追加ツール</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender VSE Unofficial Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html"><span class="section-number">2. </span>Video Editing</a> &raquo;</li>
+        
+          <li><a href="../index.html"><span class="section-number">2.2. </span>プロジェクトを編集する</a> &raquo;</li>
+        
+          <li><a href="index.html"><span class="section-number">2.2.1. </span>Montage</a> &raquo;</li>
+        
+      <li><span class="section-number">2.2.1.3. </span>Add</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/video_editing/edit/montage/add.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="add">
+<h1><span class="section-number">2.2.1.3. </span>Add<a class="headerlink" href="#add" title="この見出しへのパーマリンク">¶</a></h1>
+<p><a class="reference internal" href="../../setup/index.html"><span class="doc">setting up your project</span></a> した後、すべての映像を含む整理されたディレクトリが作成されるはずです。 <em>Montage</em> の最初のステップは、これらの footage (ムービーの場面、一部)を <em>import</em> し、サポート ストリップ (テキスト、カラーなど)を <em>Add</em> することです。</p>
+<div class="section" id="import">
+<h2><span class="section-number">2.2.1.3.1. </span>Import<a class="headerlink" href="#import" title="この見出しへのパーマリンク">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>Blender は、最近のすべてのビデオ編集者と同様に、ノンリニア編集 (NLE) システムです。 <a class="reference external" href="https://en.wikipedia.org/wiki/Non-linear_editing">wikipedia</a> によると、ノンリニア編集は、編集中に元のコンテンツが変更されない、オーディオ、ビデオ、および画像編集のためのオフライン編集の形式です。</p>
+</div>
+<p>映像をインポートするには 3 つの方法がありますが、それらの間には微妙ではあるものの、場合によっては煩わしい違いがあります。 <a class="reference external" href="https://www.youtube.com/watch?v=zslAZxC29rk">Mikeycal Meyers</a> は、短いビデオ チュートリアルでそれらをデモンストレーションしました。</p>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://docs.blender.org/manual/en/dev/editors/file_browser.html">Blender File Browser</a> を使用して、ビデオ、サウンド、または画像/画像シーケンスをタイムライン上にドラッグします。 Blender ファイル ブラウザは、ビデオ編集ワークスペースの左上のウィンドウです (図 1)。</p></li>
+<li><p>ショートカット キー (<kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">A</kbd></kbd>) または [Add] メニューにより、ストリップを Blender File View を使って Sequencer のタイムラインに追加し、 目的のファイルを配置します。</p></li>
+<li><p>オペレーティング システムのファイル ブラウザから、シーケンサーのタイムライン上に目的のビデオ、サウンド、または画像ファイルをドラッグ アンド ドロップします。</p></li>
+</ol>
+<div class="figure align-default" id="id8">
+<img alt="Import methods" src="../../../_images/vse_setup_project_methods.gif" />
+<p class="caption"><span class="caption-text">図 1: 3 つのインポート方法</span><a class="headerlink" href="#id8" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<ul class="simple">
+<li><p>2番目の Add 方法を使用した場合のみ、利用可能なすべてのストリップ タイプを追加できます。他の方法では、ムービー、サウンド、またはイメージ/イメージ シーケンス ストリップの追加のみが可能です。</p></li>
+<li><p>また、Add による方法のみがインポート オプション ([Scale To Fit] など) を提供します。これらのオプションについては、次のセクションで説明します。</p></li>
+<li><p>また、複数のファイルをインポートできるのは Add メソッドのみです。複数のファイルを選択できますが (OS ファイル ブラウザと同様に Blender ファイル ブラウザでも)、タイムラインにドロップされるのは 1 つのファイル (最初に選択したファイル) だけです。おそらく同じ理由で、イメージ シーケンスを追加することはできません。</p></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<blockquote>
+<div><p>3 つの方法はすべて、他のビデオエディターと比べるとかなり制限されています。</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>複数のクリップで Add メソッドを使用すると、再生ヘッドの位置から開始してタイムライン上にクリップが順番に配置されます。ただし、クリップを積み重ねたい場合は、クリップを 1 つずつ追加する必要があります。</p></li>
+<li><p>Playhead の位置にすでにストリップがある場合、Blender は最初の空きチャンネルにストリップを追加します。追加するクリップのチャンネルを選択することはできません。</p></li>
+<li><p>ストリップをドロップする場所は重要ではありません。 Blender はそれらをPlayheadの位置に挿入します。ただし、(ストリップが挿入されることを期待して) 別のストリップの上またはストリップの間にストリップをドロップしようとしても、何も起こりません。ストリップも追加されていません。 <a class="footnote-reference brackets" href="#f1" id="id1">1</a></p></li>
+<li><p>ストリップの挿入に使用できるチャンネルは 128 です。 より大きな番号のチャンネルにはスクロールで表示することができあす。したがって、原則として、同時に 128 を超えるストリップを追加することはできません。ただし、メタ ストリップを使用することで、この制限を回避できます。いくつかのストリップを選択して右クリックします。 [Make meta strip] を選択します。ショートカット <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">G</kbd></kbd> 。選択したストリップは 1 つのチャンネルに折りたたまれ、1 チャンネルとしてカウントされます。</p></li>
+<li><p>他のストリップの前または間にストリップをインポートすることはできません。ただし、シーケンサー内でそれを行うこともできます。 <a class="footnote-reference brackets" href="#f2" id="id2">2</a></p></li>
+<li><p>ファイル ブラウザのドラッグ方法の場合は、ファイルのアイコンをドラッグする必要があります。名前をドラッグしようとすると、選択操作のみが呼び出されます。 <a class="footnote-reference brackets" href="#f3" id="id3">3</a></p></li>
+</ul>
+</div>
+<p>これらの制限の一部はアドオンによって解決されます。たとえば、<a class="reference external" href="https://github.com/snuq/VSEQF">VSE Quick Functions addon</a> に は次のインポート機能が追加されています。 <a class="footnote-reference brackets" href="#f4" id="id4">4</a></p>
+<ul class="simple">
+<li><p>Import At Frame: 標準のインポート動作で、新しいシーケンスを再生ヘッドに配置します。</p></li>
+<li><p>Insert At Frame: 次のシーケンスは、インポートされたシーケンスの長さだけ前方に移動されます。</p></li>
+<li><p>Cut And Insert At Frame: 現在のフレームのすべてのシーケンスがカットされ、後続のすべてのシーケンスがインポートされたシーケンスの長さだけ前に移動されます。</p></li>
+<li><p>Import At End: インポートされたシーケンスをタイムラインの最後に配置します。</p></li>
+</ul>
+<p>3点編集方法の実用的ではあるが実験的なバージョンもあります。この方法を使用すると、
+ソースクリップを別のプレビューウィンドウ(例えば Movie Clip Editor)にロードでき、
+このクリップ内でスクラブし、イン (開始) ポイントとアウト (終了) ポイントを設定できます。
+そして、ソースクリップの一部を、様々なオプション(上述の import at frame, insert at frame, ...)を使って、タイムラインにインポートできます。</p>
+<div class="section" id="options">
+<h3><span class="section-number">2.2.1.3.1.1. </span>Options<a class="headerlink" href="#options" title="この見出しへのパーマリンク">¶</a></h3>
+<div class="figure align-right" id="id9">
+<a class="reference internal image-reference" href="../../../_images/vse_setup_project_options-moviestrip.png"><img alt="Import options Movie strip" src="../../../_images/vse_setup_project_options-moviestrip.png" style="width: 334.59999999999997px; height: 210.7px;" /></a>
+<p class="caption"><span class="caption-text">図2 Movieストリップのインポート オプション</span><a class="headerlink" href="#id9" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<p>インポート オプションは 外部ソース(ムービー、サウンド、イメージ/イメージ シーケンス)を持つ <a class="reference internal" href="striptypes/index.html"><span class="doc">strip types of group 2</span></a> 用です。</p>
+<dl class="simple">
+<dt>Relative Path</dt><dd><p>ビデオ ファイルの場所は保存され、<a class="reference internal" href="striptypes/movie.html#source-panel"><span class="std std-ref">Source panel</span></a> で利用できます。
+この場所は、アセットがインポートされる blend ファイルの場所から始まる相対的な場所、またはコンピューターのルート ディレクトリから始まる絶対的な場所にすることができます ( <a class="reference external" href="https://docs.blender.org/manual/en/dev/files/blend/open_save.html#relative-paths">Blender manual</a> を参照)。
+もちろん、blend ファイルはすでに保存されており、外部ファイルを別のドライブに置くことはできません。??</p>
+</dd>
+<dt>Start Frame</dt><dd><p>名前が示すように、ムービーの開始フレーム。このフィールドには、再生ヘッドの位置が自動的に入力されます。たとえば、再生ヘッドが位置 0 にある場合は値 0、再生ヘッドが位置 15 にある場合は値 15 です。</p>
+</dd>
+<dt>Channel</dt><dd><p>ストリップを配置するチャンネル。たとえその位置にすでにストリップがあったとしても、塗りつぶされたチャンネルは常に 1 つです。ただし、新しく追加されたストリップは、次に低い、または高い空きチャンネルに配置されます。より多くのチャンネルを表示できる場合でも、チャンネルの最大数は 128 です。</p>
+</dd>
+<dt>Replace Selection</dt><dd><p>現在選択されているストリップを新しいストリップに置き換えます。</p>
+</dd>
+</dl>
+<div class="admonition-todo admonition" id="id5">
+<p class="admonition-title">課題</p>
+<p>[選択範囲を置換] オプションは何も行わないようです。</p>
+</div>
+<dl>
+<dt>Set View Transform</dt><dd><p>このオプションを有効にすると (デフォルト)、ムービー クリップの最初のインポート時に[View Transform]が標準に設定されます。
+[View Transform] プロパティは、 [Properties Editor] &gt; [Rnedering Properties] &gt; [Color Management] パネルあります。
+ほとんどのビデオ ファイルは sRGB (=標準) 色空間でエンコードされます。カラー値は 0 から 1 の間で変動することがあります。ただし、3D モデリングの世界では、シーンに追加する光の量に応じて、カラー値は 0 から無限大まで変動する可能性があります。
+したがって、別の [View Transform] アルゴリズム (Filmic など) が使用されます。
+たとえば、モデリング ワークスペース内でプロジェクトを開始した場合、[View Transform]オプションはデフォルトで Filmic に設定されます。この[View Transfrom]設定が一致しないと、レンダリング時間の大幅な遅延や色の歪みが発生する可能性があります。</p>
+</dd>
+<dt>Fit Method</dt><dd><p>シーン/プロジェクトのサイズは、インポートするムービーまたは画像のサイズと必ずしも一致するとは限りません。
+例えば; 500 (w) x 500 (h) のイメージを 640 (w) x 360 (h) のシーンにインポートしたいとします。画像の高さ (500) がシーンの高さ (360) に適合しないことは明らかです。 [Fit Method]は、レンダリング領域内に収まるようにイメージをどのようにスケールするかを決定します。これを行うには、インポートされたイメージの Transform Scale X および Y プロパティを変更します。</p>
+<blockquote>
+<div><dl>
+<dt>Scale to Fit</dt><dd><p>ストリップのビジュアル コンテンツは、元のアスペクト比を維持しながら、プロジェクトのサイズ内に正確に収まります。
+これは、上記の例 (図 3 も参照) から、画像の高さ (500) がシーンの高さ (360) に正確に収まるように、係数 0.72 (360/500) でスケーリングする必要があることを意味します。この方法では画像の元のアスペクト比を維持する必要があるため、幅も 0.72 で拡大縮小し、透明な垂直バンドを作成する必要があります。</p>
+</dd>
+<dt>Scale to Fill</dt><dd><p>ストリップのビジュアル コンテンツは、元のアスペクト比を維持しながら、プロジェクトのディメンションにまたがります。この例では、シーンの最大寸法 (640) が画像 (500) で満たされる必要があります。したがって、画像は 1.28 (= 640 /500) の係数で X 軸に拡大される必要があります。</p>
+<p>これは、元のイメージの一部がレンダリング領域内のコンテンツに適合しなくなったことを意味する可能性があります。</p>
+</dd>
+<dt>Stretch to Fill</dt><dd><p>ストリップのビジュアル コンテンツはプロジェクトのディメンションを埋めます。
+他の 2 つの方法とは異なり、Stretch to Fill は元のアスペクト比を維持しないことに注意してください。</p>
+<p>これにより、元の画像が歪む可能性があります (図 3 を参照)。</p>
+</dd>
+</dl>
+<div class="figure align-default" id="id10">
+<img alt="Import methods" src="../../../_images/vse_setup_project_scale-methods.svg" /><p class="caption"><span class="caption-text">図3 3 つのフィット方法</span><a class="headerlink" href="#id10" title="この画像へのパーマリンク">¶</a></p>
+</div>
+</div></blockquote>
+</dd>
+<dt>Sound</dt><dd><p>ビデオ ファイルに埋め込みオーディオ チャネルが含まれている場合、このオプションを有効にすると、
+ムービーのオーディオ トラックを含むサウンド ストリップが追加されます。このオプションを無効にすると、音声のないムービー ストリップのみが追加されます。</p>
+</dd>
+<dt>Use Movie Frame Rate</dt><dd><p>このオプションは、シーンのシーン フレーム レートを、追加されたムービー ファイルにエンコードされたフレーム レートに設定します。プロジェクトとストリップのフレーム レートの不一致が、 オーディオとの <a class="reference internal" href="striptypes/movie.html"><span class="doc">synchronizing problems</span></a> となることがよくあります。新しい Blend ファイルが作成されると、フレームレートはデフォルトで 24 fps に設定されます。このオプションが有効になっていない場合、フレームレート 30 fps のムービーを追加すると、この種の問題が発生します。</p>
+</dd>
+</dl>
+<p>Image/Image Sequence ストリップには、[Sound] や [Movie Frame Rate] オプションはありません。 (この文脈では意味をなさないため)。
+[Use Placeholders] オプションが追加されます。さらに、サウンド ストリップには [Fit method] オプションがありません。
+ただし、[Cache]と[Mono]オプションが追加されます。これらのオプションは、<a class="reference internal" href="striptypes/image.html"><span class="doc">Image Sequence strip</span></a> と <a class="reference internal" href="striptypes/sound.html"><span class="doc">Sound strip</span></a> のプロパティ リストですでに説明されています 。</p>
+</div>
+<div class="section" id="id6">
+<h3><span class="section-number">2.2.1.3.1.2. </span>タイムラインを整理する<a class="headerlink" href="#id6" title="この見出しへのパーマリンク">¶</a></h3>
+<p>長く複雑なタイムラインを扱うのは簡単ではありません。可能な限り効率的に作業するには、何らかの組織が必要です。
+「タイムラインを他の人が拾える状態にしておくこと」というアダージョは確かに当てはまります。タイムラインの整理はおそらく非常に個人的なアプローチですが、次のヒントが役立つかもしれません。</p>
+<ul class="simple">
+<li><p>Blender VSE では、任意のストリップを任意のチャンネルに配置できます。ただし、多くの編集者は、チャネルを機能バンドにグループ化します。たとえば、チャネル 1 ～ 5: オーディオ、5 ～ 10: ビデオ、11 ～ 15: エフェクトです。各バンド内には、バックグラウンド ミュージック、ナレーション、アンビエント サウンドなどのサブバンドを含めることができます。可能な分類については、 <a class="reference internal" href="../../setup/directory-structure.html"><span class="doc">Organize your assets</span></a> を参照してください。</p></li>
+<li><p>一部のビデオ編集プログラムは、ビデオと埋め込みオーディオ ストリップをリンクします。もちろん利点は、一方のストリップを移動すると他方のストリップも移動することです。同期の問題が発生する可能性は低くなります。 Blender VSE では、ビデオとオーディオはリンクされていません。回避策はメタ ストリップを使用することですが、これには音波が見えなくなるという欠点があります。 VSQEF アドオンを使用すると、ストリップを親にすることができます。 <a class="reference external" href="https://www.youtube.com/watch?v=rJg8xH8PyGc&amp;t=40s">video tutorial</a> を参照してください。</p></li>
+<li><p>Blender の VSE は、 &quot;bin&quot; という概念を使用しません。これは、ソース クリップへの参照を保持するためにプロジェクト内にのみ存在する仮想フォルダーです。ただし、複数のシーンを使用することで簡単にエミュレートできます。図 4 では、2 つのシーン (Raw フッテージとラフ カット) が作成されています (スライド 1)。すべてのクリップが Raw Footage シーンのタイムラインに追加されます。アウトライナー (右上のウィンドウ) の表示モードはScenes(スライド 2) に設定されます。アウトライナーでシーンを選択するだけで、両方のシーンのタイムラインを簡単に切り替えることができます (スライド 3)。</p></li>
+</ul>
+<object data="/_static/images/bins.svg" type="image/svg+xml"></object><p>図4 &quot;bin&quot;&quot; を作成するには?画像をクリックするか、キーボードの矢印を使用して次のスライドを表示します。</p>
+<p>フィクションを制作する場合、次のように映像を整理できます。</p>
+<ul class="simple">
+<li><p>Sequence: 一連のシーン。 S・キューブリックは常に8つのシーケンスで自分の物語を語った。</p></li>
+<li><p>Scene: 1 つの場所で継続的に展開される状況。</p></li>
+<li><p>Shot: シーン全体またはその一部をカバーするように設定されたカメラ。</p></li>
+<li><p>Take: ショットを正しく撮るための多くの試みの中から記録されたもの。</p></li>
+</ul>
+</div>
+<div class="section" id="id7">
+<h3><span class="section-number">2.2.1.3.1.3. </span>Add<a class="headerlink" href="#id7" title="この見出しへのパーマリンク">¶</a></h3>
+<p>ショートカット キー <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">A</kbd></kbd> を使用すると、外部ソースなしでストリップ(テキスト、カラーなど) を追加できます。利用可能なすべてのタイプの詳細な概要については、 <a class="reference internal" href="striptypes/index.html"><span class="doc">Strip types</span></a> を参照してください。</p>
+<p>これらのストリップの配置は、ストリップのインポートと同じルールに従います。</p>
+<p class="rubric">脚注</p>
+<dl class="footnote brackets">
+<dt class="label" id="f1"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>Blender4.0では、1つ目の方法では、素材を任意の位置にドラッグ&amp;ドロップできます(snapも利用可能。3つ目の方法でも、任意の位置にドラッグ&amp;ドロップできますが、snapは利用できず、1の方法と比較すると、どの位置に追加できるか判断が難しいです。</p>
+</dd>
+<dt class="label" id="f2"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>Blender4.0では、可能なようです。</p>
+</dd>
+<dt class="label" id="f3"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
+<dd><p>Blender4.0では、 アイコンおよびファイル名をドラッグ可能です。</p>
+</dd>
+<dt class="label" id="f4"><span class="brackets"><a class="fn-backref" href="#id4">4</a></span></dt>
+<dd><p>このアドオンも何年もメンテナンスされていません。</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="copy_paste.html" class="btn btn-neutral float-right" title="2.2.1.4. Copy - Paste" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="select.html" class="btn btn-neutral float-left" title="2.2.1.2. Select" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright This page is licensed under a CC-BY-SA 4.0 Int. License.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

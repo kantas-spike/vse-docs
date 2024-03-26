@@ -1,0 +1,285 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>1. Video Sequence Editor &mdash; Blender VSE Unofficial Documentation  ドキュメント</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+    <link rel="canonical" href="https://kantas-spike.github.io/vse-docs/video_sequencer/index.html" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="next" title="1.1. Sequencer" href="sequencer/index.html" />
+    <link rel="prev" title="Blender VSE 非公式文書" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Blender VSE Unofficial Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1. Video Sequence Editor</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sequencer/index.html">1.1. Sequencer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preview/index.html">1.2. Preview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sequencer_and_preview/index.html">1.3. Sequencer &amp; Preview</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../video_editing/index.html">2. Video Editing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../extra-tools/index.html">3. 追加ツール</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Blender VSE Unofficial Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li><span class="section-number">1. </span>Video Sequence Editor</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/video_sequencer/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="video-sequence-editor">
+<h1><span class="section-number">1. </span>Video Sequence Editor<a class="headerlink" href="#video-sequence-editor" title="この見出しへのパーマリンク">¶</a></h1>
+<span class="target" id="id1"></span><p>Blenderは多機能なソフトウェアで、モデリング、スカルプティング、2Dドローイング、アニメーションや動画編集に利用されます。
+多くの作業は、いわゆるエディターで行います。エディターとは、Blenderの特定の領域に、あなたの作品を表示・変更するためのツールです。</p>
+<p>動画を操作できるエディターがいくつかあります。<a class="reference external" href="https://docs.blender.org/manual/en/dev/editors/compositor.html">Compositor</a> 、<a class="reference external" href="https://docs.blender.org/manual/en/dev/editors/clip/index.html">Movie Clip Editor</a>, the <a class="reference external" href="https://docs.blender.org/manual/en/dev/editors/image/index.html">Image Editor</a> (静止画専用)、そして Video Sequencer です。</p>
+<p>全てのエディターは、左上のコーナーに、Editor Type Selector を持っています(参照 図2)。
+この章では、Video Sequence Editor (VSE) (&quot;Sequencer&quot; とも略される) についてのみ説明します。</p>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>Video Sequencerセクションに書くべきか、Video Editingセクションに書くべきか、いつも明らかなわけではありません。以下のルールを適用しようとします。</p>
+<ul class="simple">
+<li><p>エディター内の操作に関するもの(ビューメニュー、オーバーレイ、ディスプレイモード...)はVideo Sequence Editorセクションで説明します。</p></li>
+<li><p>エディターデータ(例えば、VSEの場合はストリップ)の操作に関わるものは、Vide Editingセクションで説明します。</p></li>
+</ul>
+<p>例えば、ストリップの選択は、Video Editingセクションに記載し、一方、タイムライン上でのズームはVideo Sequence Editorセクションで扱います。</p>
+</div>
+<p>View Type Selector(参照 図1)を使えば、Video Seuqence Editorの構成を、Sequencerのみ、Previewのみ、Sequencer/Previewの両方を選択できます。</p>
+<div class="figure align-default" id="id9">
+<img alt="View types" src="../_images/editors_vse_view_types.svg" /><p class="caption"><span class="caption-text">図1: Video Sequence Editorの 3つのビュータイプ</span><a class="headerlink" href="#id9" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<p>Blender のメインウィンドウ内のどのエリアにもエディターを含めることができ、同じエディターをメインウィンドウ内に複数表示できることに注意してください。したがって、理論的には、空のワークスペースから開始して、2つのVideo Sequence Editorを上下に配置 <a class="footnote-reference brackets" href="#f1" id="id2">1</a> することで、View Type の Sequencer/Preview の構成を再構築できます。その場合、下部エディターの View Typeは Sequencer で、上部エディターの View TypeはPreviewになります。</p>
+<p>VSEは複数のリージョン <a class="footnote-reference brackets" href="#f2" id="id3">2</a> から構成されます(参照 図2)。これらのリージョンについては、次のセクションで詳細を説明します。
+図2は、<em>Sequencer</em>/<em>Preview</em> が結合されビューになります。
+View Type Selectorでこのビューを選択できます。このビューは以下のリージョンを含みます。</p>
+<div class="figure align-default" id="id10">
+<img alt="Main view of Sequencer" src="../_images/editors_vse_overview.svg" /><p class="caption"><span class="caption-text">図2: Sequence Editor メインビュー: Header (赤), Preview (黄), Sequencer (ブルー), Properties (グレー), パネルとタブ (黄色枠線と矢印), Toolbar (パープル)</span><a class="headerlink" href="#id10" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<ul class="simple">
+<li><p>Sequencer: ストリップのモンタージュ用のエリア <a class="footnote-reference brackets" href="#f4" id="id4">3</a></p></li>
+</ul>
+<ul class="simple">
+<li><p>Properties: アクティブストリップのプロパティーを表示します。プロパティーはパネルとタブで分割されています。<kbd class="kbd docutils literal notranslate">N</kbd> キーで表示非表示を切替えます <a class="footnote-reference brackets" href="#f3" id="id5">4</a></p></li>
+</ul>
+<ul class="simple">
+<li><p>Toolbar: アイコンの一覧。 アイコンをクリックすると、Sequencer内の選択したストリップを操作できます。:kbd:<a href="#id6"><span class="problematic" id="id7">`</span></a>T`キーで表示非表示を切替えます。</p></li>
+</ul>
+<ul class="simple">
+<li><p>Preview: プレイヘッドが指し示す時刻のSequencerの内容を表示します。 <a class="footnote-reference brackets" href="#f5" id="id8">5</a></p></li>
+</ul>
+<ul class="simple">
+<li><p>Header: メニューとボタンを持ちます。 ヘッダーは選択されているビューによって若干内容が変わります。 (以降の文書を参照).</p></li>
+</ul>
+<div class="toctree-wrapper compound">
+</div>
+<p class="rubric">脚注</p>
+<dl class="footnote brackets">
+<dt class="label" id="f1"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
+<dd><p>(訳注) Video Editing ワークスペースは、実際に上下2つのエリアにそれぞれVSEをVideo Sequence Editor配置しています。</p>
+</dd>
+<dt class="label" id="f2"><span class="brackets"><a class="fn-backref" href="#id3">2</a></span></dt>
+<dd><p>(訳注) Vエディター内の名前のつけられた領域は、リージョン(region)と呼ばれます。</p>
+</dd>
+<dt class="label" id="f4"><span class="brackets"><a class="fn-backref" href="#id4">3</a></span></dt>
+<dd><p>(訳注) 厳密にはメインリージョンの上半分の領域になります。</p>
+</dd>
+<dt class="label" id="f3"><span class="brackets"><a class="fn-backref" href="#id5">4</a></span></dt>
+<dd><p>(訳注) <kbd class="kbd docutils literal notranslate">N</kbd> キーで表示される右端のリージョン(region)は、サイドバーと呼ばれます。サイドバーはタブで分類され、各タブにはオブジェクトやエディター自身の設定を行うパネルがあります。</p>
+</dd>
+<dt class="label" id="f5"><span class="brackets"><a class="fn-backref" href="#id8">5</a></span></dt>
+<dd><p>(訳注) 厳密にはメインリージョンの下半分の領域になります。</p>
+</dd>
+</dl>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="sequencer/index.html" class="btn btn-neutral float-right" title="1.1. Sequencer" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../index.html" class="btn btn-neutral float-left" title="Blender VSE 非公式文書" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright This page is licensed under a CC-BY-SA 4.0 Int. License.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

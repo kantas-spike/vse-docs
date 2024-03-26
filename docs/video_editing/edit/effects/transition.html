@@ -1,0 +1,349 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>2.2.2.3. Transition &mdash; Blender VSE Unofficial Documentation  ドキュメント</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+    <link rel="canonical" href="https://kantas-spike.github.io/vse-docs/video_editing/edit/effects/transition.html" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="検索" href="../../../search.html" />
+    <link rel="next" title="2.2.2.4. Masking" href="masking.html" />
+    <link rel="prev" title="2.2.2.2. グリースペンシルによる注釈" href="grease_pencil.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Blender VSE Unofficial Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../video_sequencer/index.html">1. Video Sequence Editor</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">2. Video Editing</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../setup/index.html">2.1. Setup</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">2.2. プロジェクトを編集する</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../montage/index.html">2.2.1. Montage</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">2.2.2. Effects</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="animation.html">2.2.2.1. VSE でのアニメーション</a></li>
+<li class="toctree-l4"><a class="reference internal" href="grease_pencil.html">2.2.2.2. グリースペンシルによる注釈</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">2.2.2.3. Transition</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#cross-gamma-cross-fade">2.2.2.3.1. Cross &amp; Gamma Cross Fade</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#wipe">2.2.2.3.2. Wipe</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#sound-crossfade">2.2.2.3.3. Sound Crossfade</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="masking.html">2.2.2.4. Masking</a></li>
+<li class="toctree-l4"><a class="reference internal" href="speed.html">2.2.2.5. Speed</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../color-grading/index.html">2.2.3. Color grading</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../sound/index.html">2.2.4. サウンドの編集</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/index.html">2.3. Render your project</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../extra-tools/index.html">3. 追加ツール</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender VSE Unofficial Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html"><span class="section-number">2. </span>Video Editing</a> &raquo;</li>
+        
+          <li><a href="../index.html"><span class="section-number">2.2. </span>プロジェクトを編集する</a> &raquo;</li>
+        
+          <li><a href="index.html"><span class="section-number">2.2.2. </span>Effects</a> &raquo;</li>
+        
+      <li><span class="section-number">2.2.2.3. </span>Transition</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/video_editing/edit/effects/transition.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="transition">
+<h1><span class="section-number">2.2.2.3. </span>Transition<a class="headerlink" href="#transition" title="この見出しへのパーマリンク">¶</a></h1>
+<p>ビデオ トランジションは、あるショットを別のショットに接続するためのポストプロダクション技術です。最も単純なトランジションは、最初の画像が次の画像に即座に置き換えられる basic cut です。</p>
+<div class="figure align-default" id="id4">
+<img alt="Basic cut" src="../../../_images/video_editing_edit_effects_transition_basic-cut.svg" /><p class="caption"><span class="caption-text">図1 Sprite Fright の basic cut の例 - Blender Open Movie</span><a class="headerlink" href="#id4" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<p>図 1 のような basic cut は、フレームの画像内容が大きく異なり、視聴者がストーリーの変化を問題なく理解できるため、問題ありません (この場合、これは非常に賢い選択でもあります。フェンスの穴から覗いて新しい世界を発見します。）
+場合によっては、ストーリーの変化がそれほど明らかではないため、ビデオのトランジションがこの別の視点に役立つ可能性があります。</p>
+<p>[Add] メニュー、ショートカット キー <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shft</kbd>-<kbd class="kbd docutils literal notranslate">A</kbd></kbd> 、または :kbd:<a href="#id1"><span class="problematic" id="id2">`</span></a>RMB-Click`で表示されるコンテキストメニューを使用して、2 つのストリップにトランジションを追加できます。一度に 3 つ以上のストリップにトランジションを追加することはできません。</p>
+<p>古典的で最もわかりやすい手順は、2 つのストリップを異なるチャンネルに配置し、時間内でオーバーラップさせることです。通常、チャネルは連続しています (例: チャネル 1 と 2) が、必ずしもそうである必要はありません。追加のトランジション ストリップは、オーバーラップのランレングスを持つ両方のストリップの上の最初のフリー チャネルに配置されます。トランジション ストリップの各フレームは、入力 1 および入力 2 ストリップの 2 つの対応するフレームをブレンドしたものです。</p>
+<div class="figure align-default" id="id5">
+<img alt="Add methods" src="../../../_images/video_editing_edit_effects_transition_add-methods.svg" /><p class="caption"><span class="caption-text">図2 2 つのストリップ間にトランジションを追加する 2 つの方法</span><a class="headerlink" href="#id5" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<p>追加のチャンネルを占有しないようにするために、2 つの入力ストリップを同じチャンネルに配置し、それらの間に小さなギャップを残すことができます。次に、ギャップはトランジション ストリップで埋められます (図 2、2 番目の方法を参照)。ギャップはゼロフレームにすることもできます。つまり、入力ストリップは互いに隣り合って配置されます。トランジションを追加した後、何も起こっていないようです。ただし、トランジション ストリップが作成され、最初のストリップの終了ハンドルまたは 2 番目のストリップの開始ハンドルをドラッグすると、トランジション ストリップが 2 つのストリップの間に表示されます。</p>
+<p>これは、トランジション ストリップを短くしたり長くしたりする方法でもあります。
+ストリップ自体のデュレーションを変更することはできません。デュレーションは 2 つの入力ストリップの重なりによって決まります。したがって、入力ストリップのハンドルをドラッグしてオーバーラップを変更すると、トランジションの長さも同様に変更されます。</p>
+<div class="admonition important">
+<p class="admonition-title">重要</p>
+<p>ストリップが静止画像の場合、両方の画像のコンテンツを使用してトランジションが作成されます。トランジション内の各フレームは、同じ 2 つの画像を組み合わせたものです。 2 つのストリップがムービーの場合、トランジション内の各フレームには、オフセット範囲内の対応する画像の組み合わせが含まれます。</p>
+<div class="figure align-default" id="id6">
+<img alt="Transition with Strip Offset" src="../../../_images/video_editing_edit_effects_transition_blending.svg" /><p class="caption"><span class="caption-text">図3 ストリップ オフセット開始または終了を使用したスト​​リップ上のトランジション</span><a class="headerlink" href="#id6" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<p>図 3 では、トランジションの 2 番目のフレームは、オフセット範囲内の対応する画像 (E と 1) の組み合わせです。トランジションの最初と最後のフレームでは、オフセット内に対応する画像が 1 つだけあります。 2 番目のイメージには、最後に使用されたイメージ (1 および E) が入力されます。</p>
+</div>
+<div class="figure align-right" id="id7">
+<a class="reference internal image-reference" href="../../../_images/video_editing_edit_effects_transition-direction.png"><img alt="Switch direction of transition" src="../../../_images/video_editing_edit_effects_transition-direction.png" style="width: 313.5px; height: 122.0px;" /></a>
+<p class="caption"><span class="caption-text">図4 スイッチの方向</span><a class="headerlink" href="#id7" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<p>2 つのストリップの選択順序は、トランジションの方向にとって重要です。たとえば、ストリップ 1 からストリップ 2 へ、またはその逆。アクティブなストリップ (白い四角形のストリップ) がターゲット ストリップです。トランジションは、非アクティブな (ただし選択されている) ストリップからアクティブなストリップまで実行されます。つまり、非アクティブなストリップは入力 1 に割り当てられ、アクティブなストリップは入力 2 に割り当てられます。サイド バーの [入力 1] フィールドと [入力 2] フィールドを切り替えることで、いつでもトランジションの方向を変更できます (図 4 を参照)および5）。ショートカット  <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">S</kbd></kbd> または <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">RMB</kbd>-<kbd class="kbd docutils literal notranslate">Click</kbd></kbd> によるコンテキストメニュー使用し て、[Effect Strip] &gt; [Chnage Effect Input] &gt; [A --&gt; B] を使用することもできます。</p>
+<div class="figure align-default" id="id8">
+<img alt="Direction of transition" src="../../../_images/video_editing_edit_effects_transition_direction.svg" /><p class="caption"><span class="caption-text">図5 遷移の方向 (入力 1 対入力 2)</span><a class="headerlink" href="#id8" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<div class="section" id="cross-gamma-cross-fade">
+<h2><span class="section-number">2.2.2.3.1. </span>Cross &amp; Gamma Cross Fade<a class="headerlink" href="#cross-gamma-cross-fade" title="この見出しへのパーマリンク">¶</a></h2>
+<p>Cross および Gamma Cross Fade エフェクトは、赤、緑、青のカラー コンポーネントと入力 1 および入力 2 ストリップのアルファの間のディゾルブです。
+入力 1 ストリップはフェードアウトします (最初は完全に不透明で、徐々に透明になります)。入力 2 ストリップは完全に透明な状態でトランジションを開始し、完全に不透明になります。したがって、時間内の 2 番目のストリップは入力 2 ストリップである必要があります。そうしないと、グリッチ効果が発生します。</p>
+<p>図 6 には、次の色の 2 つのカラー ストリップがあります。</p>
+<ul class="simple">
+<li><p>strip-1: RGBA(1,0,0,0.4); red color with alpha = 0.4</p></li>
+<li><p>strip-2: RGB(0,1,0, 0.6); green color with alpha = 0.6</p></li>
+</ul>
+<div class="figure align-default" id="id9">
+<img alt="Cross Fade" src="../../../_images/video_editing_edit_effects_transition_cross.svg" /><p class="caption"><span class="caption-text">図6 2 つの色のクロス フェード (ストリップ 1 とストリップ 2 は両方とも PNG イメージです)</span><a class="headerlink" href="#id9" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<p>クロス フェードには 4 フレームかかり、再生ヘッドは 2 番目のフレームにあります。したがって、クロス フェードの赤コンポーネントは 1 (入力 1) から 0 (入力 2) に、緑コンポーネントは 0 (入力 1) から 1 (入力 2) に変化する必要があります。青コンポーネントは入力 1 と入力 2 の間で変化せず、アルファ値は 0.4 から 0.6 になります。このトランジションを行うために、エフェクトには 4 つのフレームが使用可能です。したがって、赤のコンポーネントはフレームごとに 0.25 ずつ減分し、緑のコンポーネントは同じ値で増分する必要があります。アルファはフレームごとに 0.05 ずつ増加する必要があります。</p>
+<p>図 6 からわかるように、2 番目のフレームでは、赤の成分 = 0.74902、緑の成分 = 0.24706 (+- 0.25 ) です。アルファ = 0.4471、つまり約 0.05 ずつ増加します。</p>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>カラー ストリップのアルファ値は考慮されません。クロス フェード ストリップは、入力カラー ストリップの不透明度に関係なく、常に alpha = 1 になります。図 5 のストリップはカラー ストリップのように見えますが、実際にはアルファ チャネルを持つ PNG です。</p>
+</div>
+<p>もちろん、これはPreview ウィンドウ内のピクセルごとに行われます。トランジション エフェクトは、入力ストリップのすべての変換 (crop, scale, modifiers など) の後に適用されます。</p>
+<p>クロスフェードとガンマクロスフェードは非常に似ています。ドキュメントによると、「ガンマ クロスはフェードを実行する際に色補正を使用するため、目に優しいスムーズな移行が実現します。」</p>
+<div class="admonition-todo admonition" id="id3">
+<p class="admonition-title">課題</p>
+<p>詳しく説明する。</p>
+</div>
+</div>
+<div class="section" id="wipe">
+<h2><span class="section-number">2.2.2.3.2. </span>Wipe<a class="headerlink" href="#wipe" title="この見出しへのパーマリンク">¶</a></h2>
+<div class="figure align-right" id="id10">
+<a class="reference internal image-reference" href="../../../_images/video_editing_edit_effects_wipe-properties.png"><img alt="Wipe properties" src="../../../_images/video_editing_edit_effects_wipe-properties.png" style="width: 290.5px; height: 268.0px;" /></a>
+<p class="caption"><span class="caption-text">図7 ワイプトランジションのプロパティ</span><a class="headerlink" href="#id10" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<p>ワイプ トランジションでは、2 つのショットが何らかのスライド アニメーションで接続されます。まるで 1 つのショットが消えて次のショットが現れるかのように見えます。ワイプ トランジションは簡単にやりすぎてしまう可能性があります。したがって、コンテンツを強化する目的でのみ使用し、慎重に使用してください。例えば落下シーンでは縦ワイプで動きを強化できます。</p>
+<p>エフェクト ストリップの入力 1 と入力 2 のプロパティについてはすでに上で説明しています。説明については、図 5 を参照してください。トランジションの最初のフレームは入力 1 に似ており、最後のフレームは入力 2 ストリップに似ていることに注意してください。</p>
+<dl>
+<dt>Transiton Type:</dt><dd><p>ワイプ トランジションには 4 つのタイプがあります。それぞれにフェードインまたはフェードアウトの方向があります。その結果、8 つの異なるバリアントが生成されます (図 8 を参照)。</p>
+<ul class="simple">
+<li><p>Single: 画像上を直線的に移動して次のストリップを明らかにします。 Direction Out は、上から下、または左から右 (角度に応じて) のリビールに対応します。</p></li>
+<li><p>Double: シングルと似ていますが、画像の中央または外側から始まる 2 本の線を使用します。瞬きのように。トランジションの方向に応じて、開閉します。方向が Out の場合、入力ストリップ 2 はフレームの中央で小さく始まり、大きくなります。</p></li>
+<li><p>Iris: 拡大 (または縮小) する円を通して次のストリップを表示します。カメラの絞りや目の瞳孔のようなものです。トランジションをぼかして、インクが紙ににじんでいるように見せることができます。</p></li>
+<li><p>Clock: アナログ時計の針のように、9 時の位置から時計回りまたは (ワイプインが有効な場合) 反時計回りに動きます。スイープすると、次のストリップが表示されます。</p></li>
+</ul>
+<div class="figure align-default" id="id11">
+<img alt="Direction In Out" src="../../../_images/video_editing_edit_effects_transition_direction-in-out.svg" /><p class="caption"><span class="caption-text">図 8: 8 つのトランジション バリアント (4 種類 x 2 方向)</span><a class="headerlink" href="#id11" title="この画像へのパーマリンク">¶</a></p>
+</div>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Direction:</dt><dd><p>フェードインするかフェードアウトするかを制御します。イン方向またはアウト方向に対応する動きについては、図 8 を参照してください。</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Blur Width:</dt><dd><p>図 8 では、掃引線の境界線が非常に鮮明です (1 ピクセル内で緑から赤まで)。ただし、この線をぼかすことができ、2 つの色のより滑らかなグラデーションが得られます。幅はパーセントで指定されます。画像全体の幅。</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Angle:</dt><dd><p>シングルおよびダブルトランジションタイプの線の角度を制御します。 -45°の角度では、左上から右下に向かって広がる三角形が表示されます。</p>
+</dd>
+</dl>
+<p>デフォルトのフェードでは、ストリップの長さ全体にわたって直線的なフェードが自動的に計算されます。したがって、トランジション ストリップが 4 フレームの場合、シングル フェード タイプは、トランジション ストリップのフレーム 1 ～ 4 の画像領域のそれぞれ 0、0.25、0.50、および 0.75 をカバーします。デフォルトのフェードが有効になっていない場合は、カスタムのエフェクト フェーダーを指定できます。このフィールドをキーフレーム化して、トランジションの各フレームに異なるフェーダー値を持たせることができます。これにより、カスタムのイーズインまたはイーズアウト効果 (アニメーションの最初と最後の小さな領域) を作成できます。</p>
+</div>
+<div class="section" id="sound-crossfade">
+<h2><span class="section-number">2.2.2.3.3. </span>Sound Crossfade<a class="headerlink" href="#sound-crossfade" title="この見出しへのパーマリンク">¶</a></h2>
+<p>サウンド クロスフェード トランジションは、2 つの重なり合うサウンド ストリップのボリュームをアニメーション化して、それらの間で均等にフェードすることで機能します。これは値をアニメーション化するだけなので、他のエフェクトやトランジションのようなストリップは作成されません。ただし、エフェクトを適用するには、2 つのサウンド ストリップをオーバーラップさせる必要があります (図 1 の方法 2 は使用できません)。 F カーブとサウンド波形を表示するには、[Show Overlay] (右上) と [Display Waveform] (下) でそれらを有効にする必要があります。図 9 からわかるように、クロス フェードは、初期値からゼロへ、またはその逆にボリュームをキーフレーム化することによって実装されます。</p>
+<div class="figure align-default" id="id12">
+<img alt="Sound Cross Fade effect" src="../../../_images/video_editing_edit_effects_transition_sound-cross-fade.svg" /><p class="caption"><span class="caption-text">図9 サウンドのクロスフェード効果</span><a class="headerlink" href="#id12" title="この画像へのパーマリンク">¶</a></p>
+<div class="legend">
+<p>図 9 の両方のストリップの初期ボリュームは 1 であるため、クロス フェードはサウンド 1 では 1 からゼロになり、サウンド 2 ではその逆になります。アニメーションにはイーズイン (ゆっくり始まり加速) とイーズアウト (最後に減速) があります。</p>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="masking.html" class="btn btn-neutral float-right" title="2.2.2.4. Masking" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="grease_pencil.html" class="btn btn-neutral float-left" title="2.2.2.2. グリースペンシルによる注釈" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright This page is licensed under a CC-BY-SA 4.0 Int. License.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

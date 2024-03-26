@@ -1,0 +1,77 @@
+/* color codes of the striptypes */
+.movie {color:#4D6890;}
+.sound {color:#4C8F8F;}
+.clip {color:#8F4C4C;}
+.image {color:#8F744B;}
+.scene {color:#828F50;}
+.effect {color:#514A73;}
+.color {color:#8F8F8F;}
+.meta {color:#5B4D91;}
+.mask {color:#666666;}
+.text {color:#824C8F;}
+
+.black {color: black;}
+.gray {color: gray;}
+.grey {color: gray;}
+.silver {color: silver;}
+.white {color: white;}
+.maroon {color: maroon;}
+.red {color: red;}
+.magenta {color: magenta;}
+.fuchsia {color: fuchsia;}
+.pink {color: pink;}
+.orange {color: orange;}
+.yellow {color: yellow;}
+.lime {color: lime;}
+.green {color: green;}
+.olive {color: olive;}
+.teal {color: teal;}
+.cyan {color: cyan;}
+.aqua {color: aqua;}
+.blue {color: blue;}
+.navy {color: navy;}
+.purple {color: purple;}
+.under {text-decoration: underline;}
+.over {text-decoration: overline;}
+.blink {text-decoration: blink;}
+.line {text-decoration: line-through;}
+.strike {text-decoration: line-through;}
+.it {font-style: italic;}
+.ob {font-style: oblique;}
+.small {font-size: small;}
+.large {font-size: large;}
+
+
+/* remove border, whtespace & grid from admonition table */
+.admonition .wy-table-responsive{
+	margin-bottom: 0;
+}
+
+.rst-content .admonition table {
+	border: none;
+}
+
+.wy-table-bordered-all td, .rst-content table.docutils td {
+	border: none;
+}
+
+.wy-table td, .rst-content table.docutils td {
+	padding: 2px 16px;
+}
+
+.small tbody p {
+	font-size:smaller;
+}
+
+/* removed because caption below figure was too close
+.rst-content div.figure {
+	margin-bottom: 0px;
+}
+*/
+
+/*bootstrap*/
+:root {
+	/*--sd-color-card-header: red;*/
+ }
+
+

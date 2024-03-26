@@ -1,0 +1,300 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>2.2.1.7. Remove/disable &mdash; Blender VSE Unofficial Documentation  ドキュメント</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+    <link rel="canonical" href="https://kantas-spike.github.io/vse-docs/video_editing/edit/montage/remove.html" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="検索" href="../../../search.html" />
+    <link rel="next" title="2.2.2. Effects" href="../effects/index.html" />
+    <link rel="prev" title="2.2.1.6. Transform" href="transform.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Blender VSE Unofficial Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../video_sequencer/index.html">1. Video Sequence Editor</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">2. Video Editing</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../setup/index.html">2.1. Setup</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">2.2. プロジェクトを編集する</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">2.2.1. Montage</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="striptypes/index.html">2.2.1.1. ストリップの種類</a></li>
+<li class="toctree-l4"><a class="reference internal" href="select.html">2.2.1.2. Select</a></li>
+<li class="toctree-l4"><a class="reference internal" href="add.html">2.2.1.3. Add</a></li>
+<li class="toctree-l4"><a class="reference internal" href="copy_paste.html">2.2.1.4. Copy - Paste</a></li>
+<li class="toctree-l4"><a class="reference internal" href="move.html">2.2.1.5. Move</a></li>
+<li class="toctree-l4"><a class="reference internal" href="transform.html">2.2.1.6. Transform</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">2.2.1.7. Remove/disable</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#delete">2.2.1.7.1. Delete</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#mute">2.2.1.7.2. Mute</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#lock">2.2.1.7.3. Lock</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../effects/index.html">2.2.2. Effects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../color-grading/index.html">2.2.3. Color grading</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../sound/index.html">2.2.4. サウンドの編集</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/index.html">2.3. Render your project</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../extra-tools/index.html">3. 追加ツール</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender VSE Unofficial Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html"><span class="section-number">2. </span>Video Editing</a> &raquo;</li>
+        
+          <li><a href="../index.html"><span class="section-number">2.2. </span>プロジェクトを編集する</a> &raquo;</li>
+        
+          <li><a href="index.html"><span class="section-number">2.2.1. </span>Montage</a> &raquo;</li>
+        
+      <li><span class="section-number">2.2.1.7. </span>Remove/disable</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/video_editing/edit/montage/remove.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="remove-disable">
+<h1><span class="section-number">2.2.1.7. </span>Remove/disable<a class="headerlink" href="#remove-disable" title="この見出しへのパーマリンク">¶</a></h1>
+<p>ストリップは、削除、ミュート、およびロックのコマンドを使用して削除または無効にすることができます。</p>
+<div class="section" id="delete">
+<h2><span class="section-number">2.2.1.7.1. </span>Delete<a class="headerlink" href="#delete" title="この見出しへのパーマリンク">¶</a></h2>
+<div class="figure align-right" id="id2">
+<a class="reference internal image-reference" href="../../../_images/video_editing_edit_montage_delete_delete.svg"><img alt="Strip menu" height="132" src="../../../_images/video_editing_edit_montage_delete_delete.svg" width="93" /></a>
+<p class="caption"><span class="caption-text">図1 ストリップ メニュー</span><a class="headerlink" href="#id2" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<p>1 つまたは複数の選択したストリップを削除するには、 <kbd class="kbd docutils literal notranslate">X</kbd> キーまたは <kbd class="kbd docutils literal notranslate">Delete</kbd> キーを押すか、 [Strip]メニュー &gt; [Delete] または <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">RMB</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Click</kbd></kbd> でコンテキスト メニューを使用します(図1)。</p>
+<p>もちろん、この削除操作は、[Undo] コマンドまたは <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate">Z</kbd></kbd> キーを使用して元に戻すことができます。関連するエフェクト（Glow や Gaussian Blur など）を持つストリップを削除すると、エフェクト ストリップも削除されます。</p>
+<p>X キーは標準 (Qwerty) キーボードの左手で簡単にアクセスできるため、削除に推奨されるキーは Delete ではなく X です。そうすれば、右手でマウスを放す必要がなくなります (もちろん、右利きの場合)。</p>
+</div>
+<div class="section" id="mute">
+<h2><span class="section-number">2.2.1.7.2. </span>Mute<a class="headerlink" href="#mute" title="この見出しへのパーマリンク">¶</a></h2>
+<div class="figure align-right" id="id3">
+<img alt="Mute-lock menu" src="../../../_images/video_editing_edit_montage_delete_mute-lock.svg" /><p class="caption"><span class="caption-text">図2  ミュートとロック メニュー</span><a class="headerlink" href="#id3" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<p>[Mute] コマンドを使用すると、プレビューでストリップが非表示になります。
+このコマンドは以前は <em>Hide</em> と呼ばれていましたが、これはショートカット キー (H) から推測できます。ストリップはタイムラインにまだ表示されていますが (少しグレー表示されています。図 2 を参照)、プレビューの画像には表示されません。 [Mute] コマンドの効果は、ストリップ プロパティの [Mute] アイコンをクリックした場合と同じです (図 2 を参照)。選択したすべてのストリップにミュートを適用したい場合は、 <kbd class="kbd docutils literal notranslate">Alt</kbd> キーを押しながら、アイコンをクリックする必要があります。選択したストリップをミュートすることも、その逆、選択されていないストリップをミュートすることもできます。</p>
+<ul class="simple">
+<li><p>Mute/Unmute Strips (kbd:<span class="incremental">H</span>, <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">H</kbd></kbd>): 選択したストリップをミュートまたはミュート解除します。ストリップはプレビューに表示されます。</p></li>
+<li><p>Mute/Unmute Deselected Strips (<kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">H</kbd></kbd>, <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">H</kbd></kbd>): 選択したストリップを除くすべてのストリップをミュートまたはミュート解除します。</p></li>
+</ul>
+</div>
+<div class="section" id="lock">
+<h2><span class="section-number">2.2.1.7.3. </span>Lock<a class="headerlink" href="#lock" title="この見出しへのパーマリンク">¶</a></h2>
+<p>Lock コマンドは、ストリップが時間内に移動されたり、持続時間が変更されたりすることを防ぎます。 Lock コマンドの効果は、ストリップ プロパティの [Time] パネル (図 2 を参照) で [Lock] シンボルをクリックした場合と同じです。選択したすべてのストリップにロックを適用したい場合は、 <kbd class="kbd docutils literal notranslate">Alt</kbd> キーを押しながら、Lock 記号をクリックする必要があります。ストリップはシーケンサーではストライプとして表示されます。</p>
+<ul class="simple">
+<li><p>Lock Strips (<kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">L</kbd></kbd>): ストリップの変更を無効にします。</p></li>
+<li><p>Unlock Strips (<kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">L</kbd></kbd>): 無効になっているストリップを有効にし、変更できるようにします。</p></li>
+</ul>
+<p><strong>Remove gaps</strong></p>
+<p>プロジェクトの開始位置 (通常はフレーム 1) から開始して、タイムライン ウィンドウの空白列を削除します。空白の列は、どのチャンネルにもストリップがない時間/フレームの位置です。つまり、その時間/フレーム位置のプレビュー ウィンドウは空です。</p>
+<p>このコマンドは、[Strip]メニュー &gt; [Transform] &gt; [Remove Gaps] を使用するか、 <kbd class="kbd docutils literal notranslate">Backspace</kbd> キーを使用して呼び出すことができます。
+コマンドの発行後、[All Gaps]オプションにチェックを入れて他のギャップを削除するか、数回押してBackspace他のギャップを削除できます。</p>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>ストリップは次の間で移動できます。<a class="footnote-reference brackets" href="#f1" id="id1">1</a></p>
+<ul class="simple">
+<li><p>Scenes: ストリップをコピーし (<kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">C</kbd></kbd>)、他のシーンに切り替えて貼り付けます ( <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">ctrl</kbd>-<kbd class="kbd docutils literal notranslate">V</kbd></kbd> )。アニメーションのキーフレームを除くすべてのストリップ設定がコピーされます。</p></li>
+<li><p>Projects: メニューの [File] &gt; [Append] を使用して、必要なストリップを含むシーンを現在のプロジェクトにインポートします。</p></li>
+</ul>
+</div>
+<p class="rubric">脚注</p>
+<dl class="footnote brackets">
+<dt class="label" id="f1"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>この省都関係のない noteになっているようです。</p>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../effects/index.html" class="btn btn-neutral float-right" title="2.2.2. Effects" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="transform.html" class="btn btn-neutral float-left" title="2.2.1.6. Transform" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright This page is licensed under a CC-BY-SA 4.0 Int. License.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
