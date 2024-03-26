@@ -74,7 +74,7 @@ The HTML-version of these docs can be found at: https://vse-docs.readthedocs.io/
 - [x] ./video_editing/edit/sound/index.rst
 - [-] ./video_editing/edit/sound/audacity/audacity.rst
 - [x] ./video_editing/edit/sound/measuring/volume.rst
-- [ ] ./extra-tools/python-useful-scripts.rst
+- [x] ./extra-tools/python-useful-scripts.rst
 - [x] ./extra-tools/index.rst
 - [ ] ./extra-tools/exiftool.rst
 - [ ] ./extra-tools/ffmpeg.rst
