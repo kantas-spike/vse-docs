@@ -78,7 +78,7 @@ The HTML-version of these docs can be found at: https://vse-docs.readthedocs.io/
 - [x] ./extra-tools/index.rst
 - [x] ./extra-tools/exiftool.rst
 - [x] ./extra-tools/ffmpeg.rst
-- [ ] ./extra-tools/annotating-screenshot.rst
+- [x] ./extra-tools/annotating-screenshot.rst
 - [ ] ./extra-tools/test.rst
 - [x] ./extra-tools/python-scripting-workspace.rst
 - [ ] ./xxx-old-texts/index.rst
