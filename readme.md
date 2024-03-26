@@ -36,14 +36,14 @@ The HTML-version of these docs can be found at: https://vse-docs.readthedocs.io/
 - [x] ./video_editing/setup/directory-structure.rst
 - [x] ./video_editing/setup/creating-test-files.rst
 - [x] ./video_editing/setup/project-settings.rst
-- [x] ./video_editing/render/index.rst
-- [x] ./video_editing/render/codec/video/video.rst
-- [x] ./video_editing/render/codec/codec.rst
-- [x] ./video_editing/render/codec/audio/audio.rst
+- [-] ./video_editing/render/index.rst
+- [-] ./video_editing/render/codec/video/video.rst
+- [-] ./video_editing/render/codec/codec.rst
+- [-] ./video_editing/render/codec/audio/audio.rst
 - [x] ./video_editing/render/postprocessing/ffmpeg/ffmpeg.rst
-- [x] ./video_editing/render/postprocessing/compositor/compositor.rst
-- [x] ./video_editing/render/postprocessing/postprocessing.rst
-- [x] ./video_editing/render/postprocessing/subtitles/subtitles.rst
+- [-] ./video_editing/render/postprocessing/compositor/compositor.rst
+- [-] ./video_editing/render/postprocessing/postprocessing.rst
+- [-] ./video_editing/render/postprocessing/subtitles/subtitles.rst
 - [x] ./video_editing/edit/index.rst
 - [x] ./video_editing/edit/montage/index.rst
 - [x] ./video_editing/edit/montage/striptypes/index.rst
@@ -64,7 +64,7 @@ The HTML-version of these docs can be found at: https://vse-docs.readthedocs.io/
 - [x] ./video_editing/edit/color-grading/adjustment.rst
 - [x] ./video_editing/edit/color-grading/index.rst
 - [x] ./video_editing/edit/color-grading/terminology/terminology.rst
-- [x] ./video_editing/edit/color-grading/modifiers.rst
+- [-] ./video_editing/edit/color-grading/modifiers.rst
 - [x] ./video_editing/edit/effects/index.rst
 - [x] ./video_editing/edit/effects/speed.rst
 - [x] ./video_editing/edit/effects/animation.rst
@@ -72,7 +72,7 @@ The HTML-version of these docs can be found at: https://vse-docs.readthedocs.io/
 - [x] ./video_editing/edit/effects/grease_pencil.rst
 - [x] ./video_editing/edit/effects/transition.rst
 - [x] ./video_editing/edit/sound/index.rst
-- [x] ./video_editing/edit/sound/audacity/audacity.rst
+- [-] ./video_editing/edit/sound/audacity/audacity.rst
 - [x] ./video_editing/edit/sound/measuring/volume.rst
 - [ ] ./extra-tools/python-useful-scripts.rst
 - [ ] ./extra-tools/index.rst
