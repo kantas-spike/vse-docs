@@ -20,10 +20,10 @@ Blender VSE 非公式文書 [#f1]_
 このBlenderによる動画編集の文書は、3つのセクションで構成されます。
 この文書は、公式のBlenderリファレンス文書よりも、よりワークフロー思考のアプローチでをで記載されています。 [#f2]_
 
-.. figure:: /images/vse_icon_sequencer.svg
+.. figure:: ./images/vse_icon_sequencer.svg
    :alt: Sequencer icon
    :align: left
-   :target: /video_sequencer/index.html
+   :target: ./video_sequencer/index.html
 
 **Video Sequence Editor**
 #########################
@@ -36,10 +36,10 @@ Blender VSE 非公式文書 [#f1]_
 その主要なコンポーネントとその働きについて説明します。
 
 
-.. figure:: /images/vse_icon_video-editing.svg
+.. figure:: ./images/vse_icon_video-editing.svg
    :alt: Sequencer icon
    :align: left
-   :target: /video_editing/index.html
+   :target: ./video_editing/index.html
 
 **Video Editing**
 #################
@@ -50,10 +50,10 @@ Blender VSE 非公式文書 [#f1]_
 これらのフェーズは、プリエディティング、エディティング、ポストエディティングと考えることができます。
 エディティングサブセクションは、もちろん、モンタージュ、エフェクト、カラーグレーディング、サウンド編集に関する情報が最も充実しています。
 
-.. figure:: /images/vse_icon_tools.svg
+.. figure:: ./images/vse_icon_tools.svg
    :alt: Extra tools icon
    :align: left
-   :target: /extra-tools/index.html
+   :target: ./extra-tools/index.html
 
 **Extra tools**
 ###############
