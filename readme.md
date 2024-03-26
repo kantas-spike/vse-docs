@@ -80,7 +80,7 @@ The HTML-version of these docs can be found at: https://vse-docs.readthedocs.io/
 - [x] ./extra-tools/ffmpeg.rst
 - [ ] ./extra-tools/annotating-screenshot.rst
 - [ ] ./extra-tools/test.rst
-- [ ] ./extra-tools/python-scripting-workspace.rst
+- [x] ./extra-tools/python-scripting-workspace.rst
 - [ ] ./xxx-old-texts/index.rst
 - [ ] ./xxx-old-texts/timecode.rst
 - [ ] ./xxx-old-texts/supporting-doc.rst
