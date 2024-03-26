@@ -8,6 +8,10 @@ The HTML-version of these docs can be found at: https://vse-docs.readthedocs.io/
 
 ## 翻訳
 
+日本語翻訳版
+
+- https://kantas-spike.github.io/vse-docs/
+
 ### TODO (74ファイル. xxx-old-textsは不要かも)
 
 - [x] ./index.rst
