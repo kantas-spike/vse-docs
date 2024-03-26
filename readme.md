@@ -76,7 +76,7 @@ The HTML-version of these docs can be found at: https://vse-docs.readthedocs.io/
 - [x] ./video_editing/edit/sound/measuring/volume.rst
 - [x] ./extra-tools/python-useful-scripts.rst
 - [x] ./extra-tools/index.rst
-- [ ] ./extra-tools/exiftool.rst
+- [x] ./extra-tools/exiftool.rst
 - [x] ./extra-tools/ffmpeg.rst
 - [ ] ./extra-tools/annotating-screenshot.rst
 - [ ] ./extra-tools/test.rst
