@@ -36,14 +36,14 @@ The HTML-version of these docs can be found at: https://vse-docs.readthedocs.io/
 - [x] ./video_editing/setup/directory-structure.rst
 - [x] ./video_editing/setup/creating-test-files.rst
 - [x] ./video_editing/setup/project-settings.rst
-- [ ] ./video_editing/render/index.rst
-- [ ] ./video_editing/render/codec/video/video.rst
-- [ ] ./video_editing/render/codec/codec.rst
-- [ ] ./video_editing/render/codec/audio/audio.rst
-- [ ] ./video_editing/render/postprocessing/ffmpeg/ffmpeg.rst
-- [ ] ./video_editing/render/postprocessing/compositor/compositor.rst
-- [ ] ./video_editing/render/postprocessing/postprocessing.rst
-- [ ] ./video_editing/render/postprocessing/subtitles/subtitles.rst
+- [x] ./video_editing/render/index.rst
+- [x] ./video_editing/render/codec/video/video.rst
+- [x] ./video_editing/render/codec/codec.rst
+- [x] ./video_editing/render/codec/audio/audio.rst
+- [x] ./video_editing/render/postprocessing/ffmpeg/ffmpeg.rst
+- [x] ./video_editing/render/postprocessing/compositor/compositor.rst
+- [x] ./video_editing/render/postprocessing/postprocessing.rst
+- [x] ./video_editing/render/postprocessing/subtitles/subtitles.rst
 - [x] ./video_editing/edit/index.rst
 - [x] ./video_editing/edit/montage/index.rst
 - [x] ./video_editing/edit/montage/striptypes/index.rst
