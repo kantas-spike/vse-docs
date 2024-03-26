@@ -226,7 +226,7 @@ Stereoscopyは、一対の 2 次元画像から 3 次元の奥行きの錯覚を
 Blender VSE での Stereoscopy ムービーの編集は、次の 2 段階のプロセスです。
 
  .. * Enable the Stereoscopy option under output Properties > Stereoscopy > Stereo 3D. This will also add a new panel in the Source properties.
- * Select the stereoscopic strip and enable the *Use Multi-View* option in the Source panel of the movie strip. This option is only available after you have completed step 1. Choose the appropriate Views Format. This depends on the format of the source file. If the image pair is saved as two individual files; select *Individual*. If the image pair is saved as one file, with both images side-by-side, select Stereo 3D and set the Stereo Mode to Side-by-Side.
+ .. * Select the stereoscopic strip and enable the *Use Multi-View* option in the Source panel of the movie strip. This option is only available after you have completed step 1. Choose the appropriate Views Format. This depends on the format of the source file. If the image pair is saved as two individual files; select *Individual*. If the image pair is saved as one file, with both images side-by-side, select Stereo 3D and set the Stereo Mode to Side-by-Side.
  * [Output]プロパティー > [Stereoscopy] > [Stereo 3D] で、 Stereoscopy オプションを有効にします。これにより、ストリップの [Source]プロパティに新しいパネルも追加されます。
  * Stereoscopyが有効になったストリップを選択し、ムービー ストリップの [Source] パネルで[Use Multi-View]オプションを有効にします。このオプションは、ステップ 1 を完了した後にのみ使用できます。適切なビュー形式を選択します。これはソース ファイルの形式によって異なります。画像ペアが 2 つの個別のファイルとして保存される場合。[Individual] を選択します。画像ペアが両方の画像を並べて 1 つのファイルとして保存する場合は、[Stereo 3D] を選択し、[Stereo Mode] を [Side-by-Side] に設定します。
 
