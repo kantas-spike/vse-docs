@@ -97,14 +97,22 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../video_sequencer/index.html">1. Video Sequence Editor</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">2. Video Editing</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">2.1. Setup</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">2.1. セットアップ</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="workspace.html">2.1.1. Workspace</a></li>
 <li class="toctree-l3"><a class="reference internal" href="preferences.html">2.1.2. User Preferences</a></li>
 <li class="toctree-l3"><a class="reference internal" href="add-ons.html">2.1.3. Add-ons</a></li>
 <li class="toctree-l3"><a class="reference internal" href="proxies.html">2.1.4. Proxies &amp; cache</a></li>
 <li class="toctree-l3"><a class="reference internal" href="directory-structure.html">2.1.5. Directory structure</a></li>
 <li class="toctree-l3"><a class="reference internal" href="project-settings.html">2.1.6. Project settings</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">2.1.7. テストファイルの作成</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">2.1.7. テストファイルの作成</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#ffmpeg">2.1.7.1. ffmpeg でテストビデオを生成する</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">2.1.7.2. FFMPEG を使用してタイムコード オーバーレイを生成する</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#blender-python">2.1.7.3. Blender Python を使用してタイムコード オーバーレイを生成する</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">2.1.7.4. プレースホルダー画像ジェネレーター</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#blender">2.1.7.5. Blender オープンムービー</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">2.1.7.6. 役立つウェブサイト</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../edit/index.html">2.2. プロジェクトを編集する</a></li>
@@ -162,7 +170,7 @@
         
           <li><a href="../index.html"><span class="section-number">2. </span>Video Editing</a> &raquo;</li>
         
-          <li><a href="index.html"><span class="section-number">2.1. </span>Setup</a> &raquo;</li>
+          <li><a href="index.html"><span class="section-number">2.1. </span>セットアップ</a> &raquo;</li>
         
       <li><span class="section-number">2.1.7. </span>テストファイルの作成</li>
     
@@ -185,10 +193,11 @@
             
   <div class="section" id="id1">
 <h1><span class="section-number">2.1.7. </span>テストファイルの作成<a class="headerlink" href="#id1" title="この見出しへのパーマリンク">¶</a></h1>
-<p>場合によっては、特定の解像度、期間、またはフレームレート、および特定のコンテンツを持つ、テストビデオまたはテスト画像が必要な時があります。</p>
+<p>場合によっては、特定の解像度、Duration、またはフレームレート、および特定のコンテンツを持つ、テストビデオまたはテスト画像が必要な時があります。</p>
 <p>例えば、グラデーション カラー、TV テスト画像、カウンターまたはタイムコードなど</p>
 <p>ここでは、テストビデオや画像を作成するための便利なコマンドとプログラムをいくつか紹介します。</p>
-<p><strong>A. ffmpeg でテストビデオを生成する</strong></p>
+<div class="section" id="ffmpeg">
+<h2><span class="section-number">2.1.7.1. </span>ffmpeg でテストビデオを生成する<a class="headerlink" href="#ffmpeg" title="この見出しへのパーマリンク">¶</a></h2>
 <p>FFMPEG は、ビデオ ファイルとオーディオ ファイルを処理 (デコード、エンコード、変換など) するためのコマンド ライン ツールです。
 これは、Blender を含む多くの商用および無料ソフトウェア製品で使用されています。
 ツールのコアは FFMPEG プログラムと、ビデオ &amp; オーディオ プレーヤー (FFPLAY) およびストリーム アナライザー (FFPROBE) です。</p>
@@ -207,7 +216,9 @@
 </pre></div>
 </div>
 <p>その他のコマンドとテスト形式については、 <a class="reference external" href="https://www.bogotobogo.com/FFMpeg/ffmpeg_video_test_patterns_src.php">bogotobogo</a> を参照してください。</p>
-<p><strong>B. FFMPEG を使用してタイムコード オーバーレイを生成する</strong></p>
+</div>
+<div class="section" id="id2">
+<h2><span class="section-number">2.1.7.2. </span>FFMPEG を使用してタイムコード オーバーレイを生成する<a class="headerlink" href="#id2" title="この見出しへのパーマリンク">¶</a></h2>
 <p>タイムコードが埋め込まれたビデオが必要になったことはありますか?</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ffplay</span> <span class="o">-</span><span class="n">i</span> <span class="n">test</span><span class="o">.</span><span class="n">mp4</span> <span class="o">-</span><span class="n">vf</span> <span class="s2">&quot;drawtext=text=&#39;timestamp: %{pts \: hms}&#39;: x=500: y=500: fontsize=32:fontcolor=yellow@0.9: box=1: boxcolor=black@0.6&quot;</span>
 </pre></div>
@@ -215,12 +226,14 @@
 <p>このコマンドは、ffmpeg ビデオ プレーヤー (ffplay) を呼び出します。入力ビデオは test.mp4 です。drawtext ビデオ フィルターを使用すると、タイムスタンプが入力ビデオにオーバーレイされます。時刻形式は pts パラメータで指定します。</p>
 <p><em>ffplay</em> コマンドを <em>ffmpeg</em> に置き換え、出力ファイルを追加して新しいビデオを作成します。</p>
 <p><span class="incremental">drawtext</span> フィルタと上記の ffmpeg コマンド のより広範な紹介は、 <a class="reference external" href="https://ottverse.com/ffmpeg-drawtext-filter-dynamic-overlays-timecode-scrolling-text-credits/">Krishna Rao</a> によって提供されています。</p>
-<p><strong>C. Blender Python を使用してタイムコード オーバーレイを生成する</strong></p>
+</div>
+<div class="section" id="blender-python">
+<h2><span class="section-number">2.1.7.3. </span>Blender Python を使用してタイムコード オーバーレイを生成する<a class="headerlink" href="#blender-python" title="この見出しへのパーマリンク">¶</a></h2>
 <p>上記の ffmpeg コマンドは機能しますが、柔軟性はあまりありません。
 次の <a class="reference external" href="https://gist.github.com/tin2tin/1eabb233bce24e78d2edf35cb5a435c8">Python script of Tin2Tin</a> を使用すると、Blender でタイムコード オーバーレイを非常に簡単に生成できます。</p>
-<div class="figure align-center" id="id3">
+<div class="figure align-center" id="id6">
 <img alt="Test file from Python scriptExample of a complex timeline" src="../../_images/vse_setup_project_test-files.png" />
-<p class="caption"><span class="caption-text">図2: Python スクリプトから生成されたテストファイル</span><a class="headerlink" href="#id3" title="この画像へのパーマリンク">¶</a></p>
+<p class="caption"><span class="caption-text">図2: Python スクリプトから生成されたテストファイル</span><a class="headerlink" href="#id6" title="この画像へのパーマリンク">¶</a></p>
 </div>
 <p>タイムコード オーバーレイを作成するには、次の手順に従います。</p>
 <ol class="arabic simple">
@@ -282,33 +295,40 @@
 <li><p>Video Sequence Editor (VSE) でこのクリップが必要な場合は、新しいシーンを作成します。新しいシーンに切り替えて、シーンストリップを追加します (<kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>+<kbd class="kbd docutils literal notranslate">A</kbd></kbd> &gt; Scene)。</p></li>
 </ol>
 <p>注意: このシーン ストリップは、VSE 内のどこにストリップを配置しても、常に時刻 0 から開始されます。これは、たとえば特定のストリップに関連するタイムコードを表示したい場合に便利です。</p>
-<p><strong>D. プレースホルダー画像ジェネレーター</strong></p>
-<p>画像プレースホルダーはダミー画像です。これらの画像へのリンクを提供したり、コンピュータ上でこれらの画像を自分で生成したりできる Web サイトがいくつかあります。もちろん、リンクの背後にあるオンライン画像をいつでも保存できます。</p>
-<p>たとえば、URL <a class="reference external" href="http://via.placeholder.com/640x360">http://via.placeholder.com/640x360</a> または <a class="reference external" href="https://placekitten.com/640/360">https://placekitten.com/640/360</a> <a class="footnote-reference brackets" href="#f1" id="id2">1</a> を使用すると、ブラウザーに 640x360 ピクセルのプレースホルダー画像が表示され、コンピューターに保存できます。</p>
-<div class="figure align-center" id="id4">
-<img alt="Test file from placeholder.com" src="http://via.placeholder.com/640x360" />
-<p class="caption"><span class="caption-text">図 3: via.placeholder.com からのテスト ファイル</span><a class="headerlink" href="#id4" title="この画像へのパーマリンク">¶</a></p>
 </div>
-<div class="figure align-center" id="id5">
+<div class="section" id="id3">
+<h2><span class="section-number">2.1.7.4. </span>プレースホルダー画像ジェネレーター<a class="headerlink" href="#id3" title="この見出しへのパーマリンク">¶</a></h2>
+<p>画像プレースホルダーはダミー画像です。これらの画像へのリンクを提供したり、コンピュータ上でこれらの画像を自分で生成したりできる Web サイトがいくつかあります。もちろん、リンクの背後にあるオンライン画像をいつでも保存できます。</p>
+<p>たとえば、URL <a class="reference external" href="http://via.placeholder.com/640x360">http://via.placeholder.com/640x360</a> または <a class="reference external" href="https://placekitten.com/640/360">https://placekitten.com/640/360</a> <a class="footnote-reference brackets" href="#f1" id="id4">1</a> を使用すると、ブラウザーに 640x360 ピクセルのプレースホルダー画像が表示され、コンピューターに保存できます。</p>
+<div class="figure align-center" id="id7">
+<img alt="Test file from placeholder.com" src="http://via.placeholder.com/640x360" />
+<p class="caption"><span class="caption-text">図 3: via.placeholder.com からのテスト ファイル</span><a class="headerlink" href="#id7" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<div class="figure align-center" id="id8">
 <img alt="Test file from placekitten.com" src="https://placekitten.com/640/360" />
-<p class="caption"><span class="caption-text">図 4: placekitten.com からのテスト ファイル</span><a class="headerlink" href="#id5" title="この画像へのパーマリンク">¶</a></p>
+<p class="caption"><span class="caption-text">図 4: placekitten.com からのテスト ファイル</span><a class="headerlink" href="#id8" title="この画像へのパーマリンク">¶</a></p>
 </div>
 <p>これらのプレースホルダー画像は主に、Web ページのモックアップを作成するために Web サイトのデザインで使用されます
 (テキスト用の Lorem Ipsum ジェネレーターとともに)。
 他の Web サイトやジェネレーターを見つけるには、Google で「画像プレースホルダー」を検索してください。</p>
-<p><strong>E. Blender Open-Movies</strong></p>
+</div>
+<div class="section" id="blender">
+<h2><span class="section-number">2.1.7.5. </span>Blender オープンムービー<a class="headerlink" href="#blender" title="この見出しへのパーマリンク">¶</a></h2>
 <p>Spring オープン ムービーの WebM 形式は、 <a class="reference external" href="https://commons.wikimedia.org/wiki/File:Spring_-_Blender_Open_Movie.webm">Wikimedia Commons</a> からダウンロードできます。</p>
-<p><strong>F. 役立つウェブサイト</strong></p>
+</div>
+<div class="section" id="id5">
+<h2><span class="section-number">2.1.7.6. </span>役立つウェブサイト<a class="headerlink" href="#id5" title="この見出しへのパーマリンク">¶</a></h2>
 <ol class="arabic simple">
 <li><p><a class="reference external" href="https://www.demolandia.net/">https://www.demolandia.net/</a>: Demolandia は本質的に、映画に関連する多種多様な画像、オーディオ、ビデオ ファイル (例: 4K) が見つかるオーディオビジュアル ライブラリです。</p></li>
 <li><p><a class="reference external" href="https://file-examples.com/">https://file-examples.com/</a>: この Web サイトは、開発者、デザイナー、テスター向けに設計されたサービスです。さまざまなカテゴリ: ビデオ、オーディオ、ドキュメント、画像など</p></li>
 </ol>
-<p class="rubric">脚注</p>
+<p class="rubric">訳注</p>
 <dl class="footnote brackets">
-<dt class="label" id="f1"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
-<dd><p>(訳注) placekitten.com は、翻訳時点(2024-03-22)でダウンしているようです。</p>
+<dt class="label" id="f1"><span class="brackets"><a class="fn-backref" href="#id4">1</a></span></dt>
+<dd><p>placekitten.com は、翻訳時点(2024-03-22)でダウンしているようです。</p>
 </dd>
 </dl>
+</div>
 </div>
 
 

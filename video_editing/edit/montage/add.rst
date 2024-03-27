@@ -305,7 +305,7 @@ Add
 .. The placement of these strips obey the same rules as with importing strips.
 これらのストリップの配置は、ストリップのインポートと同じルールに従います。
 
-.. rubric:: 脚注
+.. rubric:: 訳注
 
 .. [#f1] Blender4.0では、1つ目の方法では、素材を任意の位置にドラッグ&ドロップできます(snapも利用可能。3つ目の方法でも、任意の位置にドラッグ&ドロップできますが、snapは利用できず、1の方法と比較すると、どの位置に追加できるか判断が難しいです。
 .. [#f2] Blender4.0では、可能なようです。

@@ -30,10 +30,14 @@
     3. *Color, Text*: the input is created within the Sequence Editor
     4. *Adjustment Layer, Effect Strip, Transition, Fade*: the input source is another strip.
    ..
-   1. *Scene, Clip, Mask*: 入力ソースは別の Blender モジュールで作成されます
-   2. *Movie, Sound, Image/Sequence*: 入力ソースは外部ファイルです
-   3. *Color, Text*: 入力はシーケンス エディター内で作成されます。
-   4. *Adjustment Layer, Effect Strip, Transition, Fade*: 入力ソースは別のストリップです。
+   1. *Scene, Clip, Mask*:
+       入力ソースは別の Blender モジュールで作成されます
+   2. *Movie, Sound, Image/Sequence*:
+       入力ソースは外部ファイルです
+   3. *Color, Text*:
+       入力はシーケンス エディター内で作成されます。
+   4. *Adjustment Layer, Effect Strip, Transition, Fade*:
+       入力ソースは別のストリップです。
 
 
 ..
@@ -83,10 +87,13 @@
 ..
 
 各ストリップには複数のプロパティがあります。
+
 図 1 は、右側にムービー ストリップのプロパティを示しています。
 この Sidebar は、 :menuselection:`View --> Sidebar`  またはショートカットキー :kbd:`N` で表示できます。
-すべてのプロパティは、Compositing, Transform, Crop などのパネルにまとめられています。
+
+すべてのプロパティは、[Compositing], [Transform], [Crop] などのパネルにまとめられています。
 これらのパネルの操作については、 `Tabs & panels <https://docs.blender.org/manual/en/dev/interface/window_system/tabs_panels.html>`_ で説明されています。
+
 Sidebarの上部には、ストリップ タイプのアイコン、ストリップの名前、および [Mute] チェックボックスを備えた、常に表示されるヘッダーが含まれています。
 ここでストリップに名前を付けたり、名前を変更したりできます。[Mute]がチェックされている場合、ストリップは Sequencer に表示されたままになりますが、出力は生成されません。
 

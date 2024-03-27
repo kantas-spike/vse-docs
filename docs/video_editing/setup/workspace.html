@@ -48,7 +48,7 @@
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="検索" href="../../search.html" />
     <link rel="next" title="2.1.2. User Preferences" href="preferences.html" />
-    <link rel="prev" title="2.1. Setup" href="index.html" /> 
+    <link rel="prev" title="2.1. セットアップ" href="index.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -97,8 +97,11 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../video_sequencer/index.html">1. Video Sequence Editor</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">2. Video Editing</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">2.1. Setup</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">2.1.1. Workspace</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">2.1. セットアップ</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">2.1.1. Workspace</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id2">2.1.1.1. サードパーティ アドオンの代替ワークスペースの例</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="preferences.html">2.1.2. User Preferences</a></li>
 <li class="toctree-l3"><a class="reference internal" href="add-ons.html">2.1.3. Add-ons</a></li>
 <li class="toctree-l3"><a class="reference internal" href="proxies.html">2.1.4. Proxies &amp; cache</a></li>
@@ -162,7 +165,7 @@
         
           <li><a href="../index.html"><span class="section-number">2. </span>Video Editing</a> &raquo;</li>
         
-          <li><a href="index.html"><span class="section-number">2.1. </span>Setup</a> &raquo;</li>
+          <li><a href="index.html"><span class="section-number">2.1. </span>セットアップ</a> &raquo;</li>
         
       <li><span class="section-number">2.1.1. </span>Workspace</li>
     
@@ -185,28 +188,53 @@
             
   <div class="section" id="workspace">
 <h1><span class="section-number">2.1.1. </span>Workspace<a class="headerlink" href="#workspace" title="この見出しへのパーマリンク">¶</a></h1>
-<p>Blender を開くと、<a class="reference external" href="https://docs.blender.org/manual/en/dev/interface/window_system/splash.html">splash screen</a> でビデオ編集プロジェクトを作成できるようになります。このオプションを選択すると、すぐに Video Editing workspace に移動します。このワークスペースは、ファイル ブラウザ (左上)、Video Sequence Editor(VSE): Preview (中央上)、プロパティ (右上)、Video Sequence Editor(VSE): Sequencer (下あたり)、およびタイムライン (下) の 5 つのエディターをスマートに組み合わせたものです。これらを組み合わせると、ビデオの編集に必要なすべてのツールが提供されます。</p>
-<div class="figure align-default" id="id2">
+<p>Blender を開くと、<a class="reference external" href="https://docs.blender.org/manual/en/latest/interface/window_system/splash.html">splash screen</a>  <a class="footnote-reference brackets" href="#f2" id="id1">1</a> で [Video Editing] を選択すると、ビデオ編集プロジェクトを作成できるようになります。</p>
+<div class="figure align-center" id="id4">
+<a class="reference internal image-reference" href="../../_images/video_editing_setup_splash_screen.svg"><img alt="Splash Screen" height="288" src="../../_images/video_editing_setup_splash_screen.svg" width="304" /></a>
+<p class="caption"><span class="caption-text">図1: Splash Screen</span><a class="headerlink" href="#id4" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<p>また、<span class="incremental">splash screen</span> が表示されない場合は、[File]メニュー &gt; [New] &gt; [Video Editing] からもビデオ編集プロジェクトを作成できます。</p>
+<div class="figure align-center" id="id5">
+<a class="reference internal image-reference" href="../../_images/video_editing_setup_new_menu.svg"><img alt="File &gt; New" height="306" src="../../_images/video_editing_setup_new_menu.svg" width="370" /></a>
+<p class="caption"><span class="caption-text">図2: [File]メニュー &gt; [New] &gt; [Video Editing]</span><a class="headerlink" href="#id5" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<p><span class="incremental">Video Editing</span> を選択すると、すぐに Video Editing workspace に移動します。このワークスペースは、以下の5つのエディターをスマートに組み合わせたものです。これらを組み合わせると、ビデオの編集に必要なすべてのツールが提供されます。</p>
+<ul class="simple">
+<li><p>図3-(1) File Browser</p></li>
+<li><p>図3-(2) Video Sequence Editor: Preview</p></li>
+<li><p>図3-(3) Video Sequence Editor: Sequencer</p></li>
+<li><p>図3-(4) Properties</p></li>
+<li><p>図3-(5) Timeline</p></li>
+</ul>
+<div class="figure align-default" id="id6">
 <img alt="The Video Editing Workspace" src="../../_images/video_editing_setup_workspace.png" />
-<p class="caption"><span class="caption-text">図1: video editing workspace のスクリーンショット</span><a class="headerlink" href="#id2" title="この画像へのパーマリンク">¶</a></p>
+<p class="caption"><span class="caption-text">図3: video editing workspace のスクリーンショット</span><a class="headerlink" href="#id6" title="この画像へのパーマリンク">¶</a></p>
 </div>
 <p>このビデオ編集プロジェクトの準備の結果、すべてのアセット (クリップ、画像、サウンドなど) がプロジェクトに適したフォルダー構造で整理されます。
-たとえば、日次、トピックごと、キャラクターごとなどに整理されています。 ファイル ブラウザを使用すると、この構造を表示したり、ファイルをDrag and Dropすることでタイムラインにアセットを簡単に追加したりできます。複数のファイルを選択すると、タイムラインに順番に追加されます。ファイル ブラウザをカスタマイズ (並べ替え、フィルタリングなど) できるため、アセットの最適な概要が得られます。</p>
+たとえば、日次、トピックごと、キャラクターごとなどに整理されています (参照 <a class="reference internal" href="directory-structure.html"><span class="doc">Directory structure</span></a>)。</p>
+<p>File Browser を使用すると、この構造を表示したり、ファイルを ドラッグ&amp;ドロップ することで Sequencer のタイムラインにアセットを簡単に追加したりできます。複数のファイルを選択すると、タイムラインに順番に追加されます。File Browserをカスタマイズ (並べ替え、フィルタリングなど) できるため、アセットの最適な概要が得られます。</p>
 <p>Video Sequence Editor には、 <em>Sequencer</em> 、<em>Preview</em> 、および <em>Sequencer/Preview</em> の3つのビュー タイプがあります(詳細については、<a class="reference internal" href="../../video_sequencer/index.html"><span class="doc">Video Sequence Editor</span></a> を参照してください)。</p>
-<p>1つのワークスペースで任意のビュータイプの複数のインスタンスを作成できます。したがって、 Video Sequence Editor はワークスペース内の 2 つの Area を占有します。を使用すると、<kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">CtrL</kbd> <kbd class="kbd docutils literal notranslate">Tab</kbd></kbd> Sequencer と Preview を簡単に切り替えることができます。</p>
-<p>[Properties] パネルでは、多くのアクティブなデータを編集できます。これらはいくつかのカテゴリに分類されており、タブ (左側のアイコン列) から選択できます。すべてのカテゴリが Video Sequence Editor に関連するわけではありません。デフォルトでは、Active Tool, Render Properties, View Layer Properties, Scene Properties, World Properties, と Texture Properties のみが表示されます。ほとんどの場合、使用するのは Render Properties のみです。</p>
-<p>Blender標準の Video Editing Workspace は非常に便利で、簡単にカスタマイズできます。各エディタ領域は、サイズ変更、移動、置換、またはワークスペースからの削除が可能です。たとえば、アドオンが自動インストールされる代替ワークスペースは、<a class="reference external" href="https://github.com/tin2tin/Sequence_Editing">tin2tin's github</a> からダウンロードできます <a class="footnote-reference brackets" href="#f1" id="id1">1</a> 。スクリーンショットを以下に示します。</p>
-<div class="figure align-default" id="id3">
-<img alt="A customized Video Editing Workspace" src="https://raw.githubusercontent.com/tin2tin/Sequence_Editing/main/Sequence_Editing.png" />
-<p class="caption"><span class="caption-text">図2: Video Editing Workspaceのカスタマイズ</span><a class="headerlink" href="#id3" title="この画像へのパーマリンク">¶</a></p>
+<p>1つのワークスペースで任意のビュータイプの複数のインスタンスを作成できます。したがって、 Video Sequence Editor はワークスペース内の 2 つの 領域(Area) を占有します。 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">CtrL</kbd>-<kbd class="kbd docutils literal notranslate">Tab</kbd></kbd> を使用すると、 Sequencer と Preview を簡単に切り替えることができます。</p>
+<p>Properties Editor では、多くのアクティブなデータを編集できます。これらはいくつかのカテゴリに分類されており、タブ (左側のアイコン列) から選択できます。すべてのカテゴリが Video Sequence Editor に関連するわけではありません。デフォルトでは、Active Tool, Render Properties, Output Properties, View Layer Properties, Scene Properties, World Properties, Collection Properties と Texture Properties のみが表示されます。ほとんどの場合、使用するのは Render Properties のみです。</p>
+<div class="section" id="id2">
+<h2><span class="section-number">2.1.1.1. </span>サードパーティ アドオンの代替ワークスペースの例<a class="headerlink" href="#id2" title="この見出しへのパーマリンク">¶</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>(訳注) ここで紹介されているアドオン <a class="reference external" href="https://github.com/tin2tin/Sequence_Editing">tin2tin's github</a> は、4年前を最後にメンテナンスされていないようです。そのため、アドオンは利用はせずに、あくまで参考情報としてください。</p>
 </div>
-<p>Timeline Editor が削除され、再生コントロールがシーケンサーのヘッダーに配置されることに注意してください。いくつかのアドオン (例: Transform ツール) が、いくつかの新しいオペレーター (例: Remove Gap after …) とともに自動的にインストールされます。最後になりましたが、Properties Editor も削除され、プロジェクト設定はプレビュー サイドバーに配置され、N キーで簡単にオン/オフを切り替えることができます。</p>
-<p class="rubric">脚注</p>
+<p>Blender標準の Video Editing Workspace は非常に便利で、簡単にカスタマイズできます。各エディタ領域は、サイズ変更、移動、置換、またはワークスペースからの削除が可能です。たとえば、<a class="reference external" href="https://github.com/tin2tin/Sequence_Editing">tin2tin's github</a> からダウンロードできるアドオンにより自動インストールされる代替ワークスペースのスクリーンショットを以下に示します。</p>
+<div class="figure align-default" id="id7">
+<img alt="A customized Video Editing Workspace" src="https://raw.githubusercontent.com/tin2tin/Sequence_Editing/main/Sequence_Editing.png" />
+<p class="caption"><span class="caption-text">図4: Video Editing Workspaceのカスタマイズ</span><a class="headerlink" href="#id7" title="この画像へのパーマリンク">¶</a></p>
+</div>
+<p>Timeline Editor が削除され、再生コントロールがシーケンサーのヘッダーに配置されることに注意してください。いくつかのアドオン (例: Transform ツール) が、いくつかの新しいオペレーター (例: Remove Gap after …) とともに自動的にインストールされます。最後になりましたが、Properties Editor も削除され、プロジェクト設定は Preview の Sidebar に配置され、N キーで簡単にオン/オフを切り替えることができます。</p>
+<p class="rubric">訳注</p>
 <dl class="footnote brackets">
-<dt class="label" id="f1"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>紹介されているリポジトリ(tin2tin/Sequence_Editing)は、4年前を最後にメンテナンスされていないようです。そのため、利用しないほうが良さそうです。</p>
+<dt class="label" id="f2"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>スプラッシュスクリーンが表示されない場合は、[Edit]メニュー &gt; [Preferences] &gt; [interface] &gt; [Display] の [Splash Screen]チェックボックスを有効にすると表示できます。</p>
 </dd>
 </dl>
+</div>
 </div>
 
 
@@ -216,7 +244,7 @@
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
         <a href="preferences.html" class="btn btn-neutral float-right" title="2.1.2. User Preferences" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="index.html" class="btn btn-neutral float-left" title="2.1. Setup" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral float-left" title="2.1. セットアップ" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

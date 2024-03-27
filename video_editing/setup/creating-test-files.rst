@@ -5,7 +5,7 @@
 
 .. Sometimes you need a test video or test image with a specific resolution, duration or framerate and specific content, e.g. gradient color, TV test image, counter or time code. Here are some useful commands and programs to create test videos and images.
 
-場合によっては、特定の解像度、期間、またはフレームレート、および特定のコンテンツを持つ、テストビデオまたはテスト画像が必要な時があります。
+場合によっては、特定の解像度、Duration、またはフレームレート、および特定のコンテンツを持つ、テストビデオまたはテスト画像が必要な時があります。
 
 例えば、グラデーション カラー、TV テスト画像、カウンターまたはタイムコードなど
 
@@ -13,7 +13,8 @@
 
 
 .. **A. Generate test video with ffmpeg**
-**A. ffmpeg でテストビデオを生成する**
+ffmpeg でテストビデオを生成する
+^^^^
 
 ..
  FFMPEG is a command line tool for handling (decode, encode, convert, ...) video and audio files.
@@ -82,7 +83,8 @@ FFMPEG は、ビデオ ファイルとオーディオ ファイルを処理 (デ
 その他のコマンドとテスト形式については、 `bogotobogo <https://www.bogotobogo.com/FFMpeg/ffmpeg_video_test_patterns_src.php>`_ を参照してください。
 
 .. **B. Generate a timecode overlay with FFMPEG**
-**B. FFMPEG を使用してタイムコード オーバーレイを生成する**
+FFMPEG を使用してタイムコード オーバーレイを生成する
+^^^^^^^^
 
 .. Did you ever needed a video with the timecode embedded?
 
@@ -112,7 +114,8 @@ FFMPEG は、ビデオ ファイルとオーディオ ファイルを処理 (デ
 `drawtext` フィルタと上記の ffmpeg コマンド のより広範な紹介は、 `Krishna Rao <https://ottverse.com/ffmpeg-drawtext-filter-dynamic-overlays-timecode-scrolling-text-credits/>`_ によって提供されています。
 
 .. **C. Generate a timecode overlay with Blender Python**
-**C. Blender Python を使用してタイムコード オーバーレイを生成する**
+Blender Python を使用してタイムコード オーバーレイを生成する
+^^^^
 
 ..
   The ffmpeg command above does the job but is not very flexible.
@@ -256,7 +259,8 @@ FFMPEG は、ビデオ ファイルとオーディオ ファイルを処理 (デ
 注意: このシーン ストリップは、VSE 内のどこにストリップを配置しても、常に時刻 0 から開始されます。これは、たとえば特定のストリップに関連するタイムコードを表示したい場合に便利です。
 
 .. **D. Placeholder image generators**
-**D. プレースホルダー画像ジェネレーター**
+プレースホルダー画像ジェネレーター
+^^^^
 
 ..
   An image placeholder is a dummy image.
@@ -296,7 +300,9 @@ FFMPEG は、ビデオ ファイルとオーディオ ファイルを処理 (デ
 (テキスト用の Lorem Ipsum ジェネレーターとともに)。
 他の Web サイトやジェネレーターを見つけるには、Google で「画像プレースホルダー」を検索してください。
 
-**E. Blender Open-Movies**
+.. **E. Blender Open-Movies**
+Blender オープンムービー
+^^^^
 
 ..
   The WebM-format of the Spring open-movie can be downloaded from
@@ -306,7 +312,8 @@ Spring オープン ムービーの WebM 形式は、 `Wikimedia Commons <https:
 
 
 .. **F. Useful websites**
-**F. 役立つウェブサイト**
+役立つウェブサイト
+^^^^
 
 .. 1. https://www.demolandia.net/: Demolandia is, essentially, an audiovisual library where you will find a great diversity of images,
    audio and video files (e.g. 4K) related to the cinema.
@@ -316,6 +323,6 @@ Spring オープン ムービーの WebM 形式は、 `Wikimedia Commons <https:
 1. https://www.demolandia.net/: Demolandia は本質的に、映画に関連する多種多様な画像、オーディオ、ビデオ ファイル (例: 4K) が見つかるオーディオビジュアル ライブラリです。
 2. https://file-examples.com/: この Web サイトは、開発者、デザイナー、テスター向けに設計されたサービスです。さまざまなカテゴリ: ビデオ、オーディオ、ドキュメント、画像など
 
-.. rubric:: 脚注
+.. rubric:: 訳注
 
-.. [#f1] (訳注) placekitten.com は、翻訳時点(2024-03-22)でダウンしているようです。
+.. [#f1] placekitten.com は、翻訳時点(2024-03-22)でダウンしているようです。

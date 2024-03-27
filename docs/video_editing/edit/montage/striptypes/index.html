@@ -97,7 +97,7 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../../../video_sequencer/index.html">1. Video Sequence Editor</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">2. Video Editing</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../../../setup/index.html">2.1. Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../setup/index.html">2.1. セットアップ</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../../index.html">2.2. プロジェクトを編集する</a><ul class="current">
 <li class="toctree-l3 current"><a class="reference internal" href="../index.html">2.2.1. Montage</a><ul class="current">
 <li class="toctree-l4 current"><a class="current reference internal" href="#">2.2.1.1. ストリップの種類</a><ul>
@@ -213,10 +213,26 @@
 <p>ストリップのタイプは 4 つのグループに分類されます。</p>
 <blockquote>
 <div><ol class="arabic simple">
-<li><p><em>Scene, Clip, Mask</em>: 入力ソースは別の Blender モジュールで作成されます</p></li>
-<li><p><em>Movie, Sound, Image/Sequence</em>: 入力ソースは外部ファイルです</p></li>
-<li><p><em>Color, Text</em>: 入力はシーケンス エディター内で作成されます。</p></li>
-<li><p><em>Adjustment Layer, Effect Strip, Transition, Fade</em>: 入力ソースは別のストリップです。</p></li>
+<li><dl class="simple">
+<dt><em>Scene, Clip, Mask</em>:</dt><dd><p>入力ソースは別の Blender モジュールで作成されます</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><em>Movie, Sound, Image/Sequence</em>:</dt><dd><p>入力ソースは外部ファイルです</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><em>Color, Text</em>:</dt><dd><p>入力はシーケンス エディター内で作成されます。</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><em>Adjustment Layer, Effect Strip, Transition, Fade</em>:</dt><dd><p>入力ソースは別のストリップです。</p>
+</dd>
+</dl>
+</li>
 </ol>
 </div></blockquote>
 <p>各ストリップ タイプは独自に色分けされています。
@@ -236,12 +252,12 @@
 <span class="target" id="default-color"></span><p>これらの色はユーザー設定で定義されており、メニューの <span class="menuselection">Edit ‣ Preferences ‣ Themes ‣ Video Sequencer</span> で変更できます。</p>
 <p>4番目のグループ のストリップ タイプは、図 1 には示されていないため、別のセクションで説明します。
 これらは、上記の基本的なストリップが 1 つ以上存在することを前提としています。</p>
-<p>各ストリップには複数のプロパティがあります。
-図 1 は、右側にムービー ストリップのプロパティを示しています。
-この Sidebar は、 <span class="menuselection">View ‣ Sidebar</span>  またはショートカットキー <kbd class="kbd docutils literal notranslate">N</kbd> で表示できます。
-すべてのプロパティは、Compositing, Transform, Crop などのパネルにまとめられています。
-これらのパネルの操作については、 <a class="reference external" href="https://docs.blender.org/manual/en/dev/interface/window_system/tabs_panels.html">Tabs &amp; panels</a> で説明されています。
-Sidebarの上部には、ストリップ タイプのアイコン、ストリップの名前、および [Mute] チェックボックスを備えた、常に表示されるヘッダーが含まれています。
+<p>各ストリップには複数のプロパティがあります。</p>
+<p>図 1 は、右側にムービー ストリップのプロパティを示しています。
+この Sidebar は、 <span class="menuselection">View ‣ Sidebar</span>  またはショートカットキー <kbd class="kbd docutils literal notranslate">N</kbd> で表示できます。</p>
+<p>すべてのプロパティは、[Compositing], [Transform], [Crop] などのパネルにまとめられています。
+これらのパネルの操作については、 <a class="reference external" href="https://docs.blender.org/manual/en/dev/interface/window_system/tabs_panels.html">Tabs &amp; panels</a> で説明されています。</p>
+<p>Sidebarの上部には、ストリップ タイプのアイコン、ストリップの名前、および [Mute] チェックボックスを備えた、常に表示されるヘッダーが含まれています。
 ここでストリップに名前を付けたり、名前を変更したりできます。[Mute]がチェックされている場合、ストリップは Sequencer に表示されたままになりますが、出力は生成されません。</p>
 <div class="toctree-wrapper compound">
 </div>

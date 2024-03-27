@@ -315,6 +315,6 @@ Edit a Meta strip :kbd:`Tab`
 
 
 
-.. rubric:: 脚注
+.. rubric:: 訳注
 
 .. [#f1] Blender4.0では、 [Still Offset Start/End]フィールドは廃止されています。代わりに[Strip Offset Start/End]フィールドに負の値を設定します。

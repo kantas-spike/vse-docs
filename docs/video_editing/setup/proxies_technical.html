@@ -97,7 +97,7 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../video_sequencer/index.html">1. Video Sequence Editor</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">2. Video Editing</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">2.1. Setup</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">2.1. セットアップ</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="workspace.html">2.1.1. Workspace</a></li>
 <li class="toctree-l3"><a class="reference internal" href="preferences.html">2.1.2. User Preferences</a></li>
 <li class="toctree-l3"><a class="reference internal" href="add-ons.html">2.1.3. Add-ons</a></li>
@@ -169,7 +169,7 @@
         
           <li><a href="../index.html"><span class="section-number">2. </span>Video Editing</a> &raquo;</li>
         
-          <li><a href="index.html"><span class="section-number">2.1. </span>Setup</a> &raquo;</li>
+          <li><a href="index.html"><span class="section-number">2.1. </span>セットアップ</a> &raquo;</li>
         
           <li><a href="proxies.html"><span class="section-number">2.1.4. </span>Proxies &amp; cache</a> &raquo;</li>
         
@@ -196,26 +196,42 @@
 <h1><span class="section-number">2.1.4.2.1. </span>Proxies technical<a class="headerlink" href="#proxies-technical" title="この見出しへのパーマリンク">¶</a></h1>
 <p>ビデオのファイルサイズは非常に大きくなることがあります。 4K ファイル (3840 x 2160) を例に挙げます。 1 つの非圧縮フレームには、3840 x 2160 x 24 ビット (R、G、B の各色に 8 ビット)、または 24 883 200 バイト、約 21 MB が必要です。</p>
 <p>以下は、最初の 10 フレームを選択し、画像タイプを出力する FFProbe コードです。</p>
-<p>ffprobe -v error -hide_banner -of default=noprint_wrappers=0 -print_format flat  -select_streams v:0 -show_entries frame=pict_type -read_intervals &quot;%+#10&quot; dolby-4k.mkv</p>
-<p>1920 x 1080 = 2 073 600 x 24 bits = 49 766 400 bits / 8 = 6.220 800 / 0 048 576 = 5.932 MB</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ ffprobe -v error -hide_banner -of <span class="nv">default</span><span class="o">=</span><span class="nv">noprint_wrappers</span><span class="o">=</span><span class="m">0</span> -print_format flat  -select_streams v:0 -show_entries <span class="nv">frame</span><span class="o">=</span>pict_type -read_intervals <span class="s2">&quot;%+#10&quot;</span> dolby-4k.mkv
+
+<span class="m">1920</span> x <span class="nv">1080</span> <span class="o">=</span> <span class="m">2</span> <span class="m">073</span> <span class="m">600</span> x <span class="m">24</span> <span class="nv">bits</span> <span class="o">=</span> <span class="m">49</span> <span class="m">766</span> <span class="m">400</span> bits / <span class="nv">8</span> <span class="o">=</span> <span class="m">6</span>.220 <span class="m">800</span> / <span class="m">0</span> <span class="m">048</span> <span class="nv">576</span> <span class="o">=</span> <span class="m">5</span>.932 MB
+</pre></div>
+</div>
 <p>Blender VSE の簡単なProxy Addon (より引用 <a class="reference external" href="https://blender.community/c/rightclickselect/0Nfbbc/">https://blender.community/c/rightclickselect/0Nfbbc/</a>)</p>
-<p>Ffmpeg Command:</p>
-<p>プロキシの構築には次のコマンドを使用します。</p>
-<p>ffmpeg -i input.mp4 -vf scale=640:-2 -vcodec libx264 -g 1 -bf 0 -vb 0 -crf 20 -preset veryfast -acodec aac -ab 128k out.avi</p>
-<blockquote>
-<div><p>Fixed ratio of 640:-2 (&quot;-:2&quot; is needed for x264 to use the scale filter which needs to be divisible by 2) Details: <a class="reference external" href="https://ffmpeg.org/ffmpeg-filters.html#scale">https://ffmpeg.org/ffmpeg-filters.html#scale</a>
-これにより、アスペクト比を維持したまま固定幅 640 の AVI コンテナ内に h264 のイントラフレームが作成されます。
+<dl>
+<dt>Ffmpeg Command:</dt><dd><p>プロキシの構築には次のコマンドを使用します。</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>ffmpeg -i input.mp4 -vf <span class="nv">scale</span><span class="o">=</span><span class="m">640</span>:-2 -vcodec libx264 -g <span class="m">1</span> -bf <span class="m">0</span> -vb <span class="m">0</span> -crf <span class="m">20</span> -preset veryfast -acodec aac -ab 128k out.avi
+</pre></div>
+</div>
+<p>これにより、アスペクト比を維持したまま固定幅 640 の AVI コンテナ内に h264 のイントラフレームが作成されます。
 640:-2 の固定比率 (x264 でスケール フィルターを使用するには、2 で割り切れる必要がある「-:2」が必要です)</p>
 <p>詳細: <a class="reference external" href="https://ffmpeg.org/ffmpeg-filters.html#scale">https://ffmpeg.org/ffmpeg-filters.html#scale</a></p>
-</div></blockquote>
+</dd>
+</dl>
 <p>アスペクト比を維持しながら固定幅 640 を使用する理由は次のとおりです。</p>
 <blockquote>
-<div><p>それは簡単です。単純なプロキシ操作では、可変サイズを選択する必要はありません。</p>
-<p>HD や 4k などの混合メディアを同じ品質で併用できます。</p>
-<p>インターフェイスは幅 640 にぴったりフィットします。</p>
-<p>業界は 4K および 4K+ に向かっています。たとえば、25% プロキシでは 960x540 という巨大なファイル サイズが作成されます。</p>
-<p>可変のスケーリングは、エンコード速度とフレーム ブレンディングにも影響します。</p>
-<p>代わりに、画質とファイルサイズを考慮して CRF を使用しています。</p>
+<div><ul class="simple">
+<li><p>それは簡単です。単純なプロキシ操作では、可変サイズを選択する必要はありません。</p></li>
+</ul>
+<ul class="simple">
+<li><p>HD や 4k などの混合メディアを同じ品質で併用できます。</p></li>
+</ul>
+<ul class="simple">
+<li><p>インターフェイスは幅 640 にぴったりフィットします。</p></li>
+</ul>
+<ul class="simple">
+<li><p>業界は 4K および 4K+ に向かっています。たとえば、25% プロキシでは 960x540 という巨大なファイル サイズが作成されます。</p></li>
+</ul>
+<ul class="simple">
+<li><p>可変のスケーリングは、エンコード速度とフレーム ブレンディングにも影響します。</p></li>
+</ul>
+<ul class="simple">
+<li><p>代わりに、画質とファイルサイズを考慮して CRF を使用しています。</p></li>
+</ul>
 </div></blockquote>
 </div>
 

@@ -3,7 +3,7 @@ User Preferences
 
 .. In the User Preferences editor you can set the default look-and-feel of blender. All Blender defaults are described in detail in the `editor section <https://docs.blender.org/manual/en/dev/editors/preferences/introduction.html>`_. The editor is accessible with the menu Edit > Preferences.
 
-User Preferences editor では、Blender のデフォルトのルック&フィールを設定できます。すべての Blender のデフォルトについては、`editor section <https://docs.blender.org/manual/en/dev/editors/preferences/introduction.html>`_ で詳しく説明されています。エディターには、[Edit]メニュー > [Preferences] からアクセスできます。
+User Preferences editor では、Blender のデフォルトのルック&フィールを設定できます。すべての Blender のデフォルトについては、`editor section <https://docs.blender.org/manual/en/latest/editors/preferences/introduction.html>`_ で詳しく説明されています。このエディターには、[Edit]メニュー > [Preferences] からアクセスできます。
 
 .. We have listed all settings that apply to the Video Sequence Editor or could be useful in the video editing task in table 1. If appropriate, we added a link to some additional info in the VSE docs.
 
