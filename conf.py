@@ -102,3 +102,4 @@ html_theme_options = {
 }
 
 html_baseurl = "https://kantas-spike.github.io/vse-docs/"
+source_encoding = "utf-8"
