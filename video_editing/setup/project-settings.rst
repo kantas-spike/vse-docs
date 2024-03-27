@@ -238,7 +238,7 @@ Time Stretching
 
 .. Stereoscopy is a technique to create the illusion of three-dimensional depth from a pair of two-dimensional images. These images resemble the way our left and right eye would perceive the real image. In Blender, it is very easy to create stereoscopic images or movies; just enable the option in Output Properties > Stereoscopy > Stereo 3D. For more information; see `Stereoscopy <https://docs.blender.org/manual/en/dev/render/output/properties/stereoscopy/index.html>`_ in the Blender manual.
 
-Stereoscopyは、一対の 2 次元画像から 3 次元の奥行きの錯覚を作り出す技術です。これらの画像は、私たちの左目と右目が実際の画像を認識する方法に似ています。 Blender では、立体的な画像やムービーを非常に簡単に作成できます。 [Output]プロパティー > [Stereoscopy] > [Stereo 3D] でオプションを有効にするだけです。詳細については; Blender マニュアルの `Stereoscopy <https://docs.blender.org/manual/en/dev/render/output/properties/stereoscopy/index.html>`_ を参照してください。
+Stereoscopyは、一対の 2 次元画像から 3 次元の奥行きの錯覚を作り出す技術です。これらの画像は、私たちの左目と右目が実際の画像を認識する方法に似ています。 Blender では、立体的な画像やムービーを非常に簡単に作成できます。 [Output]プロパティー > [Stereoscopy] > [Stereo 3D] でオプションを有効にするだけです。詳細については; Blender マニュアルの `Stereoscopy <https://docs.blender.org/manual/en/latest/render/output/properties/stereoscopy/index.html>`_ を参照してください。
 
 .. Editing a stereoscopic movie in the Blender VSE is a two-step process:
 Blender VSE での Stereoscopy ムービーの編集は、次の 2 段階のプロセスです。
@@ -318,7 +318,7 @@ File Format
 
    選択された画像形式に応じて、いくつかのフィールドが Sidebar に追加されます。
 
-   考えられるすべての画像およびムービー形式については、すべての `Video & Audio Formats <https://docs.blender.org/manual/en/dev/files/media/video_formats.html>`_ と `graphics <https://docs.blender.org/manual/en/dev/files/media/image_formats.html>`_ 形式の概要とともに、ドキュメントの `Output セクション <https://docs.blender.org/manual/en/dev/render/output/properties/output.html>`_ で詳しく説明されています(リストについては図10を参照)。
+   考えられるすべての画像およびムービー形式については、すべての `Video & Audio Formats <https://docs.blender.org/manual/en/latest/files/media/video_formats.html>`_ と `graphics <https://docs.blender.org/manual/en/latest/files/media/image_formats.html>`_ 形式の概要とともに、ドキュメントの `Output セクション <https://docs.blender.org/manual/en/latest/render/output/properties/output.html>`_ で詳しく説明されています(リストについては図10を参照)。
 
    .. Warning::
       .. It's important to keep in mind that Blender is foremost a 3D and 2D modeling and animation program. Artwork is mostly created and rendered from within the 3D View or Grease Pencil workspace. As an artist, you have full control on resolution, composition, speed, color, .... As a video editor, however, you usually work with existing material from camera output; where many parameters are already fixed. The Output settings therefore are for a great deal dictated by the imported footage.

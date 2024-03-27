@@ -164,6 +164,6 @@ Image Editor は静的マスクに適しています。図 4 では、 Video Edi
 
 素晴らしいトランジションや VFX エフェクトを作成するには、Blender Frenzy による優れた `tutorial series <https://www.youtube.com/playlist?list=PLH3QvbpQe8WTbRFlKKWBwgJuTsZf58tXz>`_ に従うことができます 。
 
-.. rubric:: 脚注
+.. rubric:: 訳注
 
 .. [#f1] 図9の内容と説明が違うように思います。

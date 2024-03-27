@@ -829,7 +829,7 @@ Custom Properties
 
 カスタム プロパティは、独自のメタデータをストリップに保存する方法です。たとえば、これを使用して、ストリップの著作権情報や、さらなる後処理のための指示を保存できます。詳細については、 `data-blocks section <https://docs.blender.org/manual/en/dev/files/data_blocks.html#files-data-blocks-custom-properties>`_ を参照してください。
 
-.. rubric:: 脚注
+.. rubric:: 訳注
 
 .. [#f1] Blender4.0 では 利用できるChannelの範囲は1〜128です。
 .. [#f2] Blender3.2で *frame_still_start* と *frame_still_end* は削除されたようです。 (https://developer.blender.org/docs/release_notes/3.2/python_api/#breaking-changes)

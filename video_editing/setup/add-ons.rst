@@ -5,7 +5,7 @@ Add-ons
 
 .. Add-ons are installed and managed through the Edit > Preferences menu. In figure 1, we have searched for add-ons in the Sequencer category. There is only one add-on pre-installed: the Power Sequencer add-on.  `More details <https://docs.blender.org/manual/en/dev/editors/preferences/addons.html>`_ about this Preferences panel can be found in the manual.
 
-アドオンは、[Edit]メニュー > [Preferences] からインストールおよび管理します。図1 では、Sequencer カテゴリでアドオンを検索しました。プリインストールされているアドオンは Power Sequencer アドオン 1 つだけです。 詳細については、`User Preferences <https://docs.blender.org/manual/en/dev/editors/preferences/addons.html>`_ を参照してください。
+アドオンは、[Edit]メニュー > [Preferences] からインストールおよび管理します。図1 では、Sequencer カテゴリでアドオンを検索しました。プリインストールされているアドオンは Power Sequencer アドオン 1 つだけです。 詳細については、`User Preferences <https://docs.blender.org/manual/en/latest/editors/preferences/addons.html>`_ を参照してください。
 
 .. figure:: /images/vse_setup_environment_add-ons-panel.svg
    :alt: Add-ons panel in Preferences
@@ -30,7 +30,7 @@ Add-ons
 
 .. The installation is different depending on the format of the add-on (zip-file or Python file). The best way to choose is by understanding how an add-on is written. A `very good introduction <https://docs.blender.org/manual/en/dev/advanced/scripting/addon_tutorial.html>`_ can be found a the Blender manual.
 
-インストールは、アドオンの形式 (zip ファイルまたは Python ファイル) によって異なります。選択する最良の方法は、アドオンがどのように記述されているかを理解することです。`very good introduction <https://docs.blender.org/manual/en/dev/advanced/scripting/addon_tutorial.html>`_ は、 Blenderマニュアルにあります。
+インストールは、アドオンの形式 (zip ファイルまたは Python ファイル) によって異なります。選択する最良の方法は、アドオンがどのように記述されているかを理解することです。`very good introduction <https://docs.blender.org/manual/en/latest/advanced/scripting/addon_tutorial.html>`_ は、 Blenderマニュアルにあります。
 
 .. Tin2Tin has compiled a webpage on Blenderartists.org with more than `100 links <https://blenderartists.org/t/video-sequence-editor-news-add-ons/1188770>`_ to add-ons. They fit into categories such as toolboxes, (multi-threaded) export and import, effects, strip editing, generate, audio, scene strips, markers, organization, Multicam, user interface, shortcut keys, and templates.
 

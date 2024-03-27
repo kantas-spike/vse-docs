@@ -3,7 +3,7 @@ Workspace
 
 .. Upon opening Blender, the `splash screen <https://docs.blender.org/manual/en/dev/interface/window_system/splash.html>`_ gives you the possibility to create a Video Editing project. Choosing this option takes you immediately into the Video Editing workspace. This workspace is a smart combination of five editors: File Browser (top left), Video Sequencer: Preview (top middle), Properties (top right), Video Sequencer: Sequencer (near bottom) and Timeline (bottom). Together they provide you with all the necessary tools to edit your videos.
 
-Blender を開くと、`splash screen <https://docs.blender.org/manual/en/dev/interface/window_system/splash.html>`_  [#f2]_ で [Video Editing] を選択すると、ビデオ編集プロジェクトを作成できるようになります。
+Blender を開くと、`splash screen <https://docs.blender.org/manual/en/latest/interface/window_system/splash.html>`_  [#f2]_ で [Video Editing] を選択すると、ビデオ編集プロジェクトを作成できるようになります。
 
 .. figure:: /images/video_editing_setup_splash_screen.svg
    :alt: Splash Screen
