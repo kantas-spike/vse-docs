@@ -97,7 +97,7 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../video_sequencer/index.html">1. Video Sequence Editor</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">2. Video Editing</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">2.1. Setup</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">2.1. セットアップ</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="workspace.html">2.1.1. Workspace</a></li>
 <li class="toctree-l3"><a class="reference internal" href="preferences.html">2.1.2. User Preferences</a></li>
 <li class="toctree-l3"><a class="reference internal" href="add-ons.html">2.1.3. Add-ons</a></li>
@@ -169,7 +169,7 @@
         
           <li><a href="../index.html"><span class="section-number">2. </span>Video Editing</a> &raquo;</li>
         
-          <li><a href="index.html"><span class="section-number">2.1. </span>Setup</a> &raquo;</li>
+          <li><a href="index.html"><span class="section-number">2.1. </span>セットアップ</a> &raquo;</li>
         
       <li><span class="section-number">2.1.4. </span>Proxies &amp; cache</li>
     
@@ -225,11 +225,11 @@
 <p>現時点では、プロキシはムービー ストリップに対してのみ生成でき、イメージ シーケンスに対しては生成できません。一般に、プロキシはビデオ ファイルにのみ使用され、オーディオには使用されません。</p>
 </div>
 <ol class="arabic" start="2">
-<li><p>プロキシ レンダー サイズはデフォルトで 100% に設定されています。これは、「プレビュー」ウィンドウの「表示設定」(図 1-b を参照) で変更できます。 100% を選択すると、プレビュー ウィンドウの解像度がストリップ解像度の 100% に設定され、元のビデオ クリップ (例: testfile_4K_10s_30fps.mp4) がプロキシ (例: proxy_100.avi) に置き換えられます。後で別のプロキシ レンダー サイズを選択した場合。たとえば 25% の場合、補助プロキシ (proxy_25.avi) が作成され、2 つのプロキシ ファイル (図 1-f を参照) が存在し、そのうちの 2 番目 (25%) がプレビューに使用されます。</p>
-<p>プロキシ レンダー サイズには、表示なし、シーン サイズ、25%、50%、75%、100% の 6 つがあります。これらのビュー設定は、プレビュー ウィンドウの解像度を設定することを目的としていることに注意してください。たとえば、ストリップの解像度が 1080p (1920 x 1080) の場合、プロキシ レンダー サイズを 25% に設定すると、プレビュー ウィンドウの解像度は 480 x 270 になります。この低解像度ウィンドウにストリップを表示すると、レンダリングを少し高速化します。 [No display] を設定すると、解像度がゼロに設定されます (= 表示なし!)。シーン サイズ設定は、プロジェクトと同じに解像度に設定されます (図 1-h を参照)。これはストリップの解像度とは異なる場合があります。</p>
+<li><p>[Proxy Render Size] はデフォルトで 100% に設定されています。これは、Preview ウィンドウ &gt; Sidebar &gt; [View]タブ の [View Settings] (図 1-b を参照) で変更できます。 100% を選択すると、Preview ウィンドウの解像度がストリップ解像度の 100% に設定され、元のビデオ クリップ (例: testfile_4K_10s_30fps.mp4) がプロキシ (例: proxy_100.avi) に置き換えられます。後で別のプロキシ レンダー サイズを選択した場合。たとえば 25% の場合、補助プロキシ (proxy_25.avi) が作成され、2 つのプロキシ ファイル (図 1-f を参照) が存在し、そのうちの 2 番目 (25%) がプレビューに使用されます。</p>
+<p>[Proxy Render Size] には、表示なし、シーン サイズ、25%、50%、75%、100% の 6 つがあります。これらのビュー設定は、Preview ウィンドウの解像度を設定することを目的としていることに注意してください。たとえば、ストリップの解像度が 1080p (1920 x 1080) の場合、プロキシ レンダー サイズを 25% に設定すると、Preview ウィンドウの解像度は 480 x 270 になります。この低解像度ウィンドウにストリップを表示すると、レンダリングを少し高速化します。 [No display] を設定すると、解像度がゼロに設定されます (= 表示なし!)。シーン サイズ設定は、プロジェクトと同じに解像度に設定されます (図 1-h を参照)。これはストリップの解像度とは異なる場合があります。</p>
 <div class="admonition note">
 <p class="admonition-title">注釈</p>
-<p>次の例で、プロキシ レンダー サイズの効果を簡単に確認できます。新しいビデオ編集プロジェクトを作成します。プロジェクトの解像度はおそらく 1080p (1920 x 1080) です。サイズ 30 のテキスト ストリップを追加します。ズームを [View] &gt; [Fractional Zoom 1:1] に設定します。プロキシ レンダリング サイズを変更し、画質の低下を確認します。</p>
+<p>次の例で、[Proxy Render Size] の効果を簡単に確認できます。新しいビデオ編集プロジェクトを作成します。プロジェクトの解像度はおそらく 1080p (1920 x 1080) です。サイズ 30 のテキスト ストリップを追加します。ズームを [View] &gt; [Fractional Zoom 1:1] に設定します。プロキシ レンダリング サイズを変更し、画質の低下を確認します。</p>
 </div>
 <div class="figure align-default" id="id9">
 <img alt="Example of proxy Render Sizes" src="../../_images/vse_setup_environment_proxies-render-size.svg" /><p class="caption"><span class="caption-text">図2: プロキシ レンダー サイズ 100%、50%、25% の品質への影響</span><a class="headerlink" href="#id9" title="この画像へのパーマリンク">¶</a></p>
@@ -253,7 +253,7 @@
 <p>プロキシの内部動作のより良い説明。外部の Web サイト/チュートリアルへのリンクはありますか?</p>
 </div>
 <ol class="arabic" start="4">
-<li><p>上記の設定は、サイドバーのプロキシ設定パネルを使用して個々のストリップに対して微調整できます。パネルを表示するには、シーケンサーでストリップを選択して N を押すか、メニューの [View] &gt; [Sidebar] を選択します。</p>
+<li><p>上記の設定は、 Sidebar &gt; Proxy タブ &gt; [Proxy Settings]パネルを使用して個々のストリップに対して微調整できます。パネルを表示するには、シーケンサーでストリップを選択して N を押すか、メニューの [View] &gt; [Sidebar] を選択します。</p>
 <ol class="upperalpha simple">
 <li><p>プロキシをストリップごとに生成するか、プロジェクト全体に生成するかを決定する必要があります。 [Per Strip] を選択すると、選択したストリップの場所にプロキシ フォルダー (BL_proxy) が作成されます。このディレクトリの場所と名前は、下のパネルで [Custom Proxy Directory] チェックボックスを使用して上書きできます。または、プロジェクトを選択することもできます。プロキシ フォルダー BL_proxy が、以下のフィールドのディレクトリに作成されます。この設定は自動セットアップにも影響します。選択したディレクトリは、BL_proxy ディレクトリの自動作成に使用されます。</p></li>
 </ol>
@@ -275,15 +275,15 @@
 </ol>
 <div class="admonition-todo admonition" id="id4">
 <p class="admonition-title">課題</p>
-<p>品質とタイムコードの説明が改善されました。<a class="reference external" href="https://docs.blender.org/manual/en/dev/video_editing/sequencer/sidebar/proxy.html">Timecode index</a> を参照してください。</p>
+<p>品質とタイムコードの説明が改善されました。<a class="reference external" href="https://docs.blender.org/manual/en/latest/editors/video_sequencer/sequencer/sidebar/proxy.html#strip-proxy-timecode">Timecode index</a> を参照してください。</p>
 </div>
 </li>
 </ol>
 </div>
 <div class="section" id="cache">
 <span id="id5"></span><h2><span class="section-number">2.1.4.2. </span>Cache<a class="headerlink" href="#cache" title="この見出しへのパーマリンク">¶</a></h2>
-<p>このプロパティを表示するには、 <span class="xref std std-ref">Developer Extras</span> を有効にします。</p>
-<p>再生パフォーマンスに最も大きな影響を与えるのは、ビデオ シーケンサーが再生をキャッシュできるようにすることです。これは非常に重要であるため、キャッシュ システムはユーザーの介入をあまり受けずにバックグラウンドで静かに動作するように設計されているためです。実際、サイドバーの [Cache] タブ (図 3 を参照) は、[Edit]メニュー &gt; [Preferences] ([Interface] タブ) で [Developer Extras] がオンになっている場合にのみ表示されます。どのような場合でも、キャッシュ システムはユーザーの利益のためにバックグラウンドでサイレントに実行されます。</p>
+<p>このプロパティを表示するには、<a class="reference external" href="https://docs.blender.org/manual/en/latest/editors/preferences/interface.html#prefs-interface-dev-extras">Developer Extras</a> を有効にします。</p>
+<p>再生パフォーマンスに最も大きな影響を与えるのは、ビデオ シーケンサーが再生をキャッシュできるようにすることです。これは非常に重要であるため、キャッシュ システムはユーザーの介入をあまり受けずにバックグラウンドで静かに動作するように設計されています。実際、 Sidebar &gt; [Cache] タブ (図3) は、[Edit]メニュー &gt; [Preferences] &gt; [Interface] タブ で [Developer Extras] がオンになっている場合にのみ表示されます。どのような場合でも、キャッシュ システムはユーザーの利益のためにバックグラウンドでサイレントに実行されます。</p>
 <p>パネルは 2 つあります。</p>
 <ul class="simple">
 <li><p>Cache Settings: これらの設定はプロジェクト内の <strong>すべて</strong> のストリップに適用されます</p></li>
@@ -296,7 +296,7 @@
 <div class="admonition-todo admonition" id="id6">
 <p class="admonition-title">課題</p>
 <p>次のオプションは実際には何を意味するのでしょうか?補足情報はありますか？
-From the manual (<a class="reference external" href="https://docs.blender.org/manual/en/dev/video_editing/sequencer/sidebar/cache.html">https://docs.blender.org/manual/en/dev/video_editing/sequencer/sidebar/cache.html</a>):</p>
+(参照 <a class="reference external" href="https://docs.blender.org/manual/en/latest/editors/video_sequencer/sequencer/sidebar/cache.html">Cache — Blender Manual</a>)</p>
 </div>
 <ul class="simple">
 <li><p>Raw: ドライブから読み取られた RAW イメージをキャッシュし、メモリ使用量を犠牲にしてストリップ パラメータをより速く調整します。</p></li>
@@ -304,7 +304,7 @@ From the manual (<a class="reference external" href="https://docs.blender.org/ma
 <li><p>Composite: 中間の合成イメージをキャッシュし、メモリ使用量を犠牲にしてスタックされたストリップをより高速に調整します。</p></li>
 <li><p>Final: 各フレームの最終画像をキャッシュします。</p></li>
 </ul>
-<p>キャッシュには 2 つのレベルがあり、1 つ目は RAM キャッシュです。これはデフォルトで有効になっていますが、利用可能な RAM の量に基づいて増やすことができます。キャッシュの次のレベルは、キャッシュされたストリップをディスクに保存するディスク キャッシュです。ディスク キャッシュは通常、RAM キャッシュよりも多くのキャッシュをキャッシュできますが、速度が低下する可能性があります。これらのキャッシュ オプションはどちらも、[Edit]メニュー &gt; [Preferences] の [System]タブで設定できます (図 1-a を参照)。</p>
+<p>キャッシュには 2 つのレベルがあり、1 つ目は RAM キャッシュです。これはデフォルトで有効になっていますが、利用可能な RAM の量に基づいて増やすことができます。キャッシュの次のレベルは、キャッシュされたストリップをディスクに保存するディスク キャッシュです。ディスク キャッシュは通常、RAM キャッシュよりも多くのキャッシュをキャッシュできますが、速度が低下する可能性があります。これらのキャッシュ オプションはどちらも、[Edit]メニュー &gt; [Preferences] &gt; [System]タブで設定できます (図 1-a)。</p>
 <div class="admonition-todo admonition" id="id7">
 <p class="admonition-title">課題</p>
 <p>ディスクキャッシュとプロキシなどのキャッシュの違いの概要</p>

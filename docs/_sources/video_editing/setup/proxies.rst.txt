@@ -57,14 +57,14 @@ Blender 2.93 ではプロキシの使用が大幅に簡素化されており、�
    現時点では、プロキシはムービー ストリップに対してのみ生成でき、イメージ シーケンスに対しては生成できません。一般に、プロキシはビデオ ファイルにのみ使用され、オーディオには使用されません。
 
 .. 2. The Proxy Render Size is set by default to 100%. You can change it in the View Settings (see figure 1-b) of the Preview window. If 100% is selected, the resolution of the Preview window is set to 100% of the strip resolution AND the original video clip (e.g. testfile_4K_10s_30fps.mp4) will be replaced by the proxy (e.g. proxy_100.avi). If you select afterwards another Proxy Render Size; e.g. 25%, a supplemental proxy will be created (proxy_25.avi) and there will be two proxy files (see figure 1-f) from which the second (25%) will be used for previewing.
-2. プロキシ レンダー サイズはデフォルトで 100% に設定されています。これは、「プレビュー」ウィンドウの「表示設定」(図 1-b を参照) で変更できます。 100% を選択すると、プレビュー ウィンドウの解像度がストリップ解像度の 100% に設定され、元のビデオ クリップ (例: testfile_4K_10s_30fps.mp4) がプロキシ (例: proxy_100.avi) に置き換えられます。後で別のプロキシ レンダー サイズを選択した場合。たとえば 25% の場合、補助プロキシ (proxy_25.avi) が作成され、2 つのプロキシ ファイル (図 1-f を参照) が存在し、そのうちの 2 番目 (25%) がプレビューに使用されます。
+2. [Proxy Render Size] はデフォルトで 100% に設定されています。これは、Preview ウィンドウ > Sidebar > [View]タブ の [View Settings] (図 1-b を参照) で変更できます。 100% を選択すると、Preview ウィンドウの解像度がストリップ解像度の 100% に設定され、元のビデオ クリップ (例: testfile_4K_10s_30fps.mp4) がプロキシ (例: proxy_100.avi) に置き換えられます。後で別のプロキシ レンダー サイズを選択した場合。たとえば 25% の場合、補助プロキシ (proxy_25.avi) が作成され、2 つのプロキシ ファイル (図 1-f を参照) が存在し、そのうちの 2 番目 (25%) がプレビューに使用されます。
 
    .. There are 6 Proxy Renders Sizes: No display, Scene size, 25%, 50%, 75%, 100%. Remember that these View settings are intended to set the resolution of the Preview window. For example, if the strip has a resolution of 1080p (1920 x 1080), then setting the Proxy Render Size to 25% means that the Preview window will have a resolution of 480 x  270. Displaying the strip in this low-resolution window will speed up the rendering a little. The setting No display, will set the resolution at zero (=no display!). The setting Scene size will set the resolution the same as the project (see figure 1-h), which can be different from the resolution of the strip.
-   プロキシ レンダー サイズには、表示なし、シーン サイズ、25%、50%、75%、100% の 6 つがあります。これらのビュー設定は、プレビュー ウィンドウの解像度を設定することを目的としていることに注意してください。たとえば、ストリップの解像度が 1080p (1920 x 1080) の場合、プロキシ レンダー サイズを 25% に設定すると、プレビュー ウィンドウの解像度は 480 x 270 になります。この低解像度ウィンドウにストリップを表示すると、レンダリングを少し高速化します。 [No display] を設定すると、解像度がゼロに設定されます (= 表示なし!)。シーン サイズ設定は、プロジェクトと同じに解像度に設定されます (図 1-h を参照)。これはストリップの解像度とは異なる場合があります。
+   [Proxy Render Size] には、表示なし、シーン サイズ、25%、50%、75%、100% の 6 つがあります。これらのビュー設定は、Preview ウィンドウの解像度を設定することを目的としていることに注意してください。たとえば、ストリップの解像度が 1080p (1920 x 1080) の場合、プロキシ レンダー サイズを 25% に設定すると、Preview ウィンドウの解像度は 480 x 270 になります。この低解像度ウィンドウにストリップを表示すると、レンダリングを少し高速化します。 [No display] を設定すると、解像度がゼロに設定されます (= 表示なし!)。シーン サイズ設定は、プロジェクトと同じに解像度に設定されます (図 1-h を参照)。これはストリップの解像度とは異なる場合があります。
 
    .. note::
       .. You can easily see the effect of the Proxy Render Size in the following example. Create a new Video Editing project. The project resolution is probably 1080p (1920 x 1080). Add a text strip with size 30. Set the zoom to View > Fractional Zoom 1:1. Change the Proxy Render Size and watch the degradation of the image quality.
-      次の例で、プロキシ レンダー サイズの効果を簡単に確認できます。新しいビデオ編集プロジェクトを作成します。プロジェクトの解像度はおそらく 1080p (1920 x 1080) です。サイズ 30 のテキスト ストリップを追加します。ズームを [View] > [Fractional Zoom 1:1] に設定します。プロキシ レンダリング サイズを変更し、画質の低下を確認します。
+      次の例で、[Proxy Render Size] の効果を簡単に確認できます。新しいビデオ編集プロジェクトを作成します。プロジェクトの解像度はおそらく 1080p (1920 x 1080) です。サイズ 30 のテキスト ストリップを追加します。ズームを [View] > [Fractional Zoom 1:1] に設定します。プロキシ レンダリング サイズを変更し、画質の低下を確認します。
 
    .. figure:: /images/vse_setup_environment_proxies-render-size.svg
       :alt: Example of proxy Render Sizes
@@ -100,9 +100,10 @@ Blender 2.93 ではプロキシの使用が大幅に簡素化されており、�
    プロキシの内部動作のより良い説明。外部の Web サイト/チュートリアルへのリンクはありますか?
 
 .. 4. The above settings can be tweaked for individual strips with the Proxy Settings panel in the sidebar. To show the panel, select the strip in the Sequencer and press N or select the menu View > Sidebar.
-4. 上記の設定は、サイドバーのプロキシ設定パネルを使用して個々のストリップに対して微調整できます。パネルを表示するには、シーケンサーでストリップを選択して N を押すか、メニューの [View] > [Sidebar] を選択します。
+4. 上記の設定は、 Sidebar > Proxy タブ > [Proxy Settings]パネルを使用して個々のストリップに対して微調整できます。パネルを表示するには、シーケンサーでストリップを選択して N を押すか、メニューの [View] > [Sidebar] を選択します。
 
    .. A. You have to decide if the proxies should be generated Per Strip or globally for the project. If you choose Per Strip, then the Proxy folder (BL_proxy) will be created at the location of the selected strip.  You can override this directory location and name in the panel below with the Custom Proxy Directory checkbox. Or, you can choose Project. The proxy folder BL_proxy will then be created in the directory from the field below. This setting influences also the Automatic setup. The chosen directory will be used for the automatic creation of the BL_proxy directory.
+
    A. プロキシをストリップごとに生成するか、プロジェクト全体に生成するかを決定する必要があります。 [Per Strip] を選択すると、選択したストリップの場所にプロキシ フォルダー (BL_proxy) が作成されます。このディレクトリの場所と名前は、下のパネルで [Custom Proxy Directory] チェックボックスを使用して上書きできます。または、プロジェクトを選択することもできます。プロキシ フォルダー BL_proxy が、以下のフィールドのディレクトリに作成されます。この設定は自動セットアップにも影響します。選択したディレクトリは、BL_proxy ディレクトリの自動作成に使用されます。
 
    .. note::
@@ -111,6 +112,7 @@ Blender 2.93 ではプロキシの使用が大幅に簡素化されており、�
 
 
    .. B. If you have opted for a Manual Proxy setup, you have to build the proxy files yourself. Select the strips (it can be more than one!) for which you want to create proxies. With the button ``Set Selected Strip Proxies`` you can enable multiple proxy render sizes (25%, 50%, 75%, 100%). With the Overwrite checkbox, you give permission to overwrite existing proxy-files. You'll use this button to enable these settings for *multiple* selected clips.
+
    B. 手動プロキシ設定を選択した場合は、プロキシ ファイルを自分で構築する必要があります。プロキシを作成するストリップを選択します (複数にすることもできます)。 ``Set Selected Strip Proxies`` ボタンを使用すると、複数のプロキシ レンダリング サイズ (25%、50%、75%、100%) を有効にすることができます。 [Overwrite] チェックボックスを使用すると、既存のプロキシ ファイルを上書きする許可を与えます。このボタンを使用して、選択した複数のクリップに対してこれらの設定を有効にします。
 
    .. C. The result of pushing the ``Set Selected Strip Proxies`` is that the checkbox next to ``Strip Proxy & Timecode`` is enabled and that the proxy sizes are filled in for all the selected strips. Eventually, you can deviate for the storage directory and filename of an individual strip here.
@@ -125,18 +127,18 @@ Blender 2.93 ではプロキシの使用が大幅に簡素化されており、�
 
    .. todo::
       .. Better explanation of Quality & Time Code; see `Timecode index <https://docs.blender.org/manual/en/dev/video_editing/sequencer/sidebar/proxy.html>`_ .
-      品質とタイムコードの説明が改善されました。`Timecode index <https://docs.blender.org/manual/en/dev/video_editing/sequencer/sidebar/proxy.html>`_ を参照してください。
+      品質とタイムコードの説明が改善されました。`Timecode index <https://docs.blender.org/manual/en/latest/editors/video_sequencer/sequencer/sidebar/proxy.html#strip-proxy-timecode>`_ を参照してください。
 
 .. _proxies_cache:
 
 Cache
 -----
 .. In order for this property to be visible, enable :ref:`Developer Extras <prefs-interface-dev-extras>`.
-このプロパティを表示するには、 :ref:`Developer Extras <prefs-interface-dev-extras>` を有効にします。
+このプロパティを表示するには、`Developer Extras <https://docs.blender.org/manual/en/latest/editors/preferences/interface.html#prefs-interface-dev-extras>`_ を有効にします。
 
 .. The biggest impact on playback performance is to allow the Video Sequencer to cache the playback. Because, it is so important, the cache system is designed to work silently in the background without much user interference. In fact, the Cache tab in the sidebar (see figure 3) will only be visible if the Developer Extras are switched on in the Edit > Preferences menu (Interface tab). In every case, the cache system will run silently for your benefit in the background.
 
-再生パフォーマンスに最も大きな影響を与えるのは、ビデオ シーケンサーが再生をキャッシュできるようにすることです。これは非常に重要であるため、キャッシュ システムはユーザーの介入をあまり受けずにバックグラウンドで静かに動作するように設計されているためです。実際、サイドバーの [Cache] タブ (図 3 を参照) は、[Edit]メニュー > [Preferences] ([Interface] タブ) で [Developer Extras] がオンになっている場合にのみ表示されます。どのような場合でも、キャッシュ システムはユーザーの利益のためにバックグラウンドでサイレントに実行されます。
+再生パフォーマンスに最も大きな影響を与えるのは、ビデオ シーケンサーが再生をキャッシュできるようにすることです。これは非常に重要であるため、キャッシュ システムはユーザーの介入をあまり受けずにバックグラウンドで静かに動作するように設計されています。実際、 Sidebar > [Cache] タブ (図3) は、[Edit]メニュー > [Preferences] > [Interface] タブ で [Developer Extras] がオンになっている場合にのみ表示されます。どのような場合でも、キャッシュ システムはユーザーの利益のためにバックグラウンドでサイレントに実行されます。
 
 .. There are two panels:
 パネルは 2 つあります。
@@ -158,7 +160,7 @@ Cache
 .. todo::
    .. What do the following options really mean? Any supplemental info?
    次のオプションは実際には何を意味するのでしょうか?補足情報はありますか？
-   From the manual (https://docs.blender.org/manual/en/dev/video_editing/sequencer/sidebar/cache.html):
+   (参照 `Cache — Blender Manual <https://docs.blender.org/manual/en/latest/editors/video_sequencer/sequencer/sidebar/cache.html>`_)
 
 .. * Raw: Cache raw images read from drive, for faster tweaking of strip parameters at the cost of memory usage.
 .. * Pre-processed: Cache preprocessed images, for faster tweaking of effects at the cost of memory usage.
@@ -172,7 +174,7 @@ Cache
 
 .. There are two levels of cache, the first is a RAM cache, this is enabled by default but can be increased based on the amount of RAM available. The next level of cache is a disk cache which stores cached strips on disk. A disk cache can generally cache more than a RAM cache, but it can be slower. Both of these cache options can be configured in the Edit > Preferences menu under the System tab.(see figure 1-a).
 
-キャッシュには 2 つのレベルがあり、1 つ目は RAM キャッシュです。これはデフォルトで有効になっていますが、利用可能な RAM の量に基づいて増やすことができます。キャッシュの次のレベルは、キャッシュされたストリップをディスクに保存するディスク キャッシュです。ディスク キャッシュは通常、RAM キャッシュよりも多くのキャッシュをキャッシュできますが、速度が低下する可能性があります。これらのキャッシュ オプションはどちらも、[Edit]メニュー > [Preferences] の [System]タブで設定できます (図 1-a を参照)。
+キャッシュには 2 つのレベルがあり、1 つ目は RAM キャッシュです。これはデフォルトで有効になっていますが、利用可能な RAM の量に基づいて増やすことができます。キャッシュの次のレベルは、キャッシュされたストリップをディスクに保存するディスク キャッシュです。ディスク キャッシュは通常、RAM キャッシュよりも多くのキャッシュをキャッシュできますが、速度が低下する可能性があります。これらのキャッシュ オプションはどちらも、[Edit]メニュー > [Preferences] > [System]タブで設定できます (図 1-a)。
 
 
 .. todo::

@@ -236,6 +236,6 @@ Change Datafile
 Resolution
    :ref:`参照 Movie strip <resolution>`.
 
-.. rubric:: 脚注
+.. rubric:: 訳注
 
 .. [#f1] Blender3.2以降では、 *frame_still_start* と *frame_still_end* ではなく、 *frame_offset_start* と *frame_offset_end* の負値で表現します。

@@ -243,6 +243,6 @@ Handle
    .. These operators are useful to change the timing of a cut by moving the handles after selecting them.
    これらのオペレータは、選択後にハンドルを移動してカットのタイミングを変更するのに便利です。
 
-.. rubric:: 脚注
+.. rubric:: 訳注
 
 .. [#f1] Blender4.0では、ハンドルを選択後にストリップバーの中央を選択するとクリックすると、ストリップのボディーが選択されるようです。
