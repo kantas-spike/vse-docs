@@ -8,10 +8,13 @@ Project settings
 
    図0: Output パネル
 
-.. The Project Settings for your video project are grouped in the `Output Properties <https://docs.blender.org/manual/en/dev/render/output/index.html>`_ tab of the `Properties Editor <https://docs.blender.org/manual/en/dev/editors/properties_editor.html>`_. This editor is located at the top right area in the default Video Editing workspace and is shared with the other modules, e.g. 3D modeling. The Properties has several categories, which can be chosen via tabs (the icons column to its left). Each tab regroups properties and settings of a data type. For the VSE, only the Output properties are commonly used. This tab is selected by default on opening the Video Editor Workspace. It contains 6 categories (panels): Format, Frame Range, Stereoscopy, Output, Metadata, & Post Processing.
+.. The Project Settings for your video project are grouped in the `Output Properties <https://docs.blender.org/manual/en/dev/render/output/index.html>`_ tab of the `Properties Editor <https://docs.blender.org/manual/en/latest/editors/properties_editor.html>`_. This editor is located at the top right area in the default Video Editing workspace and is shared with the other modules, e.g. 3D modeling. The Properties has several categories, which can be chosen via tabs (the icons column to its left). Each tab regroups properties and settings of a data type. For the VSE, only the Output properties are commonly used. This tab is selected by default on opening the Video Editor Workspace. It contains 6 categories (panels): Format, Frame Range, Stereoscopy, Output, Metadata, & Post Processing.
 
-ビデオ プロジェクトのプロジェクト設定は、 `Properties Editor <https://docs.blender.org/manual/en/dev/editors/properties_editor.html>`_ の[`Output Properties <https://docs.blender.org/manual/en/dev/render/output/index.html>`_]タブにグループ化されています。
-この Editor はデフォルトの Video Editing Workspace の右上領域にあり、3D モデリングなどの他のモジュールと共有されます。プロパティにはいくつかのカテゴリがあり、タブ (左側のアイコン列) から選択できます。各タブには、データ型のプロパティと設定が再グループ化されています。 VSE の場合、一般的に使用されるのは [Output Properties] のみです。このタブは、Video Editing Workspace を開くとデフォルトで選択されます。これには、6 つのカテゴリ (パネル) が含まれています。
+ビデオ プロジェクトのプロジェクト設定は、 `Properties Editor <https://docs.blender.org/manual/en/latest/editors/properties_editor.html>`_ の[`Output <https://docs.blender.org/manual/en/latest/render/output/index.html>`_]タブにグループ化されています。
+
+この エディター はデフォルトの Video Editing Workspace の右上領域にあり、3D モデリングなどの他のモジュールと共有されます。プロパティにはいくつかのカテゴリがあり、タブ (左側のアイコン列) から選択できます。各タブには、データ型のプロパティと設定が再グループ化されています。
+
+VSE [#f2]_ の場合、一般的に使用されるのは [Output]タブ のみです。このタブは、Video Editing Workspace を開くとデフォルトで選択されます。これには、6 つのカテゴリ (パネル) が含まれています。
 
 - Format
 - Frame Range
@@ -38,6 +41,7 @@ Project settings
 
 Resolution
    .. The resolution X and Y refer to the number of pixels in the horizontal and vertical axis of the output video. Common video resolutions are:
+
    解像度 X と Y は、出力ビデオの水平軸と垂直軸のピクセル数を指します。一般的なビデオ解像度は次のとおりです。
 
    - High Definition (HD) or 720p (1280 x 720)
@@ -56,7 +60,8 @@ Resolution
       図2: Ultra HD, FHD and HD resolution
 
    .. With the Render Presets button (see figure 1), you can choose between common video render settings (HDTV 1080p, HDTV720p, ...). The resolution, resolution %, the aspect ratio and the fps will be set accordingly.  You can also create your own preset: change the settings in the Dimensions panel to your liking, enter a name in the New Preset field and press the + button. The Presets are stored in the scripts/presets/render directory as a Python file.
-   [Render Presets] ボタン (図 1 を参照) を使用すると、一般的なビデオ レンダリング設定 (HDTV 1080p、HDTV720p など) から選択できます。解像度、解像度 %、アスペクト比、fps は、選択したプリセットに応じて設定されます。
+
+   [Render Presets] ボタン (図 1) を使用すると、一般的なビデオ レンダリング設定 (HDTV 1080p、HDTV720p など) から選択できます。解像度、解像度 %、アスペクト比、fps は、選択したプリセットに応じて設定されます。
    独自のプリセットを作成することもできます。[Dimensions] パネルの設定を好みに合わせて変更し、[New Prests] フィールドに名前を入力して、[+] ボタンを押します。プリセットは、Python ファイルとして scripts/presets/render ディレクトリに保存されます。
 
 Resolution %
@@ -68,6 +73,7 @@ Resolution %
    これは、クリックした場所が、解像度 X = 190 および解像度 Y = 100 であることを意味します。したがって、完全なレンダリング イメージは実質的に 192 x 108 ピクセルになります。もちろん、写真はひどいものになります。絵を描くために自由に使えるのは 192 x 108 = 20736 ピクセルだけです。
 
    .. Figures 3 - 4 show the render result with the percentage set to 10% and 5% of the 4K image of figure 2. Please note, that a 10% render of the UHD image still gives us an image of 386 x 216 pixels. The images are scaled up to have a clear view and the same dimensions of figure 2. Figure 4 is in reality only 192 pixels wide x 108 pixels tall.
+
    図 3 ～ 4 は、図 2 の 4K 画像の割合を 10% と 5% に設定したレンダリング結果を示しています。UHD 画像を 10% レンダリングしても、依然として 386 x 216 ピクセルの画像が得られることに注意してください。画像は、鮮明に見えるように拡大され、図 2 と同じ寸法になっています。図 4 は、実際には、幅 192 ピクセル x 高さ 108 ピクセルのみです。
 
    .. figure:: /images/vse_setup_project_tree-10.png
@@ -83,11 +89,13 @@ Resolution %
       図4: 5% でレンダリングされた図 2
 
    .. Lowering the resolution % is not meant to speed up the preview or the scrubbing of the timeline. For that, you need :doc:`proxies <proxies>`. Because proxies are enabled by default (see Edit > Preferences > System Video Sequencer > Proxy Setup), you will not notice much improvement in navigating the timeline with a small resolution %.  Only the render time is affected. You can use this option if you want to create a quick test render, for example to check the audio synchronization of your video.
+
    [Resolution %] を下げることは、プレビューやタイムラインのスクラブを高速化することを意味するものではありません。
-   そのためには、プロキシが必要です。プロキシはデフォルトで有効になっているため ([Edit] > [Preferences] > [System] > [Video Sequencer] > [Proxy Setup] を参照)、[Resolution %] が小さい場合、タイムラインのナビゲーションに大きな改善は見られません。レンダリング時間のみが影響を受けます。このオプションは、ビデオの音声同期を確認するなど、簡単なテスト レンダリングを作成する場合に使用できます。
+   そのためには、 :doc:`プロキシ <proxies>` が必要です。プロキシはデフォルトで有効になっているため ([Edit] > [Preferences] > [System] > [Video Sequencer] > [Proxy Setup] を参照)、[Resolution %] が小さい場合、タイムラインのナビゲーションに大きな改善は見られません。レンダリング時間のみが影響を受けます。このオプションは、ビデオの音声同期を確認するなど、簡単なテスト レンダリングを作成する場合に使用できます。
 
 Aspect X/Y
    .. We tend to view the pixels of our computer display as little squares and for most modern computers, they are in fact squares. In the world of cinema and television, especially with older equipment, non-square pixels are commonplace. All movies on DVD and BluRay for example use rectangular pixels. Shooting with anamorphic lenses also gives a distorted raw image on a computer screen, due to the use of non-square pixels.
+
    私たちはコンピューター ディスプレイのピクセルを小さな正方形として見る傾向がありますが、ほとんどの最新のコンピューターでは、実際には正方形です。映画やテレビの世界では、特に古い機器では、非正方形ピクセルが一般的です。たとえば、DVD や BluRay のすべてのムービーは長方形のピクセルを使用します。アナモフィック レンズで撮影すると、非正方形ピクセルが使用されるため、コンピューター画面上で生の画像が歪んで表示されます。
 
    .. Figure 5 shows an example of a raw image, taken with an *anamorphic lens* with a horizontal compression of 1.33. Anamorphic lenses are typically used in cinema to achieve an ultra wide screen view. To achieve this, the image is horizontally squeezed. Although perhaps not immediately that obvious, figure 5 looks a little bit distorted.
@@ -133,12 +141,15 @@ RenderRegion/Crop to Render Region
 Frame Rate
    .. The number of frames that are displayed per second. The drop-down menu gives several common frame rates (23.98, 24, 25, 29.97, 30, ...). These presets refer to the different standards: NTSC (30 fps, mostly in North-America) and PAL/SECAM (25 fps, mostly Europe) and the necessary adjustments made in the 1950's to adapt  to color TV (23.98 and 29.97). Other frame rates can be used by selecting Custom. You can enter then a FPS and base number. The custom framerate is the result of: ``FPS / base number``. For example, to simulate a 25 fps preset, you can enter FPS = 25 and base = 1 or FPS = 50 and base = 2.
 
-   1 秒あたりに表示されるフレーム数。ドロップダウン メニューには、いくつかの一般的なフレーム レート (23.98、24、25、29.97、30 など) が表示されます。これらのプリセットはさまざまな規格を参照しています: NTSC (30 fps、主に北米) と PAL/SECAM (25 fps、主にヨーロッパ)と、1950 年代にカラーテレビ (23.98 および 29.97)を採用するために行われた必要な調整
+   1 秒あたりに表示されるフレーム数。ドロップダウン メニューには、いくつかの一般的なフレーム レート (23.98、24、25、29.97、30 など) が表示されます。
+
+   これらのプリセットはさまざまな規格を参照しています: NTSC (30 fps、主に北米) と PAL/SECAM (25 fps、主にヨーロッパ)と、1950 年代にカラーテレビ (23.98 および 29.97)を採用するために行われた必要な調整です。
+
    [Custom]を選択すると、他のフレーム レートを使用できます。FPS とベースの値を入力できます。カスタム フレームレートは ``FPS / base number`` の結果です。たとえば、25 fps プリセットをシミュレートするには、FPS = 25 および Base = 1 または FPS = 50 および Base = 2 を入力できます。
 
    .. When the first video strip is added to the sequencer, the frame rate of the project is automatically set to the frame rate of that strip. Adding a second strip with a different frame rate -even if the first strip is deleted- will not change that setting. Blender VSE cannot handle different frame rates in one project. You will not get a warning, besides some odd-looking audio strips and slow or fast motion effects.
 
-   最初のビデオ ストリップが Sequencer に追加されると、プロジェクトのフレーム レートがそのストリップのフレーム レートに自動的に設定されます。
+   最初のビデオ ストリップが Sequencer に追加されると、プロジェクトのフレーム レートがそのストリップのフレーム レートに自動的に設定されます [#f3]_ 。
    フレーム レートが異なる 2 番目のストリップを追加しても、最初のストリップが削除された場合でも、その設定は変更されません。
    Blender VSE は 1 つのプロジェクト内で異なるフレーム レートを処理できません。奇妙なオーディオ ストリップやスローまたはファスト モーション効果を除いて、警告は表示されません。
 
@@ -150,15 +161,21 @@ Frame Rate
 
    .. Figure 6 contains 3 strips that were recorded at different frame rates. Their capture frame rate was respectively 30 fps, 60 fps and 120 fps. Each recording took about 15 seconds. The strip with fps = 30 was first added. This has set the presentation frame rate of the entire project to 30 fps. Later on, strips of 60 fps and 120 fps were added. This does not change the project presentation frame rate, but, of course, the capture frame rate of the strips remains unchanged.
 
-   図7 には、異なるフレーム レートで記録された 3 つのストリップが含まれています。キャプチャ フレーム レートはそれぞれ 30 fps、60 fps、120 fps でした。それぞれ記録には約 15 秒かかりました。 fps = 30 のストリップが最初に追加されました。これにより、プロジェクト全体のプレゼンテーション フレーム レートが 30 fps に設定されました。その後、60 fps と 120 fps のストリップが追加されました。これによってプロジェクトのプレゼンテーションのフレーム レートは変更されませんが、当然のことながら、ストリップのキャプチャ フレーム レートは変更されません。
+   図7 には、異なるフレーム レートで記録された 3 つのストリップが含まれています。キャプチャ フレーム レートはそれぞれ 30 fps、60 fps、120 fps でした。それぞれ記録には約 15 秒かかりました。
+
+   fps = 30 のストリップが最初に追加されました。これにより、プロジェクト全体のプレゼンテーション フレーム レートが 30 fps に設定されました。その後、60 fps と 120 fps のストリップが追加されました。これによってプロジェクトのプレゼンテーションのフレーム レートは変更されません。そして、当然のことながら、ストリップのキャプチャ フレーム レートは変更されません。
 
    .. All the audio strips have a duration of about 15 seconds because the audio is independent of the presentation frame rate. The movie strip with capture fps = 30 has also a duration of about 15 seconds. This is because the capture and presentation frame rate is equal. The strips with capture frame rate of 60 and 120 fps are much longer. The image of the watch in the preview shows that after about 15 seconds (first watch), only 6.55 and 2.83 s are passed on the second and third watch. This is because the second strip (60 fps) contains 16.877 s x 60 fps = 1012.62 (captured) frames that were presented at a framerate of 30 fps, which takes about 33.754 s. The real time on the watch is about 6.55 s. With a capture frame rate of 60 fps, this represents the image of frame 393. Again, frame 393 will be presented at time 13.1 s with a presentation frame rate of 30 fps. This is approximately the time you can see on the first watch (allow some differences due to different starting times). If these were real animation movies, you would see a slow-motion effect with strip 60 fps and even more with strip 120 fps.
 
    オーディオはプレゼンテーションのフレーム レートに依存しないため、すべてのオーディオ ストリップの長さは約 15 秒です。
    キャプチャ fps = 30 のムービー ストリップの長さも約 15 秒です。これは、キャプチャとプレゼンテーションのフレーム レートが等しいためです。
+
    キャプチャ フレーム レートが 60 fps および 120 fps のストリップは、はるかに長くなります。プレビューの時計の画像では、約 15 秒後 (最初の時計)、2 番目と 3 番目の時計では 6.55 秒と 2.83 秒しか経過していないことがわかります。
+
    これは、2 番目のストリップ (60 fps) には、30 fps のフレームレートで表示された 16.877 s x 60 fps = 1012.62 (キャプチャされた) フレームが含まれており、これには約 33.754 秒かかります。時計の実時間は約6.55秒です。
-   60 fps のキャプチャ フレーム レートで、これはフレーム 393 の画像を表します。ここでも、フレーム 393 は 30 fps のプレゼンテーション フレーム レートで時間 13.1 秒に表示されます。これは、最初の時計で確認できるおおよその時間です (開始時間の違いによる多少の違いは許容してください)。これらが実際のアニメーション ムービーである場合、ストリップ 60 fps でスローモーション効果が見られ、ストリップ 120 fps ではさらに効果が得られます。
+   60 fps のキャプチャ フレーム レートで、これはフレーム 393 の画像を表します。ここでも、フレーム 393 は 30 fps のプレゼンテーション フレーム レートで時間 13.1 秒に表示されます。これは、最初の時計で確認できるおおよその時間です (開始時間の違いによる多少の違いは許容してください)。
+
+   これらが実際のアニメーション ムービーである場合、ストリップ 60 fps でスローモーション効果が見られ、ストリップ 120 fps ではさらに効果が得られます。
 
    .. So, it's important to set the presentation frame rate equal to the capture frame rate of the strips. You can find the capture frame rate of a strip in the Properties > Source > FPS.
 
@@ -170,7 +187,8 @@ Frame Rate
       ビデオのキャプチャ フレーム レートの決定は、場合によっては難しい場合があります。ほとんどのデバイス (特にスマートフォン) では、可変フレーム レート モードでキャプチャすることについて言及していません。したがって、キャプチャ フレーム レートを 30 FPS に設定すると、実際にはフレーム レートは 29 fps から 31 fps の間で変化する可能性があります。これはストリップの開始と終了には影響しませんが、ビデオとオーディオの同期に（小規模な）問題が発生する可能性があります。
 
       .. In the section Extra Tools, we have provided a solution to convert a video from variable rate to fixed and to change the FPS.
-      Extra Tools セクションでは、ビデオを可変レートから固定レートに変換し、FPS を変更するソリューションを提供しました。
+
+      :doc:`Extra Tools > FFMPEG </extra-tools/ffmpeg>` セクションでは、ビデオを可変レートから固定レートに変換し、FPS を変更するソリューションを提供しました。 [#f4]_
 
 .. admonition:: Reference
    :class: refbox
@@ -253,10 +271,16 @@ Blender VSE での Stereoscopy ムービーの編集は、次の 2 段階のプ�
 Output Path
    .. In the :doc:`previous section </video_editing/setup/directory-structure>`, we described a possible directory structure to hold all files that are related to your video project. In this structure, the rendered output could be stored in 3-2-Render. Because the Blend-file is stored at 3-1-Blend-file, the Output File Path should be ``//../3-2-render/``. The first // is the Blender-notation for the directory containing the current Blend-file. Depending on your choices about the File Format, you can add a file name or a directory name. The File Path ``//../3-2-render/myProject-v01.mp4`` will create a file *myProject-v01.mp4* in the specified directory (3-2-render). If you omit the extension (e.g. ``//../3-2-render/myProject-v01``) and enable *Saving File Extensions* , then a file *myProject-v010001-0020.mp4* is generated for a 20 frames project. If you render an image sequence, it is best to specify a subdirectory; place a / at the end as in ``//../3-2-render/myProject-v01/``. Rendering the project will then create the files *0001.png*, *0002.png*, *0003.png*, ... in the folder *3-2-render/myProject-v01*.
 
-   :doc:`前のセクション </video_editing/setup/directory-structure>` では、ビデオ プロジェクトに関連するすべてのファイルを保持するために考えられるディレクトリ構造について説明しました。この構造では、レンダリングされた出力を 3-2-Render に保存できます。 blend ファイルは 3-1-Blend-file に保存されているため、出力ファイル パスは ``//../3-2-render/`` である必要があります。最初の // は、現在の blend ファイルを含むディレクトリの Blender 表記です。
+   :doc:`前のセクション </video_editing/setup/directory-structure>` では、ビデオ プロジェクトに関連するすべてのファイルを保持するために考えられるディレクトリ構造について説明しました。この構造では、レンダリングされた出力を 3-2-Render に保存できます。 blend ファイルは 3-1-Blend-file に保存されているため、出力ファイル パスは ``//../3-2-render/`` である必要があります。
+
+   最初の **//** は、現在の blend ファイルを含むディレクトリの Blender 表記です。
+
    ファイル形式に関する選択に応じて、ファイル名またはディレクトリ名を追加できます。
-   ファイル ``//../3-2-render/myProject-v01.mp4`` パスにより、指定されたディレクト(3-2-render)にファイル **myProject-v01.mp4** が作成されます 。
-   拡張子を ``//../3-2-render/myProject-v01`` のように省略した場合、*Saving File Extensions* を有効にすると、20 フレームのプロジェクトに対してファイル *myProject-v010001-0020.mp4* が生成されます。イメージ シーケンスをレンダリングする場合は、サブディレクトリを指定することをお勧めします。 ``//../3-2-render/myProject-v01/`` のように最後に / を置きます。プロジェクトをレンダリングすると、ファイル0001.png、0002.png、0003.png ... がフォルダー *3-2-render/myProject-v01* に作成されます。
+   ファイル ``//../3-2-render/myProject-v01.mp4`` パスにより、指定されたディレクト(3-2-render)にファイル *myProject-v01.mp4* が作成されます 。
+
+   拡張子を ``//../3-2-render/myProject-v01`` のように省略した場合、*Saving File Extensions* を有効にすると、20 フレームのプロジェクトに対してファイル *myProject-v010001-0020.mp4* が生成されます。
+
+   イメージ シーケンスをレンダリングする場合は、サブディレクトリを指定することをお勧めします。 ``//../3-2-render/myProject-v01/`` のように最後に / を置きます。プロジェクトをレンダリングすると、ファイル0001.png、0002.png、0003.png ... がフォルダー *3-2-render/myProject-v01* に作成されます。
 
 
    Saving File Extensions
@@ -264,15 +288,23 @@ Output Path
       このオプションを有効にすると、ファイル名に適切なファイル拡張子が追加されます (使用可能なファイル形式については、図10 を参照)。
    Cache result
       .. Enabling tis option will save the render Cache to EXR files. This is useful for heavy compositing but it affects indirectly the rendered scenes.
+
       このオプションを有効にすると、レンダー キャッシュが EXR ファイルに保存されます。これは大量の合成に役立ちますが、レンダリングされたシーンに間接的に影響します。
 Color
    .. Choose BW for saving grayscale images, RGB for saving color images (red, green and blue channels), and RGBA for saving color images with transparency enabled (red, green, blue and alpha channels). The RGBA option is only available with certain file formats (see below). For example, the JPG file format does not have an alpha channel, while the PNG format does. Also, most video file formats don't have a transparency option.
-   グレースケール イメージを保存するには BW、カラー イメージ (赤、緑、青のチャネル) を保存するには RGB、透明度を有効にしたカラー イメージ (赤、緑、青、アルファ チャネル) を保存するには RGBA を選択します。 RGBA オプションは、特定のファイル形式でのみ使用できます (下記を参照)。たとえば、JPG ファイル形式にはアルファ チャネルがありませんが、PNG 形式にはアルファ チャネルがあります。また、ほとんどのビデオ ファイル形式には透明度オプションがありません。
+
+   用途に応じて以下を選択します。
+
+   - BW: グレースケール イメージを保存
+   - RGB: カラー イメージ (赤、緑、青のチャネル) を保存
+   - RGBA: 透明度を有効にしたカラー イメージ (赤、緑、青、アルファ チャネル) を保存
+
+   RGBA オプションは、特定のファイル形式でのみ使用できます (下記を参照)。たとえば、JPG ファイル形式にはアルファ チャネルがありませんが、PNG 形式にはアルファ チャネルがあります。また、ほとんどのビデオ ファイル形式には透明度オプションがありません。
 
 
 File Format
    .. You can render the sequencer content as as series of images (BMP, Iris, PNG, ..., TIFF; see figure 9) or as a movie which is, of course, also an *embedded* series of images.
-   Sequencerのコンテンツは、一連の画像 (BMP、Iris、PNG、…、TIFF、図10 を参照) として、またはもちろん一連の画像が埋め込まれたムービーとしてレンダリングできます。
+   Sequencerのコンテンツは、一連の画像 (BMP、Iris、PNG、…、TIFF、 参照 図10) として、またはもちろん一連の画像が埋め込まれたムービーとしてレンダリングできます。
 
    .. figure:: /images/video_editing_setup_project-settings-output-file-format.png
       :alt: File formats
@@ -282,7 +314,11 @@ File Format
 
    .. Which one should you choose? Depending on your choice, several additional fields are added in the sidebar. All possible Image and Movie formats are described in detail in the `section Output <https://docs.blender.org/manual/en/dev/render/output/properties/output.html>`_ of the docs with an overview of all `Video & Audio Formats <https://docs.blender.org/manual/en/dev/files/media/video_formats.html>`_ and `graphics <https://docs.blender.org/manual/en/dev/files/media/image_formats.html>`_ formats (see figure 9 for a list).
 
-   どれを選ぶべきですか? 選択に応じて、いくつかのフィールドがサイドバーに追加されます。考えられるすべての画像およびムービー形式については、すべての `Video & Audio Formats <https://docs.blender.org/manual/en/dev/files/media/video_formats.html>`_ と `graphics <https://docs.blender.org/manual/en/dev/files/media/image_formats.html>`_ 形式の概要とともに、ドキュメントの `Output セクション <https://docs.blender.org/manual/en/dev/render/output/properties/output.html>`_ で詳しく説明されています(リストについては図10 を参照)。
+   どれを選ぶべきですか?
+
+   選択された画像形式に応じて、いくつかのフィールドが Sidebar に追加されます。
+
+   考えられるすべての画像およびムービー形式については、すべての `Video & Audio Formats <https://docs.blender.org/manual/en/dev/files/media/video_formats.html>`_ と `graphics <https://docs.blender.org/manual/en/dev/files/media/image_formats.html>`_ 形式の概要とともに、ドキュメントの `Output セクション <https://docs.blender.org/manual/en/dev/render/output/properties/output.html>`_ で詳しく説明されています(リストについては図10を参照)。
 
    .. Warning::
       .. It's important to keep in mind that Blender is foremost a 3D and 2D modeling and animation program. Artwork is mostly created and rendered from within the 3D View or Grease Pencil workspace. As an artist, you have full control on resolution, composition, speed, color, .... As a video editor, however, you usually work with existing material from camera output; where many parameters are already fixed. The Output settings therefore are for a great deal dictated by the imported footage.
@@ -290,7 +326,27 @@ File Format
 
    .. If you are in the Video Editing Workspace, the default is set to a FFmpeg Video with H.264 as default video codec and AAC as audio codec. Other workspaces set the default to PNG Image Sequence and the Blender docs and many tutorials favor this approach. It's easier to stop & restart the render process (for example, in case of a crash or when you need your computer for something else). You can choose a high-quality, lossless format (e.g. OpenEXR) that's ideal for post-processing such as color grading or VFX. You can use a render farm, ... These advantages, however, are much more obvious in a 3D-animation creation process (which is the main focus of Blender), where you have full-control over the image quality. It is less obvious in a video editing workflow, where the quality of the source material is usually fixed; e.g. your footage is already shot and for example, creating a openEXR image sequence from H.264 footage will not increase the quality of it. If you saved your project as an image sequence, you also need to save the audio separately. And, in the end, you probably will need a single movie-file to hand over to your client. So, in a typical video editing workflow a single movie file format (FFMpeg Video) is much more common.
 
-   Video Editing Workspace にいる場合、デフォルトは、デフォルトのビデオ コーデックとして H.264、オーディオ コーデックとして AAC を使用する FFmpeg ビデオに設定されています。他のワークスペースではデフォルトが PNG Image Sequence に設定されており、Blender ドキュメントや多くのチュートリアルではこのアプローチが好まれています。レンダリング プロセスを停止して再起動することが簡単になります (たとえば、クラッシュが発生した場合や、別の目的でコンピュータが必要な場合)。カラー グレーディングや VFX などの後処理に最適な、高品質のロスレス形式 (OpenEXR など) を選択できます。レンダー ファームを使用することもできます。ただし、これらの利点は、画質を完全に制御できる 3D アニメーション作成プロセス (Blender の主な焦点) でより顕著になります。ソース素材の品質が通常固定されているビデオ編集ワークフローでは、このことはあまり明らかではありません。たとえば、映像はすでに撮影されており、たとえば、H.264 映像から openEXR イメージ シーケンスを作成しても、その品質は向上しません。プロジェクトを画像シーケンスとして保存した場合は、オーディオも個別に保存する必要があります。そして最終的には、おそらく 1 つのムービー ファイルをクライアントに渡す必要があるでしょう。したがって、一般的なビデオ編集ワークフローでは、単一のムービー ファイル形式 (FFMpeg Video) がはるかに一般的です。
+   Video Editing Workspace にいる場合、デフォルトでは、以下に設定されています。
+
+   - File Format: **FFmpeg Video**
+   - Video Codec: **H.264**
+   - Audio Codec: **AAC**
+
+   他のワークスペースではデフォルトが、以下に設定されており、
+
+   - File Format: **PNG** (Image Sequence)
+
+   Blender ドキュメントや多くのチュートリアルではこのアプローチが好まれています。
+
+   レンダリング プロセスを停止して再起動することが簡単になります (たとえば、クラッシュが発生した場合や、別の目的でコンピュータが必要な場合)。
+
+   カラー グレーディングや VFX などの後処理に最適な、高品質のロスレス形式 (OpenEXR など) を選択できます。
+
+   レンダー ファームを使用することもできます。ただし、これらの利点は、画質を完全に制御できる 3D アニメーション作成プロセス (Blender の主な焦点) でより顕著になります。
+
+   ソース素材の品質が通常固定されているビデオ編集ワークフローでは、このことはあまり明らかではありません。たとえば、映像はすでに撮影されており、たとえば、H.264 映像から openEXR イメージ シーケンスを作成しても、その品質は向上しません。プロジェクトを画像シーケンスとして保存した場合は、オーディオも個別に保存する必要があります。そして最終的には、おそらく 1 つのムービー ファイルをクライアントに渡す必要があるでしょう。
+
+   したがって、一般的なビデオ編集ワークフローでは、単一のムービー ファイル形式 (FFMpeg Video) がはるかに一般的です。
 
    .. note::
       .. A 1080P video with 30 fps and 10 seconds duration has an uncompressed file size of 1080 x 1920 (dimension) x 3 (color channels) x 30 (fps) x 10 (duration) =  1.866.240.000 bytes or 1.73 GB. In most cases, this file is too big and should be compressed with for example, the H.264 codec. This codec can yield compression ratios from 1:50 to about 1:200 (200 bytes are compressed into 1 byte), reducing the above file size to about 36 MB - 9 MB. The following concepts are important to keep in mind:
@@ -323,7 +379,7 @@ File Format
          .. Due to this huge file size and the absence of audio, both formats should probably not be used as delivery format but as fallback.
          この巨大なファイル サイズと音声がないため、どちらの形式も配信形式としてではなく、フォールバックとして使用する必要があると考えられます。
 
-   FFmpeg video file format
+   FFmpeg Video
       .. figure:: /images/video_editing_setup_project-settings-output-containers-codecs.png
          :alt: FFMpeg video settings
          :align: right
@@ -334,7 +390,7 @@ File Format
 
       .. FFmpeg video is an umbrella term for several containers and codecs. It uses the ffmpeg libraries under the hood to create the video file. When selecting this option, several *presets* are available: ``DVD``, ``H264 in Matroska``, ``H264 in Matroska for scrubbing``, ``H264 in MP4``, ``Ogg Theora``, ``WebM (VP9+Opus)``, and ``Xvid``.  Selecting one of these presets will set the encoding, video and audio options below to a pre-defined value. We describe only the very popular *H264 in MP4* and the related concepts. These are also applicable to the other presets.
 
-      FFmpeg ビデオは、いくつかのコンテナとコーデックを総称した用語です。内部で ffmpeg ライブラリを使用してビデオ ファイルを作成します。
+      FFmpeg Video は、いくつかのコンテナとコーデックを総称した用語です。内部で ffmpeg ライブラリを使用してビデオ ファイルを作成します。
 
       このオプションを選択すると、いくつかのプリセットが使用可能になります: ``DVD``, ``H264 in Matroska``, ``H264 in Matroska for scrubbing``, ``H264 in MP4``, ``Ogg Theora``, ``WebM (VP9+Opus)``, ``Xvid`` 。
 
@@ -526,12 +582,10 @@ File Format
       図13: Post processing オプション
 
 Compositing
-
    .. The output of the render process comes from the the Composite Output node of the compositor. Note that this option should be enabled *but* also the Use Nodes option in the compositor. If both conditions are not fulfilled, then the output of the active camera is used to render the images.
    レンダリング プロセスの出力は、コンポジターの Composite Output ノードから取得されます。このオプション *だけでなく* 、Compositer の [Use Note] オプションも有効にする必要があることに注意してください。両方の条件が満たされない場合は、アクティブな Camera の出力を使用してイメージがレンダリングされます。
 
 Sequencer
-
    .. Renders the output of the Video Sequence editor, instead of the active camera or Compositor. If the sequence contains Scene strips, these will also be rendered as part of the pipeline. If Compositing is enabled (but see above), the Scene strip will be the output of the Compositor.
 
    アクティブな Camera または Compositer の代わりに、Video Sequence Editor の出力をレンダリングします。Sequencer  にシーン ストリップが含まれている場合、これらもパイプラインの一部としてレンダリングされます。[Compositing] が有効な場合 (ただし上記を参照)、シーン ストリップは Compositer の出力になります。
@@ -543,21 +597,23 @@ Sequencer
    Video Sequence Editor が空の場合は、Sequencer オプションが有効であっても、アクティブな Camera またはコンポジット出力ノードがレンダリングされます。
 
 Dither
-
     .. Dithering is a technique for blurring pixels to prevent banding that is seen in areas of gradients, where stair-stepping appears between colors. Banding artifacts are more noticeable when gradients are longer, or less steep. Dithering was developed for graphics with low bit depths, meaning they had a limited range of possible colors.
     ディザリングは、色の間に階段状の段差が現れるグラデーション領域に見られるバンディングを防ぐためにピクセルをぼかす技術です。バンディング アーティファクトは、勾配が長い場合、または勾配が緩やかな場合により目立ちます。ディザリングは、ビット深度が低いグラフィックス向けに開発されました。つまり、使用できる色の範囲が限られています。
 
     .. Dithering works by taking pixel values and comparing them with a threshold and neighboring pixels then does calculations to generate the appropriate color. Dithering creates the perceived effect of a larger color palette by creating a sort of visual color mixing. For example, if you take a grid and distribute red and yellow pixels evenly across it, the image would appear to be orange.
     ディザリングは、ピクセル値を取得し、それらをしきい値と比較し、隣接するピクセルを計算して適切な色を生成することによって機能します。ディザリングは、一種の視覚的な色の混合を作成することにより、より大きなカラー パレットの知覚効果を作成します。たとえば、グリッドを作成し、赤と黄色のピクセルを均等に配置すると、画像はオレンジ色に見えます。
 
-test
 Some useful links:
+----
 
 * Discrete Cosine Transformation: https://www.youtube.com/watch?v=Q2aEzeMDHMA&t=33s
 * JPEG compression: https://www.youtube.com/watch?v=Ba89cI9eIg8
 * Video compression: https://www.youtube.com/watch?v=QoZ8pccsYo4
 * Rate Control mode: https://slhck.info/video/2017/03/01/rate-control.html
 
-.. rubric:: 脚注
+.. rubric:: 訳注
 
+.. [#f2] VSEは、Video Sequence Editorの略称
 .. [#f1] Blender4.0の私の環境ではVSEのPreviewを :kbd:`LMB-Click` でステータスバーに情報が表示されました。一方 Renderウィンドウでは、 :kbd:`RMB-Click` で表示されました。
+.. [#f3] :doc:`Edit > Montage > Add の'Use Movie Frame Rate'オプション </video_editing/edit/montage/add>` も確認してください。
+.. [#f4] :doc:`Extra Tools > FFMPEG </extra-tools/ffmpeg>` には可変レートから固定レートへの変換の記述がない。 `video - FFMPEG: How to convert VFR to CFR without messing up the timing - Super User <https://superuser.com/a/1805395>`_ が参考になりそう。

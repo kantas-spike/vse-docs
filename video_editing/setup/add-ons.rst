@@ -36,3 +36,10 @@ Add-ons
 
 Tin2Tin は、アドオンへの `100 links <https://blenderartists.org/t/video-sequence-editor-news-add-ons/1188770>`_ を含む Web ページを Blenderartists.org にまとめました。これらは、ツールボックス、(マルチスレッド) エクスポートとインポート、エフェクト、ストリップ編集、生成、オーディオ、シーン ストリップ、マーカー、編成、マルチカム、ユーザー インターフェイス、ショートカット キー、テンプレートなどのカテゴリに当てはまります。
 
+.. seealso:: (訳注)
+  Blenderアドオンの開発方法については、以下の書籍を参照してください。
+  `fake bpy modules` の開発者である `Nutti`さんが書かれた書籍になります。
+
+  `Blender Python完全ガイド | ぬっち | Kindleストア | Amazon <https://amzn.asia/d/4YqCwJY>`_
+
+
