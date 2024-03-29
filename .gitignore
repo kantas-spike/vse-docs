@@ -2,3 +2,5 @@ _build/
 assets/
 .python-version
 *.pdf
+wk/
+*.code-workspace

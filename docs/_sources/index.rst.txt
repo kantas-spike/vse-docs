@@ -20,6 +20,11 @@ Blender VSE 非公式文書 [#f1]_
 このBlenderによる動画編集の文書は、3つのセクションで構成されます。
 この文書は、公式のBlenderリファレンス文書よりも、よりワークフロー思考のアプローチでをで記載されています。 [#f2]_
 
+.. note::
+  **(訳注)** この文書のオリジナルは以下になります。
+
+  `Blender VSE Unofficial Docs — Blender VSE Unofficial Documentation documentation <https://vse-docs.readthedocs.io/>`_
+
 .. figure:: ./images/vse_icon_sequencer.svg
    :alt: Sequencer icon
    :align: left
@@ -64,7 +69,7 @@ BlenderのVSEは、単なるビデオエディターではありませんが、�
 Python、ffmpeg、MediaInfoやExifToolsなどのオープンソースツールについて簡単に紹介します。
 ---
 
-.. rubric:: 脚注
+.. rubric:: 訳注
 
-.. [#f1] (訳注) VSEは *Video Sequence Editor* の略です。
-.. [#f2] (訳注) 公式のBlenderリファレンス文書は、エディターの各機能を網羅的に説明しているため、動画編集のワークフローと機能の関連がわかりにくくなっています。
+.. [#f1] VSEは *Video Sequence Editor* の略です。
+.. [#f2] 公式のBlenderリファレンス文書は、エディターの各機能を網羅的に説明しているため、動画編集のワークフローと機能の関連がわかりにくくなっています。
