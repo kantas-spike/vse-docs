@@ -270,7 +270,12 @@ Image/Image Sequence ストリップには、[Sound] や [Movie Frame Rate] オ�
     The Display Mode of the Outliner (top right window) is set to ``Scenes`` (slide 2).
     You can switch very easily between the timelines of both scenes by just selecting the scene in the Outliner (slide 3).
 ..
--  Blender VSE では、任意のストリップを任意のチャンネルに配置できます。ただし、多くの編集者は、チャネルを機能バンドにグループ化します。たとえば、チャネル 1 ～ 5: オーディオ、5 ～ 10: ビデオ、11 ～ 15: エフェクトです。各バンド内には、バックグラウンド ミュージック、ナレーション、アンビエント サウンドなどのサブバンドを含めることができます。可能な分類については、 :doc:`Organize your assets </video_editing/setup/directory-structure>` を参照してください。
+-  Blender VSE では、任意のストリップを任意のチャンネルに配置できます。ただし、多くの編集者は、チャネルを機能バンドにグループ化します。たとえば、以下のようにグループ化します。
+  - チャネル 1 ～ 5: オーディオ
+  - チャネル 5 ～ 10: ビデオ
+  - チャネル 11 ～ 15: エフェクト
+  各バンド内には、バックグラウンド ミュージック、ナレーション、アンビエント サウンドのようなサブバンドを含めることができます。可能な分類については、 :doc:`Organize your assets </video_editing/setup/directory-structure>` を参照してください。
+
 -  一部のビデオ編集プログラムは、ビデオと埋め込みオーディオ ストリップをリンクします。もちろん利点は、一方のストリップを移動すると他方のストリップも移動することです。同期の問題が発生する可能性は低くなります。 Blender VSE では、ビデオとオーディオはリンクされていません。回避策はメタ ストリップを使用することですが、これには音波が見えなくなるという欠点があります。 VSQEF アドオンを使用すると、ストリップを親にすることができます。 `video tutorial <https://www.youtube.com/watch?v=rJg8xH8PyGc&t=40s>`_ を参照してください。
 -  Blender の VSE は、 "bin" という概念を使用しません。これは、ソース クリップへの参照を保持するためにプロジェクト内にのみ存在する仮想フォルダーです。ただし、複数のシーンを使用することで簡単にエミュレートできます。図 4 では、2 つのシーン (Raw フッテージとラフ カット) が作成されています (スライド 1)。すべてのクリップが Raw Footage シーンのタイムラインに追加されます。アウトライナー (右上のウィンドウ) の表示モードはScenes(スライド 2) に設定されます。アウトライナーでシーンを選択するだけで、両方のシーンのタイムラインを簡単に切り替えることができます (スライド 3)。
 
