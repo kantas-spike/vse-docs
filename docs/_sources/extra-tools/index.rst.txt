@@ -38,6 +38,7 @@ ExifTool
    ffmpeg <ffmpeg>
    Script Editor <python-scripting-workspace.rst>
    exiftool
+   creating-test-files
    annotating-screenshot
 
 

@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>3.5. スクリーンショットに注釈を付ける &mdash; Blender VSE Unofficial Documentation  ドキュメント</title>
+  <title>3.6. スクリーンショットに注釈を付ける &mdash; Blender VSE Unofficial Documentation  ドキュメント</title>
   
 
   
@@ -47,7 +47,7 @@
     
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="検索" href="../search.html" />
-    <link rel="prev" title="3.4. ExifTool" href="exiftool.html" /> 
+    <link rel="prev" title="3.5. テストファイルの作成" href="creating-test-files.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -101,9 +101,10 @@
 <li class="toctree-l2"><a class="reference internal" href="ffmpeg.html">3.2. ffmpeg</a></li>
 <li class="toctree-l2"><a class="reference internal" href="python-scripting-workspace.html">3.3. Script Editor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="exiftool.html">3.4. ExifTool</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">3.5. スクリーンショットに注釈を付ける</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#svg">3.5.1. スクリーンショットをSVGに埋め込む</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#blender">3.5.2. Blender のみのソリューション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creating-test-files.html">3.5. テストファイルの作成</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">3.6. スクリーンショットに注釈を付ける</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#svg">3.6.1. スクリーンショットをSVGに埋め込む</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#blender">3.6.2. Blender のみのソリューション</a></li>
 </ul>
 </li>
 </ul>
@@ -158,7 +159,7 @@
         
           <li><a href="index.html"><span class="section-number">3. </span>追加ツール</a> &raquo;</li>
         
-      <li><span class="section-number">3.5. </span>スクリーンショットに注釈を付ける</li>
+      <li><span class="section-number">3.6. </span>スクリーンショットに注釈を付ける</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -178,10 +179,10 @@
            <div itemprop="articleBody">
             
   <div class="section" id="id1">
-<h1><span class="section-number">3.5. </span>スクリーンショットに注釈を付ける<a class="headerlink" href="#id1" title="この見出しへのパーマリンク">¶</a></h1>
+<h1><span class="section-number">3.6. </span>スクリーンショットに注釈を付ける<a class="headerlink" href="#id1" title="この見出しへのパーマリンク">¶</a></h1>
 <p>注釈付きの図を Blender ドキュメントに追加するのは、多大な労力を要するプロセスになる場合があります。特に、Blender の内部開発により Figure の内容が大幅に変更される場合はそうです。次のテキストでは、Blender ドキュメントでこれらの頻繁に変更される図を作成するための最適化されたワークフローについて説明します。ほとんどの場合、これらの図は Blender インターフェイスの一部のスクリーンショットに基づいています。ここで、何らかの注釈 (色、テキスト、矢印、ラベルなど) が追加されます。</p>
 <div class="section" id="svg">
-<h2><span class="section-number">3.5.1. </span>スクリーンショットをSVGに埋め込む<a class="headerlink" href="#svg" title="この見出しへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">3.6.1. </span>スクリーンショットをSVGに埋め込む<a class="headerlink" href="#svg" title="この見出しへのパーマリンク">¶</a></h2>
 <ol class="arabic simple">
 <li><p>図と同じ名前の blendファイルを作成します。例: video_editing_setup_workspace.blend。高解像度のモニターを使用している場合は、テキストの読みやすさを高めるために、[Edit] &gt; [Preference] &gt; [Interface] &gt; [Resolution Scale] をより高い値 (1.5 など) に設定することをお勧めします。</p></li>
 <li><p>スクリーンショット用に Blender 環境を準備します (ワークスペースの選択、パネルのサイズ変更、展開または折りたたみなど)。メニューの [Edit] &gt; [Toggle Full Screen] を使用すると、blend ファイルのファイルの場所が表示されるタイトル バーを非表示にできます。Blender ウィンドウが最大化されていることを確認してください (または、実際のウィンドウの寸法を覚えておいてください)。</p></li>
@@ -191,7 +192,7 @@
 </ol>
 </div>
 <div class="section" id="blender">
-<h2><span class="section-number">3.5.2. </span>Blender のみのソリューション<a class="headerlink" href="#blender" title="この見出しへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">3.6.2. </span>Blender のみのソリューション<a class="headerlink" href="#blender" title="この見出しへのパーマリンク">¶</a></h2>
 <p>このワークフローの基本的な考え方は、作業とデータを複数のサードパーティ プログラム (ブレンダー、スクリーン グラバー、グラフィック エディター) に分散させるのではなく、すべての情報を 1 つのブレンド ファイルに保存する (そしてすべての作業を Blender で行う) ことです。</p>
 <ol class="arabic simple">
 <li><p>図と同じ名前の blend ファイルを作成します。例: video_editing_setup_workspace.blend。高解像度のモニターを使用している場合は、テキストの読みやすさを高めるために、[Editor] &gt; [Preferences] &gt; [Interface] &gt; [Resolution Scale] をより高い値 (1.5 など) に設定することをお勧めします。プロジェクトの解像度をモニターのサイズに設定します (たとえば、4K モニターの場合は 1920 x 1080 または 3840 x 2160)。そうしないと、Blender がスクリーンショットを拡大縮小してしまい、出力がぼやけてしまいます。これは正しいです？</p></li>
@@ -227,7 +228,7 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="exiftool.html" class="btn btn-neutral float-left" title="3.4. ExifTool" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="creating-test-files.html" class="btn btn-neutral float-left" title="3.5. テストファイルの作成" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>
