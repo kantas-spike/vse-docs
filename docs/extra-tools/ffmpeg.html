@@ -101,10 +101,10 @@
 <li class="toctree-l2"><a class="reference internal" href="python-useful-scripts.html">3.1. Python</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">3.2. ffmpeg</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id1">3.2.1. ビデオをロスレスでトリミングする</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id2">3.2.2. 複数のビデオフラグメントを 1 つのファイルに結合します</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id3">3.2.3. テストファイルを生成する</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id4">3.2.4. 複数のビデオチャンネルを 1 つのコンテナに作成する</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id5">3.2.5. 「2で割り切れない」エラーを修正</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">3.2.2. 複数のビデオフラグメントを 1 つのファイルに結合する</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">3.2.3. 複数のビデオチャンネルを 1 つのコンテナに作成する</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">3.2.4. 「2で割り切れない」エラーを修正</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">3.2.5. 可変フレームレートを確認する</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="python-scripting-workspace.html">3.3. Script Editor</a></li>
@@ -192,28 +192,18 @@
 <p><code class="docutils literal notranslate"><span class="pre">ffmpeg</span> <span class="pre">-i</span> <span class="pre">input.mkv</span> <span class="pre">-ss</span> <span class="pre">00:02:02</span> <span class="pre">-to</span> <span class="pre">00:02:43</span> <span class="pre">-c:v</span> <span class="pre">copy</span> <span class="pre">-c:a</span> <span class="pre">copy</span> <span class="pre">output.mkv</span></code></p>
 </div>
 <div class="section" id="id2">
-<h2><span class="section-number">3.2.2. </span>複数のビデオフラグメントを 1 つのファイルに結合します<a class="headerlink" href="#id2" title="この見出しへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">3.2.2. </span>複数のビデオフラグメントを 1 つのファイルに結合する<a class="headerlink" href="#id2" title="この見出しへのパーマリンク">¶</a></h2>
 <p>以前はビデオを別々のシーンで作成していました。たとえば、年次レビュー モンタージュの各月に 1 つのシーン。この 1 年の間に、個別のシーンをビデオ フラグメントにレンダリングすることができました。年末にはそれらを 1 つの作品にまとめる必要があります。</p>
 <p><code class="docutils literal notranslate"><span class="pre">ffmpeg</span> <span class="pre">-safe</span> <span class="pre">0</span> <span class="pre">-f</span> <span class="pre">concat</span> <span class="pre">-i</span> <span class="pre">list.txt</span> <span class="pre">-c</span> <span class="pre">copy</span> <span class="pre">output.mp4</span></code></p>
 <p>出力ファイルは &quot;output.mp4&quot; と呼ばれます。毎月のフラグメントは、フラグメントの名前を含む 12 行を含む別のファイル &quot;list.txt&quot; で名前が付けられます。 &quot;01-jan.mp4 02-feb.mp4 … 12-dec.mp4&quot;。フラグメントが配置されているフォルダーでコマンドを実行する必要があります。</p>
 </div>
 <div class="section" id="id3">
-<h2><span class="section-number">3.2.3. </span>テストファイルを生成する<a class="headerlink" href="#id3" title="この見出しへのパーマリンク">¶</a></h2>
-<p>場合によっては、特定の解像度、期間、またはフレームレートのテスト ビデオまたはテスト画像が必要になることがあります。まず ffplay を試してテストビデオを表示してください。その後、ffplay コマンドを ffmpeg に置き換え、outputfile パラメーターを追加します。</p>
-<p><code class="docutils literal notranslate"><span class="pre">ffplay</span> <span class="pre">-f</span> <span class="pre">lavfi</span> <span class="pre">-i</span> <span class="pre">testsrc=duration=10:size=1280x720:rate=30</span></code></p>
-<p><code class="docutils literal notranslate"><span class="pre">ffmpeg</span> <span class="pre">-f</span> <span class="pre">lavfi</span> <span class="pre">-i</span> <span class="pre">testsrc=duration=10:size=1280x720:rate=30</span> <span class="pre">test.mp4</span></code></p>
-<p>このコマンドは、解像度 1280 x 720 ピクセル、フレームレート 30 フレーム/秒、持続時間 10 秒の MP4 形式のカウントアップ ビデオを表示/作成します。その他のコマンドとテスト形式については、 <a class="reference external" href="https://www.bogotobogo.com/FFMpeg/ffmpeg_video_test_patterns_src.php">bogotobogo</a> を参照してください。</p>
-<p>次のコマンドは、不透明度が 0.2 に設定され、持続時間が 5 秒、解像度が 640x480、フレームレートが 10 fps の MP4 形式で赤色の背景を表示/作成します。</p>
-<p><code class="docutils literal notranslate"><span class="pre">ffplay</span> <span class="pre">-f</span> <span class="pre">lavfi</span> <span class="pre">-i</span> <span class="pre">color=c=red&#64;0.2:duration=5:s=640x480:r=10</span></code></p>
-<p><code class="docutils literal notranslate"><span class="pre">ffmpeg</span> <span class="pre">-f</span> <span class="pre">lavfi</span> <span class="pre">-i</span> <span class="pre">color=c=red&#64;0.2:duration=5:s=640x480:r=10</span> <span class="pre">test.mp4</span></code></p>
-</div>
-<div class="section" id="id4">
-<h2><span class="section-number">3.2.4. </span>複数のビデオチャンネルを 1 つのコンテナに作成する<a class="headerlink" href="#id4" title="この見出しへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">3.2.3. </span>複数のビデオチャンネルを 1 つのコンテナに作成する<a class="headerlink" href="#id3" title="この見出しへのパーマリンク">¶</a></h2>
 <p>一部のビデオ コンテナには、複数のビデオおよびオーディオ チャネルを含めることができます。たとえば、2 つの監視カメラ出力が隣り合っている場合などです。Blender では、[Strip] &gt; [Source] パネル &gt; [Stream index] を使用して、プレビューするチャンネルを選択できます (同時に両方を選択することはできません)。次のコマンドは、2 つのビデオ チャネルを 1 つのコンテナに作成します。</p>
 <p><code class="docutils literal notranslate"><span class="pre">ffmpeg</span> <span class="pre">-i</span> <span class="pre">input-1.mp4</span> <span class="pre">-i</span> <span class="pre">input-2.mp4</span> <span class="pre">-map</span> <span class="pre">0:0</span> <span class="pre">-map</span> <span class="pre">1:0</span> <span class="pre">output.mkv</span></code></p>
 </div>
-<div class="section" id="id5">
-<h2><span class="section-number">3.2.5. </span>「2で割り切れない」エラーを修正<a class="headerlink" href="#id5" title="この見出しへのパーマリンク">¶</a></h2>
+<div class="section" id="id4">
+<h2><span class="section-number">3.2.4. </span>「2で割り切れない」エラーを修正<a class="headerlink" href="#id4" title="この見出しへのパーマリンク">¶</a></h2>
 <p>場合によっては、クラシックな 1080p (1920 x 1080) 以外のレンダリング解像度が必要になることがあります。次に、[Output]プロパティ の [Dimensions] パネルに X および Y 解像度を入力できます。ただし、たとえば 1500 ピクセル x 399 ピクセルで H.264 コーデックを使用しようとすると、「2 で割り切れません」というエラーが発生します (さらに悪いことに、クラッシュが発生する場合もあります)。このエラーの理由は、H.264 エンコーダが固定サイズ (4x4 など) のマクロブロックを使用してムービーを圧縮するためです。各フレームはこれらの小さなマクロブロックに分割され、ビデオを圧縮するために、これらのマクロブロック間の差異のみがエンコードされます。ただし、これにより、ムービーの幅と高さが 2 で割り切れる必要があるという要件が追加されます。Y 解像度を 400 に変更すると、問題が解決します。</p>
 <p>何らかの理由で、元の解像度 1500 x 399 を維持したい場合は、最初にアニメーションを PNG シーケンスとしてレンダリングする必要があります。PNG 形式には、幅と高さに関するこの制限はありません。もちろん、再生可能なムービーはありません。</p>
 <p>したがって、ムービー (MP4 など) を作成するには FFMPEG が必要です。一連の画像からムービーを作成するには、次のコマンドが必要です。</p>
@@ -224,6 +214,21 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">-i</span> <span class="pre">%04d.png</span></code> specifies the input as a 4 digit number, followed by .png, e.g. 0001.png, 0002.png, ...</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">test.mp4</span></code> specifies the output file.</p></li>
 </ul>
+</div>
+<div class="section" id="id5">
+<h2><span class="section-number">3.2.5. </span>可変フレームレートを確認する<a class="headerlink" href="#id5" title="この見出しへのパーマリンク">¶</a></h2>
+<p>次のコマンドは VFR をチェックします。ビデオフィルター vfrdet を使用します。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ffmpeg</span> <span class="o">-</span><span class="n">i</span> <span class="n">test_input</span><span class="o">.</span><span class="n">mp4</span> <span class="o">-</span><span class="n">vf</span> <span class="n">vfrdet</span> <span class="o">-</span><span class="n">f</span> <span class="n">null</span> <span class="o">-</span>
+</pre></div>
+</div>
+<p>出力は画面に送られます。 VFR パラメータは、可変フレーム レートの割合を示します。括弧内は、VFR (この例では 0) と CFR (この例では 532) のフレーム数です。以下を参照してください。 <a class="footnote-reference brackets" href="#f1" id="id6">1</a></p>
+<p><code class="docutils literal notranslate"><span class="pre">[Parsed_vfrdet_0</span> <span class="pre">&#64;</span> <span class="pre">000001f8b3902e80]</span> <span class="pre">VFR:0.000000</span> <span class="pre">(0/532)</span></code></p>
+<p class="rubric">脚注</p>
+<dl class="footnote brackets">
+<dt class="label" id="f1"><span class="brackets"><a class="fn-backref" href="#id6">1</a></span></dt>
+<dd><p><span class="incremental">VFR(Variable Frame Rate)</span>: 可変フレームレート、<span class="incremental">CFR(Constant Frame Rate)</span>: 固定フレームレート</p>
+</dd>
+</dl>
 </div>
 </div>
 

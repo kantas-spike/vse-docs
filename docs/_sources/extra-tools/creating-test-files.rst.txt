@@ -76,10 +76,28 @@ FFMPEG は、ビデオ ファイルとオーディオ ファイルを処理 (デ
 
    ffmpeg -f lavfi -i testsrc=duration=10:size=1280x720:rate=30 test.mp4
 
+
+.. The following command will show/create a red color background with opacity set to 0.2, with a duration of 5 seconds and a resolution of 640x480 with 10 a framerate of 10 fps in MP4-format.
+
+また、次のコマンドは、不透明度が 0.2 に設定され、持続時間が 5 秒、解像度が 640x480、フレームレートが 10 fps の MP4 形式で赤色の背景を表示/作成します。
+
+.. code-block::
+
+    ffplay -f lavfi -i color=c=red@0.2:duration=5:s=640x480:r=10
+
+
+結果に満足したら、ffplayコマンドを *ffmpeg* に置き換えて出力ファイルを追加します。例: test.mp4
+
+.. code-block::
+
+    ffmpeg -f lavfi -i color=c=red@0.2:duration=5:s=640x480:r=10 test.mp4
+
+
 ..
   More commands and test formats can be found at
   `bogotobogo <https://www.bogotobogo.com/FFMpeg/ffmpeg_video_test_patterns_src.php>`_.
 ..
+
 その他のコマンドとテスト形式については、 `bogotobogo <https://www.bogotobogo.com/FFMpeg/ffmpeg_video_test_patterns_src.php>`_ を参照してください。
 
 .. **B. Generate a timecode overlay with FFMPEG**

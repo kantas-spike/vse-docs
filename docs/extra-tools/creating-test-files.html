@@ -207,6 +207,14 @@
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ffmpeg</span> <span class="o">-</span><span class="n">f</span> <span class="n">lavfi</span> <span class="o">-</span><span class="n">i</span> <span class="n">testsrc</span><span class="o">=</span><span class="n">duration</span><span class="o">=</span><span class="mi">10</span><span class="p">:</span><span class="n">size</span><span class="o">=</span><span class="mi">1280</span><span class="n">x720</span><span class="p">:</span><span class="n">rate</span><span class="o">=</span><span class="mi">30</span> <span class="n">test</span><span class="o">.</span><span class="n">mp4</span>
 </pre></div>
 </div>
+<p>また、次のコマンドは、不透明度が 0.2 に設定され、持続時間が 5 秒、解像度が 640x480、フレームレートが 10 fps の MP4 形式で赤色の背景を表示/作成します。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ffplay</span> <span class="o">-</span><span class="n">f</span> <span class="n">lavfi</span> <span class="o">-</span><span class="n">i</span> <span class="n">color</span><span class="o">=</span><span class="n">c</span><span class="o">=</span><span class="n">red</span><span class="o">@</span><span class="mf">0.2</span><span class="p">:</span><span class="n">duration</span><span class="o">=</span><span class="mi">5</span><span class="p">:</span><span class="n">s</span><span class="o">=</span><span class="mi">640</span><span class="n">x480</span><span class="p">:</span><span class="n">r</span><span class="o">=</span><span class="mi">10</span>
+</pre></div>
+</div>
+<p>結果に満足したら、ffplayコマンドを <em>ffmpeg</em> に置き換えて出力ファイルを追加します。例: test.mp4</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ffmpeg</span> <span class="o">-</span><span class="n">f</span> <span class="n">lavfi</span> <span class="o">-</span><span class="n">i</span> <span class="n">color</span><span class="o">=</span><span class="n">c</span><span class="o">=</span><span class="n">red</span><span class="o">@</span><span class="mf">0.2</span><span class="p">:</span><span class="n">duration</span><span class="o">=</span><span class="mi">5</span><span class="p">:</span><span class="n">s</span><span class="o">=</span><span class="mi">640</span><span class="n">x480</span><span class="p">:</span><span class="n">r</span><span class="o">=</span><span class="mi">10</span> <span class="n">test</span><span class="o">.</span><span class="n">mp4</span>
+</pre></div>
+</div>
 <p>その他のコマンドとテスト形式については、 <a class="reference external" href="https://www.bogotobogo.com/FFMpeg/ffmpeg_video_test_patterns_src.php">bogotobogo</a> を参照してください。</p>
 </div>
 <div class="section" id="id2">
