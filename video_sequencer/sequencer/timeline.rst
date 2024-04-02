@@ -98,7 +98,7 @@ Blender では、タイムラインを *秒単位* で表示するか *フレー
 
 .. Please note that in a Move operation, the Visible Range can be moved horizontally, vertically or both. The area will not change. As a result of the Move, the playhead could fall out of view. The Zoom operation always start from the current Visible Range and will shrink or expand its area. Again, as a result the playhead could fall fall outside the Visible Range. In a Navigate operation, the Visible Range will never change, only the playhead will move.
 
-移動操作では、表示範囲を水平、垂直、またはその両方に移動できることに注意してください。エリアは変わりません。移動の結果、再生ヘッドが表示されなくなる可能性があります。ズーム操作は常に現在の可視範囲から開始され、その領域が縮小または拡大されます。繰り返しになりますが、その結果、再生ヘッドが可視範囲外に落ちてしまう可能性があります。ナビゲート操作では、表示範囲は変更されず、再生ヘッドのみが移動します。
+移動操作では、表示範囲を水平、垂直、またはその両方に移動できることに注意してください。エリアは変わりません。移動の結果、Playheadが表示されなくなる可能性があります。ズーム操作は常に現在の可視範囲から開始され、その領域が縮小または拡大されます。繰り返しになりますが、その結果、Playheadが可視範囲外に落ちてしまう可能性があります。ナビゲート操作では、表示範囲は変更されず、Playheadのみが移動します。
 
 .. figure:: /images/editors_vse_sequencer_timeline_move-size.svg
    :alt: Sequencer window

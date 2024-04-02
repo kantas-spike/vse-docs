@@ -10,7 +10,7 @@ Split
 
 .. Splitting a strip is separating the strip into two parts at the position of the playhead. Both parts continue to function as independent strips (who shares the same source). Splitting can be done on all strip types. Splitting an effect strip however will also split the input strip of the effect and vice versa.
 
-ストリップの分割とは、ストリップを再生ヘッドの位置で 2 つの部分に分割することです。両方のパートは引き続き独立したストリップ（同じソースを共有する）として機能します。分割はすべてのストリップ タイプで実行できます。ただし、エフェクト ストリップを分割すると、エフェクトの入力ストリップも分割され、その逆も同様です。
+ストリップの分割とは、ストリップをPlayheadの位置で 2 つの部分に分割することです。両方のパートは引き続き独立したストリップ（同じソースを共有する）として機能します。分割はすべてのストリップ タイプで実行できます。ただし、エフェクト ストリップを分割すると、エフェクトの入力ストリップも分割され、その逆も同様です。
 
 .. In previous versions of Blender and also in a substantial part of the literature this operation was called "Cutting".  In a computer environment however this term is primarily used in the sense of copy-cut-paste, where it implicates delete. So, the term *Split* is preferred, although it stays very visible in terms such as *Jump Cut*, *J- or L-Cut*, ....
 
@@ -96,7 +96,7 @@ Hold Split :kbd:`Shift-K`
 
    .. The Freeze in the middle of the strip is more complicated. First, you need a Hold Split at frame 6 (playhead at 7) of the original strip. That way there is a Hold flag on frame 6 so that dragging the right handle will duplicate frame 6. You need this Hold flag on the left part of the split e.g. freeze.001. This is a Hold Offset End value of 4 because the original strip was 10 frames long.
 
-   ストリップの中央のフリーズはさらに複雑です。まず、元のストリップのフレーム 6 (再生ヘッドは 7) でホールド スプリットが必要です。そうすれば、フレーム 6 にホールド フラグが存在するため、右ハンドルをドラッグするとフレーム 6 が複製されます。このホールド フラグは、freeze.001 などの分割の左側の部分に必要です。元のストリップの長さが 10 フレームだったので、これは Hold Offset End 値 4 です。
+   ストリップの中央のフリーズはさらに複雑です。まず、元のストリップのフレーム 6 (Playheadは 7) でホールド スプリットが必要です。そうすれば、フレーム 6 にホールド フラグが存在するため、右ハンドルをドラッグするとフレーム 6 が複製されます。このホールド フラグは、freeze.001 などの分割の左側の部分に必要です。元のストリップの長さが 10 フレームだったので、これは Hold Offset End 値 4 です。
 
    .. The strip in figure 3 has a brown color because it is an image sequence. You can add the Still Offset fields to the Time panel with a little Python code (see :doc:`useful scripts </extra-tools/python-useful-scripts>` ).
 
@@ -194,7 +194,7 @@ Trim
    .. - If the playhead is outside the range of the selected strips, the :kbd:`E` will move the all selected strips in the direction of the mouse movement. This mimics the move behavior of an entire strip with :kbd:`G` key.
    .. - If the playhead is within the range of (some) selected strips, the :kbd:`E` key will trim the selected strips. If the mouse is at the left side of the playhead, the IN points of the selected strips will follow the direction of the mouse (as if trimming with the left strip handle). If the mouse is at the right side of the playhead, the OUT point will follow the direction of the mouse (as if trimming with the right strip handle).
    - Playhead が選択したストリップの範囲外にある場合、 :kbd:`E` は選択したすべてのストリップがマウスの移動方向に移動します。これは、:kbd:`G` キーによるストリップ全体の移動動作を模倣します。
-   - Playhead 選択した（一部の）ストリップの範囲内にある場合、:kbd:`E` キーは選択したストリップをトリミングします。マウスが再生ヘッドの左側にある場合、選択したストリップの IN ポイントはマウスの方向に従います (左側のストリップ ハンドルでトリミングするかのように)。マウスが再生ヘッドの右側にある場合、OUT ポイントはマウスの方向に従います (右のストリップ ハンドルでトリミングするかのように)。
+   - Playhead 選択した（一部の）ストリップの範囲内にある場合、:kbd:`E` キーは選択したストリップをトリミングします。マウスがPlayheadの左側にある場合、選択したストリップの IN ポイントはマウスの方向に従います (左側のストリップ ハンドルでトリミングするかのように)。マウスがPlayheadの右側にある場合、OUT ポイントはマウスの方向に従います (右のストリップ ハンドルでトリミングするかのように)。
 
     .. In summary, all selected strip handles from the “mouse side” of the current frame indicator (playhead) will transform together, to move or extend/shorten the selected strips.
     要約すると、現在のフレーム インジケーター (Playhead) の「マウス側」から選択されたすべてのストリップ ハンドルが一緒に変形し、選択されたストリップを移動または延長/短縮します。

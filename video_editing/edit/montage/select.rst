@@ -98,7 +98,7 @@ Select one strip
    図3 位置ベースの選択
 
 .. With these commands you can select strips, based on their position on the timeline in relation to the playhead or the active strip (see figure 2).
-これらのコマンドを使用すると、再生ヘッドまたはアクティブなストリップに対するタイムライン上の位置に基づいてストリップを選択できます (図3)。
+これらのコマンドを使用すると、Playheadまたはアクティブなストリップに対するタイムライン上の位置に基づいてストリップを選択できます (図3)。
 
 .. Select all strips based on position of playhead
 Playhead位置に基づいてすべてのストリップを選択
@@ -117,7 +117,7 @@ Playhead位置に基づいてすべてのストリップを選択
    Playheadの左側を :kbd:`Ctrl+LMB-Click` して Playheadの前のすべてのストリップを選択するか、Playheadの右側を :kbd:`Ctrl+LMB-Click` して Playheadの後のすべてのストリップを選択することもできます。
 
    .. To select all strips located at the position of the playhead, choose the submenu  *Current Frame*. There is no shortcut key associated by default.
-   再生ヘッドの位置にあるすべてのストリップを選択するには、 [Current Frame]サブメニュー を選択します。デフォルトでは関連付けられたショートカット キーはありません。
+   Playheadの位置にあるすべてのストリップを選択するには、 [Current Frame]サブメニュー を選択します。デフォルトでは関連付けられたショートカット キーはありません。
 
    .. The menu equivalent is Select > Side of Frame (see figure 2), with options: Left, Right or Current Frame.
    メニューは [Select] > [Side of Frame] (図) で、オプションは [Lef]、[Right]、または [Current Frame] です。
@@ -196,7 +196,7 @@ Effect/Linked
 
 Overlap
    .. Selects any strips that occur on the same frame as the current. Note that the current frame is always in reference to the Start frame of the active strip. It does not correspondent with the playhead position.
-   現在と同じフレーム上にあるストリップを選択します。現在のフレームは常にアクティブなストリップの開始フレームを参照していることに注意してください。再生ヘッドの位置とは対応しません。
+   現在と同じフレーム上にあるストリップを選択します。現在のフレームは常にアクティブなストリップの開始フレームを参照していることに注意してください。Playheadの位置とは対応しません。
 
 ストリップハンドルを選択
 ....................

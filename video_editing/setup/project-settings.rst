@@ -210,7 +210,7 @@ Step
 
 Time Stretching
    .. You can use this to speed up or slow down the playback of the whole project. For example, in figure 7, there are two indicators of the Current Frame. The Playhead is split into a blue line (the old frame number) and a blue box with the new frame number (which you actually see in the preview).
-   これを使用して、プロジェクト全体の再生を高速化または低速化できます。たとえば、図8 には、現在のフレームの 2 つのインジケーターがあります。再生ヘッドは、青い線 (古いフレーム番号) と新しいフレーム番号を含む青いボックス (実際にプレビューで表示されます) に分割されます。
+   これを使用して、プロジェクト全体の再生を高速化または低速化できます。たとえば、図8 には、現在のフレームの 2 つのインジケーターがあります。Playheadは、青い線 (古いフレーム番号) と新しいフレーム番号を含む青いボックス (実際にプレビューで表示されます) に分割されます。
 
    Old
       .. The length in frames of the original animation.
