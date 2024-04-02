@@ -12,7 +12,7 @@ Proxies
 
 .. note::
    .. You can try it yourself by creating a 4K test movie (see :doc:`test files </video_editing/setup/creating-test-files>`) and adding it to the sequencer. Without proxies you will notice that scrubbing through the strip will stutter. Adding an effect (e.g. Gaussian Blur) will aggravate the problem.
-   4K テスト ムービー ( :doc:`test files </video_editing/setup/creating-test-files>` を参照) を作成し、それをシーケンサーに追加することで、自分で試すことができます。プロキシを使用しないと、ストリップのスクラブが途切れることに気づくでしょう。エフェクト（ガウスぼかしなど）を追加すると、問題がさらに悪化します。
+   4K テスト ムービー ( :doc:`test files </extra-tools/creating-test-files>` を参照) を作成し、それをシーケンサーに追加することで、自分で試すことができます。プロキシを使用しないと、ストリップのスクラブが途切れることに気づくでしょう。エフェクト（ガウスぼかしなど）を追加すると、問題がさらに悪化します。
 
 .. Using a 720p (1280×720) or a more optimized format will reduce the load on your computer. Proxies are only used to speed up the editing. For rendering out the final project, the original, high quality source files are used.
 

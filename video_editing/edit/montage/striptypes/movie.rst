@@ -243,7 +243,7 @@ Mirror
   In figure 3 we changed the project dimensions to equal
   the strip dimensions so that the viewport is fully taken by the video.
 ..
-図 3 の「Spring」オープン ムービーのサイズはデフォルトではありません: 2048 x 858。このムービーをダウンロードするには、 `creating test-files - section E) </video_editing/setup/creating-test-files>`_ を参照してください。
+図 3 の「Spring」オープン ムービーのサイズはデフォルトではありません: 2048 x 858。このムービーをダウンロードするには、 `creating test-files - section E) </extra-tools/creating-test-files>`_ を参照してください。
 このムービーをデフォルトの FHD タイムライン (1920 x 1080) に追加すると、スケーリングされます。
 最長の寸法 (2048) は 0.9375 の係数で 1920 にスケーリングされます (0.9375 x 2048 = 1920)。
 垂直方向の寸法も同じパラメータで拡大縮小され、高さ 858 * 0.9375 = 804 が指定され、
@@ -370,7 +370,7 @@ Strobe
     (see :doc:`Creating test files - section C </video_editing/setup/creating-test-files>`).
   ..
   フレーム 2 ～ 9、11 ～ 19 などは黒く塗りつぶされていないため、実際にはストロボ効果ではありません。
-  これは、タイムコード オーバーレイ テスト ファイルを使用して簡単に確認できます (参照 :doc:`Creating test files - section C </video_editing/setup/creating-test-files>`)。
+  これは、タイムコード オーバーレイ テスト ファイルを使用して簡単に確認できます (参照 :doc:`Creating test files - section C </extra-tools/creating-test-files>`)。
 
 Reverse Frames
   ..
