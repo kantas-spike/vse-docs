@@ -229,7 +229,7 @@
 <div><p>3 つの方法はすべて、他のビデオエディターと比べるとかなり制限されています。</p>
 </div></blockquote>
 <ul class="simple">
-<li><p>複数のクリップで Add メソッドを使用すると、再生ヘッドの位置から開始してタイムライン上にクリップが順番に配置されます。ただし、クリップを積み重ねたい場合は、クリップを 1 つずつ追加する必要があります。</p></li>
+<li><p>複数のクリップで Add メソッドを使用すると、Playheadの位置から開始してタイムライン上にクリップが順番に配置されます。ただし、クリップを積み重ねたい場合は、クリップを 1 つずつ追加する必要があります。</p></li>
 <li><p>Playhead の位置にすでにストリップがある場合、Blender は最初の空きチャンネルにストリップを追加します。追加するクリップのチャンネルを選択することはできません。</p></li>
 <li><p>ストリップをドロップする場所は重要ではありません。 Blender はそれらをPlayheadの位置に挿入します。ただし、(ストリップが挿入されることを期待して) 別のストリップの上またはストリップの間にストリップをドロップしようとしても、何も起こりません。ストリップも追加されていません。 <a class="footnote-reference brackets" href="#f1" id="id1">1</a></p></li>
 <li><p>ストリップの挿入に使用できるチャンネルは 128 です。 より大きな番号のチャンネルにはスクロールで表示することができあす。したがって、原則として、同時に 128 を超えるストリップを追加することはできません。ただし、メタ ストリップを使用することで、この制限を回避できます。いくつかのストリップを選択して右クリックします。 [Make meta strip] を選択します。ショートカット <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">G</kbd></kbd> 。選択したストリップは 1 つのチャンネルに折りたたまれ、1 チャンネルとしてカウントされます。</p></li>
@@ -239,7 +239,7 @@
 </div>
 <p>これらの制限の一部はアドオンによって解決されます。たとえば、<a class="reference external" href="https://github.com/snuq/VSEQF">VSE Quick Functions addon</a> に は次のインポート機能が追加されています。 <a class="footnote-reference brackets" href="#f4" id="id4">4</a></p>
 <ul class="simple">
-<li><p>Import At Frame: 標準のインポート動作で、新しいシーケンスを再生ヘッドに配置します。</p></li>
+<li><p>Import At Frame: 標準のインポート動作で、新しいシーケンスをPlayheadに配置します。</p></li>
 <li><p>Insert At Frame: 次のシーケンスは、インポートされたシーケンスの長さだけ前方に移動されます。</p></li>
 <li><p>Cut And Insert At Frame: 現在のフレームのすべてのシーケンスがカットされ、後続のすべてのシーケンスがインポートされたシーケンスの長さだけ前に移動されます。</p></li>
 <li><p>Import At End: インポートされたシーケンスをタイムラインの最後に配置します。</p></li>
@@ -260,7 +260,7 @@
 この場所は、アセットがインポートされる blend ファイルの場所から始まる相対的な場所、またはコンピューターのルート ディレクトリから始まる絶対的な場所にすることができます ( <a class="reference external" href="https://docs.blender.org/manual/en/dev/files/blend/open_save.html#relative-paths">Blender manual</a> を参照)。
 もちろん、blend ファイルはすでに保存されており、外部ファイルを別のドライブに置くことはできません。??</p>
 </dd>
-<dt>Start Frame</dt><dd><p>名前が示すように、ムービーの開始フレーム。このフィールドには、再生ヘッドの位置が自動的に入力されます。たとえば、再生ヘッドが位置 0 にある場合は値 0、再生ヘッドが位置 15 にある場合は値 15 です。</p>
+<dt>Start Frame</dt><dd><p>名前が示すように、ムービーの開始フレーム。このフィールドには、Playheadの位置が自動的に入力されます。たとえば、Playheadが位置 0 にある場合は値 0、Playheadが位置 15 にある場合は値 15 です。</p>
 </dd>
 <dt>Channel</dt><dd><p>ストリップを配置するチャンネル。たとえその位置にすでにストリップがあったとしても、塗りつぶされたチャンネルは常に 1 つです。ただし、新しく追加されたストリップは、次に低い、または高い空きチャンネルに配置されます。より多くのチャンネルを表示できる場合でも、チャンネルの最大数は 128 です。</p>
 </dd>

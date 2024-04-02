@@ -93,7 +93,7 @@ Cross および Gamma Cross Fade エフェクトは、赤、緑、青のカラ�
 
 .. The Cross fade takes 4 frames and the playhead is at the second frame. So, the Red component of the Cross fade has to go from 1 (input 1) to 0 (input 2) and the Green component from 0 (input 1) to 1 (input 2). The Blue component does not change between input 1 and input 2 and the alpha value goes from 0.4 to 0.6. To make this transition, the effect has 4 frames available. So, the Red component should be decremented by 0.25 each frame and the Green component should be incremented with the same value. The alpha should increment with 0.05 each frame.
 
-クロス フェードには 4 フレームかかり、再生ヘッドは 2 番目のフレームにあります。したがって、クロス フェードの赤コンポーネントは 1 (入力 1) から 0 (入力 2) に、緑コンポーネントは 0 (入力 1) から 1 (入力 2) に変化する必要があります。青コンポーネントは入力 1 と入力 2 の間で変化せず、アルファ値は 0.4 から 0.6 になります。このトランジションを行うために、エフェクトには 4 つのフレームが使用可能です。したがって、赤のコンポーネントはフレームごとに 0.25 ずつ減分し、緑のコンポーネントは同じ値で増分する必要があります。アルファはフレームごとに 0.05 ずつ増加する必要があります。
+クロス フェードには 4 フレームかかり、Playheadは 2 番目のフレームにあります。したがって、クロス フェードの赤コンポーネントは 1 (入力 1) から 0 (入力 2) に、緑コンポーネントは 0 (入力 1) から 1 (入力 2) に変化する必要があります。青コンポーネントは入力 1 と入力 2 の間で変化せず、アルファ値は 0.4 から 0.6 になります。このトランジションを行うために、エフェクトには 4 つのフレームが使用可能です。したがって、赤のコンポーネントはフレームごとに 0.25 ずつ減分し、緑のコンポーネントは同じ値で増分する必要があります。アルファはフレームごとに 0.05 ずつ増加する必要があります。
 
 .. As you can see in figure 6, at the second frame, the Red component = 0.74902 and the Green component = 0.24706 (+- 0.25 ). The alpha = 0.4471 or is incremented by about 0.05.
 

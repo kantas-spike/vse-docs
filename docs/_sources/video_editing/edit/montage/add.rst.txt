@@ -52,7 +52,7 @@ Import
   .. - There are  128 channels available for inserting strips, although you can scroll to higher-numbered channels. So, in principle, you cannot add more than 128 strips at the same time position. You can however work around this limitation by using meta strips. Select a few strips and right click. Choose "Make meta strip". Shortcut :kbd:`Ctrl G`. The selected strips collapse into one channel and count also as 1 channel.
   .. - It is not possible to import strips before or between other strips. You can do that however within the sequencer.
   .. - For the File Browser Drag method, you need to drag the icon of the file. Trying to drag the name will only invoke a select operation.
-  - 複数のクリップで Add メソッドを使用すると、再生ヘッドの位置から開始してタイムライン上にクリップが順番に配置されます。ただし、クリップを積み重ねたい場合は、クリップを 1 つずつ追加する必要があります。
+  - 複数のクリップで Add メソッドを使用すると、Playheadの位置から開始してタイムライン上にクリップが順番に配置されます。ただし、クリップを積み重ねたい場合は、クリップを 1 つずつ追加する必要があります。
   - Playhead の位置にすでにストリップがある場合、Blender は最初の空きチャンネルにストリップを追加します。追加するクリップのチャンネルを選択することはできません。
   - ストリップをドロップする場所は重要ではありません。 Blender はそれらをPlayheadの位置に挿入します。ただし、(ストリップが挿入されることを期待して) 別のストリップの上またはストリップの間にストリップをドロップしようとしても、何も起こりません。ストリップも追加されていません。 [#f1]_
   - ストリップの挿入に使用できるチャンネルは 128 です。 より大きな番号のチャンネルにはスクロールで表示することができあす。したがって、原則として、同時に 128 を超えるストリップを追加することはできません。ただし、メタ ストリップを使用することで、この制限を回避できます。いくつかのストリップを選択して右クリックします。 [Make meta strip] を選択します。ショートカット :kbd:`Ctrl-G` 。選択したストリップは 1 つのチャンネルに折りたたまれ、1 チャンネルとしてカウントされます。
@@ -67,7 +67,7 @@ Import
 .. - Insert At Frame: the following sequence will be moved forward by the length of the imported sequence.
 .. - Cut And Insert At Frame: all sequences at the current frame will be cut and all following sequences will be moved forward by the length of the imported sequence.
 .. - Import At End: places the imported sequences at the end of the timeline.
-- Import At Frame: 標準のインポート動作で、新しいシーケンスを再生ヘッドに配置します。
+- Import At Frame: 標準のインポート動作で、新しいシーケンスをPlayheadに配置します。
 - Insert At Frame: 次のシーケンスは、インポートされたシーケンスの長さだけ前方に移動されます。
 - Cut And Insert At Frame: 現在のフレームのすべてのシーケンスがカットされ、後続のすべてのシーケンスがインポートされたシーケンスの長さだけ前に移動されます。
 - Import At End: インポートされたシーケンスをタイムラインの最後に配置します。
@@ -115,7 +115,7 @@ Start Frame
      This field is automatically filled in with the position of the playhead;
      e.g. with the value zero if the playhead is at position 0, or 15 if the playhead is at position 15.
     ..
-    名前が示すように、ムービーの開始フレーム。このフィールドには、再生ヘッドの位置が自動的に入力されます。たとえば、再生ヘッドが位置 0 にある場合は値 0、再生ヘッドが位置 15 にある場合は値 15 です。
+    名前が示すように、ムービーの開始フレーム。このフィールドには、Playheadの位置が自動的に入力されます。たとえば、Playheadが位置 0 にある場合は値 0、Playheadが位置 15 にある場合は値 15 です。
 
 Channel
     ..

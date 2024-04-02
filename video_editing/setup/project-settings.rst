@@ -188,7 +188,7 @@ Frame Rate
 
       .. In the section Extra Tools, we have provided a solution to convert a video from variable rate to fixed and to change the FPS.
 
-      :doc:`Extra Tools > FFMPEG </extra-tools/ffmpeg>` セクションでは、ビデオを可変レートから固定レートに変換し、FPS を変更するソリューションを提供しました。 [#f4]_
+      :doc:`Extra Tools > FFMPEG </extra-tools/ffmpeg>` セクションでは、ビデオを可変レートから固定レートに変換し、FPS を変更するソリューションを提供しました。
 
 .. admonition:: Reference
    :class: refbox
@@ -210,7 +210,7 @@ Step
 
 Time Stretching
    .. You can use this to speed up or slow down the playback of the whole project. For example, in figure 7, there are two indicators of the Current Frame. The Playhead is split into a blue line (the old frame number) and a blue box with the new frame number (which you actually see in the preview).
-   これを使用して、プロジェクト全体の再生を高速化または低速化できます。たとえば、図8 には、現在のフレームの 2 つのインジケーターがあります。再生ヘッドは、青い線 (古いフレーム番号) と新しいフレーム番号を含む青いボックス (実際にプレビューで表示されます) に分割されます。
+   これを使用して、プロジェクト全体の再生を高速化または低速化できます。たとえば、図8 には、現在のフレームの 2 つのインジケーターがあります。Playheadは、青い線 (古いフレーム番号) と新しいフレーム番号を含む青いボックス (実際にプレビューで表示されます) に分割されます。
 
    Old
       .. The length in frames of the original animation.
@@ -616,4 +616,4 @@ Some useful links:
 .. [#f2] VSEは、Video Sequence Editorの略称
 .. [#f1] Blender4.0の私の環境ではVSEのPreviewを :kbd:`LMB-Click` でステータスバーに情報が表示されました。一方 Renderウィンドウでは、 :kbd:`RMB-Click` で表示されました。
 .. [#f3] :doc:`Edit > Montage > Add の'Use Movie Frame Rate'オプション </video_editing/edit/montage/add>` も確認してください。
-.. [#f4] :doc:`Extra Tools > FFMPEG </extra-tools/ffmpeg>` には可変レートから固定レートへの変換の記述がない。 `video - FFMPEG: How to convert VFR to CFR without messing up the timing - Super User <https://superuser.com/a/1805395>`_ が参考になりそう。
+

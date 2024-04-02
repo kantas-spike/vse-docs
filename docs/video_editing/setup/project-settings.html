@@ -187,9 +187,9 @@
             
   <div class="section" id="project-settings">
 <h1><span class="section-number">2.1.6. </span>Project settings<a class="headerlink" href="#project-settings" title="この見出しへのパーマリンク">¶</a></h1>
-<div class="figure align-right" id="id8">
+<div class="figure align-right" id="id7">
 <a class="reference internal image-reference" href="../../_images/video_editing_setup_project-settings-output-categories.png"><img alt="Output panels" src="../../_images/video_editing_setup_project-settings-output-categories.png" style="width: 238.4px; height: 264.40000000000003px;" /></a>
-<p class="caption"><span class="caption-text">図0: Output パネル</span><a class="headerlink" href="#id8" title="この画像へのパーマリンク">¶</a></p>
+<p class="caption"><span class="caption-text">図0: Output パネル</span><a class="headerlink" href="#id7" title="この画像へのパーマリンク">¶</a></p>
 </div>
 <p>ビデオ プロジェクトのプロジェクト設定は、 <a class="reference external" href="https://docs.blender.org/manual/en/latest/editors/properties_editor.html">Properties Editor</a> の[<a class="reference external" href="https://docs.blender.org/manual/en/latest/render/output/index.html">Output</a>]タブにグループ化されています。</p>
 <p>この エディター はデフォルトの Video Editing Workspace の右上領域にあり、3D モデリングなどの他のモジュールと共有されます。プロパティにはいくつかのカテゴリがあり、タブ (左側のアイコン列) から選択できます。各タブには、データ型のプロパティと設定が再グループ化されています。</p>
@@ -222,9 +222,9 @@
 </tbody>
 </table>
 </div>
-<div class="figure align-right" id="id9">
+<div class="figure align-right" id="id8">
 <a class="reference internal image-reference" href="../../_images/video_editing_setup_project-settings.png"><img alt="Project Settings" src="../../_images/video_editing_setup_project-settings.png" style="width: 155.20000000000002px; height: 192.4px;" /></a>
-<p class="caption"><span class="caption-text">図1: Dimensions パネル</span><a class="headerlink" href="#id9" title="この画像へのパーマリンク">¶</a></p>
+<p class="caption"><span class="caption-text">図1: Dimensions パネル</span><a class="headerlink" href="#id8" title="この画像へのパーマリンク">¶</a></p>
 </div>
 <dl>
 <dt>Resolution</dt><dd><p>解像度 X と Y は、出力ビデオの水平軸と垂直軸のピクセル数を指します。一般的なビデオ解像度は次のとおりです。</p>
@@ -234,9 +234,9 @@
 <li><p>Ultra HD (UHD) 4K or 2160p (3840 x 2160).</p></li>
 </ul>
 <p>図 2 は、これら 3 つの一般的な解像度をより視覚的に示しています。 UHD または 4K バージョンと比較して、HD 解像度がいかに小さいかに注目してください。もちろん、ソーシャル メディア、映画館など、他にも多くの形式があります。かなり網羅的なリストは <a class="reference external" href="https://en.wikipedia.org/wiki/List_of_common_resolutions">Wikipedia</a> にあります。</p>
-<div class="figure align-right" id="id10">
+<div class="figure align-right" id="id9">
 <a class="reference internal image-reference" href="../../_images/vse_setup_project_resolutions.svg"><img alt="Resolutions" height="2261" src="../../_images/vse_setup_project_resolutions.svg" width="3947" /></a>
-<p class="caption"><span class="caption-text">図2: Ultra HD, FHD and HD resolution</span><a class="headerlink" href="#id10" title="この画像へのパーマリンク">¶</a></p>
+<p class="caption"><span class="caption-text">図2: Ultra HD, FHD and HD resolution</span><a class="headerlink" href="#id9" title="この画像へのパーマリンク">¶</a></p>
 </div>
 <p>[Render Presets] ボタン (図 1) を使用すると、一般的なビデオ レンダリング設定 (HDTV 1080p、HDTV720p など) から選択できます。解像度、解像度 %、アスペクト比、fps は、選択したプリセットに応じて設定されます。
 独自のプリセットを作成することもできます。[Dimensions] パネルの設定を好みに合わせて変更し、[New Prests] フィールドに名前を入力して、[+] ボタンを押します。プリセットは、Python ファイルとして scripts/presets/render ディレクトリに保存されます。</p>
@@ -246,29 +246,29 @@
 Statusbarに、<code class="docutils literal notranslate"><span class="pre">X</span> <span class="pre">:</span> <span class="pre">190</span>&#160; <span class="pre">Y:</span> <span class="pre">100</span> <span class="pre">...</span></code> のような表示が表示されます。
 これは、クリックした場所が、解像度 X = 190 および解像度 Y = 100 であることを意味します。したがって、完全なレンダリング イメージは実質的に 192 x 108 ピクセルになります。もちろん、写真はひどいものになります。絵を描くために自由に使えるのは 192 x 108 = 20736 ピクセルだけです。</p>
 <p>図 3 ～ 4 は、図 2 の 4K 画像の割合を 10% と 5% に設定したレンダリング結果を示しています。UHD 画像を 10% レンダリングしても、依然として 386 x 216 ピクセルの画像が得られることに注意してください。画像は、鮮明に見えるように拡大され、図 2 と同じ寸法になっています。図 4 は、実際には、幅 192 ピクセル x 高さ 108 ピクセルのみです。</p>
-<div class="figure align-default" id="id11">
+<div class="figure align-default" id="id10">
 <a class="reference internal image-reference" href="../../_images/vse_setup_project_tree-10.png"><img alt="Resolutions" src="../../_images/vse_setup_project_tree-10.png" style="width: 768.0px; height: 432.0px;" /></a>
-<p class="caption"><span class="caption-text">図3: 10% でレンダリングされた図 2</span><a class="headerlink" href="#id11" title="この画像へのパーマリンク">¶</a></p>
+<p class="caption"><span class="caption-text">図3: 10% でレンダリングされた図 2</span><a class="headerlink" href="#id10" title="この画像へのパーマリンク">¶</a></p>
 </div>
-<div class="figure align-default" id="id12">
+<div class="figure align-default" id="id11">
 <a class="reference internal image-reference" href="../../_images/vse_setup_project_tree-05.png"><img alt="Resolutions" src="../../_images/vse_setup_project_tree-05.png" style="width: 768.0px; height: 432.0px;" /></a>
-<p class="caption"><span class="caption-text">図4: 5% でレンダリングされた図 2</span><a class="headerlink" href="#id12" title="この画像へのパーマリンク">¶</a></p>
+<p class="caption"><span class="caption-text">図4: 5% でレンダリングされた図 2</span><a class="headerlink" href="#id11" title="この画像へのパーマリンク">¶</a></p>
 </div>
 <p>[Resolution %] を下げることは、プレビューやタイムラインのスクラブを高速化することを意味するものではありません。
 そのためには、 <a class="reference internal" href="proxies.html"><span class="doc">プロキシ</span></a> が必要です。プロキシはデフォルトで有効になっているため ([Edit] &gt; [Preferences] &gt; [System] &gt; [Video Sequencer] &gt; [Proxy Setup] を参照)、[Resolution %] が小さい場合、タイムラインのナビゲーションに大きな改善は見られません。レンダリング時間のみが影響を受けます。このオプションは、ビデオの音声同期を確認するなど、簡単なテスト レンダリングを作成する場合に使用できます。</p>
 </dd>
 <dt>Aspect X/Y</dt><dd><p>私たちはコンピューター ディスプレイのピクセルを小さな正方形として見る傾向がありますが、ほとんどの最新のコンピューターでは、実際には正方形です。映画やテレビの世界では、特に古い機器では、非正方形ピクセルが一般的です。たとえば、DVD や BluRay のすべてのムービーは長方形のピクセルを使用します。アナモフィック レンズで撮影すると、非正方形ピクセルが使用されるため、コンピューター画面上で生の画像が歪んで表示されます。</p>
 <p>図 5 は、水平圧縮 1.33 のアナモルフィック レンズで撮影した生の画像の例を示しています。アナモフィック レンズは通常、超ワイド スクリーン ビューを実現するために映画で使用されます。これを実現するために、画像は水平方向に圧縮されます。すぐには明らかではないかもしれませんが、図 5 は少し歪んで見えます。</p>
-<div class="figure align-default" id="id13">
+<div class="figure align-default" id="id12">
 <a class="reference internal image-reference" href="../../_images/vse_setup_project_anamorphic-squeezed.jpg"><img alt="Image from an anamorphic lens (squeezed)" src="../../_images/vse_setup_project_anamorphic-squeezed.jpg" style="width: 590.0px; height: 332.0px;" /></a>
-<p class="caption"><span class="caption-text">図5: アナモフィック レンズからの Raw イメージ</span><a class="headerlink" href="#id13" title="この画像へのパーマリンク">¶</a></p>
+<p class="caption"><span class="caption-text">図5: アナモフィック レンズからの Raw イメージ</span><a class="headerlink" href="#id12" title="この画像へのパーマリンク">¶</a></p>
 </div>
 <p>ffmpeg を使用すると、この画像のアスペクト比を取得できます。結果は次のとおりです。</p>
 <p><code class="docutils literal notranslate"><span class="pre">590x332</span> <span class="pre">[SAR</span> <span class="pre">96:96</span> <span class="pre">DAR</span> <span class="pre">295:166]</span></code></p>
 <p>ffmpeg によると、画像は 590 x 332 ピクセルです (Blender も同様です)</p>
-<div class="figure align-default" id="id14">
+<div class="figure align-default" id="id13">
 <a class="reference internal image-reference" href="../../_images/vse_setup_project_anamorphic-desqueezed.jpg"><img alt="Image from an anamorphic lens (desqueezed)" src="../../_images/vse_setup_project_anamorphic-desqueezed.jpg" style="width: 590.0px; height: 332.0px;" /></a>
-<p class="caption"><span class="caption-text">図6: アナモルフィック レンズからの後処理画像</span><a class="headerlink" href="#id14" title="この画像へのパーマリンク">¶</a></p>
+<p class="caption"><span class="caption-text">図6: アナモルフィック レンズからの後処理画像</span><a class="headerlink" href="#id13" title="この画像へのパーマリンク">¶</a></p>
 </div>
 <p>これにより、古い DVD ムービーをコンピュータで再生するときに、あらゆる種類の問題が発生する可能性があります。場合によっては、文字が圧縮されたり、引き伸ばされたりすることがあります。なぜ？それに対して何ができるでしょうか?</p>
 <div class="admonition-todo admonition" id="id3">
@@ -288,9 +288,9 @@ Statusbarに、<code class="docutils literal notranslate"><span class="pre">X</s
 <p>最初のビデオ ストリップが Sequencer に追加されると、プロジェクトのフレーム レートがそのストリップのフレーム レートに自動的に設定されます <a class="footnote-reference brackets" href="#f3" id="id4">3</a> 。
 フレーム レートが異なる 2 番目のストリップを追加しても、最初のストリップが削除された場合でも、その設定は変更されません。
 Blender VSE は 1 つのプロジェクト内で異なるフレーム レートを処理できません。奇妙なオーディオ ストリップやスローまたはファスト モーション効果を除いて、警告は表示されません。</p>
-<div class="figure align-default" id="id15">
+<div class="figure align-default" id="id14">
 <img alt="Mixing of different FPS in one project" src="../../_images/video_editing_setup_project-settings-fps.png" />
-<p class="caption"><span class="caption-text">図7: 1 つのプロジェクト内での異なるフレーム レートの混合</span><a class="headerlink" href="#id15" title="この画像へのパーマリンク">¶</a></p>
+<p class="caption"><span class="caption-text">図7: 1 つのプロジェクト内での異なるフレーム レートの混合</span><a class="headerlink" href="#id14" title="この画像へのパーマリンク">¶</a></p>
 </div>
 <p>図7 には、異なるフレーム レートで記録された 3 つのストリップが含まれています。キャプチャ フレーム レートはそれぞれ 30 fps、60 fps、120 fps でした。それぞれ記録には約 15 秒かかりました。</p>
 <p>fps = 30 のストリップが最初に追加されました。これにより、プロジェクト全体のプレゼンテーション フレーム レートが 30 fps に設定されました。その後、60 fps と 120 fps のストリップが追加されました。これによってプロジェクトのプレゼンテーションのフレーム レートは変更されません。そして、当然のことながら、ストリップのキャプチャ フレーム レートは変更されません。</p>
@@ -304,7 +304,7 @@ Blender VSE は 1 つのプロジェクト内で異なるフレーム レート�
 <div class="admonition note">
 <p class="admonition-title">注釈</p>
 <p>ビデオのキャプチャ フレーム レートの決定は、場合によっては難しい場合があります。ほとんどのデバイス (特にスマートフォン) では、可変フレーム レート モードでキャプチャすることについて言及していません。したがって、キャプチャ フレーム レートを 30 FPS に設定すると、実際にはフレーム レートは 29 fps から 31 fps の間で変化する可能性があります。これはストリップの開始と終了には影響しませんが、ビデオとオーディオの同期に（小規模な）問題が発生する可能性があります。</p>
-<p><a class="reference internal" href="../../extra-tools/ffmpeg.html"><span class="doc">Extra Tools &gt; FFMPEG</span></a> セクションでは、ビデオを可変レートから固定レートに変換し、FPS を変更するソリューションを提供しました。 <a class="footnote-reference brackets" href="#f4" id="id5">4</a></p>
+<p><a class="reference internal" href="../../extra-tools/ffmpeg.html"><span class="doc">Extra Tools &gt; FFMPEG</span></a> セクションでは、ビデオを可変レートから固定レートに変換し、FPS を変更するソリューションを提供しました。</p>
 </div>
 </dd>
 </dl>
@@ -333,16 +333,16 @@ Blender VSE は 1 つのプロジェクト内で異なるフレーム レート�
 </dd>
 <dt>Step</dt><dd><p>タイムライン内の各フレームごとに進むフレーム数を制御します。Sequencer のストリップに 10 フレームが含まれている場合、ステップ 2 では 5 フレーム (フレーム 1、3、5、7、9) がレンダリングされます。</p>
 </dd>
-<dt>Time Stretching</dt><dd><p>これを使用して、プロジェクト全体の再生を高速化または低速化できます。たとえば、図8 には、現在のフレームの 2 つのインジケーターがあります。再生ヘッドは、青い線 (古いフレーム番号) と新しいフレーム番号を含む青いボックス (実際にプレビューで表示されます) に分割されます。</p>
+<dt>Time Stretching</dt><dd><p>これを使用して、プロジェクト全体の再生を高速化または低速化できます。たとえば、図8 には、現在のフレームの 2 つのインジケーターがあります。Playheadは、青い線 (古いフレーム番号) と新しいフレーム番号を含む青いボックス (実際にプレビューで表示されます) に分割されます。</p>
 <dl class="simple">
 <dt>Old</dt><dd><p>元のアニメーションのフレームの長さ。</p>
 </dd>
 <dt>New</dt><dd><p>新しいアニメーションのフレームの長さ。</p>
 </dd>
 </dl>
-<div class="figure align-default" id="id16">
+<div class="figure align-default" id="id15">
 <img alt="Time Remapping (Old:1, New:2)" src="../../_images/video_editing_setup_project-settings-time-remapping.png" />
-<p class="caption"><span class="caption-text">図8: 時間のリマッピング (Old:1, New:2)</span><a class="headerlink" href="#id16" title="この画像へのパーマリンク">¶</a></p>
+<p class="caption"><span class="caption-text">図8: 時間のリマッピング (Old:1, New:2)</span><a class="headerlink" href="#id15" title="この画像へのパーマリンク">¶</a></p>
 </div>
 </dd>
 </dl>
@@ -394,9 +394,9 @@ Blender VSE は 1 つのプロジェクト内で異なるフレーム レート�
 </tbody>
 </table>
 </div>
-<div class="figure align-right" id="id17">
+<div class="figure align-right" id="id16">
 <a class="reference internal image-reference" href="../../_images/video_editing_setup_project-settings-output.png"><img alt="Render Output properties" src="../../_images/video_editing_setup_project-settings-output.png" style="width: 228.2px; height: 513.1px;" /></a>
-<p class="caption"><span class="caption-text">図9: レンダリング出力プロパティ</span><a class="headerlink" href="#id17" title="この画像へのパーマリンク">¶</a></p>
+<p class="caption"><span class="caption-text">図9: レンダリング出力プロパティ</span><a class="headerlink" href="#id16" title="この画像へのパーマリンク">¶</a></p>
 </div>
 <p>図9は、[Output] プロパティの展開された [Output]パネルを示しています。ここでは、プロジェクトのレンダリング結果の保存場所とファイル形式を定義します。図9 では、FFmpeg ビデオ ファイル形式が選択されています。他の可能なファイル形式を図10 に示します。</p>
 <dl>
@@ -422,9 +422,9 @@ Blender VSE は 1 つのプロジェクト内で異なるフレーム レート�
 <p>RGBA オプションは、特定のファイル形式でのみ使用できます (下記を参照)。たとえば、JPG ファイル形式にはアルファ チャネルがありませんが、PNG 形式にはアルファ チャネルがあります。また、ほとんどのビデオ ファイル形式には透明度オプションがありません。</p>
 </dd>
 <dt>File Format</dt><dd><p>Sequencerのコンテンツは、一連の画像 (BMP、Iris、PNG、…、TIFF、 参照 図10) として、またはもちろん一連の画像が埋め込まれたムービーとしてレンダリングできます。</p>
-<div class="figure align-default" id="id18">
+<div class="figure align-default" id="id17">
 <img alt="File formats" src="../../_images/video_editing_setup_project-settings-output-file-format.png" />
-<p class="caption"><span class="caption-text">図10: ファイルフォーマット</span><a class="headerlink" href="#id18" title="この画像へのパーマリンク">¶</a></p>
+<p class="caption"><span class="caption-text">図10: ファイルフォーマット</span><a class="headerlink" href="#id17" title="この画像へのパーマリンク">¶</a></p>
 </div>
 <p>どれを選ぶべきですか?</p>
 <p>選択された画像形式に応じて、いくつかのフィールドが Sidebar に追加されます。</p>
@@ -469,9 +469,9 @@ Blender VSE は 1 つのプロジェクト内で異なるフレーム レート�
 <p>この巨大なファイル サイズと音声がないため、どちらの形式も配信形式としてではなく、フォールバックとして使用する必要があると考えられます。</p>
 </div>
 </dd>
-<dt>FFmpeg Video</dt><dd><div class="figure align-right" id="id19">
+<dt>FFmpeg Video</dt><dd><div class="figure align-right" id="id18">
 <a class="reference internal image-reference" href="../../_images/video_editing_setup_project-settings-output-containers-codecs.png"><img alt="FFMpeg video settings" src="../../_images/video_editing_setup_project-settings-output-containers-codecs.png" style="width: 289.8px; height: 498.0px;" /></a>
-<p class="caption"><span class="caption-text">図11: FFmpeg Video settings</span><a class="headerlink" href="#id19" title="この画像へのパーマリンク">¶</a></p>
+<p class="caption"><span class="caption-text">図11: FFmpeg Video settings</span><a class="headerlink" href="#id18" title="この画像へのパーマリンク">¶</a></p>
 </div>
 <p>FFmpeg Video は、いくつかのコンテナとコーデックを総称した用語です。内部で ffmpeg ライブラリを使用してビデオ ファイルを作成します。</p>
 <p>このオプションを選択すると、いくつかのプリセットが使用可能になります: <code class="docutils literal notranslate"><span class="pre">DVD</span></code>, <code class="docutils literal notranslate"><span class="pre">H264</span> <span class="pre">in</span> <span class="pre">Matroska</span></code>, <code class="docutils literal notranslate"><span class="pre">H264</span> <span class="pre">in</span> <span class="pre">Matroska</span> <span class="pre">for</span> <span class="pre">scrubbing</span></code>, <code class="docutils literal notranslate"><span class="pre">H264</span> <span class="pre">in</span> <span class="pre">MP4</span></code>, <code class="docutils literal notranslate"><span class="pre">Ogg</span> <span class="pre">Theora</span></code>, <code class="docutils literal notranslate"><span class="pre">WebM</span> <span class="pre">(VP9+Opus)</span></code>, <code class="docutils literal notranslate"><span class="pre">Xvid</span></code> 。</p>
@@ -507,9 +507,9 @@ Blender VSE は 1 つのプロジェクト内で異なるフレーム レート�
 <dl>
 <dt>Quality levels (variable bitrate)</dt><dd><p>出力の望ましい品質について何らかの指示を与える必要があります。そうしないと、コーデックは常に最低のビットレートに落ち着く可能性があり、これは当然ながら最低の品質でもあります。</p>
 <p>Blender は <a class="reference external" href="https://blender.stackexchange.com/questions/93048/what-numerical-crf-values-do-the-assorted-output-qualities-correspond-to-in-the">verbal labels</a> を使用することを選択しました。これは FFmpeg の <a class="reference external" href="http://trac.ffmpeg.org/wiki/Encode/H.264">Constant Rate Factor</a> (CRF)の変換です。0 から 51 までの値で、値が低いほど、ファイル サイズは大きくなりますが、品質が向上します (フレームあたりのビット数が増加します)。値が大きいほど圧縮率が高くなりますが、ある時点で品質の低下に気づくことがあります。 ± 6 の変更により、ファイル サイズは約半分または 2 倍になります。</p>
-<div class="figure align-default" id="id20">
+<div class="figure align-default" id="id19">
 <img alt="Output Quality" src="../../_images/video_editing_setup_project-settings-output-quality.png" />
-<p class="caption"><span class="caption-text">図12: 出力品質と FFmpeg の Constant Rate Factor (CRF) 値</span><a class="headerlink" href="#id20" title="この画像へのパーマリンク">¶</a></p>
+<p class="caption"><span class="caption-text">図12: 出力品質と FFmpeg の Constant Rate Factor (CRF) 値</span><a class="headerlink" href="#id19" title="この画像へのパーマリンク">¶</a></p>
 </div>
 </dd>
 <dt>Constant Bitrate</dt><dd><p>FFmpeg にはネイティブまたは真の CBR モードはありませんが、Blender はワンパス平均ビットレート エンコードのパラメーターを調整することで、固定ビット レート設定を「シミュレート」します。次の追加の入力フィールドを設定する必要があります。ただし、ビットレート、最小値、および最大値はすべて同じ値に設定できます。</p>
@@ -588,7 +588,7 @@ Audiocoding (AAC) は MP3 の後継フォーマットであり、MPEG-4 パー�
 </tbody>
 </table>
 </div>
-<div class="admonition-todo admonition" id="id7">
+<div class="admonition-todo admonition" id="id6">
 <p class="admonition-title">課題</p>
 <p>Describe metadata</p>
 </div>
@@ -614,9 +614,9 @@ Audiocoding (AAC) は MP3 の後継フォーマットであり、MPEG-4 パー�
 </div>
 <p>[Post Processing] パネルは、カメラのレンダリングが行われた後に画像を処理するために使用されるさまざまなオプションを制御するために使用されます。</p>
 <blockquote>
-<div><div class="figure align-right" id="id21">
+<div><div class="figure align-right" id="id20">
 <a class="reference internal image-reference" href="../../_images/video_editing_setup_project-settings-output-post-processing.png"><img alt="Post processing options" src="../../_images/video_editing_setup_project-settings-output-post-processing.png" style="width: 309.0px; height: 146.4px;" /></a>
-<p class="caption"><span class="caption-text">図13: Post processing オプション</span><a class="headerlink" href="#id21" title="この画像へのパーマリンク">¶</a></p>
+<p class="caption"><span class="caption-text">図13: Post processing オプション</span><a class="headerlink" href="#id20" title="この画像へのパーマリンク">¶</a></p>
 </div>
 </div></blockquote>
 <dl>
@@ -648,9 +648,6 @@ Audiocoding (AAC) は MP3 の後継フォーマットであり、MPEG-4 パー�
 </dd>
 <dt class="label" id="f3"><span class="brackets"><a class="fn-backref" href="#id4">3</a></span></dt>
 <dd><p><a class="reference internal" href="../edit/montage/add.html"><span class="doc">Edit &gt; Montage &gt; Add の'Use Movie Frame Rate'オプション</span></a> も確認してください。</p>
-</dd>
-<dt class="label" id="f4"><span class="brackets"><a class="fn-backref" href="#id5">4</a></span></dt>
-<dd><p><a class="reference internal" href="../../extra-tools/ffmpeg.html"><span class="doc">Extra Tools &gt; FFMPEG</span></a> には可変レートから固定レートへの変換の記述がない。 <a class="reference external" href="https://superuser.com/a/1805395">video - FFMPEG: How to convert VFR to CFR without messing up the timing - Super User</a> が参考になりそう。</p>
 </dd>
 </dl>
 </div>

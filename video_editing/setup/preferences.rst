@@ -9,6 +9,7 @@ User Preferences editor では、Blender のデフォルトのルック&フィ�
 
 Video Sequence Editor に適用されるすべての設定、またはビデオ編集タスクに役立つ可能性のあるすべての設定を 表1 にまとめました。必要に応じて、VSE ドキュメントの追加情報へのリンクを追加しました。
 
+
 .. csv-table:: 表1: VSE 関連の User Preferences の概要
    :class: "small"
    :header: "Setting", "Location", "Additional Info"
@@ -34,3 +35,15 @@ Video Sequence Editor に適用されるすべての設定、またはビデオ�
    Annotations, Editing > Annotations, Default color and Eraser radius; :ref:`More info <annotations>`
    Zoom to Mouse Position, Navigation > Zoom, Handy for zooming in on specific spot.
    Spacebar Action, Keymap > Preferences, Pressing spacebar starts/stops playback
+
+
+
+.. note::
+   **(訳注)** Blenderのショートカットキーには、マウスホイールボタン(:kbd:`MMB`) やテンキー(:kbd:`Numpad*`)を含むものがたくさんあります。
+   お使いの入力デバイスに、マウスホイールボタンやテンキーがない場合は、
+   [Edit]メニュー > [Preferences] > [Input] の以下の項目で、それらのデバイスをエミュレート可能です。
+
+    - `[Mouse] > [Emulate 3 Button Mouse] <https://docs.blender.org/manual/en/latest/editors/preferences/input.html#mouse>`_
+    - `[Keyboard] > [Emulate Numpad] <https://docs.blender.org/manual/en/latest/editors/preferences/input.html#keyboard>`_
+
+   ただし、テンキーのピリオドだけは **[Emulate Numpad]** を有効にしても、エミュレートできないそうなので注意してください。

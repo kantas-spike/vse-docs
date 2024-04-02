@@ -44,7 +44,7 @@ Video Editing
 
     - :green:`(1.2.1)` 論理的でわかりやすいディレクトリ構造
     - :green:`(1.2.2)` 適切なプロジェクト設定のセットアップ (これにより、ワークフローが改善されます。)
-    - :green:`(1.2.3)` 映像のインポート
+    - :green:`(1.2.3)` 編集に必要な素材をインポート
 
   .. The :red:`(2)` Editing phase start with the :blue:`(2.1)` montage of the final video, e.g. :green:`(2.1.1)` adding, :green:`(2.1.2)` selecting, :green:`(2.1.3)` splitting, :green:`(2.1.4)` moving, :green:`(2.1.5 )` trimming, :green:`(2.1.6)` grouping, and :green:`(2.1.7)` deleting strips. An extensive description of all available strip types is included in :green:`(2.1.1)`. When the rough montage is done, you can add some :blue:`(2.2)` effects such as transition and fade but also more advanced animation effects, including speeding and masking. This will give you a semi-final timeline. Then, you start :blue:`(2.3)` color grading and :blue:`(2.4)` editing the sound, although some authors start with the sound much earlier (for example when editing a music video).
 

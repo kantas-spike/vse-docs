@@ -400,7 +400,7 @@
 <img alt="Onion Skinning" src="../../_images/editors_vse_preview_onion-skinning.svg" /><p class="caption"><span class="caption-text">図11: VSE の Onion Skinning</span><a class="headerlink" href="#id11" title="この画像へのパーマリンク">¶</a></p>
 </div>
 <dl>
-<dt>Metadata</dt><dd><p>ムービーまたはイメージ ストリップには、実際の画像に加えて、ファイル名、作成日、カメラ モデルなどのメタデータを含めることができます。このメタデータの一部はプレビューに表示できます ([Show Overlay] ボタンを参照)。ただし、表示されるメタデータは、シーケンサー内のアクティブな (選択された) ストリップではなく、再生ヘッドの下のストリップからのものです。</p>
+<dt>Metadata</dt><dd><p>ムービーまたはイメージ ストリップには、実際の画像に加えて、ファイル名、作成日、カメラ モデルなどのメタデータを含めることができます。このメタデータの一部はプレビューに表示できます ([Show Overlay] ボタンを参照)。ただし、表示されるメタデータは、シーケンサー内のアクティブな (選択された) ストリップではなく、Playheadの下のストリップからのものです。</p>
 <p>Blender 出力レンダリングからのメタデータは、適切なフィールド (カメラ、時間など) に保存されます。  <a class="reference external" href="https://docs.blender.org/manual/en/dev/render/output/properties/metadata.html">Rendered Output</a> を参照してください。Gimp などの一部のグラフィック プログラムも一部のメタデータを保存します。ただし、ヘッダー フィールド「コメント」に保存されているテキストのみが表示されます。プレビューに表示され、メタデータ パネルに表示されます。この値は Blender 内から編集することはできません。そのためには、exiftool などの外部プログラムが必要です。</p>
 <p>「コメント」フィールドを変更するコマンドは次のとおりです。</p>
 <p>exiftool --comments=&quot;My new comment&quot; name-of-file.png</p>

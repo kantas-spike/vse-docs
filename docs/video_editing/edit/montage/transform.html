@@ -201,7 +201,7 @@
 <p>Transform セクションでは、Split、Trim、Group という 3 つの操作について説明します。</p>
 <div class="section" id="split">
 <h2><span class="section-number">2.2.1.6.1. </span>Split<a class="headerlink" href="#split" title="この見出しへのパーマリンク">¶</a></h2>
-<p>ストリップの分割とは、ストリップを再生ヘッドの位置で 2 つの部分に分割することです。両方のパートは引き続き独立したストリップ（同じソースを共有する）として機能します。分割はすべてのストリップ タイプで実行できます。ただし、エフェクト ストリップを分割すると、エフェクトの入力ストリップも分割され、その逆も同様です。</p>
+<p>ストリップの分割とは、ストリップをPlayheadの位置で 2 つの部分に分割することです。両方のパートは引き続き独立したストリップ（同じソースを共有する）として機能します。分割はすべてのストリップ タイプで実行できます。ただし、エフェクト ストリップを分割すると、エフェクトの入力ストリップも分割され、その逆も同様です。</p>
 <p>Blender の以前のバージョンや文献の大部分では、この操作は &quot;Cutting&quot; と呼ばれていました。
 ただし、コンピュータ環境では、この用語は主にコピー、カット、ペーストの意味で使用され、削除を意味します。
 したがって、 <em>Split</em> という用語が好まれますが、 <em>Jump Cut</em>、 <em>J-Cut</em> 、 <em>L-Cut</em> などの用語でも非常に目立つままです。</p>
@@ -239,7 +239,7 @@
 <img alt="Freeze frames" src="../../../_images/video_editing_edit_montage_splitting_freeze.svg" /><p class="caption"><span class="caption-text">図3 フリーズ フレームの例</span><a class="headerlink" href="#id5" title="この画像へのパーマリンク">¶</a></p>
 </div>
 <p>ストリップの最初と最後でのフリーズは簡単です。ハンドルをドラッグするだけで静止オフセットを導入できます (詳細については、 <a class="reference internal" href="striptypes/movie.html#time-panel"><span class="std std-ref">Time Panel &gt; Still Offset</span></a> を参照してください。図 3 の左側のパネルには 3 フレームの still Offset Start フィールドがあり、右側のパネルの Still Offset End フィールドもあります)  <a class="footnote-reference brackets" href="#f1" id="id1">1</a> 。</p>
-<p>ストリップの中央のフリーズはさらに複雑です。まず、元のストリップのフレーム 6 (再生ヘッドは 7) でホールド スプリットが必要です。そうすれば、フレーム 6 にホールド フラグが存在するため、右ハンドルをドラッグするとフレーム 6 が複製されます。このホールド フラグは、freeze.001 などの分割の左側の部分に必要です。元のストリップの長さが 10 フレームだったので、これは Hold Offset End 値 4 です。</p>
+<p>ストリップの中央のフリーズはさらに複雑です。まず、元のストリップのフレーム 6 (Playheadは 7) でホールド スプリットが必要です。そうすれば、フレーム 6 にホールド フラグが存在するため、右ハンドルをドラッグするとフレーム 6 が複製されます。このホールド フラグは、freeze.001 などの分割の左側の部分に必要です。元のストリップの長さが 10 フレームだったので、これは Hold Offset End 値 4 です。</p>
 <p>図 3 のストリップは画像シーケンスであるため、茶色になっています。小さな Python コードを使用して、[Still Offset fields] フィールドを [Time] パネルに追加できます ( <a class="reference internal" href="../../../extra-tools/python-useful-scripts.html"><span class="doc">useful scripts</span></a> を参照) <a class="footnote-reference brackets" href="#f1" id="id2">1</a> 。</p>
 </div></blockquote>
 <p><em>Classic Cuts</em></p>
@@ -293,7 +293,7 @@
 </div></blockquote>
 <ul class="simple">
 <li><p>Playhead が選択したストリップの範囲外にある場合、 <kbd class="kbd docutils literal notranslate">E</kbd> は選択したすべてのストリップがマウスの移動方向に移動します。これは、<kbd class="kbd docutils literal notranslate">G</kbd> キーによるストリップ全体の移動動作を模倣します。</p></li>
-<li><p>Playhead 選択した（一部の）ストリップの範囲内にある場合、<kbd class="kbd docutils literal notranslate">E</kbd> キーは選択したストリップをトリミングします。マウスが再生ヘッドの左側にある場合、選択したストリップの IN ポイントはマウスの方向に従います (左側のストリップ ハンドルでトリミングするかのように)。マウスが再生ヘッドの右側にある場合、OUT ポイントはマウスの方向に従います (右のストリップ ハンドルでトリミングするかのように)。</p></li>
+<li><p>Playhead 選択した（一部の）ストリップの範囲内にある場合、<kbd class="kbd docutils literal notranslate">E</kbd> キーは選択したストリップをトリミングします。マウスがPlayheadの左側にある場合、選択したストリップの IN ポイントはマウスの方向に従います (左側のストリップ ハンドルでトリミングするかのように)。マウスがPlayheadの右側にある場合、OUT ポイントはマウスの方向に従います (右のストリップ ハンドルでトリミングするかのように)。</p></li>
 </ul>
 <blockquote>
 <div><p>要約すると、現在のフレーム インジケーター (Playhead) の「マウス側」から選択されたすべてのストリップ ハンドルが一緒に変形し、選択されたストリップを移動または延長/短縮します。</p>
