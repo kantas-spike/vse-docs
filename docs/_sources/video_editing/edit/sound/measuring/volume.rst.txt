@@ -134,7 +134,7 @@ Sound オブジェクトの data() メソッドは、ストリップがトリミ
 
 .. Suppose, you want the dB value for the sound samples underneath the playhead/cursor in the timeline. Audio strips however work with time code, not frames. This is the cause of many misunderstandings. For example, if you have a MP4-file (video + audio) and you change the frame-per-second parameter of the scene, then the length of the video will change but not the length of the audio strip. The duration of an audio-strip can be calculated, based on the sample rate and the number of samples.
 
-タイムラインの再生ヘッド/カーソルの下にあるサウンド サンプルの dB 値が必要だとします。ただし、オーディオ ストリップはフレームではなくタイムコードで機能します。これが多くの誤解の原因となっています。たとえば、MP4 ファイル (ビデオ + オーディオ) があり、シーンのフレーム/秒パラメータを変更すると、ビデオの長さは変わりますが、オーディオ ストリップの長さは変わりません。オーディオ ストリップの長さは、サンプル レートとサンプル数に基づいて計算できます。
+タイムラインのPlayhead/カーソルの下にあるサウンド サンプルの dB 値が必要だとします。ただし、オーディオ ストリップはフレームではなくタイムコードで機能します。これが多くの誤解の原因となっています。たとえば、MP4 ファイル (ビデオ + オーディオ) があり、シーンのフレーム/秒パラメータを変更すると、ビデオの長さは変わりますが、オーディオ ストリップの長さは変わりません。オーディオ ストリップの長さは、サンプル レートとサンプル数に基づいて計算できます。
 
 .. code-block:: Python
 
@@ -201,7 +201,7 @@ Sound オブジェクトの Data メソッドは常にストリップ全体の�
 
 .. The volume level of a strip, however can be changed and animated on a per frame basis. In section 2.2 you calculated the dB value for one frame. Thanks to the dependency graph, we can use the strip.volume value because this value will updated for that specific frame. So, to calculate the dB value for an entire animated strip, the easiest (but perhaps not the most efficient way) will be to loop through the strip frame by frame, set the playhead to that frame, retrieving the sound.data for the frame, multiplying it with the sound volume and cumulating these data into an array.
 
-ただし、ストリップのボリューム レベルは、フレームごとに変更したりアニメーション化したりできます。セクション 2.2 では、1 フレームの dB 値を計算しました。依存関係グラフのおかげで、strip.volume 値がその特定のフレームに対して更新されるため、この値を使用できます。したがって、アニメーション ストリップ全体の dB 値を計算するには、ストリップをフレームごとにループし、再生ヘッドをそのフレームに設定し、そのフレームの sound.data を取得するのが最も簡単です (ただし、最も効率的ではないかもしれません)。 、それに音量を乗算し、これらのデータを配列に累積します。
+ただし、ストリップのボリューム レベルは、フレームごとに変更したりアニメーション化したりできます。セクション 2.2 では、1 フレームの dB 値を計算しました。依存関係グラフのおかげで、strip.volume 値がその特定のフレームに対して更新されるため、この値を使用できます。したがって、アニメーション ストリップ全体の dB 値を計算するには、ストリップをフレームごとにループし、Playheadをそのフレームに設定し、そのフレームの sound.data を取得するのが最も簡単です (ただし、最も効率的ではないかもしれません)。 、それに音量を乗算し、これらのデータを配列に累積します。
 
 .. code-block:: Python
 

@@ -200,7 +200,7 @@
 <div class="figure align-default" id="id10">
 <img alt="Playhead" src="../../_images/editors_vse_sequencer_timeline_playhead.svg" /><p class="caption"><span class="caption-text">図1: Playheadの詳細</span><a class="headerlink" href="#id10" title="この画像へのパーマリンク">¶</a></p>
 </div>
-<p>図1 では、再生ヘッドはフレーム 3 と 4 の間に配置されており、上部の小さな青い四角形でフレーム4 がPreviewウィンドウにあることを示しています。したがって、Playheadは常にプレビューされるフレームの先頭に配置されます。</p>
+<p>図1 では、Playheadはフレーム 3 と 4 の間に配置されており、上部の小さな青い四角形でフレーム4 がPreviewウィンドウにあることを示しています。したがって、Playheadは常にプレビューされるフレームの先頭に配置されます。</p>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
 <p>「現在のフレーム」という用語に関しては、混乱を招く可能性があります。 [Strip プロパティ] &gt; [Time] パネルによると、現在のフレームはフレーム 3 ですが、PlayheadとPreviewウィンドウにはフレーム 4 が表示されます。これは、[Time] パネルの [Current Frame] フィールドが相対的な尺度であるためです。これは、Playheadの位置です。アクティブストリップの視覚的な開始点 (≠ Start フィールド) を基準にします。</p>
@@ -219,7 +219,7 @@
 </dd>
 </dl>
 <dl>
-<dt>フレームごとに移動する</dt><dd><p>カーソルキーの <kbd class="kbd docutils literal notranslate">Left</kbd> や <kbd class="kbd docutils literal notranslate">Right</kbd> を押すと、再生ヘッドを 1 フレームずつ移動できます。</p>
+<dt>フレームごとに移動する</dt><dd><p>カーソルキーの <kbd class="kbd docutils literal notranslate">Left</kbd> や <kbd class="kbd docutils literal notranslate">Right</kbd> を押すと、Playheadを 1 フレームずつ移動できます。</p>
 <p><kbd class="kbd docutils literal notranslate">Alt</kbd> を押しながら <kbd class="kbd docutils literal notranslate">MMB</kbd> を回転させると、Playhead がフレームごとに移動します。</p>
 </dd>
 </dl>
@@ -241,10 +241,10 @@
 <div class="figure align-default" id="id11">
 <img alt="Scrubbing area" src="../../_images/editors_vse_sequencer_timeline_scrubbing.svg" /><p class="caption"><span class="caption-text">図2: スクラブ領域</span><a class="headerlink" href="#id11" title="この画像へのパーマリンク">¶</a></p>
 </div>
-<p>図2 からわかるように、上部のSequencer または下部のTimeline Editorから、両方のタイムラインを使用できます。下部のタイムラインをスクラブすると、上部の再生ヘッドも移動します。両方のタイムラインを同期 (同じフレーム範囲、同じPlayhead位置)させる場合、 <em>両方</em> のタイムラインの [View]メニューで[<code class="docutils literal notranslate"><span class="pre">Sync</span> <span class="pre">Visible</span> <span class="pre">Range</span></code>]でオプションを設定する必要があることに注意してください。</p>
+<p>図2 からわかるように、上部のSequencer または下部のTimeline Editorから、両方のタイムラインを使用できます。下部のタイムラインをスクラブすると、上部のPlayheadも移動します。両方のタイムラインを同期 (同じフレーム範囲、同じPlayhead位置)させる場合、 <em>両方</em> のタイムラインの [View]メニューで[<code class="docutils literal notranslate"><span class="pre">Sync</span> <span class="pre">Visible</span> <span class="pre">Range</span></code>]でオプションを設定する必要があることに注意してください。</p>
 <p>Sequencerのストリップ上で <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">RMB</kbd></kbd> を直接ドラッグすると、ストリップ <em>ソロ</em> が表示され、エフェクトや他のストリップは一時的に無視され、このストリップの出力のみが表示されます (図2 の白いテキストと矢印で示されています)。
 たとえば、2つのカラー ストリップが重なっている場合、通常はPreviewウィンドウで最上位のチャンネルのストリップが表示されます。下のカラーストリップを <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">RMB</kbd></kbd> で ドラッグすると、このカラーストリップのみがPreviewウィンドウに表示されます。これはサウンドでも機能します。サウンドストリップでは音声のみが生成されます。</p>
-<p>通常、ストリップ ハンドルをドラッグするとストリップが縮小または拡張されますが、Previewは変更されません (再生ヘッドのフレームを表示し続けます)。Previewウィンドウの[View]メニュー &gt; [<em>Preview during Transform</em>]オプション を設定すると、ハンドルをドラッグ時にハンドル位置のフレームも表示されます。</p>
+<p>通常、ストリップ ハンドルをドラッグするとストリップが縮小または拡張されますが、Previewは変更されません (Playheadのフレームを表示し続けます)。Previewウィンドウの[View]メニュー &gt; [<em>Preview during Transform</em>]オプション を設定すると、ハンドルをドラッグ時にハンドル位置のフレームも表示されます。</p>
 </div></blockquote>
 </div>
 <div class="section" id="id5">
@@ -255,7 +255,7 @@
 <img alt="Transport controls" src="../../_images/editors_vse_sequencer_timeline_transport-controls.png" />
 <p class="caption"><span class="caption-text">図5: Transportコントロール</span><a class="headerlink" href="#id12" title="この画像へのパーマリンク">¶</a></p>
 </div>
-<p>これらのコントロールはおそらく一目瞭然です。再生/逆再生ボタンを押すと、再生ヘッドから順方向または逆方向で動画の再生が開始されます。順方向に再生するためのショートカットキーは <kbd class="kbd docutils literal notranslate">Spacebar</kbd> キーです。<kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>-<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>-<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Spacebar</kbd></kbd> は逆再生のショートカットです。</p>
+<p>これらのコントロールはおそらく一目瞭然です。再生/逆再生ボタンを押すと、Playheadから順方向または逆方向で動画の再生が開始されます。順方向に再生するためのショートカットキーは <kbd class="kbd docutils literal notranslate">Spacebar</kbd> キーです。<kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd> <kbd class="kbd docutils literal notranslate"></kbd>-<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>-<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Spacebar</kbd></kbd> は逆再生のショートカットです。</p>
 <div class="admonition note">
 <p class="admonition-title">注釈</p>
 <p>Blender を初めてインストールするときは、<kbd class="kbd docutils literal notranslate">Spacebar</kbd> の機能など、いくつかの基本的な選択肢を入力する必要があります (以前のバージョンでは、ヘルプ機能が割り当てられていました)。これは、[User Preferences] &gt; [Keymap] &gt; [Spacebar Action] で確認またはリセットできます。 <a class="footnote-reference brackets" href="#f2" id="id6">2</a></p>

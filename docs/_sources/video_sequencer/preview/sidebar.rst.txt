@@ -262,7 +262,7 @@ Onion Skinning
 
 Metadata
    .. A movie or image strip can contain, in addition to the actual image, some metadata such as the file name, the date created, the camera model, ... Some of this metadata can be made visible in the Preview (see Show Overlay button). The metadata that is shown however is from the strip under the playhead, *not* the active (selected) strip in the sequencer.
-   ムービーまたはイメージ ストリップには、実際の画像に加えて、ファイル名、作成日、カメラ モデルなどのメタデータを含めることができます。このメタデータの一部はプレビューに表示できます ([Show Overlay] ボタンを参照)。ただし、表示されるメタデータは、シーケンサー内のアクティブな (選択された) ストリップではなく、再生ヘッドの下のストリップからのものです。
+   ムービーまたはイメージ ストリップには、実際の画像に加えて、ファイル名、作成日、カメラ モデルなどのメタデータを含めることができます。このメタデータの一部はプレビューに表示できます ([Show Overlay] ボタンを参照)。ただし、表示されるメタデータは、シーケンサー内のアクティブな (選択された) ストリップではなく、Playheadの下のストリップからのものです。
 
    .. The metadata from a Blender output render is stored in the appropriate fields (camera, time, ...; see `Rendered Output <https://docs.blender.org/manual/en/dev/render/output/properties/metadata.html>`_. Some graphic programs such as Gimp also store some metadata. However, only the text stored in the header field "Comments" is displayed in the Preview and shown in the metadata panel. You cannot edit this value from within Blender. For that, you need an external program such as exiftool.
 

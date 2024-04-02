@@ -149,7 +149,7 @@ Multiply
 
    .. Figure 7 is a special case because there is a Strip Offset Start and End. The Multiply Factor is set to 1.5. As a result of these Offsets, the visual duration of the Speed Control strip is reduced with the sum of both Offsets. The concept of Current Frame (see figure 6, side panel bottom) is very important here. Although the Playhead is located at frame 64 in the timeline, the Current Frame is actually 44. This is the number of frames, from the playhead (64) to the visual Start of the strip (20 or Strip Offset Start). The content of the Target strip, however is only reduced with the strip Offset Start. The first frame (frame 0) of the Target strip has value 20. The previous frames are no longer accessible. But frames 70 - 99 - even if they are not visible - are still accessible. Because of the Multiply factor of 1.5, the action seems to play faster (some frames are skipped).
 
-   図 7 は、ストリップ オフセットの開始と終了があるため、特殊なケースです。乗算係数は 1.5 に設定されます。これらのオフセットの結果、スピード コントロール ストリップの視覚的な継続時間は両方のオフセットの合計で短縮されます。ここでは、現在のフレームの概念 (図 6、サイド パネル下部を参照) が非常に重要です。再生ヘッドはタイムラインのフレーム 64 にありますが、現在のフレームは実際には 44 です。これは、再生ヘッド (64) からストリップの視覚的な開始点 (20 またはストリップ オフセット開始) までのフレーム数です。ただし、ターゲット ストリップのコンテンツは、ストリップのオフセット スタートでのみ削減されます。ターゲット ストリップの最初のフレーム (フレーム 0) の値は 20 です。以前のフレームにはアクセスできなくなります。ただし、フレーム 70 ～ 99 は、表示されていなくてもアクセスできます。乗算係数が 1.5 であるため、アクションの再生が速くなったように見えます (一部のフレームがスキップされます)。
+   図 7 は、ストリップ オフセットの開始と終了があるため、特殊なケースです。乗算係数は 1.5 に設定されます。これらのオフセットの結果、スピード コントロール ストリップの視覚的な継続時間は両方のオフセットの合計で短縮されます。ここでは、現在のフレームの概念 (図 6、サイド パネル下部を参照) が非常に重要です。Playheadはタイムラインのフレーム 64 にありますが、現在のフレームは実際には 44 です。これは、Playhead (64) からストリップの視覚的な開始点 (20 またはストリップ オフセット開始) までのフレーム数です。ただし、ターゲット ストリップのコンテンツは、ストリップのオフセット スタートでのみ削減されます。ターゲット ストリップの最初のフレーム (フレーム 0) の値は 20 です。以前のフレームにはアクセスできなくなります。ただし、フレーム 70 ～ 99 は、表示されていなくてもアクセスできます。乗算係数が 1.5 であるため、アクションの再生が速くなったように見えます (一部のフレームがスキップされます)。
 
    .. figure:: /images/video_editing_edit_effects_speed-control-multiply-slow-mo-offsets.svg
       :alt: Speed Control with multiply option
@@ -177,27 +177,27 @@ Multiply
 Frame Number
    .. This option provides you with maximum control. For each position of the Current Frame (playhead most of the timeline)), you can specify a frame number from the target strip to display in the Speed Control strip. Because you can :doc:`keyframe </animation/keyframes/index>` this Frame Number value, you are able to specify custom speed profiles. For example, suppose you want a slo-mo effect as in figure 6 *but* only between frames 50 - 69. The other frames (before and after) should play at normal speed. Because the 20 frames between 50 and 69 are played with a Multiplication Factor = 0.4; only 5 frames are actually played and the rest is duplicated and inserted. So, the sequence should be :
 
-   このオプションを使用すると、最大限の制御が可能になります。現在のフレーム (タイムラインのほとんどの再生ヘッド) の各位置について、速度コントロール ストリップに表示するターゲット ストリップのフレーム番号を指定できます。このフレーム番号の値を :doc:`keyframe </animation/keyframes/index>`  化できるため、カスタムの速度プロファイルを指定できます。たとえば、図 6 のようなスローモーション効果が必要で、フレーム 50 ～ 69 の間のみであるとします。他のフレーム (前後) は通常の速度で再生する必要があります。 50 から 69 までの 20 フレームは乗算係数 = 0.4 で再生されるため、実際に再生されるのは 5 フレームのみで、残りは複製されて挿入されます。したがって、シーケンスは次のようになります。
+   このオプションを使用すると、最大限の制御が可能になります。現在のフレーム (タイムラインのほとんどのPlayhead) の各位置について、速度コントロール ストリップに表示するターゲット ストリップのフレーム番号を指定できます。このフレーム番号の値を :doc:`keyframe </animation/keyframes/index>`  化できるため、カスタムの速度プロファイルを指定できます。たとえば、図 6 のようなスローモーション効果が必要で、フレーム 50 ～ 69 の間のみであるとします。他のフレーム (前後) は通常の速度で再生する必要があります。 50 から 69 までの 20 フレームは乗算係数 = 0.4 で再生されるため、実際に再生されるのは 5 フレームのみで、残りは複製されて挿入されます。したがって、シーケンスは次のようになります。
 
 
    .. * Select the Speed Control strip with the option Frame Number and set the playhead at frame 0 (first frame). Normally, it should display the value 0; which is the first frame of the target strip.
-   * フレーム番号オプションを使用してスピード コントロール ストリップを選択し、再生ヘッドをフレーム 0 (最初のフレーム) に設定します。通常、値 0 が表示されます。これはターゲット ストリップの最初のフレームです。
+   * フレーム番号オプションを使用してスピード コントロール ストリップを選択し、Playheadをフレーム 0 (最初のフレーム) に設定します。通常、値 0 が表示されます。これはターゲット ストリップの最初のフレームです。
    .. * Enter the value 0 in Frame Number. This means that the value to display comes from frame 0 from the Target strip.
    * [フレーム番号] に値 0 を入力します。これは、表示する値がターゲット ストリップのフレーム 0 から取得されることを意味します。
    .. * Keyframe the Frame Number attribute (press I when hovering over the field). The field becomes yellow a an indication of the existence of a keyframe.
    * フレーム番号アトリビュートにキーフレームを設定します(フィールド上にマウスを置いたときに I を押します)。フィールドが黄色になり、キーフレームが存在することを示します。
    .. * Set the playhead to frame 49. The Frame Number attribute is green; indicating that the value is governed by a keyframe that is not changed since. The value is still 0 and the preview is 0.
-   * 再生ヘッドをフレーム 49 に設定します。フレーム番号属性は緑色です。それ以降変更されていないキーフレームによって値が管理されていることを示します。値は 0 のままで、プレビューも 0 です。
+   * Playheadをフレーム 49 に設定します。フレーム番号属性は緑色です。それ以降変更されていないキーフレームによって値が管理されていることを示します。値は 0 のままで、プレビューも 0 です。
    .. * Change the Frame Number value to 49. The preview changes to 49 and the attribute color changes to brown. Keyframe this value (color changes to yellow)
    * フレーム番号の値を 49 に変更します。プレビューが 49 に変わり、属性の色が茶色に変わります。この値をキーフレーム化します (色が黄色に変わります)。
    .. * Set the playhead to frame 50 and enter the Frame Number 50. Keyframe this value.
-   * 再生ヘッドをフレーム 50 に設定し、フレーム番号 50 を入力します。この値をキーフレーム化します。
+   * Playheadをフレーム 50 に設定し、フレーム番号 50 を入力します。この値をキーフレーム化します。
    .. * Set the playhead to frame 69 and enter the Frame Number 55. Keyframe this value.
-   * 再生ヘッドをフレーム 69 に設定し、フレーム番号 55 を入力します。この値をキーフレーム化します。
+   * Playheadをフレーム 69 に設定し、フレーム番号 55 を入力します。この値をキーフレーム化します。
    .. * Set the playhead to frame 70 and enter the Frame Number 56. Keyframe this value.
-   * 再生ヘッドをフレーム 70 に設定し、フレーム番号 56 を入力します。この値をキーフレーム化します。
+   * Playheadをフレーム 70 に設定し、フレーム番号 56 を入力します。この値をキーフレーム化します。
    .. * Set the playhead to frame 115 and enter the Frame Number 99. Keyframe this value. You have to increase the duration of the strip.
-   * 再生ヘッドをフレーム 115 に設定し、フレーム番号 99 を入力します。この値をキーフレーム化します。ストリップの継続時間を長くする必要があります。
+   * Playheadをフレーム 115 に設定し、フレーム番号 99 を入力します。この値をキーフレーム化します。ストリップの継続時間を長くする必要があります。
 
    .. figure:: /images/video_editing_edit_effects_speed-control-frame-number-example.svg
       :alt: Speed Control with Frame Number option
@@ -257,15 +257,15 @@ Examples
 これは、ストリップを 3 つの部分 (0 ～ 100、100、および 101 ～ 150) に分割し、上記のテクニックを使用することで簡単に行うことができます。 1 つのストリップとフレーム番号オプションを使用してこれを実現することもできます。
 
 .. * Place the playhead at frame 0 and keyframe the field Frame Number (to zero).
-* 再生ヘッドをフレーム 0 に配置し、フィールド「フレーム番号」を (0 に) キーフレームします。
+* Playheadをフレーム 0 に配置し、フィールド「フレーム番号」を (0 に) キーフレームします。
 .. * Move the playhead to frame 49, change the value of Frame Number to 99 and keyframe again.
-* 再生ヘッドをフレーム 49 に移動し、フレーム番号の値を 99 に変更して、再度キーフレームを設定します。
+* Playheadをフレーム 49 に移動し、フレーム番号の値を 99 に変更して、再度キーフレームを設定します。
 .. * Move the playhead to frame 50, change the value of Frame Number to 100 and keyframe.
-* 再生ヘッドをフレーム 50 に移動し、フレーム番号の値を 100 に変更してキーフレームを設定します。
+* Playheadをフレーム 50 に移動し、フレーム番号の値を 100 に変更してキーフレームを設定します。
 .. * Move the playhead to frame 69, leave the value of Frame Number to 100 and keyframe.
-* 再生ヘッドをフレーム 69 に移動し、フレーム番号の値を 100 のままにしてキーフレームを設定します。
+* Playheadをフレーム 69 に移動し、フレーム番号の値を 100 のままにしてキーフレームを設定します。
 .. * Move the playhead to frame 170, change the value of Frame Number to 150 and keyframe.
-* 再生ヘッドをフレーム 170 に移動し、フレーム番号の値を 150 に変更してキーフレームを設定します。
+* Playheadをフレーム 170 に移動し、フレーム番号の値を 150 に変更してキーフレームを設定します。
 
 .. To get even finer control over your clip timing, you can use the Graph Editor (see figure 10).
 クリップのタイミングをさらに細かく制御するには、グラフ エディターを使用します (図 10 を参照)。

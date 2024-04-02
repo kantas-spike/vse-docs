@@ -13,7 +13,7 @@
 
 .. In figure 1, the playhead is positioned between frame 3 & 4 and indicates with the little blue square at the top that frame 4 is in the Preview window. So, the playhead is always positioned at the start of the previewed frame.
 
-図1 では、再生ヘッドはフレーム 3 と 4 の間に配置されており、上部の小さな青い四角形でフレーム4 がPreviewウィンドウにあることを示しています。したがって、Playheadは常にプレビューされるフレームの先頭に配置されます。
+図1 では、Playheadはフレーム 3 と 4 の間に配置されており、上部の小さな青い四角形でフレーム4 がPreviewウィンドウにあることを示しています。したがって、Playheadは常にプレビューされるフレームの先頭に配置されます。
 
 
 .. |notequal| unicode:: 0x2260
@@ -49,7 +49,7 @@
 .. Moving frame by frame
 フレームごとに移動する
    .. The Playhead can be moved in single-frame increments by pressing the cursor keys :kbd:`Left` or :kbd:`Right`.
-   カーソルキーの :kbd:`Left` や :kbd:`Right` を押すと、再生ヘッドを 1 フレームずつ移動できます。
+   カーソルキーの :kbd:`Left` や :kbd:`Right` を押すと、Playheadを 1 フレームずつ移動できます。
 
    .. Rolling with the :kbd:`MMB` while holding :kbd:`Alt` (:kbd:`Alt-Wheel`) will also move the playhead frame by frame.
    :kbd:`Alt` を押しながら :kbd:`MMB` を回転させると、Playhead がフレームごとに移動します。
@@ -90,7 +90,7 @@
 
    .. As can be seen in figure 2, you can use *both* timelines: from the sequencer at the top or from the Timeline Editor at the bottom. Scrubbing at the timeline at the bottom will also move the playhead at the top. Please note, that both timelines are also synced (same frame range, same playhead position). For this, you need to set the option ``Sync Visible Range`` under the View menu for both timelines.
 
-   図2 からわかるように、上部のSequencer または下部のTimeline Editorから、両方のタイムラインを使用できます。下部のタイムラインをスクラブすると、上部の再生ヘッドも移動します。両方のタイムラインを同期 (同じフレーム範囲、同じPlayhead位置)させる場合、 *両方* のタイムラインの [View]メニューで[``Sync Visible Range``]でオプションを設定する必要があることに注意してください。
+   図2 からわかるように、上部のSequencer または下部のTimeline Editorから、両方のタイムラインを使用できます。下部のタイムラインをスクラブすると、上部のPlayheadも移動します。両方のタイムラインを同期 (同じフレーム範囲、同じPlayhead位置)させる場合、 *両方* のタイムラインの [View]メニューで[``Sync Visible Range``]でオプションを設定する必要があることに注意してください。
 
    .. When you drag with :kbd:`Shift-RMB` directly on a sequence strip, this will show the strip *solo*, temporarily disregarding effects and other strips, showing only this strip's output (indicated with the white text and arrows in figure 2). For example, if you have two color strips on top of each other, normally you see the strip from the highest channel in the Preview window. Drag with :kbd:`Shift-RMB` on the lower color strip will show only this color strip in the Preview window. This works also with sound. :kbd:`Shift-RMB` on the sound strip will only produce the audio.
 
@@ -99,7 +99,7 @@
 
    .. Dragging the strip handle will normally shrink or extend the strip but will not change the Preview (you keep viewing the frame at the playhead). With the option *Preview during Transform* of the Preview window set, dragging the handle will also display the frame at the position of the handle.
 
-   通常、ストリップ ハンドルをドラッグするとストリップが縮小または拡張されますが、Previewは変更されません (再生ヘッドのフレームを表示し続けます)。Previewウィンドウの[View]メニュー > [*Preview during Transform*]オプション を設定すると、ハンドルをドラッグ時にハンドル位置のフレームも表示されます。
+   通常、ストリップ ハンドルをドラッグするとストリップが縮小または拡張されますが、Previewは変更されません (Playheadのフレームを表示し続けます)。Previewウィンドウの[View]メニュー > [*Preview during Transform*]オプション を設定すると、ハンドルをドラッグ時にハンドル位置のフレームも表示されます。
 
 .. Playing
 再生
@@ -118,7 +118,7 @@
 
    .. These controls are probably self-explanatory. Pressing the Play/Reversed Play button will start playing the movie from the playhead in forward or reversed direction. The shortcut key is :kbd:`Spacebar` for play forward. The shortcut :kbd:`Shift - Ctrl - Spacebar` is for reversed play.
 
-   これらのコントロールはおそらく一目瞭然です。再生/逆再生ボタンを押すと、再生ヘッドから順方向または逆方向で動画の再生が開始されます。順方向に再生するためのショートカットキーは :kbd:`Spacebar` キーです。:kbd:`Shift - Ctrl - Spacebar` は逆再生のショートカットです。
+   これらのコントロールはおそらく一目瞭然です。再生/逆再生ボタンを押すと、Playheadから順方向または逆方向で動画の再生が開始されます。順方向に再生するためのショートカットキーは :kbd:`Spacebar` キーです。:kbd:`Shift - Ctrl - Spacebar` は逆再生のショートカットです。
 
    .. note::
       .. When installing Blender for the first time, you have to enter some basic choices, e.g. the function of the spacebar (in previous versions it was assigned the Help function). You can check or reset this in User Preferences > Keymap > Spacebar Action.
