@@ -68,3 +68,23 @@ FFMEG のインストールやコマンド ラインの使用に関するチュ�
 - ``test.mp4`` specifies the output file.
 
 
+.. ## 3. Check for variable frame rate
+可変フレームレートを確認する
+-------
+
+.. The following command will check for VFR. It uses the videofilter vfrdet.
+次のコマンドは VFR をチェックします。ビデオフィルター vfrdet を使用します。
+
+.. code-block::
+
+   ffmpeg -i test_input.mp4 -vf vfrdet -f null -
+
+.. The output is directed to the screen. The VFR parameter shows the percentage of variable frame rate. Between brackets are the number of frames with VFR (0 in this example) and with CFR (532 in this example); see below.
+
+出力は画面に送られます。 VFR パラメータは、可変フレーム レートの割合を示します。括弧内は、VFR (この例では 0) と CFR (この例では 532) のフレーム数です。以下を参照してください。 [#f1]_
+
+``[Parsed_vfrdet_0 @ 000001f8b3902e80] VFR:0.000000 (0/532)``
+
+.. rubric:: 脚注
+
+.. [#f1] `VFR(Variable Frame Rate)`: 可変フレームレート、`CFR(Constant Frame Rate)`: 固定フレームレート
